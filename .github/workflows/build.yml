@@ -1,0 +1,119 @@
+name: Deploy Minecraft Server
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  start-server:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Cache APT Dependencies
+        uses: actions/cache@v3
+        with:
+          path: /var/cache/apt/archives
+          key: ${{ runner.os }}-apt-cache-${{ hashFiles('apt-cache-key.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-apt-cache-
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen || true
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Verify Server File
+        run: ls -l server.jar
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the commit loop in the background
+          nohup bash -c '
+            while true; do
+              git add --all
+              git commit -m "Auto-update server changes" --allow-empty
+              git push -f || echo "Git push failed"
+              sleep 30
+            done
+          ' > commit_loop.log 2>&1 &
+
+          # Start the Minecraft server with optimized flags for performance
+          screen -dmS minecraft_server /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Save server state periodically
+          nohup bash -c '
+            while true; do
+            screen -S minecraft -p 0 -X stuff "save-all\n"
+            sleep 300
+            done
+          ' > save.log 2>&1 &          
+
+          # Wait for the server to run for a set duration (e.g., 5 hours)
+          sleep 18000
+          echo "Stopping Minecraft server..."
+          
+          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 60 seconds\n"
+          sleep 30
+          
+          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 30 seconds\n"
+          sleep 10
+          
+          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 20 seconds\n"
+          sleep 5
+          
+          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 15 seconds\n"
+          sleep 5
+          
+          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 10 seconds\n"
+          sleep 5
+          
+          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 5 seconds\n"
+          sleep 1
+          
+          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 4 seconds\n"
+          sleep 1
+          
+          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 3 seconds\n"
+          sleep 1
+          
+          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 2 seconds\n"
+          sleep 1
+          
+          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 1 seconds\n"
+          sleep 1
+          
+          screen -S minecraft -p 0 -X stuff "msg @a Server restarting...\n"
+          
+          pkill -f "bash -c 'while true; do screen -S minecraft -p 0 -X stuff"
+
+          # Stop the server gracefully
+          screen -S minecraft -p 0 -X stuff "stop\n"
+
+          # Stop the commit loop
+          pkill -f "bash -c 'while true; do git add --all; git commit -m"
+
+          # Final commit to capture all changes
+          git add --all
+          git commit -m "Final commit after server stop" --allow-empty
+          git push -f || echo "Final git push failed"
+          echo "Final commit made and pushed."
