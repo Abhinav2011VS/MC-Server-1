@@ -48,25 +48,24 @@ jobs:
           echo "Starting Minecraft server..."
 
           # Start the commit loop in the background
-          nohup bash -c '
-            while true; do
-              git add --all
-              git commit -m "Auto-update server changes" --allow-empty
-              git push -f || echo "Git push failed"
-              sleep 30
-            done
-          ' > commit_loop.log 2>&1 &
+          while true; do
+            git add --all
+            git commit -m "Auto-update server changes" --allow-empty
+            git push -f || echo "Git push failed"
+            sleep 90
+          done &
 
           # Start the Minecraft server with optimized flags for performance
           screen -dmS minecraft_server /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
 
           # Save server state periodically
-          nohup bash -c '
-            while true; do
+          
+          while true; do
+            echo "Saving server..."
             screen -S minecraft -p 0 -X stuff "save-all\n"
+            echo "Server saved!"
             sleep 300
-            done
-          ' > save.log 2>&1 &          
+          done &
 
           # Wait for the server to run for a set duration (e.g., 5 hours)
           sleep 18000
