@@ -15899,3 +15899,133 @@ Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for l
 [09:57:30] [Server thread/INFO]: InventoStarz lost connection: Disconnected
 [09:57:30] [Server thread/INFO]: [ForceResourcepacks] [DEBUG] Not sending message to CraftPlayer{name=InventoStarz} on clearPack as we are not in an environment where we should (key is empty in key.yml)
 [09:57:30] [Server thread/INFO]: InventoStarz left the game
+[09:57:39] [Thread-10/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=49.204.21.64:34255, claimAddress=209.25.140.2:43784, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, 49, -52, 21, 64, -123, -49, -21, 72, -6, -16, -85, 8, 102, -2, 106, -109, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 56, 9, -82, 16, -16, -85, 8, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 44, -66, -68, 40, -126, 34, 106, 14, -40, 17, -21, -109, 39, -70, -71, 63], tunnelServerId=1, dataCenterId=28}
+[09:57:39] [Thread-10/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[09:57:39] [Thread-10/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43784 to claim client
+[09:57:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[09:57:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[09:57:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[09:57:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[09:57:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[09:57:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[09:57:39] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[09:58:06] [Server thread/INFO]: [Discord-Linker] §bCommand from Discord: /stop 
+[09:58:06] [Server thread/INFO]: Stopping the server
+[09:58:06] [Server thread/INFO]: Stopping server
+[09:58:06] [Server thread/INFO]: [oplogin] Disabling oplogin v1.0-SNAPSHOT
+[09:58:06] [Server thread/INFO]: [BannedWordsEffective] Disabling BannedWordsEffective v0.2
+[09:58:06] [Server thread/INFO]: [playit-gg] Disabling playit-gg v0.1.4
+[09:58:06] [Server thread/INFO]: [DeadlyDisasters] Disabling DeadlyDisasters v14.7
+[09:58:06] [Server thread/INFO]: [DeadlyDisasters] Saving regen data DO NOT CLOSE! Or regen data will be lost!
+[09:58:06] [Server thread/INFO]: [DeadlyDisasters] Sucessfully finished and saved all regen data!
+[09:58:06] [Server thread/INFO]: [ExecutableItems] Disabling ExecutableItems v7.24.9.21
+[09:58:06] [Server thread/INFO]: [SCore] Disabling SCore v5.24.9.21
+[09:58:06] [Server thread/INFO]: SCore Save UsagePerDay....
+[09:58:06] [Server thread/INFO]: SCore Save UsagePerDay done !
+[09:58:06] [Server thread/INFO]: SCore Save Commands...
+[09:58:06] [Server thread/INFO]: SCore Save Commands done !
+[09:58:06] [Server thread/INFO]: SCore Save Cooldowns...
+[09:58:06] [Server thread/INFO]: SCore Save Cooldowns done !
+[09:58:06] [Server thread/INFO]: SCore Run delayed saving tasks...
+[09:58:06] [Server thread/INFO]: SCore Run delayed saving tasks done !
+[09:58:06] [Server thread/INFO]: [EpicRealmsSMP] Disabling EpicRealmsSMP v1.1
+[09:58:06] [Server thread/INFO]: [FarmProtect] Disabling FarmProtect v1.9.0
+[09:58:06] [Server thread/INFO]: [Discord-Linker] Disabling Discord-Linker v3.4.2
+[09:58:06] [Server thread/INFO]: [Discord-Linker] §cPlugin disabled.
+[09:58:06] [Server thread/INFO]: [BackpackPlus] Disabling BackpackPlus v1.4.2
+[09:58:06] [Server thread/INFO]: [BackpackPlus] SQLite Successfully disconnected from the database
+[09:58:06] [Server thread/INFO]: [Giants] Disabling Giants v2.0.5
+[09:58:06] [Server thread/INFO]: [Veinminer] Disabling Veinminer v2.1.4
+[09:58:06] [EventThread/ERROR]: [io.socket.thread.EventThread] Task threw exception
+java.lang.IllegalStateException: zip file closed
+	at java.base/java.util.zip.ZipFile.ensureOpen(ZipFile.java:846) ~[?:?]
+	at java.base/java.util.zip.ZipFile.getEntry(ZipFile.java:338) ~[?:?]
+	at java.base/java.util.jar.JarFile.getEntry(JarFile.java:516) ~[?:?]
+	at java.base/java.util.jar.JarFile.getJarEntry(JarFile.java:471) ~[?:?]
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:209) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
+	at org.bukkit.plugin.java.PluginClassLoader.loadClass0(PluginClassLoader.java:169) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at org.bukkit.plugin.java.PluginClassLoader.loadClass(PluginClassLoader.java:164) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	at DiscordLinker-3.4.2.jar/io.socket.engineio.client.Socket.close(Socket.java:720) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.client.Manager.close(Manager.java:463) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.client.Manager.destroy(Manager.java:400) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.client.Socket.destroy(Socket.java:457) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.client.Socket.access$1300(Socket.java:19) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.client.Socket$8.run(Socket.java:476) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.thread.EventThread$2.run(EventThread.java:80) ~[DiscordLinker-3.4.2.jar:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[09:58:06] [Server thread/INFO]: [ForceResourcepacks] Disabling ForceResourcepacks v1.12.17 (build 745)
+[09:58:06] [EventThread/WARN]: Exception in thread "EventThread" java.lang.IllegalStateException: zip file closed
+[09:58:06] [EventThread/WARN]: 	at java.base/java.util.zip.ZipFile.ensureOpen(ZipFile.java:846)
+[09:58:06] [EventThread/WARN]: 	at java.base/java.util.zip.ZipFile.getEntry(ZipFile.java:338)
+[09:58:06] [EventThread/WARN]: 	at java.base/java.util.jar.JarFile.getEntry(JarFile.java:516)
+[09:58:06] [EventThread/WARN]: 	at java.base/java.util.jar.JarFile.getJarEntry(JarFile.java:471)
+[09:58:06] [EventThread/WARN]: 	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:209)
+[09:58:06] [EventThread/WARN]: 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593)
+[09:58:06] [EventThread/WARN]: 	at org.bukkit.plugin.java.PluginClassLoader.loadClass0(PluginClassLoader.java:169)
+[09:58:06] [EventThread/WARN]: 	at org.bukkit.plugin.java.PluginClassLoader.loadClass(PluginClassLoader.java:164)
+[09:58:06] [EventThread/WARN]: 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+[09:58:06] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.engineio.client.Socket.close(Socket.java:720)
+[09:58:06] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.client.Manager.close(Manager.java:463)
+[09:58:06] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.client.Manager.destroy(Manager.java:400)
+[09:58:06] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.client.Socket.destroy(Socket.java:457)
+[09:58:06] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.client.Socket.access$1300(Socket.java:19)
+[09:58:06] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.client.Socket$8.run(Socket.java:476)
+[09:58:06] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.thread.EventThread$2.run(EventThread.java:80)
+[09:58:06] [EventThread/WARN]: 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+[09:58:06] [EventThread/WARN]: 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[09:58:06] [EventThread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[09:58:06] [Thread-10/INFO]: [gg.playit.minecraft.PlayitManager] control channel shutdown
+[09:58:08] [Server thread/INFO]: [SpawnerSilk] Disabling SpawnerSilk v5.8.0
+[09:58:08] [Server thread/INFO]: [TreeFeller] Disabling TreeFeller v1.24.1
+[09:58:08] [Server thread/INFO]: [TreeFeller] TreeFeller has been disabled! (Version 1.24.1) by ThizThizzyDizzy
+[09:58:08] [Server thread/INFO]: [GodItems] Disabling GodItems v1.5
+[09:58:08] [Server thread/INFO]: [ModelEngine] Disabling ModelEngine vR4.0.7
+[09:58:08] [Server thread/INFO]: [SilentAutoSave] Disabling SilentAutoSave v3.0
+[09:58:08] [Server thread/INFO]: [HomePlugin] Disabling HomePlugin v0.6.4
+[09:58:08] [Server thread/INFO]: [HomePlugin] ----------------------HomePlugin----------------------
+[09:58:08] [Server thread/INFO]: [HomePlugin] ----------HomePlugin a été éteint avec succés !----------
+[09:58:08] [Server thread/INFO]: [HomePlugin] ------------------------------------------------------
+[09:58:08] [Server thread/INFO]: [Sleeper] Disabling Sleeper v1.5.3
+[09:58:08] [Server thread/INFO]: [Sleeper] Sleeper Has Been Disabled!
+[09:58:08] [Server thread/INFO]: [DontKillFriends] Disabling DontKillFriends v1.0
+[09:58:08] [Server thread/INFO]: [DontKillFriends] DontKillFriends disabled!
+[09:58:08] [Server thread/INFO]: [DeathLocation] Disabling DeathLocation v1.4
+[09:58:08] [Server thread/INFO]: [AuthMe] Disabling AuthMe v5.6.0-bCUSTOM
+[09:58:08] [Server thread/INFO]: [AuthMe] Waiting for 0 tasks to finish
+[09:58:08] [Server thread/INFO]: [AuthMe] AuthMe 5.6.0-bCUSTOM disabled!
+[09:58:08] [Server thread/INFO]: [WorldGuard] Disabling WorldGuard v7.0.12+829a4a4
+[09:58:08] [Server thread/INFO]: [WorldGuard] Shutting down executor and cancelling any pending tasks...
+[09:58:08] [Server thread/INFO]: [Multiverse-Core] Disabling Multiverse-Core v4.3.13
+[09:58:08] [Server thread/INFO]: [WorldEdit] Disabling WorldEdit v7.3.6+6892-3d660b8
+[09:58:08] [Server thread/INFO]: Unregistering com.sk89q.worldedit.bukkit.BukkitServerInterface from WorldEdit
+[09:58:08] [Server thread/INFO]: Saving players
+[09:58:08] [Server thread/INFO]: Saving worlds
+[09:58:08] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 9 entity chunks, 0 poi chunks in world 'world' in 0.01s
+[09:58:08] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 0 entity chunks, 0 poi chunks in world 'world_nether' in 0.00s
+[09:58:08] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 10 entity chunks, 0 poi chunks in world 'world_the_end' in 0.00s
+[09:58:08] [Server thread/INFO]: Saving chunks for level 'ServerLevel[disaster_world]'/minecraft:disaster_world
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'disaster_world'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'disaster_world'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'disaster_world'
+[09:58:08] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 2 entity chunks, 0 poi chunks in world 'disaster_world' in 0.00s
+[09:58:08] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[09:58:08] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[09:58:08] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[09:58:08] [Server thread/INFO]: ThreadedAnvilChunkStorage (disaster_world): All chunks are saved
+[09:58:08] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
