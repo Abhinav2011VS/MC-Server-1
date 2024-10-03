@@ -1,0 +1,70 @@
+# Notes:
+# To have no values in a list, remove every value below it and change to [] like `effects: []`
+
+# If disabled, the giant will not move or attack
+ai: true
+
+# Makes giants jump. Very experimental.
+# I prefer velocity mode
+# 0 - disabled
+# 1 - velocity mode
+# 2 - tp mode
+jumpMode: 0
+# 0 - when target is higher
+# 1 - when target is higher and giant is stuck
+# 2 - when giant is stuck
+jumpCondition: 1
+# Delay before jumping again, counted from hitting the ground. In milliseconds
+jumpDelay: 200
+# If velocity mode, y blocks/tick (default 0.42)
+# If tp mode, +y to teleport (default 1.2)
+# -1: auto
+jumpHeight: -1
+
+# In hearts, 0.5 is half a heart
+attackDamage: 1.0
+
+# Attack delay / speed, in ticks
+# 20 is 1 second
+attackDelay: 20
+
+# Self-explanatory, 0 will attack only colliding (touching) entities
+# There's no wall check yet, so it will hit through walls
+attackReach: 2
+
+# Vertical reach
+attackVerticalReach: 1
+
+###
+
+# Chance of a zombie becoming a giant. This is per each zombie spawn, natural or not.
+# 0 is 0% (no zombie becomes a giant), 1 is 100% (every zombie becomes a giant), so the default 0.005 is 0.5%
+chance: 0.005
+
+# Worlds that Giants will not spawn in naturally.
+# You can still use the command to spawn
+blacklist:
+  - "world_nether"
+  - "world_the_end"
+
+# Potion effects applied to a giant
+# type:amplifier
+# types: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html
+# amplifier: just like you know it, max 255
+effects:
+  - "JUMP:1"
+  - "REGENERATION:2"
+  - "HEALTH_BOOST:10"
+
+# Custom drops
+# Adding metadata (enchantments, lore etc) is possible. See https://www.spigotmc.org/resources/giants.99600/field?field=documentation
+drops:
+  - material: STICK # See https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+    chance: 0.75 # 75% chance to drop 1-3 apples
+    quantityMin: 1 # inclusive
+    quantityMax: 3 # inclusive
+  - material: WOODEN_SWORD
+    chance: 0.05 # 5%
+    quantityMin: 1
+    quantityMax: 1
+
