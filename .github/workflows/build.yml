@@ -71,47 +71,36 @@ jobs:
           sleep 18000
           echo "Stopping Minecraft server..."
           
-          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 60 seconds\n"
           screen -S minecraft -p 0 -X stuff "say Server will restart in 60 seconds\n"
           sleep 30
           
-          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 30 seconds\n"
           screen -S minecraft -p 0 -X stuff "say Server will restart in 30 seconds\n"
           sleep 10
           
-          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 20 seconds\n"
           screen -S minecraft -p 0 -X stuff "say Server will restart in 20 seconds\n"
           sleep 5
           
-          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 15 seconds\n"
           screen -S minecraft -p 0 -X stuff "say Server will restart in 15 seconds\n"
           sleep 5
           
-          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 10 seconds\n"
           screen -S minecraft -p 0 -X stuff "say Server will restart in 10 seconds\n"
           sleep 5
           
-          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 5 seconds\n"
           screen -S minecraft -p 0 -X stuff "say Server will restart in 5 seconds\n"
           sleep 1
           
-          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 4 seconds\n"
           screen -S minecraft -p 0 -X stuff "say Server will restart in 4 seconds\n"
           sleep 1
           
-          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 3 seconds\n"
           screen -S minecraft -p 0 -X stuff "say Server will restart in 3 seconds\n"
           sleep 1
           
-          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 2 seconds\n"
           screen -S minecraft -p 0 -X stuff "say Server will restart in 2 seconds\n"
           sleep 1
           
-          screen -S minecraft -p 0 -X stuff "msg @a Server will restart in 1 seconds\n"
           screen -S minecraft -p 0 -X stuff "say Server will restart in 1 seconds\n"
           sleep 1
           
-          screen -S minecraft -p 0 -X stuff "msg @a Server restarting...\n"
           screen -S minecraft -p 0 -X stuff "say Server restarting...\n"
           
           pkill -f "bash -c 'while true; do screen -S minecraft -p 0 -X stuff"
