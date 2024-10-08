@@ -8216,3 +8216,111 @@ java.io.IOException: Connection timed out
 [07:52:49] [Server thread/INFO]: Saving the game (this may take a moment!)
 [07:52:49] [Server thread/INFO]: Saved the game
 [07:53:08] [Thread-14/INFO]: [gg.playit.control.ChannelSetup] send keep alive
+[07:55:29] [Server thread/INFO]: [Discord-Linker] §bCommand from Discord: /stop 
+[07:55:29] [Server thread/INFO]: Stopping the server
+[07:55:29] [Server thread/INFO]: Stopping server
+[07:55:29] [Server thread/INFO]: [oplogin] Disabling oplogin v1.0-SNAPSHOT
+[07:55:29] [Server thread/INFO]: [BannedWordsEffective] Disabling BannedWordsEffective v0.2
+[07:55:29] [Server thread/INFO]: [StackableItems] Disabling StackableItems v1.3.0
+[07:55:29] [Server thread/INFO]: [playit-gg] Disabling playit-gg v0.1.4
+[07:55:29] [Server thread/INFO]: [DeadlyDisasters] Disabling DeadlyDisasters v14.7
+[07:55:29] [Server thread/INFO]: [DeadlyDisasters] Saving regen data DO NOT CLOSE! Or regen data will be lost!
+[07:55:29] [Server thread/INFO]: [DeadlyDisasters] Sucessfully finished and saved all regen data!
+[07:55:29] [Server thread/INFO]: [FarmProtect] Disabling FarmProtect v1.9.0
+[07:55:29] [Server thread/INFO]: [Discord-Linker] Disabling Discord-Linker v3.4.2
+[07:55:29] [Server thread/INFO]: [Discord-Linker] §cPlugin disabled.
+[07:55:29] [Server thread/INFO]: [BackpackPlus] Disabling BackpackPlus v1.4.2
+[07:55:29] [Server thread/INFO]: [BackpackPlus] SQLite Successfully disconnected from the database
+[07:55:29] [Server thread/INFO]: [SkinsRestorer] Disabling SkinsRestorer v15.4.3
+[07:55:29] [EventThread/ERROR]: [io.socket.thread.EventThread] Task threw exception
+java.lang.IllegalStateException: zip file closed
+	at java.base/java.util.zip.ZipFile.ensureOpen(ZipFile.java:846) ~[?:?]
+	at java.base/java.util.zip.ZipFile.getEntry(ZipFile.java:338) ~[?:?]
+	at java.base/java.util.jar.JarFile.getEntry(JarFile.java:516) ~[?:?]
+	at java.base/java.util.jar.JarFile.getJarEntry(JarFile.java:471) ~[?:?]
+	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:209) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593) ~[?:?]
+	at org.bukkit.plugin.java.PluginClassLoader.loadClass0(PluginClassLoader.java:169) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at org.bukkit.plugin.java.PluginClassLoader.loadClass(PluginClassLoader.java:164) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	at DiscordLinker-3.4.2.jar/io.socket.engineio.client.Socket.close(Socket.java:720) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.client.Manager.close(Manager.java:463) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.client.Manager.destroy(Manager.java:400) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.client.Socket.destroy(Socket.java:457) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.client.Socket.access$1300(Socket.java:19) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.client.Socket$8.run(Socket.java:476) ~[DiscordLinker-3.4.2.jar:?]
+	at DiscordLinker-3.4.2.jar/io.socket.thread.EventThread$2.run(EventThread.java:80) ~[DiscordLinker-3.4.2.jar:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[?:?]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[?:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[07:55:29] [Server thread/INFO]: [Giants] Disabling Giants v2.0.5
+[07:55:29] [Server thread/INFO]: [Veinminer] Disabling Veinminer v2.1.4
+[07:55:29] [EventThread/WARN]: Exception in thread "EventThread" java.lang.IllegalStateException: zip file closed
+[07:55:29] [EventThread/WARN]: 	at java.base/java.util.zip.ZipFile.ensureOpen(ZipFile.java:846)
+[07:55:29] [EventThread/WARN]: 	at java.base/java.util.zip.ZipFile.getEntry(ZipFile.java:338)
+[07:55:29] [Server thread/INFO]: [ForceResourcepacks] Disabling ForceResourcepacks v1.12.17 (build 745)
+[07:55:29] [EventThread/WARN]: 	at java.base/java.util.jar.JarFile.getEntry(JarFile.java:516)
+[07:55:29] [EventThread/WARN]: 	at java.base/java.util.jar.JarFile.getJarEntry(JarFile.java:471)
+[07:55:29] [EventThread/WARN]: 	at org.bukkit.plugin.java.PluginClassLoader.findClass(PluginClassLoader.java:209)
+[07:55:29] [EventThread/WARN]: 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:593)
+[07:55:29] [EventThread/WARN]: 	at org.bukkit.plugin.java.PluginClassLoader.loadClass0(PluginClassLoader.java:169)
+[07:55:29] [EventThread/WARN]: 	at org.bukkit.plugin.java.PluginClassLoader.loadClass(PluginClassLoader.java:164)
+[07:55:29] [EventThread/WARN]: 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+[07:55:29] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.engineio.client.Socket.close(Socket.java:720)
+[07:55:29] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.client.Manager.close(Manager.java:463)
+[07:55:29] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.client.Manager.destroy(Manager.java:400)
+[07:55:29] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.client.Socket.destroy(Socket.java:457)
+[07:55:29] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.client.Socket.access$1300(Socket.java:19)
+[07:55:29] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.client.Socket$8.run(Socket.java:476)
+[07:55:29] [EventThread/WARN]: 	at DiscordLinker-3.4.2.jar//io.socket.thread.EventThread$2.run(EventThread.java:80)
+[07:55:29] [EventThread/WARN]: 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+[07:55:29] [EventThread/WARN]: 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+[07:55:29] [EventThread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[07:55:29] [Thread-14/INFO]: [gg.playit.minecraft.PlayitManager] control channel shutdown
+[07:55:31] [Server thread/INFO]: [SpawnerSilk] Disabling SpawnerSilk v5.8.0
+[07:55:31] [Server thread/INFO]: [TreeFeller] Disabling TreeFeller v1.24.1
+[07:55:31] [Server thread/INFO]: [TreeFeller] TreeFeller has been disabled! (Version 1.24.1) by ThizThizzyDizzy
+[07:55:31] [Server thread/INFO]: [ModelEngine] Disabling ModelEngine vR4.0.7
+[07:55:31] [Server thread/INFO]: [SilentAutoSave] Disabling SilentAutoSave v3.0
+[07:55:31] [Server thread/INFO]: [HomePlugin] Disabling HomePlugin v0.6.4
+[07:55:31] [Server thread/INFO]: [HomePlugin] ----------------------HomePlugin----------------------
+[07:55:31] [Server thread/INFO]: [HomePlugin] ----------HomePlugin a été éteint avec succés !----------
+[07:55:31] [Server thread/INFO]: [HomePlugin] ------------------------------------------------------
+[07:55:31] [Server thread/INFO]: [Sleeper] Disabling Sleeper v1.5.3
+[07:55:31] [Server thread/INFO]: [Sleeper] Sleeper Has Been Disabled!
+[07:55:31] [Server thread/INFO]: [DeathLocation] Disabling DeathLocation v1.4
+[07:55:31] [Server thread/INFO]: [AuthMe] Disabling AuthMe v5.6.0-bCUSTOM
+[07:55:31] [Server thread/INFO]: [AuthMe] Waiting for 0 tasks to finish
+[07:55:31] [Server thread/INFO]: [AuthMe] AuthMe 5.6.0-bCUSTOM disabled!
+[07:55:31] [Server thread/INFO]: [WorldGuard] Disabling WorldGuard v7.0.12+829a4a4
+[07:55:31] [Server thread/INFO]: [WorldGuard] Shutting down executor and cancelling any pending tasks...
+[07:55:31] [Server thread/INFO]: [Multiverse-Core] Disabling Multiverse-Core v4.3.13
+[07:55:31] [Server thread/INFO]: [WorldEdit] Disabling WorldEdit v7.3.6+6892-3d660b8
+[07:55:31] [Server thread/INFO]: Unregistering com.sk89q.worldedit.bukkit.BukkitServerInterface from WorldEdit
+[07:55:31] [Server thread/INFO]: Saving players
+[07:55:31] [Server thread/INFO]: Saving worlds
+[07:55:31] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 11 entity chunks, 0 poi chunks in world 'world' in 0.01s
+[07:55:31] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_nether]'/minecraft:the_nether
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_nether'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_nether'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_nether'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 77 entity chunks, 0 poi chunks in world 'world_nether' in 0.01s
+[07:55:31] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world_the_end]'/minecraft:the_end
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'world_the_end'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'world_the_end'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'world_the_end'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 10 entity chunks, 0 poi chunks in world 'world_the_end' in 0.00s
+[07:55:31] [Server thread/INFO]: Saving chunks for level 'ServerLevel[disaster_world]'/minecraft:disaster_world
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Waiting 60s for chunk system to halt for world 'disaster_world'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Halted chunk system for world 'disaster_world'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Saving all chunkholders for world 'disaster_world'
+[07:55:31] [Server thread/INFO]: [ChunkHolderManager] Saved 0 block chunks, 23 entity chunks, 0 poi chunks in world 'disaster_world' in 0.01s
+[07:55:31] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[07:55:31] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[07:55:31] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[07:55:31] [Server thread/INFO]: ThreadedAnvilChunkStorage (disaster_world): All chunks are saved
+[07:55:31] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
