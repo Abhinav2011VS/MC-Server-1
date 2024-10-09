@@ -19,18 +19,10 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Cache APT Dependencies
-        uses: actions/cache@v3
-        with:
-          path: /var/cache/apt/archives
-          key: ${{ runner.os }}-apt-cache-${{ hashFiles('apt-cache-key.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-apt-cache-
-
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y wget screen || true
+          sudo apt-get install -y wget screen
 
       - name: Configure Git
         run: |
@@ -49,6 +41,7 @@ jobs:
 
           # Start the commit loop in the background
           nohup bash -c 'while true; do
+            git pull || echo "Git pull failed"
             git add --all
             git commit -m "Auto-update server changes" --allow-empty
             git push -f || echo "Git push failed"
@@ -91,6 +84,10 @@ jobs:
 
           # Stop the commit loop
           pkill -f "bash -c 'while true; do git add --all; git commit -m"
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git pull || echo "Git pull failed"
 
           # Final commit to capture all changes
           git add --all
