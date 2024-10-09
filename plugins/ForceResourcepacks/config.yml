@@ -13,58 +13,86 @@ only-run-actions-after-pack-send: true
 use-auth-plugin: true
 worldguard: true
 
-packs:
-  universal:
-    url: https://github.com/Abhinav2011VS/RP-Maximus/releases/download/v1.0/EpicRealmsSMP-ResourcePack.zip
-    hash: 5e89f14e60183f10de4c77f2ae9beecea0674d1c
-    uuid: 01234567-89ab-cdef-0123-456789abcdef
-    format: 1
-    version: "1.8"
-    restricted: false
-    permission: forceresourcepacks.pack.universal
-
-empty: 
+empty:
   url: http://cdn.moep.tv/files/Empty.zip
   hash: 01517226212d27586ea0c5d6aff1aa5492dd2484
+  uuid: 90a7e280-0c24-36e2-b39b-327abf49c261
 
 global:
   pack: universal
-  optional-packs: []
   send-delay: 10
   required: true
-  prompt-message: "§x§f§f§c§a§0§0E§x§f§f§c§8§0§2p§x§f§f§c§6§0§4i§x§f§f§c§4§0§7c§x§f§f§c§2§0§9 §x§f§f§c§0§0§bR§x§f§f§b§e§0§de§x§f§f§b§c§0§fa§x§f§f§b§a§1§1l§x§f§f§b§8§1§4m§x§f§f§b§6§1§6s§x§f§f§b§4§1§8 §x§f§f§b§2§1§aS§x§f§f§a§f§1§cM§x§f§f§a§d§1§eP§x§f§f§a§b§2§1 §x§f§f§a§9§2§3R§x§f§f§a§7§2§5e§x§f§f§a§5§2§7s§x§f§f§a§3§2§9o§x§f§f§a§1§2§bu§x§f§f§9§f§2§er§x§f§f§9§d§3§0c§x§f§f§9§b§3§2e§x§f§f§9§9§3§4 §x§f§f§9§7§3§6P§x§f§f§9§5§3§8a§x§f§f§9§3§3§bc§x§f§f§9§1§3§dk§x§f§f§8§f§3§f §x§f§f§8§d§4§1-§x§f§f§8§b§4§3 §x§f§f§8§9§4§5E§x§f§f§8§7§4§8n§x§f§f§8§5§4§ah§x§f§f§8§3§4§ca§x§f§f§8§1§4§en§x§f§f§7§f§5§0c§x§f§f§7§c§5§3e§x§f§f§7§a§5§5 §x§f§f§7§8§5§7Y§x§f§f§7§6§5§9o§x§f§f§7§4§5§bu§x§f§f§7§2§5§dr§x§f§f§7§0§6§0 §x§f§f§6§e§6§2A§x§f§f§6§c§6§4d§x§f§f§6§a§6§6v§x§f§f§6§8§6§8e§x§f§f§6§6§6§an§x§f§f§6§4§6§dt§x§f§f§6§2§6§fu§x§f§f§6§0§7§1r§x§f§f§5§e§7§3e§x§f§f§5§c§7§5 §x§f§f§5§a§7§7-§x§f§f§5§8§7§a §x§f§f§5§6§7§cY§x§f§f§5§4§7§eo§x§f§f§5§2§8§0u§x§f§f§5§0§8§2 §x§f§f§4§e§8§4m§x§f§f§4§b§8§7u§x§f§f§4§9§8§9s§x§f§f§4§7§8§bt§x§f§f§4§5§8§d §x§f§f§4§3§8§fa§x§f§f§4§1§9§2c§x§f§f§3§f§9§4c§x§f§f§3§d§9§6e§x§f§f§3§b§9§8p§x§f§f§3§9§9§at§x§f§f§3§7§9§c §x§f§f§3§5§9§ft§x§f§f§3§3§a§1h§x§f§f§3§1§a§3e§x§f§f§2§f§a§5 §x§f§f§2§d§a§7R§x§f§f§2§b§a§9e§x§f§f§2§9§a§cs§x§f§f§2§7§a§eo§x§f§f§2§5§b§0u§x§f§f§2§3§b§2r§x§f§f§2§1§b§4c§x§f§f§1§f§b§6e§x§f§f§1§d§b§9 §x§f§f§1§b§b§bP§x§f§f§1§8§b§da§x§f§f§1§6§b§fc§x§f§f§1§4§c§1k§x§f§f§1§2§c§3 §x§f§f§1§0§c§6t§x§f§f§0§e§c§8o§x§f§f§0§c§c§a §x§f§f§0§a§c§cP§x§f§f§0§8§c§el§x§f§f§0§6§d§0a§x§f§f§0§4§d§3y§x§f§f§0§2§d§5!"
+  prompt-message: §x§f§f§c§a§0§0E§x§f§f§c§8§0§2p§x§f§f§c§6§0§4i§x§f§f§c§4§0§7c§x§f§f§c§2§0§9
+    §x§f§f§c§0§0§bR§x§f§f§b§e§0§de§x§f§f§b§c§0§fa§x§f§f§b§a§1§1l§x§f§f§b§8§1§4m§x§f§f§b§6§1§6s§x§f§f§b§4§1§8
+    §x§f§f§b§2§1§aS§x§f§f§a§f§1§cM§x§f§f§a§d§1§eP§x§f§f§a§b§2§1 §x§f§f§a§9§2§3R§x§f§f§a§7§2§5e§x§f§f§a§5§2§7s§x§f§f§a§3§2§9o§x§f§f§a§1§2§bu§x§f§f§9§f§2§er§x§f§f§9§d§3§0c§x§f§f§9§b§3§2e§x§f§f§9§9§3§4
+    §x§f§f§9§7§3§6P§x§f§f§9§5§3§8a§x§f§f§9§3§3§bc§x§f§f§9§1§3§dk§x§f§f§8§f§3§f §x§f§f§8§d§4§1-§x§f§f§8§b§4§3
+    §x§f§f§8§9§4§5E§x§f§f§8§7§4§8n§x§f§f§8§5§4§ah§x§f§f§8§3§4§ca§x§f§f§8§1§4§en§x§f§f§7§f§5§0c§x§f§f§7§c§5§3e§x§f§f§7§a§5§5
+    §x§f§f§7§8§5§7Y§x§f§f§7§6§5§9o§x§f§f§7§4§5§bu§x§f§f§7§2§5§dr§x§f§f§7§0§6§0 §x§f§f§6§e§6§2A§x§f§f§6§c§6§4d§x§f§f§6§a§6§6v§x§f§f§6§8§6§8e§x§f§f§6§6§6§an§x§f§f§6§4§6§dt§x§f§f§6§2§6§fu§x§f§f§6§0§7§1r§x§f§f§5§e§7§3e§x§f§f§5§c§7§5
+    §x§f§f§5§a§7§7-§x§f§f§5§8§7§a §x§f§f§5§6§7§cY§x§f§f§5§4§7§eo§x§f§f§5§2§8§0u§x§f§f§5§0§8§2
+    §x§f§f§4§e§8§4m§x§f§f§4§b§8§7u§x§f§f§4§9§8§9s§x§f§f§4§7§8§bt§x§f§f§4§5§8§d §x§f§f§4§3§8§fa§x§f§f§4§1§9§2c§x§f§f§3§f§9§4c§x§f§f§3§d§9§6e§x§f§f§3§b§9§8p§x§f§f§3§9§9§at§x§f§f§3§7§9§c
+    §x§f§f§3§5§9§ft§x§f§f§3§3§a§1h§x§f§f§3§1§a§3e§x§f§f§2§f§a§5 §x§f§f§2§d§a§7R§x§f§f§2§b§a§9e§x§f§f§2§9§a§cs§x§f§f§2§7§a§eo§x§f§f§2§5§b§0u§x§f§f§2§3§b§2r§x§f§f§2§1§b§4c§x§f§f§1§f§b§6e§x§f§f§1§d§b§9
+    §x§f§f§1§b§b§bP§x§f§f§1§8§b§da§x§f§f§1§6§b§fc§x§f§f§1§4§c§1k§x§f§f§1§2§c§3 §x§f§f§1§0§c§6t§x§f§f§0§e§c§8o§x§f§f§0§c§c§a
+    §x§f§f§0§a§c§cP§x§f§f§0§8§c§el§x§f§f§0§6§d§0a§x§f§f§0§4§d§3y§x§f§f§0§2§d§5!
   actions:
     loaded:
-      message: "§x§f§f§c§a§0§0Y§x§f§f§c§6§0§4o§x§f§f§c§2§0§9u§x§f§f§b§d§0§d §x§f§f§b§9§1§2a§x§f§f§b§5§1§6r§x§f§f§b§1§1§be§x§f§f§a§d§1§f §x§f§f§a§8§2§4n§x§f§f§a§4§2§8o§x§f§f§a§0§2§dw§x§f§f§9§c§3§1 §x§f§f§9§8§3§6u§x§f§f§9§3§3§as§x§f§f§8§f§3§fi§x§f§f§8§b§4§3n§x§f§f§8§7§4§8g§x§f§f§8§2§4§c §x§f§f§7§e§5§1E§x§f§f§7§a§5§5p§x§f§f§7§6§5§ai§x§f§f§7§2§5§ec§x§f§f§6§d§6§3 §x§f§f§6§9§6§7R§x§f§f§6§5§6§ce§x§f§f§6§1§7§0a§x§f§f§5§d§7§4l§x§f§f§5§8§7§9m§x§f§f§5§4§7§ds§x§f§f§5§0§8§2 §x§f§f§4§c§8§6S§x§f§f§4§8§8§bM§x§f§f§4§3§8§fP§x§f§f§3§f§9§4 §x§f§f§3§b§9§8R§x§f§f§3§7§9§de§x§f§f§3§3§a§1s§x§f§f§2§e§a§6o§x§f§f§2§a§a§au§x§f§f§2§6§a§fr§x§f§f§2§2§b§3c§x§f§f§1§d§b§8e§x§f§f§1§9§b§c §x§f§f§1§5§c§1P§x§f§f§1§1§c§5a§x§f§f§0§d§c§ac§x§f§f§0§8§c§ek§x§f§f§0§4§d§3!"
+      message: §x§f§f§c§a§0§0Y§x§f§f§c§6§0§4o§x§f§f§c§2§0§9u§x§f§f§b§d§0§d §x§f§f§b§9§1§2a§x§f§f§b§5§1§6r§x§f§f§b§1§1§be§x§f§f§a§d§1§f
+        §x§f§f§a§8§2§4n§x§f§f§a§4§2§8o§x§f§f§a§0§2§dw§x§f§f§9§c§3§1 §x§f§f§9§8§3§6u§x§f§f§9§3§3§as§x§f§f§8§f§3§fi§x§f§f§8§b§4§3n§x§f§f§8§7§4§8g§x§f§f§8§2§4§c
+        §x§f§f§7§e§5§1E§x§f§f§7§a§5§5p§x§f§f§7§6§5§ai§x§f§f§7§2§5§ec§x§f§f§6§d§6§3
+        §x§f§f§6§9§6§7R§x§f§f§6§5§6§ce§x§f§f§6§1§7§0a§x§f§f§5§d§7§4l§x§f§f§5§8§7§9m§x§f§f§5§4§7§ds§x§f§f§5§0§8§2
+        §x§f§f§4§c§8§6S§x§f§f§4§8§8§bM§x§f§f§4§3§8§fP§x§f§f§3§f§9§4 §x§f§f§3§b§9§8R§x§f§f§3§7§9§de§x§f§f§3§3§a§1s§x§f§f§2§e§a§6o§x§f§f§2§a§a§au§x§f§f§2§6§a§fr§x§f§f§2§2§b§3c§x§f§f§1§d§b§8e§x§f§f§1§9§b§c
+        §x§f§f§1§5§c§1P§x§f§f§1§1§c§5a§x§f§f§0§d§c§ac§x§f§f§0§8§c§ek§x§f§f§0§4§d§3!
     declined:
-      kick: "§x§f§f§c§a§0§0Y§x§f§f§c§7§0§3o§x§f§f§c§4§0§6u§x§f§f§c§1§0§9 §x§f§f§b§e§0§ch§x§f§f§b§b§1§0a§x§f§f§b§8§1§3v§x§f§f§b§6§1§6e§x§f§f§b§3§1§9 §x§f§f§b§0§1§ct§x§f§f§a§d§1§fo§x§f§f§a§a§2§2 §x§f§f§a§7§2§5a§x§f§f§a§4§2§9c§x§f§f§a§1§2§cc§x§f§f§9§e§2§fe§x§f§f§9§b§3§2p§x§f§f§9§8§3§5t§x§f§f§9§5§3§8 §x§f§f§9§2§3§bt§x§f§f§8§f§3§eh§x§f§f§8§d§4§1e§x§f§f§8§a§4§5 §x§f§f§8§7§4§8R§x§f§f§8§4§4§be§x§f§f§8§1§4§es§x§f§f§7§e§5§1o§x§f§f§7§b§5§4u§x§f§f§7§8§5§7r§x§f§f§7§5§5§ac§x§f§f§7§2§5§de§x§f§f§6§f§6§1 §x§f§f§6§c§6§4P§x§f§f§6§9§6§7a§x§f§f§6§6§6§ac§x§f§f§6§4§6§dk§x§f§f§6§1§7§0 §x§f§f§5§e§7§3i§x§f§f§5§b§7§6n§x§f§f§5§8§7§a §x§f§f§5§5§7§do§x§f§f§5§2§8§0r§x§f§f§4§f§8§3d§x§f§f§4§c§8§6e§x§f§f§4§9§8§9r§x§f§f§4§6§8§c §x§f§f§4§3§8§ft§x§f§f§4§0§9§2o§x§f§f§3§d§9§6 §x§f§f§3§b§9§9p§x§f§f§3§8§9§cl§x§f§f§3§5§9§fa§x§f§f§3§2§a§2y§x§f§f§2§f§a§5 §x§f§f§2§c§a§8o§x§f§f§2§9§a§bn§x§f§f§2§6§a§e §x§f§f§2§3§b§2t§x§f§f§2§0§b§5h§x§f§f§1§d§b§8i§x§f§f§1§a§b§bs§x§f§f§1§7§b§e §x§f§f§1§4§c§1s§x§f§f§1§2§c§4e§x§f§f§0§f§c§7r§x§f§f§0§c§c§bv§x§f§f§0§9§c§ee§x§f§f§0§6§d§1r§x§f§f§0§3§d§4!"
+      kick: §x§f§f§c§a§0§0Y§x§f§f§c§7§0§3o§x§f§f§c§4§0§6u§x§f§f§c§1§0§9 §x§f§f§b§e§0§ch§x§f§f§b§b§1§0a§x§f§f§b§8§1§3v§x§f§f§b§6§1§6e§x§f§f§b§3§1§9
+        §x§f§f§b§0§1§ct§x§f§f§a§d§1§fo§x§f§f§a§a§2§2 §x§f§f§a§7§2§5a§x§f§f§a§4§2§9c§x§f§f§a§1§2§cc§x§f§f§9§e§2§fe§x§f§f§9§b§3§2p§x§f§f§9§8§3§5t§x§f§f§9§5§3§8
+        §x§f§f§9§2§3§bt§x§f§f§8§f§3§eh§x§f§f§8§d§4§1e§x§f§f§8§a§4§5 §x§f§f§8§7§4§8R§x§f§f§8§4§4§be§x§f§f§8§1§4§es§x§f§f§7§e§5§1o§x§f§f§7§b§5§4u§x§f§f§7§8§5§7r§x§f§f§7§5§5§ac§x§f§f§7§2§5§de§x§f§f§6§f§6§1
+        §x§f§f§6§c§6§4P§x§f§f§6§9§6§7a§x§f§f§6§6§6§ac§x§f§f§6§4§6§dk§x§f§f§6§1§7§0
+        §x§f§f§5§e§7§3i§x§f§f§5§b§7§6n§x§f§f§5§8§7§a §x§f§f§5§5§7§do§x§f§f§5§2§8§0r§x§f§f§4§f§8§3d§x§f§f§4§c§8§6e§x§f§f§4§9§8§9r§x§f§f§4§6§8§c
+        §x§f§f§4§3§8§ft§x§f§f§4§0§9§2o§x§f§f§3§d§9§6 §x§f§f§3§b§9§9p§x§f§f§3§8§9§cl§x§f§f§3§5§9§fa§x§f§f§3§2§a§2y§x§f§f§2§f§a§5
+        §x§f§f§2§c§a§8o§x§f§f§2§9§a§bn§x§f§f§2§6§a§e §x§f§f§2§3§b§2t§x§f§f§2§0§b§5h§x§f§f§1§d§b§8i§x§f§f§1§a§b§bs§x§f§f§1§7§b§e
+        §x§f§f§1§4§c§1s§x§f§f§1§2§c§4e§x§f§f§0§f§c§7r§x§f§f§0§c§c§bv§x§f§f§0§9§c§ee§x§f§f§0§6§d§1r§x§f§f§0§3§d§4!
 
 worlds:
   your_example_world:
-    regex: 'example_world_.*'
-    packs:
-      - universal
+    regex: example_world_.*
     actions:
       loaded:
-        message: "&aYou are now using the &e%pack%&a pack!"
+        message: '&aYou are now using the &e%pack%&a pack!'
       declined:
-        title: "&cPlease accept pack!"
-        subtitle: "&eIt looks a lot nicer with it!"
-        message: "&cVisit &ehttp://s.moep.tv/rp&c for info on how to enable the server resource pack!"
+        title: '&cPlease accept pack!'
+        subtitle: '&eIt looks a lot nicer with it!'
+        message: '&cVisit &ehttp://s.moep.tv/rp&c for info on how to enable the server
+          resource pack!'
       failed:
-        kick: "&ePlease try rejoining, you need the pack!"
+        kick: '&ePlease try rejoining, you need the pack!'
       accepted:
-        message: "&cDownloading server resource pack..."
-
+        message: '&cDownloading server resource pack...'
+    pack: universal
+    required: false
+  
   your_example_nether:
     pack: universal
     actions:
       declined:
         send: world
-        title: "&cYou need the pack!"
-        subtitle: "&eYou cannot play without it!!"
-        message: "&cVisit &ehttp://s.moep.tv/rp&c for info on how to enable the server resource pack!"
+        title: '&cYou need the pack!'
+        subtitle: '&eYou cannot play without it!!'
+        message: '&cVisit &ehttp://s.moep.tv/rp&c for info on how to enable the server
+          resource pack!'
       timeout:
-        send: lobby
-        title: "&cPlease accept the pack!"
-        subtitle: "&eYou cannot play without it!"
+        title: '&cPlease accept the pack!'
+        subtitle: '&eYou cannot play without it!'
+    required: false
+packs:
+  universal:
+    url: https://github.com/Abhinav2011VS/RP-Maximus/releases/download/v1.0/EpicRealmsSMP-ResourcePack.zip
+    uuid: 01234567-89ab-cdef-0123-456789abcdef
+    hash: 5e89f14e60183f10de4c77f2ae9beecea0674d1c
+    format: 1
+    version: '1.8'
+    restricted: false
+    permission: forceresourcepacks.pack.universal
+  hd:
+    url: https://github.com/Abhinav2011VS/RP-Maximus/releases/download/v1.0/EpicRealmsSMP-HDWorld-ResourcePack.zip
+    uuid: b25ffa68-ad76-3f85-b8cc-61700c0140ed
+    restricted: false
+    permission: resourcepacksplugin.pack.hd
