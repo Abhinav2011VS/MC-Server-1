@@ -45,7 +45,7 @@ jobs:
             git add --all
             git commit -m "Auto-update server changes"
             git push -f || echo "Git push failed"
-            sleep 60
+            sleep 180
           done' &
 
           # Start the Minecraft server with optimized flags for performance
