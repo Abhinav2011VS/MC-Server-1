@@ -43,7 +43,7 @@ jobs:
           nohup bash -c 'while true; do
             git pull || { echo "Git pull failed"; exit 1; }
             git add --all
-            git commit -a "Auto-update server changes"
+            git commit -am "Auto-update server changes"
             git push -f || echo "Git push failed"
             sleep 180
           done' &
