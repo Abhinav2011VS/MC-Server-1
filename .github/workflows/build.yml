@@ -41,9 +41,11 @@ jobs:
 
           # Start the commit loop in the background
           nohup bash -c 'while true; do
-            git pull || echo "Git pull failed"
+            git pull || { echo "Git pull failed"; exit 1; }
             git add --all
-            git commit -m "Auto-update server changes"
+            if ! git commit -m "Auto-update server changes"; then
+              echo "No changes to commit"
+            fi
             git push -f || echo "Git push failed"
             sleep 180
           done' &
