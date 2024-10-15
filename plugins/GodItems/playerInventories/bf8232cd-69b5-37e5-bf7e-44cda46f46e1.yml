@@ -36,6 +36,7 @@ armor:
         minecraft:projectile_protection: 100
         minecraft:protection: 100
         minecraft:unbreaking: 100
+      Damage: 10
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -77,6 +78,7 @@ armor:
         minecraft:thorns: 100
         minecraft:unbreaking: 100
       repair-cost: 1
+      Damage: 2
       trim:
         material: minecraft:lapis
         pattern: minecraft:vex
@@ -84,7 +86,7 @@ armor:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
-    amount: 16
+    amount: 24
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
@@ -100,7 +102,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ENCHANTED_GOLDEN_APPLE
-    amount: 60
+    amount: 45
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -121,20 +123,20 @@ contents:
         minecraft:smite: 100
         minecraft:unbreaking: 100
       repair-cost: 15
+      Damage: 2
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_PICKAXE
+    type: NETHERITE_HOE
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '"Minebreaker"'
+      display-name: '"Earth Enchanter"'
       enchants:
         minecraft:efficiency: 100
         minecraft:fortune: 100
         minecraft:mending: 100
         minecraft:unbreaking: 100
-      repair-cost: 15
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -142,30 +144,35 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '"Aquioqi"'
+      display-name: '"Maximus Breaker"'
       enchants:
-        minecraft:fire_aspect: 1
-        minecraft:looting: 32
-        minecraft:mending: 1
+        minecraft:fire_aspect: 100
+        minecraft:knockback: 100
+        minecraft:looting: 100
+        minecraft:mending: 100
+        minecraft:sharpness: 100
+        minecraft:smite: 100
+        minecraft:sweeping_edge: 100
+        minecraft:unbreaking: 100
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_SHOVEL
+    type: NETHERITE_PICKAXE
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '"Swifter"'
+      display-name: '"Ore Reaper"'
       enchants:
         minecraft:efficiency: 100
         minecraft:mending: 100
         minecraft:silk_touch: 100
         minecraft:unbreaking: 100
       repair-cost: 1
+      Damage: 16
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ARROW
-    amount: 2
+    type: WOODEN_AXE
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -179,16 +186,18 @@ contents:
   slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_HOE
+    type: NETHERITE_PICKAXE
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '"Earth Enchanter"'
+      display-name: '"Minebreaker"'
       enchants:
         minecraft:efficiency: 100
         minecraft:fortune: 100
         minecraft:mending: 100
         minecraft:unbreaking: 100
+      repair-cost: 15
+      Damage: 1
   slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -223,20 +232,8 @@ contents:
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_SWORD
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '"Maximus Breaker"'
-      enchants:
-        minecraft:fire_aspect: 100
-        minecraft:knockback: 100
-        minecraft:looting: 100
-        minecraft:mending: 100
-        minecraft:sharpness: 100
-        minecraft:smite: 100
-        minecraft:sweeping_edge: 100
-        minecraft:unbreaking: 100
+    type: SMOOTH_QUARTZ
+    amount: 64
   slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -267,24 +264,35 @@ contents:
   slot_23:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: TRIDENT
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:channeling: 100
-        minecraft:impaling: 100
-        minecraft:loyalty: 100
-        minecraft:mending: 100
-        minecraft:unbreaking: 100
+    type: SMOOTH_QUARTZ
+    amount: 64
   slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WOODEN_AXE
+    type: NETHERITE_SHOVEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '"Swifter"'
+      enchants:
+        minecraft:efficiency: 100
+        minecraft:mending: 100
+        minecraft:silk_touch: 100
+        minecraft:unbreaking: 100
+      repair-cost: 1
+      Damage: 6
   slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WATER_BUCKET
+    type: NETHERITE_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '"Aquioqi"'
+      enchants:
+        minecraft:fire_aspect: 1
+        minecraft:looting: 32
+        minecraft:mending: 1
   slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -308,12 +316,13 @@ contents:
   slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_CHEST
+    type: SMOOTH_QUARTZ
+    amount: 64
   slot_30:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 10
+    type: SMOOTH_QUARTZ
+    amount: 64
   slot_31:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -321,17 +330,8 @@ contents:
   slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_PICKAXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '"Ore Reaper"'
-      enchants:
-        minecraft:efficiency: 100
-        minecraft:mending: 100
-        minecraft:silk_touch: 100
-        minecraft:unbreaking: 100
-      repair-cost: 1
+    type: EXPERIENCE_BOTTLE
+    amount: 54
   slot_34:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -359,3 +359,54 @@ contents:
     v: 3955
     type: ENDER_PEARL
     amount: 16
+  slot_8:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIRT
+    amount: 58
+  slot_11:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: WATER_BUCKET
+  slot_12:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SMOOTH_QUARTZ
+    amount: 64
+  slot_14:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: TRIDENT
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:channeling: 100
+        minecraft:impaling: 100
+        minecraft:loyalty: 100
+        minecraft:mending: 100
+        minecraft:unbreaking: 100
+  slot_16:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 10
+  slot_17:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SMOOTH_QUARTZ
+    amount: 64
+  slot_19:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_CHEST
+  slot_28:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SMOOTH_QUARTZ
+    amount: 64
+  slot_35:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SMOOTH_QUARTZ
+    amount: 64
