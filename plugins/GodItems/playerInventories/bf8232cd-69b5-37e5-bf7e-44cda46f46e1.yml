@@ -18,7 +18,6 @@ armor:
         minecraft:thorns: 100
         minecraft:unbreaking: 100
       repair-cost: 1
-      Damage: 131
       trim:
         material: minecraft:diamond
         pattern: minecraft:silence
@@ -37,7 +36,6 @@ armor:
         minecraft:projectile_protection: 100
         minecraft:protection: 100
         minecraft:unbreaking: 100
-      Damage: 14
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -56,7 +54,6 @@ armor:
         minecraft:thorns: 100
         minecraft:unbreaking: 100
       repair-cost: 1
-      Damage: 118
       trim:
         material: minecraft:emerald
         pattern: minecraft:sentry
@@ -80,54 +77,50 @@ armor:
         minecraft:thorns: 100
         minecraft:unbreaking: 100
       repair-cost: 1
-      Damage: 156
       trim:
         material: minecraft:lapis
         pattern: minecraft:vex
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: AIR
-    amount: 0
-charms: {}
-contents:
-  slot_0:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_SWORD
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '"Maximus Breaker"'
-      enchants:
-        minecraft:fire_aspect: 100
-        minecraft:knockback: 100
-        minecraft:looting: 100
-        minecraft:mending: 100
-        minecraft:sharpness: 100
-        minecraft:smite: 100
-        minecraft:sweeping_edge: 100
-        minecraft:unbreaking: 100
-  slot_1:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_RABBIT
-    amount: 31
-  slot_2:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: MELON_SLICE
-    amount: 31
-  slot_3:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
     type: FIREWORK_ROCKET
-    amount: 54
+    amount: 16
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
       firework-effects: []
       power: 3
+charms: {}
+contents:
+  slot_0:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: OAK_BOAT
+  slot_1:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_GOLDEN_APPLE
+    amount: 60
+  slot_2:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_RABBIT
+    amount: 17
+  slot_3:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '"Annihilator"'
+      enchants:
+        minecraft:efficiency: 100
+        minecraft:mending: 100
+        minecraft:sharpness: 100
+        minecraft:smite: 100
+        minecraft:unbreaking: 100
+      repair-cost: 15
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -142,25 +135,18 @@ contents:
         minecraft:mending: 100
         minecraft:unbreaking: 100
       repair-cost: 15
-      Damage: 2
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BOW
+    type: NETHERITE_SWORD
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '"Phoenix Quiver"'
+      display-name: '"Aquioqi"'
       enchants:
-        minecraft:flame: 100
-        minecraft:infinity: 100
-        minecraft:looting: 100
-        minecraft:mending: 100
-        minecraft:piercing: 100
-        minecraft:power: 100
-        minecraft:punch: 100
-        minecraft:unbreaking: 100
-      Damage: 1
+        minecraft:fire_aspect: 1
+        minecraft:looting: 32
+        minecraft:mending: 1
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -178,39 +164,18 @@ contents:
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FLINT_AND_STEEL
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 10
-  slot_8:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_SWORD
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '"Aquioqi"'
-      enchants:
-        minecraft:fire_aspect: 1
-        minecraft:looting: 32
+    type: ARROW
+    amount: 2
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BAKED_POTATO
+    type: END_PORTAL_FRAME
+    amount: 12
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COPPER_BLOCK
     amount: 14
-  slot_11:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: STICK
-  slot_12:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GLOWSTONE
   slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -224,10 +189,6 @@ contents:
         minecraft:fortune: 100
         minecraft:mending: 100
         minecraft:unbreaking: 100
-  slot_14:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ORANGE_TULIP
   slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -259,25 +220,23 @@ contents:
       - ==: Pattern
         color: YELLOW
         pattern: minecraft:triangles_bottom
-  slot_16:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: TNT
-    amount: 10
-  slot_17:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: STRING
-    amount: 2
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WOODEN_AXE
-  slot_19:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: REINFORCED_DEEPSLATE
-    amount: 35
+    type: NETHERITE_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '"Maximus Breaker"'
+      enchants:
+        minecraft:fire_aspect: 100
+        minecraft:knockback: 100
+        minecraft:looting: 100
+        minecraft:mending: 100
+        minecraft:sharpness: 100
+        minecraft:smite: 100
+        minecraft:sweeping_edge: 100
+        minecraft:unbreaking: 100
   slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -304,7 +263,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ENDER_PEARL
-    amount: 6
+    amount: 16
   slot_23:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -343,15 +302,9 @@ contents:
         minecraft:thorns: 100
         minecraft:unbreaking: 100
       repair-cost: 1
-      Damage: 3
       trim:
         material: minecraft:gold
         pattern: minecraft:silence
-  slot_28:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FEATHER
-    amount: 64
   slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -359,19 +312,8 @@ contents:
   slot_30:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_AXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '"Annihilator"'
-      enchants:
-        minecraft:efficiency: 100
-        minecraft:mending: 100
-        minecraft:sharpness: 100
-        minecraft:smite: 100
-        minecraft:unbreaking: 100
-      repair-cost: 15
-      Damage: 11
+    type: ENDER_PEARL
+    amount: 10
   slot_31:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -398,14 +340,22 @@ contents:
   slot_27:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: TARGET
-    amount: 2
+    type: BOW
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '"Phoenix Quiver"'
+      enchants:
+        minecraft:flame: 100
+        minecraft:infinity: 100
+        minecraft:looting: 100
+        minecraft:mending: 100
+        minecraft:piercing: 100
+        minecraft:power: 100
+        minecraft:punch: 100
+        minecraft:unbreaking: 100
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: LAPIS_LAZULI
-    amount: 9
-  slot_35:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: WHEAT_SEEDS
+    type: ENDER_PEARL
+    amount: 16
