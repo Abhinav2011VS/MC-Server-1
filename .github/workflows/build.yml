@@ -49,7 +49,7 @@ jobs:
           # Save server state periodically
           nohup bash -c 'while true; do
             echo "Saving server..."
-            screen -S minecraft_server -p 0 -X stuff "save-all\n"
+            screen -S minecraft_server -p 0 -X stuff "save-all flush\n"
             sleep 5  # Wait a moment for the server to save
             echo "Server saved!"
 
