@@ -53,53 +53,14 @@ armor:
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_CHESTPLATE
+    type: ELYTRA
     meta:
       ==: ItemMeta
-      meta-type: ARMOR
-      display-name: '{"text":"","extra":[{"text":"Infernal Armor","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"Gives you inhuman power, but at a terrible cost","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Permanent strength","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Permanent hunger","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Full Set) - Not targeted by mobs from the Nether","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"           - Immune to fire","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"           - (Sneak + F) - Summon Guards","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      custom-model-data: 1200017
+      meta-type: UNSPECIFIC
       enchants:
-        minecraft:protection: 5
-        minecraft:thorns: 4
-        minecraft:unbreaking: 3
-      attribute-modifiers:
-        minecraft:generic.armor:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 10.0
-          slot: chest
-          operation: 0
-          key: minecraft:5c7aa5b0-6ffb-4b96-85b3-baa77dfa1e0b
-        minecraft:generic.armor_toughness:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 5.0
-          slot: chest
-          operation: 0
-          key: minecraft:d503dd07-867a-4e93-b52c-fc59cc093795
-        minecraft:generic.knockback_resistance:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 3.0
-          slot: chest
-          operation: 0
-          key: minecraft:1c4f0b84-385b-4bc1-85a6-8f47da90a159
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "dark_lord_armor"
-        }
+        minecraft:mending: 1
+        minecraft:unbreaking: 2
+      Damage: 185
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -222,7 +183,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
-    amount: 19
+    amount: 17
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
@@ -528,14 +489,53 @@ contents:
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ELYTRA
+    type: NETHERITE_CHESTPLATE
     meta:
       ==: ItemMeta
-      meta-type: UNSPECIFIC
+      meta-type: ARMOR
+      display-name: '{"text":"","extra":[{"text":"Infernal Armor","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Gives you inhuman power, but at a terrible cost","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Permanent strength","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Permanent hunger","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Full Set) - Not targeted by mobs from the Nether","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"           - Immune to fire","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"           - (Sneak + F) - Summon Guards","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1200017
       enchants:
-        minecraft:mending: 1
-        minecraft:unbreaking: 2
-      Damage: 183
+        minecraft:protection: 5
+        minecraft:thorns: 4
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.armor:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 10.0
+          slot: chest
+          operation: 0
+          key: minecraft:5c7aa5b0-6ffb-4b96-85b3-baa77dfa1e0b
+        minecraft:generic.armor_toughness:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 5.0
+          slot: chest
+          operation: 0
+          key: minecraft:d503dd07-867a-4e93-b52c-fc59cc093795
+        minecraft:generic.knockback_resistance:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 3.0
+          slot: chest
+          operation: 0
+          key: minecraft:1c4f0b84-385b-4bc1-85a6-8f47da90a159
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "dark_lord_armor"
+        }
   slot_21:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
