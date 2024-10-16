@@ -10,7 +10,6 @@ armor:
         minecraft:mending: 1
         minecraft:protection: 4
         minecraft:unbreaking: 3
-      Damage: 3
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -24,7 +23,7 @@ armor:
       enchants:
         minecraft:mending: 1
         minecraft:unbreaking: 3
-      Damage: 45
+      Damage: 1
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -36,7 +35,6 @@ armor:
         minecraft:mending: 1
         minecraft:protection: 4
         minecraft:unbreaking: 3
-      Damage: 5
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -51,15 +49,14 @@ armor:
         minecraft:mending: 1
         minecraft:protection: 4
         minecraft:unbreaking: 3
-      Damage: 4
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CHEST
-    amount: 49
+    type: AIR
+    amount: 0
 charms: {}
 contents:
   slot_0:
@@ -73,7 +70,6 @@ contents:
         minecraft:mending: 1
         minecraft:sharpness: 5
         minecraft:unbreaking: 3
-      Damage: 1
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -84,7 +80,6 @@ contents:
       enchants:
         minecraft:mending: 1
       repair-cost: 1
-      Damage: 33
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -97,18 +92,21 @@ contents:
         minecraft:mending: 1
         minecraft:silk_touch: 1
       repair-cost: 7
-      Damage: 13
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
+    type: WATER_BUCKET
+  slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
     type: FIREWORK_ROCKET
-    amount: 61
+    amount: 36
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
       firework-effects: []
       power: 3
-  slot_4:
+  slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_CHESTPLATE
@@ -119,57 +117,37 @@ contents:
         minecraft:mending: 1
         minecraft:protection: 4
         minecraft:unbreaking: 3
-      Damage: 3
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
-  slot_5:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: BAKED_POTATO
-    amount: 9
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: MANGROVE_PLANKS
-    amount: 63
+    type: COOKED_CHICKEN
+    amount: 17
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: YELLOW_SHULKER_BOX
+    type: LIGHT_GRAY_SHULKER_BOX
     meta:
       ==: ItemMeta
       meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/61WwW4UORD1ZJLs0AICWULCcmlai7RICZe9zQU2AiSEBEisdg9oZbnbNdNWu+2R7Z4wivIXfAC3/RAue9xPojozyZRDekOyXFoz3X5Vr56rnp0wlrDtXNui2gMTVJjtFbaeWIN//DX2Y60MFE6MwrCwJgj85xLG2O0+W/XaBvy5krBVFaAesBUl2b0lYKQcHFhXcYfBIfTZWmEb00IeJiyhWW4uQdo6GOCSHnt2mMGH4EQ2fH+YqSC0KrLhSGgPu1nAL9kw+72EVFszBpeeJHuQHf11+j07GrAtUkHjg625ETWwNzR6YTEtrpcC2ea6gWy3I+Obt+mLRaY4UUKlOiGDpSXwYaKtV9b4VrfegK35UkyAJb4WWvMcH1jsxkircRm4bJwIuPgfXMuWGq9GGt9YZgqG6rpCMWsRZpPI4Kz3uT0gwB4FrkfAuwRYWtd4PnKNollTCv6hK6vNvZJKGAJ8QIHXL0M36p+EcgRTlMKEev5hXcMUtO+zbWOngvvgmiI0Dvxw7MQUm/1ENNIlDiZCOV5Yv1CGkLwRkdyhJPGpzJgHkWvo2pKbEZx0fS0K+F/13V6ukGD8vLJ+nw3ayMNSnW5yd6E99vO5afhYK3zaKTinJGCMWySZqMUYEP4o0mkjKnRjud4HVVSk0l8p6laE2iaostEVOO5L0LpL3DsR+j7pPPxpsW+DU0LzCmY0QqT0gA5xG2vuFU8OM3QBnYuiwll/bmT6rlST9BXM0CfQQ4zXIgB+aiGPpQmPwUgkqyZttuyoT9ksTKi2EjSXIggk8W8k3lZUyBbdFIkiTEC4ThHudomANgRO4bYCz20IUY/u0AjbV4nwlEbYufIkd7r1R+rWudUyG+Iooy1/g3PbfNT4AjdInr5CH1B4IpXONuPyrMXvg1eARwpGalrBsftPoWcs/+K5vLNc0ZjcgajQJI53Gz3fl/aAK8ODtTqoSfv2PxtlY//VuWflOlvJMvb31xotCjsR6fvo82cJDtISxHSWCheU1uBmqfKpAZAY5CLZjsl+upAsGvSMkJ1v92W5/vKutDY8SvfS5/NjeArI2dmDb2P5+bIsryjpS5yW9LdcafTtYXout91DkhPAdN9QXp+9mGx91YPtGcWSc4atbbOEbb5tcoy831SVCn8I7BqczM2xle1Ue7wISpiP5SBfzAqLryv3IgcgZ5PGEQFnutzrpy7nGyl0UzxdnZXf65jET3I+i70+vbXqpqi4HfFQAvcgWor9aOjw+jB/2T3bHWfk4FimL7H6uCVyCwAA
-      blockMaterial: YELLOW_SHULKER_BOX
+      internal: H4sIAAAAAAAA/6XUWW7DIBAAULK1idMsTZrFOUNzgf60N7HGmDjIGCzAiXr7ElUqgypaRf6Dj6dhmCUhJCG7XChaHZm03H4eqaobJd3FTMi65pJRDSf7RpW04G46IYSkAzI0Qll3dH7ILavHpM8LsvdAQmu5aE1mzkyIARlR1cqb6BHieS/gW8+vYJnO8pZWzMZwvwseBDj1uAZZanVhWSNAVgb5D+yHgd94z2ThgtMzMzh2H9tR7OE/sYUqY4EfuuDHLnjcBU8CvECd9ddPJYFaepWD1izaVtOA7RDT7MplmRkLsojpp0Cv8FNBUwUiluMsgHM8PQFKMZoHCI1c2cpGXV0zIbnCchHIA6pHazjNCm6oS1RDNNFlbAaoUhUrskbpip5Vg/wU++eYPwkubea+2MVnYZkSkvgVM8AlLaCGkn13AAqyim0YU3N7vhXTQi5YLMd1wGeec4rNOzabWPsABcrhn82wvVdvsd4F+sVrBdVvusc0vXM+XzE+xOYT5IWLcD4J+QIQf/rIOQYAAA==
+      blockMaterial: LIGHT_GRAY_SHULKER_BOX
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/53UsU7DMBAA0GsTShsKBUKbFhYkJoZuTEz8SeQ41yaK44sco4q/J5lyaWWp8mZLfj777uwIIIIkUySrPWpb2r+9pLoh3U3aBcR1qVEacbDfkrQV3cxEAJAEELaKbDfsfFharOcwLXNYDUAYQ6cAbiT96n7hD8CgJiO15mGowjzNEA/M3nI79YoYuJQlIwumllyF18b64mo+Uo+DarvMHpGxT84WXheLvNSdl1p6qXsv9eClVl7qyamaRvF6RVw9u1RmUORMfXAVj9TuovUbMpUsqGH+jfsX19OpUZFOW1VKfuINt2vXiU8FCsvUhKuNq50zUWdEjM04S1xM9rWwrlpsr2YxZ7sR216kVRalrFC7or6O+PvAUctCaNvtcCSVo07PW2LWf4L/ToHLvUgFAAA=
-      blockMaterial: SHULKER_BOX
+    type: ACACIA_LOG
+    amount: 64
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CHEST
-    amount: 64
+    type: CRAFTING_TABLE
   slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CHEST
-    amount: 64
-  slot_27:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: POTION
-    meta:
-      ==: ItemMeta
-      meta-type: POTION
-      potion-type: minecraft:healing
-      custom-effects: []
+    type: ENDER_PEARL
+    amount: 16
   slot_28:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -178,10 +156,6 @@ contents:
       ==: ItemMeta
       meta-type: UNSPECIFIC
       Damage: 12
-  slot_29:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: WATER_BUCKET
   slot_30:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -190,26 +164,25 @@ contents:
       ==: ItemMeta
       meta-type: UNSPECIFIC
       Damage: 167
-  slot_32:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_CHICKEN
-    amount: 22
   slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: DEEPSLATE_DIAMOND_ORE
-    amount: 7
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/53UsU7DMBAA0GsTShsKBUKbFhYkJoZuTEz8SeQ41yaK44sco4q/J5lyaWWp8mZLfj777uwIIIIkUySrPWpb2r+9pLoh3U3aBcR1qVEacbDfkrQV3cxEAJAEELaKbDfsfFharOcwLXNYDUAYQ6cAbiT96n7hD8CgJiO15mGowjzNEA/M3nI79YoYuJQlIwumllyF18b64mo+Uo+DarvMHpGxT84WXheLvNSdl1p6qXsv9eClVl7qyamaRvF6RVw9u1RmUORMfXAVj9TuovUbMpUsqGH+jfsX19OpUZFOW1VKfuINt2vXiU8FCsvUhKuNq50zUWdEjM04S1xM9rWwrlpsr2YxZ7sR216kVRalrFC7or6O+PvAUctCaNvtcCSVo07PW2LWf4L/ToHLvUgFAAA=
+      blockMaterial: SHULKER_BOX
   slot_35:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: MANGROVE_PLANKS
-    amount: 28
+    amount: 21
   slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CHEST
-    amount: 64
+    type: ENDER_PEARL
+    amount: 10
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -225,36 +198,62 @@ contents:
       - ==: Pattern
         color: YELLOW
         pattern: minecraft:skull
-  slot_22:
+  slot_34:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: LIGHT_GRAY_SHULKER_BOX
+    type: YELLOW_SHULKER_BOX
     meta:
       ==: ItemMeta
       meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/6XUWW7DIBAAULK1idMsTZrFOUNzgf60N7HGmDjIGCzAiXr7ElUqgypaRf6Dj6dhmCUhJCG7XChaHZm03H4eqaobJd3FTMi65pJRDSf7RpW04G46IYSkAzI0Qll3dH7ILavHpM8LsvdAQmu5aE1mzkyIARlR1cqb6BHieS/gW8+vYJnO8pZWzMZwvwseBDj1uAZZanVhWSNAVgb5D+yHgd94z2ThgtMzMzh2H9tR7OE/sYUqY4EfuuDHLnjcBU8CvECd9ddPJYFaepWD1izaVtOA7RDT7MplmRkLsojpp0Cv8FNBUwUiluMsgHM8PQFKMZoHCI1c2cpGXV0zIbnCchHIA6pHazjNCm6oS1RDNNFlbAaoUhUrskbpip5Vg/wU++eYPwkubea+2MVnYZkSkvgVM8AlLaCGkn13AAqyim0YU3N7vhXTQi5YLMd1wGeec4rNOzabWPsABcrhn82wvVdvsd4F+sVrBdVvusc0vXM+XzE+xOYT5IWLcD4J+QIQf/rIOQYAAA==
-      blockMaterial: LIGHT_GRAY_SHULKER_BOX
-  slot_26:
+      internal: H4sIAAAAAAAA/61WzW4UORD2ZEKYbS0kGwgJy6VpLdIiJVy4zQWIYKUV0oLEajmgleVu10xb7XaNbPeEUZS34AG48SBc9sgjbXVmkrFDmkDg0upu+6ufz1VfOWEsYdu5xqLaA+OVn+0VWE/Q0If7id2olYHCipEfFmi8oC+bMMY2+mzVafT0upKwVeWhHrAVJdntJWCkLBygrbgl4+D77EqBjWkh9xKWhF6uL0EaLQxoS489PczgrbciG745zJQXWhXZcCS0g93M00o2zP4uIdVoxmDTE2d3s6N/T9ezowHbCjJonMeaG1EDexFaL5Dc0n4pKNpcN5Dtdnh88TL9Y+EpdpSEVJ0EQ6kl8Hai0Sk0ruWtN2BXXCkmwBJXC615Tg9Kdn2k1bj0XDZWeNr8H+1lS45XI46vLT15E/K6EmLWIsytgIYSbeP4yDYqBKch+GoE3lyCMXdKKmEC4N0Q+HMXsLDoXI4HAbAXlUESxgimKIXx9XxhTcMUtOuzbYNTwZ23TeEbC244tmJKNXuSe3DYFiZCWV6gO3YV0XktCnInDJKeyoy5F7mGLmavR/CgeGtRwHfl98tyhwTj5pn1+2zQWh6WapHKlxLtsd/OdcPHWtETp2CtkkA2NgJnohZjIPj9iKf1KNH15X7nVVEFmT4MURsRajtAlY2uwHJXgtZd5N6M0HeCyqNXpLr1VgnNK5iFFiKmB2EvtrbmLf/oMKNm1rkoKmrZZ0amr0o1SZ/DjNqdpMA4LTzQUgt5II1/AEZSsGrSesuO+mE0Cy2pUYLmUnhBQXyKyNuKEtkKD0USCRMQtpOEW10kkJqAVXSswHP0PqrRndDC9mUsPA4t7Fy6kztF910oujlqmQ2plUldv0KAMR81rqADkqe/SAcUDZbSYjMuzyr1PjgFNBnIUtMSTtV/Cj2j3Bf35c3ljsbkFkRFInF82iTdrsQDrgz3iNqrSfv3i4Wyvv/83JG3xlayjH34nKNFYick/Rh+XpdgIS1BTGepsF5pDXaWKpcaAElGLqLtONj3FwZLAj0Lgp0f97fG+vurEtHfT/fSZ/NpOgWK2eLB10X58VujvCSlf1K3pE9ypUm3h+m5se0eBj4BTPdF46+z94utz2qwnVEsOafZ2jJL2ObLJifL+01VKf+PoKqhztwco2y72tF9TsK8LQf5oldYfOu4HSlAMJs0tQhY06Vev3Yp30iRmtJ0tSh/1JikJTnvxV4/vHzqpqg4jrgvgTsQbYj9qOno+jD/2d3bHTNycEzT/7Siz6E5CwAA
+      blockMaterial: YELLOW_SHULKER_BOX
+  slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CHEST
-    amount: 64
-  slot_31:
+    type: MANGROVE_PLANKS
+    amount: 54
+  slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FIREWORK_ROCKET
-    amount: 48
+    type: PLAYER_HEAD
     meta:
       ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
-  slot_34:
+      meta-type: SKULL
+      lore:
+      - '{"text":"Killed by ","extra":[{"text":"Atomic_Slayer","hoverEvent":{"contents":{"type":"minecraft:player","id":[1432953401,628702467,-1903487299,245080073],"name":"Atomic_Slayer"},"action":"show_entity"},"insertion":"Atomic_Slayer","clickEvent":{"action":"suggest_command","value":"/tell
+        Atomic_Slayer "},"color":"yellow"}],"italic":false,"color":"gold"}'
+      skull-owner:
+        ==: PlayerProfile
+        uniqueId: bf8232cd-69b5-37e5-bf7e-44cda46f46e1
+        name: InventoStarz
+        properties:
+        - name: textures
+          value: ewogICJ0aW1lc3RhbXAiIDogMTU5ODc1ODY4MDc0NiwKICAicHJvZmlsZUlkIiA6ICI5MWZlMTk2ODdjOTA0NjU2YWExZmMwNTk4NmRkM2ZlNyIsCiAgInByb2ZpbGVOYW1lIiA6ICJoaGphYnJpcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80OWYwNzYwMjEyNzFjMjhhZjUzNDNjOTE2YTM2NGFjNjYxZDVkNTIyNGNmOTc0OTNiNzgyZDY1YzQzNjQwMzNmIgogICAgfQogIH0KfQ==
+          signature: q1w4jiDJU7xj9P8a/cAuYnxX/LJmq9XaSdF81u/kNV1Zd2B/p9mC0b5m5QXzy+spkOJXL83Dcb0INRLvFYwT1zWgTGMQIdnQnPpDslTz5fn90pHbfXzZa2EA6ZwG5adxNZ9BRoBQmrcAGshrtXxKCR8b/Vrl2Y2R7RokGwm9TVUd7Fb2XNlsf8sQfG4B9CRWrthAZKaEszrmc1vmHInB8JBZ/zq0IKndTdjSQ1zV0kR4YCKKH3qb1qSd1WYrzaWMGdQCvj8dvCEpQtfNCUOqPDEtqa8TSIs5OIHGXkHcu4IqBYhNPw7oYCqjakf03V+HP4mT3pMK/tiyp/1UZzvX4Gy1VRozJE8yWStZj1PcJuCL6PWOx+6tLy9FWq1cMxu3QpbxsnrHmZ0BfTPUMuHRnreaMM9ZvPhJb6trL1UNBJNRP/h12TemJPERrOebF6LcNOiHdoWSspylSlYOWRJEunCZhLt/LamkinJW60vqo5I+rhXI6p8nPfQVGToXVz62lMDparxj1iQf0mabbXCMWOTeZ4jm3n5rCl79M1oK6DDqTdRlBWiio2ujnGa+yjaoNhviEBew4AJmsz663foOrFdZqGpGPJNTaEnG8ApawJ/Z8iR0GeeFEpVfDj8V95f7Au3gzswzW6IrBv7+zjXyHptxgVB6SH6TAfbhu2xEzXg=
+  slot_14:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: PLAYER_HEAD
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      lore:
+      - '{"text":"Killed by ","extra":[{"text":"InventoStarz","hoverEvent":{"contents":{"type":"minecraft:player","id":[-1081986355,1773484005,-1082243891,-1536211231],"name":"InventoStarz"},"action":"show_entity"},"insertion":"InventoStarz","clickEvent":{"action":"suggest_command","value":"/tell
+        InventoStarz "},"color":"yellow"}],"italic":false,"color":"gold"}'
+      skull-owner:
+        ==: PlayerProfile
+        uniqueId: 55692239-2579-3d03-8e8b-16bd0e9ba009
+        name: Atomic_Slayer
+        properties:
+        - name: textures
+          value: ewogICJ0aW1lc3RhbXAiIDogMTcyOTA3NDkzODMwOSwKICAicHJvZmlsZUlkIiA6ICJkMWZlYmI4ZGM4M2Q0Yjg3ODM3ZDEyZDUzYzI1YTk2MiIsCiAgInByb2ZpbGVOYW1lIiA6ICJBdG9taWNfc2xheWVyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Y1ZGRkYjQxZGNhZmVmNjE2ZTk1OWMyODE3ODA4ZTBiZTc0MWM4OWZmYmZlZDM5MTM0YTEzZTc1YjgxMTg2M2QiCiAgICB9CiAgfQp9
+          signature: SutiZmT8EOy1deSo5D24/6EK+18loURV46kMAe/tZMbxbLhDTgVgA/N6wHGWEHFRKl/7WkdVytRb6osqucmdMptUrF/VBz/qFzWpEnGSiDXZRes/zLaiO8GwTOKFq3BM9r9GDnHIexhkLdvx9cYnJEeC++4sx9MkcVNLhsHlhOkAidN1hrEyZYVw3xB6AocF0bscT13EgGsynU5pZQHwrhoJbWX0Xnx1d5lWpAs1g0yMUEVRnOApOmtIAUMDjw6qTbc7Xs1m2cYU1ohYRR5lNiBrCln2zdHI4Eni38So6sqCYa0WAfHTiDjYjRSlCN3x02IfFWeVInE4wU2AwGUJfnKV50Hl9/5Y/4+r2w1wy/OKJa2l23IpzTGMsivrRzfgHNKn7roNfT20CBjTU8azBM+MgR2BZ+qsJRdoPOm2eXsJeQ0Wn/ZvxfKUbtYzWpOzPQFHUEDusJ0KF/lA2wkEXxqTaXgx88YqRZyZRjZFUyCYP8y/D9OwH8BtgP3D2YDaQJvzQeptOPT+UmfomSypYmeF5N2pGFv5i1goKhwgpaklVmQ2piYCtZ2JB9IHYFQl1xSpwPyiqap038WZbytGoA7SAq1SU7tea8sAYkioyDq3laAfP/Gp3h4SHsOSkZVLlESxII/Ryo0y9NcCrIM370hOMkKBA+K0biUYBuNQfLc=
+  slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: RED_SHULKER_BOX
     meta:
       ==: ItemMeta
       meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/+2Z3W7bNhTH6TpNHbVL0nw2242nDdtNDOTDdhJfrXFbLFs3tHCxXQyDQEnHMmeKFCiqjVf0GfYAu97zDdgTjErmiEoiSF0GqYMDw4Bl8cePPw/POToyEDLQpk25M24Bk0ROWg73A87URbiAVn3CwBF4KHsOZxKrK2EghDbraC6kXKqfip8jEvwGukNcHbAFf8MsdwJ1dNfhEYsb1wxkJP030LrWfxRK7lsM+4B+f2vCqRTY7P301rQ5dc3eENMQtk2HUy7MnvnZzk5/r981t00iMSXORQNuD6PQwRISJpSCjEGOBI+80cW/Uo2gOnpCsM+Z2zzGzjhQX9VjxFwQVE1s2sW7ny+am+/q6JMrk/a5C9RyscToQaduXLOs+J6BVl5EtprscTQeE/kDphEoDbbsf4YOaBT2phdRpNT8vLN/1LG70G61j9p7rbZ9eNA6cg52W64L3cMhHsKBq+TN6CEEN5ZcqZy6H0/FxiGg+cHL5yevnmbxkoBQfB2hBbSYLEjpDw31/0rtfv4uPTvq7+7s3HyXut3T5rU7s5018pPH8efmI/exEFzmWkVtuUQx2pWJwfkY1FkBGOYrslKeIp1OVYp8EzGPQvMFxWwc5mtilKfJ/mFVmgwkKeBHy7SP/cpOzEV4iSNsviZL5WmyW5l9nAjOmifMK+JWGyUKsl+VIK9YASVWy1PioCohvlc3QKhssuh5+ajEGFOZdQiCafNbmOTL8XAG5Hjqg8C0sEd9VJ4ke9Ufm/4IQhlQhX5QDmW3emWOOZcFErQS0/jKRPlRNRXN48hRLW7NJB74mRpONh+rPG0gAegH5WgrE2Waug7ecOHmS7IxA5Ik7uQ5eB5hXgGPsjgDugwo8ZWLxbTA0VmbAT0SO/kaqF/Ay57V2aYV1VqqorqSlN4EuKHkTC+oLungnSyQqCcuC5+mKrE6WE+BGwnoKZlAoUFAdbiuw3NZo3I7BPEahAbe08G7KVCrmbrnnufyjIvVjn/LtS+bRnDzPf7uF04ZETetFy//+de15dUa+iN3IZR4I2kFkVC78x88Z4y4+DJs+nGnk+YI+yrR/jR3ealid8RsAXiMbQooZdLzt1s9K1t9L7XVDxMCzh/ctG2e07nGrYmcmUimyv9r20mZyEJ2gAsgfjjJCjVGCtxMwDAuOU+sgMTxUaPndfp+il7W3lQCdlJYKjg+SGFbCcamUd46e3+q8Q2dX8xabWyglsRe1sDL7xPOU8fB0GM4MGeEmfTPb8xTeA00rKM1rcVwSByi2k3iJAKlz/Nq1nmOh8NhmDX7tRS3pHGXxEpR6ylq7dKaSVw01tAvdHQjC42TmCvolo5uvkfG9ZUOPspKnChWtmhR/GtEiQav6/DWv03XPs4Cw2Di0St7gtDfbl3MKuYfAAA=
+      internal: H4sIAAAAAAAA/+2Z3W7bNhTH6TpNXLXNh5OmzXbjqQN2EwP5sJ3EV2vcFsvWDR1ctBfDYFDSscyJIgWKWuMVfYY9wK73fAP6BKWSOqaSaFKXQWrhwDBgWfzz43cOz6GODIQMdN+i3PaawCSR46bN/YAzdRHeQqs+YWALPJRdmzOJ1ZUwEELrVTQXUi7VT6WfIxL8GrpBHF1gCf6aDZwxVNFNm0csblwxkDHtv4buaf1HoeT+gGEf0F9vTDiWApvdX96YFqeO2R1iGsKmaXPKhdk1H25t9XZ6HXPTJBJTYp814NYwCm0sYaoJpSAeyJHgkTs6+1eqEVRHjwn2OXMah9j2AvVVPUbMAUHVxCZdvP31rLn5toq+vDBpnztABw6WGN1pV41LlhXfM1D9eWSpyR5GnkfkS0wjUAw2rA9DBzQKu5OLKFI0v27vHrStDrSarYPWTrNl7e81D+y97abjQGd/iIew5yi8KT2E4MTIFeXE/XgqFg4Bzfd/fnb04kmaXhIQSl9F6BZanC5I8Yea+r9euZ1tpacHve2tratbqdM5blxqmc20kR8/ij9XH7mHheAy0ysqywXCaJUGg3MP1F4BGGYTqRdHpN0ui8j3EXMpNJ5TzLwwm4lRHJPd/bKY9CXJEUeL9I/d0nbMWXqJM2w2k6XimGyX5h9HgrPGEXPzhNVagUB2ywLyguUgsVocib2yQPykboBQp8m8++VugTmmNO8QBNPGDzDOxrEyAzie+CAwzR1RHxSHZKf8bdMbQSgDqqSfVEDZLp/MIecyxwGtwGN8aVBeqaaicRjZqsW1m8QDP1XDycYjdU7rSwD6SQXa0qBMjq7911w42UjWZwDJNJw8A9clzM0RURZngEufEl+FWExzbJ21GeAx9ZPvgPo5ouxJnW1SUa0kKqr1aelNgBNKzvSC6pIuvJEmJOqJa4CPE5VYXVhNCNenQldhAiUNAqqLq7r4ZkKslT6d0wByfuB8JeA/M93EohFc3VQ//sYpI+KqZd/lf95dWiWtoL8zF0KJO5KDIBIK8v/wuDDi4puw4cedjhsj7Kvz8leZy0vUrCNmCcAetiighGfOX5t6Vky9kDD1ylQBp89fmpnndF3t2kVOXCSV8mftOwkXuZ0w9bL25g+wzVlasrmTkG1MZWySNQcn7yM1fU3X303o185lORLXFTXpQ126mJYgYycbSOymzXn5YzJrwqUNPZ0Cs0eYSf/0xjyF34GGVX0NMBwSm6h24zifo+SeXElL0yezCIjt/dtMqrqJHOxjN97yC4kR6mm7/sPu1Tpf0HWrabp4eByGaVzXErolTXfOAxKq9TQPiI8rFzxgQ5fe/4iz1be68EEae4oDEg4o/iOiRBPf08Ub//Vg9kWaMAzGLr0AFqH3mcbigtAfAAA=
       blockMaterial: RED_SHULKER_BOX
