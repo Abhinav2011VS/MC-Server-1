@@ -12,7 +12,7 @@ armor:
         minecraft:thorns: 3
         minecraft:unbreaking: 3
       repair-cost: 3
-      Damage: 183
+      Damage: 106
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -24,7 +24,7 @@ armor:
         minecraft:mending: 1
         minecraft:unbreaking: 3
       repair-cost: 1
-      Damage: 10
+      Damage: 91
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -32,14 +32,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      display-name: '"Netherite Leggingsee"'
-      enchants:
-        minecraft:fire_protection: 4
-        minecraft:mending: 1
-        minecraft:thorns: 3
-        minecraft:unbreaking: 3
-      repair-cost: 3
-      Damage: 169
+      Damage: 87
   boots:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -47,13 +40,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      enchants:
-        minecraft:mending: 1
-        minecraft:projectile_protection: 4
-        minecraft:thorns: 3
-        minecraft:unbreaking: 3
-      repair-cost: 3
-      Damage: 182
+      Damage: 87
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -72,7 +59,7 @@ contents:
         minecraft:knockback: 2
         minecraft:sharpness: 5
       repair-cost: 1
-      Damage: 338
+      Damage: 499
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -80,12 +67,15 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 178
+      Damage: 214
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COOKED_MUTTON
-    amount: 8
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 79
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -95,12 +85,16 @@ contents:
       meta-type: CROSSBOW
       enchants:
         minecraft:unbreaking: 1
-      Damage: 18
+      Damage: 21
+      charged-projectiles:
+      - ==: org.bukkit.inventory.ItemStack
+        v: 3955
+        type: ARROW
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
-    amount: 64
+    amount: 42
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
@@ -109,54 +103,152 @@ contents:
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 15
+    type: ENCHANTED_GOLDEN_APPLE
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 13
+    type: ROTTEN_FLESH
+    amount: 41
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FIREWORK_ROCKET
-    amount: 46
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
+    type: WIND_CHARGE
+    amount: 60
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WIND_CHARGE
+    type: EXPERIENCE_BOTTLE
     amount: 64
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: WIND_CHARGE
-    amount: 64
+    amount: 27
   slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: GOLD_NUGGET
-    amount: 64
+    type: DIAMOND
+    amount: 43
   slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
+    type: CHORUS_FRUIT
+    amount: 32
+  slot_13:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EXPERIENCE_BOTTLE
+    amount: 64
+  slot_14:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 3
+  slot_15:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_16:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_17:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_21:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/53LQQrCMBCF4UdTwcaFVReCd+gFvE06RggmM9KMiLc3rrp2du+H93nA4zxnoccUWZN+JpLyFG5RB5xK4khLuOuVhDW0WjyAwaGvWbTN5vuksWzRpRuOK6gs7znk7LAhefHvOwIr7KzQWaG3wp0V7q1wtMKDFV7+g8AXEu+rOTsCAAA=
+      blockMaterial: SHULKER_BOX
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/53TTQ6CMBQE4JGCQv2NLjwFF/A2UDFpLO8ZWmO8vWXF2tnNJPMtxwIW1z6oe7aDJJ++rdPxpZJLbHAZvQxu6h7p5lRSl9tkARwNyhg05Zh96dMw1ij8HecFRNFP34VgUDl9y7w9AQtcsbBgoWFhycKKhWsWblhYs7BhoWXhloU7Fu5ZePgDzsfCD5zySPyRAwAA
+      blockMaterial: SHULKER_BOX
+  slot_23:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/53LWQ6CMACE4ZFFoS4gqLicgQt4G6iYNJbWQI3x9tYnnp23+ZP5BCBQtdrKR90Zp9ynlrZ/WuNjTFH2ynRyaO7uKq1xja9BALiEiEZtnZ/eR8p1fYJA3VBMYDT23TZah4ilfZnfNwcmOGNhwMKQhRELYxbOWbhgYcLClIWChUsWrli4ZuGGhRkLcxZuWViwsGThjoV7Fh5YWLHwyMITC8//QeALiaaLPz0GAAA=
+      blockMaterial: SHULKER_BOX
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
     type: FIREWORK_ROCKET
-    amount: 7
+    amount: 50
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
       firework-effects: []
       power: 3
-  slot_13:
+  slot_28:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: GOLD_NUGGET
-    amount: 64
-  slot_14:
+    type: ENDER_PEARL
+    amount: 16
+  slot_30:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_31:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/53LWQ6CMACE4ZFFoS4gqLicgQt4G6iYNJbWQI3x9tYnnp23+ZP5BCBQtdrKR90Zp9ynlrZ/WuNjTFH2ynRyaO7uKq1xja9BALiEiEZtnZ/eR8p1fYJA3VBMYDT23TZah4ilfZnfNwcmOGNhwMKQhRELYxbOWbhgYcLClIWChUsWrli4ZuGGhRkLcxZuWViwsGThjoV7Fh5YWLHwyMITC8//QeALiaaLPz0GAAA=
+      blockMaterial: SHULKER_BOX
+  slot_32:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_BLOCK
+    amount: 32
+  slot_33:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: CARVED_PUMPKIN
+    amount: 2
+  slot_2:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:mending: 1
+        minecraft:protection: 4
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      repair-cost: 3
+      Damage: 13
+  slot_18:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/53LWQ6CMACE4ZFFoS4gqLicgQt4G6iYNJbWQI3x9tYnnp23+ZP5BCBQtdrKR90Zp9ynlrZ/WuNjTFH2ynRyaO7uKq1xja9BALiEiEZtnZ/eR8p1fYJA3VBMYDT23TZah4ilfZnfNwcmOGNhwMKQhRELYxbOWbhgYcLClIWChUsWrli4ZuGGhRkLcxZuWViwsGThjoV7Fh5YWLHwyMITC8//QeALiaaLPz0GAAA=
+      blockMaterial: SHULKER_BOX
+  slot_19:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: MACE
@@ -171,76 +263,45 @@ contents:
         minecraft:unbreaking: 3
         minecraft:wind_burst: 2
       enchantment-glint-override: false
-  slot_15:
+      Damage: 2
+  slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: EMERALD
-    amount: 64
-  slot_16:
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/53LWQ6CMACE4ZFFoS4gqLicgQt4G6iYNJbWQI3x9tYnnp23+ZP5BCBQtdrKR90Zp9ynlrZ/WuNjTFH2ynRyaO7uKq1xja9BALiEiEZtnZ/eR8p1fYJA3VBMYDT23TZah4ilfZnfNwcmOGNhwMKQhRELYxbOWbhgYcLClIWChUsWrli4ZuGGhRkLcxZuWViwsGThjoV7Fh5YWLHwyMITC8//QeALiaaLPz0GAAA=
+      blockMaterial: SHULKER_BOX
+  slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_17:
+    type: NETHERITE_INGOT
+    amount: 28
+  slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ARROW
-    amount: 38
-  slot_21:
+    amount: 64
+  slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: LEAD
-    amount: 2
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: TORCH
-  slot_23:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_CHESTPLATE
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      enchants:
-        minecraft:mending: 1
-        minecraft:protection: 4
-        minecraft:thorns: 3
-        minecraft:unbreaking: 3
-      repair-cost: 3
-  slot_27:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_AXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 64
-  slot_28:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_30:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_31:
+    type: SNOWBALL
+  slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_SHOVEL
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 817
-  slot_32:
+      Damage: 65
+  slot_34:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_BLOCK
-    amount: 10
-  slot_33:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ARROW
+    type: EMERALD
     amount: 64
+  slot_35:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_INGOT
+    amount: 23
