@@ -56,19 +56,19 @@ armor:
           amount: 10.0
           slot: chest
           operation: 0
-          key: minecraft:8be8320e-0440-45a4-9b1c-949a967f28cc
+          key: minecraft:b583eaa8-35b0-414e-aa13-df8e19765ef3
         minecraft:generic.armor_toughness:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: 5.0
           slot: chest
           operation: 0
-          key: minecraft:c623acde-f59a-49ce-8d49-ecd7f17e5f75
+          key: minecraft:e7d2679f-932d-415a-82aa-73f5eaea6463
         minecraft:generic.knockback_resistance:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: 3.0
           slot: chest
           operation: 0
-          key: minecraft:21672aea-60c2-47de-ba6f-a3c73d7c9ee2
+          key: minecraft:472b737c-6073-49f5-a193-edbd1792381c
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
@@ -145,32 +145,42 @@ contents:
         minecraft:efficiency: 5
         minecraft:fortune: 3
         minecraft:mending: 1
-      Damage: 741
+      Damage: 761
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FIREWORK_ROCKET
-    amount: 2
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      display-name: '{"text":"","extra":[{"text":"OP Firework","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
-      lore:
-      - '{"text":"","extra":[{"text":"The ultimate long-lasting firework!","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"white","bold":false}]}'
-      custom-model-data: 1110001
-      firework-effects: []
-      power: 200
+    type: COOKED_CHICKEN
+    amount: 39
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: SMOOTH_QUARTZ
-    amount: 19
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: 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
+      blockMaterial: SHULKER_BOX
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BRICK
-    amount: 3
+    type: SWEET_BERRIES
+    amount: 35
   slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_GOLDEN_APPLE
+    amount: 8
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_INGOT
+    amount: 13
+  slot_7:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: QUARTZ_SLAB
+    amount: 48
+  slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_SWORD
@@ -187,79 +197,25 @@ contents:
         minecraft:unbreaking: 3
       repair-cost: 3
       Damage: 18
-  slot_5:
+  slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FLINT
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Bomb","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gold","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"Defeat your opponents with cunning and planning","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"(Right Click) - place explosive","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Left Click) - show placed explosives","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - detonate","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - load gunpowder","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Must be loaded with gunpowder from inventory","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Loaded: 5/6","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      custom-model-data: 1000028
-      enchants:
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      Damage: 0
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "bomb"
-        }
-  slot_7:
+    type: DARK_OAK_PLANKS
+  slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_MUTTON
     amount: 13
-  slot_8:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENCHANTED_GOLDEN_APPLE
-    amount: 9
-  slot_9:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_CHICKEN
-    amount: 42
-  slot_10:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ROTTEN_FLESH
-    amount: 64
-  slot_11:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: OAK_LOG
-    amount: 64
   slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ELYTRA
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:mending: 1
-        minecraft:unbreaking: 2
-      Damage: 114
+    type: OAK_LOG
+    amount: 63
   slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: SMOOTH_QUARTZ
-    amount: 64
+    type: DIRT
+    amount: 7
   slot_14:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -268,13 +224,13 @@ contents:
   slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: OAK_LOG
-    amount: 64
+    type: CARVED_PUMPKIN
+    amount: 2
   slot_16:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: GUNPOWDER
-    amount: 50
+    amount: 64
   slot_17:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -298,21 +254,16 @@ contents:
   slot_22:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WET_SPONGE
-    amount: 2
+    type: NETHERITE_CHESTPLATE
   slot_23:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_PICKAXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 894
+    type: SMOOTH_STONE
+    amount: 3
   slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BONE
-    amount: 64
+    type: CHERRY_SIGN
   slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -334,31 +285,45 @@ contents:
   slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: SHULKER_BOX
+    type: FLINT
     meta:
       ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/+2b7U/bRhzHDwIdpJTHdkA7bVa6l0RLA4GUVyOhrGyMpk21vpgm62xfEisXX3Y+L6RV/5L9szuHEJ9LjW/LdBfJFYpEYn/9sz/+PdxjHoA82LYwsbtF5DGXDYs26fWJx7/4y2Cr53rIprDFjm3iMci/0TwA4HEOLPiYMP4v1y+4DPWWwLzriAJGXYjNLhrmwKJNAi88eQ6ASDkXUz6KlB1ufmiObkrQzova+Zh2PdL6EPeIl2Qyl3SzPuM2TXiFkpQLMeXDSOlS4pmu1yZMkC6I0sUkaZtg59ZjxqT3YtKdSDogxEGe2Xft7h03/VVMvhHJMYKsg6igq4q6pZhuW8DUI4R1zD8DSNl7Qf2jqF5Ostq6ZTX2TvPyd5sTdfdjujXBHnY9lqRaSXIFi5KBZzrDGNU8yEdxsSQ6qx1w3+mZHuwh8PeHArpiFBaOf/9QsPjbLRy3IPbRXsEmmNDCceFpqVQv1w8LewWXQezakxOI1Qp8GzIUaXweQV3EOpQE7c7kV8Yt8AudupD7uWPUoN3t8w+/YuA5iPJHnlzi4x+T0wsfc+DJrZvucSfCpgMZBCsVHhu3Hys8lgebjcDiN1sLul2X/QZxgDiDXWtsuo8D//jmSxBwmt9Xjw4r+2XLKh7Acrl4cNR6XqxWqofFqg2rFadkOQfogFOMXSE0ZUEfgXvN1xfnb1/kkiz4yAlfSdJx5iJ6/bKXwargRISiJf77D3PfpL+ls+f1Z6XS9G/p2ZXx2Rezd2OY0UCw60DaNSk/bWrD9dCJDdIyeOAYlxwB6UHPRjTVTea2FdKpVNL4fGr69CT8+x/4EMvCyDFOEer7mOvSwawqBFOu6gLzBjmjWpjOYz0TPC5RWHqoTIZVSaRa0hs5kj7yRB2RwwNdRF54dgd6/HTjJ24HecZJv48l4GxkAc7rUVPRqIWt3HQkW1lAcpNiv0CJpRXS5RFU7/AeDfLSoayog7KvDcq4kT9TqaR8pIvGBey7vnEB3wfYTUeyqRDJoebs2mTQpX46k7UsMAmLsHEeDsjMVGota8siJz1+ZOgzo9mBVCKZLCuEsq8Lytug1UpH8Z3CPo62vNog2PU7vPjWMO/mjJsmlNdhiYzyQGUnUFsAcZO+KzNGoBKHth7gGzgwzimRaKQpbJZoi56fA6+NkdHA0JMJGIUlWBuS0DmMy6DdRhIlWOGwmrYmySvYlXYQhU0SbaOv14NqPKMaTZvC/kz19rRBeWX5ruNCibSq0EW0NVojF5FsyivMI9qgjBLrFx7xrp7kKJrCFKKNRxPBNoW+RJVR2DLT1sWbTJHLOYjCbq82JGfhioh0FPczgOLielFJOoxHCodD9FZb4x2kTDZcFPqINixnsj6icvxd8wzNrwFjMn1/lWPNupC8DBcqygaMyrEhbaOq4ZpP4xc0nKn5GW04opUBNR48M1VqtDEZr5God5DP+nIrr7LgKjeN1WaH/IVwOpN8Bpg0R2u5Z6rUaGMxrr41hCSmrRQOEGkDIowhDojMtGYW6m9zNHl3ciWRVLMQNA0Mh7xb8xJBCf/YyQCQKGj+Tf1dygCZmtR61kzkEBJgowlllp1loWH2brTTymhc77RKZQLEPUYPYnuMhP033igOzQGk7O59bquxK+x+egV+yPTD8pe0A2wtpv/2c3p7kgmSLrKetAvNuW60mv6o0Zok35hqN9lmOoE7d99txfSbkZ6M59sE4aIofCiBPpy9TNJ/PdVjbyfdNoUDM9xzKAjzonBnKrO7U6kf/wc1AP8AEpMZg4Q6AAA=
-      blockMaterial: SHULKER_BOX
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Bomb","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gold","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Defeat your opponents with cunning and planning","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Right Click) - place explosive","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Left Click) - show placed explosives","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - detonate","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - load gunpowder","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Must be loaded with gunpowder from inventory","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Loaded: 0/6","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000028
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      Damage: 0
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "bomb"
+        }
   slot_27:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: PLAYER_HEAD
-    meta:
-      ==: ItemMeta
-      meta-type: SKULL
-      lore:
-      - '{"text":"Killed by ","extra":[{"text":"PixelPulse21","hoverEvent":{"contents":{"type":"minecraft:player","id":[939184145,1892039021,-1386504150,513788497],"name":"PixelPulse21"},"action":"show_entity"},"insertion":"PixelPulse21","clickEvent":{"action":"suggest_command","value":"/tell
-        PixelPulse21 "},"color":"yellow"}],"italic":false,"color":"gold"}'
-      skull-owner:
-        ==: PlayerProfile
-        uniqueId: 5477bdde-4f9f-3a57-af69-af5e4c5b959f
-        name: tempguide
+    type: WET_SPONGE
+    amount: 2
   slot_28:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: IRON_BLOCK
-    amount: 60
+    type: GUNPOWDER
+    amount: 50
   slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -372,25 +337,18 @@ contents:
   slot_31:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ARROW
-    amount: 64
+    type: GLOWSTONE_DUST
+    amount: 62
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: OAK_LOG
-    amount: 50
+    type: GLOWSTONE_DUST
+    amount: 64
   slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_SWORD
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:fire_aspect: 1
-        minecraft:mending: 1
-        minecraft:sharpness: 5
-      Damage: 28
+    type: ROTTEN_FLESH
+    amount: 43
   slot_35:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -401,3 +359,13 @@ contents:
       meta-type: UNSPECIFIC
       item-name: '{"translate":"item.dnt.creeper_key","fallback":"Creeping Key"}'
       custom-model-data: 712
+  slot_21:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_BLOCK
+    amount: 59
+  slot_34:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GLOWSTONE_DUST
+    amount: 64
