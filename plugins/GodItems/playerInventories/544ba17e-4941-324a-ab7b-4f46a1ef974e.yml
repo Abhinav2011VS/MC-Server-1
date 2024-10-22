@@ -2,32 +2,63 @@ armor:
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: TORCH
-    amount: 20
+    type: AIR
+    amount: 0
+  helmet:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_HELMET
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      Damage: 6
+  chestplate:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ELYTRA
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 39
+  leggings:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_LEGGINGS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      Damage: 8
+  boots:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_BOOTS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      Damage: 8
 charms: {}
 contents:
   slot_0:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: STONE_AXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 23
+    type: NETHERITE_SWORD
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: CARROT
-    amount: 12
+    amount: 7
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COARSE_DIRT
+    type: SADDLE
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: DIRT
-    amount: 2
+    type: NETHERITE_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      repair-cost: 1
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -35,35 +66,35 @@ contents:
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: STONE_PICKAXE
+    type: FIREWORK_ROCKET
+    amount: 27
     meta:
       ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 70
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: STONE
-    amount: 4
+    amount: 62
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: POTION
-    meta:
-      ==: ItemMeta
-      meta-type: POTION
-      potion-type: minecraft:healing
-      custom-effects: []
+    type: BAKED_POTATO
+    amount: 13
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BEETROOT_SEEDS
-    amount: 3
+    type: NETHERITE_SHOVEL
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CRAFTING_TABLE
-    amount: 2
+    type: STONE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 23
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -71,7 +102,11 @@ contents:
   slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: RAW_IRON
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 6
   slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -85,11 +120,11 @@ contents:
   slot_14:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WOODEN_PICKAXE
+    type: STONE_PICKAXE
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 19
+      Damage: 70
   slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -113,7 +148,7 @@ contents:
   slot_19:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BROWN_MUSHROOM
+    type: WHEAT_SEEDS
   slot_22:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -124,11 +159,6 @@ contents:
     v: 3955
     type: COBBLESTONE
     amount: 4
-  slot_24:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: STONE
-    amount: 64
   slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -157,13 +187,13 @@ contents:
   slot_30:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: MELON_SEEDS
-    amount: 6
+    type: TORCH
+    amount: 20
   slot_31:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WHEAT_SEEDS
-    amount: 9
+    type: DIRT
+    amount: 2
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -188,5 +218,17 @@ contents:
   slot_35:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BAKED_POTATO
-    amount: 18
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      potion-type: minecraft:healing
+      custom-effects: []
+  slot_20:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: BEEF
+  slot_21:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_PICKAXE
