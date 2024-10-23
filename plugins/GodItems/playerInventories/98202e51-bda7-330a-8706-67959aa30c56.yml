@@ -2,16 +2,64 @@ armor:
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ELYTRA
+    type: NETHERITE_CHESTPLATE
     meta:
       ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 431
+      meta-type: ARMOR
+      enchants:
+        minecraft:blast_protection: 4
+        minecraft:mending: 1
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      repair-cost: 1
+      Damage: 100
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: AIR
     amount: 0
+  leggings:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_LEGGINGS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:blast_protection: 4
+        minecraft:mending: 1
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      repair-cost: 1
+      Damage: 107
+  boots:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_BOOTS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:blast_protection: 4
+        minecraft:mending: 1
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      repair-cost: 1
+      Damage: 117
+  helmet:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_HELMET
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:blast_protection: 4
+        minecraft:mending: 1
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      repair-cost: 1
+      Damage: 102
 charms: {}
 contents:
   slot_0:
@@ -21,7 +69,11 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 57
+      enchants:
+        minecraft:mending: 1
+        minecraft:unbreaking: 3
+      repair-cost: 1
+      Damage: 204
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -32,40 +84,84 @@ contents:
       enchants:
         nova_structures:gravity: 2
       repair-cost: 1
+      Damage: 35
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BUCKET
+    type: DIAMOND_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Might of the Thunder","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_aqua","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"This godly weapon allows you to","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"aqua","bold":false}]}'
+      - '{"text":"","extra":[{"text":"harness the power of thunder","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"aqua","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Hit) - Strike Lightning","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000001
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 11.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:c5b00371-d290-45a6-ba9c-4943af92240b
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:e5a2847d-1382-4e7d-87c3-242e56068bb2
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "thunder_axe"
+        }
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COBBLESTONE
-    amount: 64
+    type: NETHERITE_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 456
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COBBLESTONE
-    amount: 64
+    type: COOKED_PORKCHOP
+    amount: 26
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COBBLESTONE
-    amount: 64
+    type: BUCKET
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CRIMSON_PLANKS
-    amount: 2
+    type: ROTTEN_FLESH
+    amount: 3
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FIREWORK_ROCKET
-    amount: 26
+    type: ELYTRA
     meta:
       ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:mending: 1
+      Damage: 214
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -75,16 +171,26 @@ contents:
       ==: ItemMeta
       meta-type: SKULL
       lore:
-      - '{"text":"Killed by ","extra":[{"text":"InventoStarz","hoverEvent":{"contents":{"type":"minecraft:player","id":[-1081986355,1773484005,-1082243891,-1536211231],"name":"InventoStarz"},"action":"show_entity"},"insertion":"InventoStarz","clickEvent":{"action":"suggest_command","value":"/tell
-        InventoStarz "},"color":"yellow"}],"italic":false,"color":"gold"}'
+      - '{"text":"Killed by ","extra":[{"text":"umang_op","hoverEvent":{"contents":{"type":"minecraft:player","id":[-1742721455,-1113115894,-2029623403,-1700590506],"name":"umang_op"},"action":"show_entity"},"insertion":"umang_op","clickEvent":{"action":"suggest_command","value":"/tell
+        umang_op "},"color":"yellow"}],"italic":false,"color":"gold"}'
       skull-owner:
         ==: PlayerProfile
-        uniqueId: 98202e51-bda7-330a-8706-67959aa30c56
-        name: umang_op
+        uniqueId: 8237a884-4818-37a0-bbc1-480ae9e34b35
+        name: GameX_PlayZ
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
+    type: ARROW
+  slot_11:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EMERALD
+    amount: 64
+  slot_12:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
     type: PLAYER_HEAD
+    amount: 4
     meta:
       ==: ItemMeta
       meta-type: SKULL
@@ -93,58 +199,35 @@ contents:
         umang_op "},"color":"yellow"}],"italic":false,"color":"gold"}'
       skull-owner:
         ==: PlayerProfile
-        uniqueId: 8de6d343-c333-3ae8-8c00-8f52dfc323bd
-        name: kartvyaasawa2012
-  slot_11:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-  slot_12:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_LEGGINGS
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      Damage: 149
-  slot_13:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_CHESTPLATE
-  slot_14:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_HELMET
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      Damage: 149
+        uniqueId: 544ba17e-4941-324a-ab7b-4f46a1ef974e
+        name: UtkarshTNT
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_PICKAXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 442
+    type: COOKED_PORKCHOP
+    amount: 29
   slot_19:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COOKED_PORKCHOP
-    amount: 58
-  slot_20:
+    type: OMINOUS_BOTTLE
+  slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_BOOTS
+    type: STRING
+  slot_34:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: MACE
     meta:
       ==: ItemMeta
-      meta-type: ARMOR
-      Damage: 146
-  slot_26:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ROTTEN_FLESH
-  slot_27:
+      meta-type: UNSPECIFIC
+      enchants:
+        mace:hit: 1
+        minecraft:density: 3
+      repair-cost: 1
+      enchantment-glint-override: false
+      Damage: 41
+  slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: MACE
@@ -160,42 +243,82 @@ contents:
         minecraft:wind_burst: 2
       enchantment-glint-override: false
       Damage: 2
-  slot_28:
+  slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CHERRY_HANGING_SIGN
-    amount: 16
-  slot_29:
+    type: PLAYER_HEAD
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      lore:
+      - '{"text":"Killed by ","extra":[{"text":"GameX_PlayZ","hoverEvent":{"contents":{"type":"minecraft:player","id":[-2110281596,1209546656,-1144961014,-370980043],"name":"GameX_PlayZ"},"action":"show_entity"},"insertion":"GameX_PlayZ","clickEvent":{"action":"suggest_command","value":"/tell
+        GameX_PlayZ "},"color":"yellow"}],"italic":false,"color":"gold"}'
+      skull-owner:
+        ==: PlayerProfile
+        uniqueId: 98202e51-bda7-330a-8706-67959aa30c56
+        name: umang_op
+  slot_16:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIRT
+    amount: 14
+  slot_17:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:mending: 1
+        minecraft:unbreaking: 3
+  slot_14:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: LEATHER
+    amount: 4
+  slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_AXE
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 43
-  slot_31:
+      enchants:
+        minecraft:mending: 1
+        minecraft:unbreaking: 3
+      repair-cost: 1
+      Damage: 51
+  slot_22:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: MANGROVE_PLANKS
-    amount: 2
-  slot_33:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: OMINOUS_BOTTLE
-    meta:
-      ==: ItemMeta
-      meta-type: OMINOUS_BOTTLE
-      ominous-bottle-amplifier: 3
-  slot_34:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: MACE
+    type: NETHERITE_AXE
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      enchants:
-        mace:hit: 1
-        minecraft:density: 3
-      repair-cost: 1
-      enchantment-glint-override: false
-      Damage: 41
+      Damage: 7
+  slot_13:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: LEAD
+    amount: 2
+  slot_23:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EMERALD
+    amount: 64
+  slot_32:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ROTTEN_FLESH
+    amount: 64
+  slot_28:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 33
+  slot_30:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_PORKCHOP
+    amount: 55
