@@ -12,14 +12,13 @@ armor:
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ELYTRA
+    type: NETHERITE_CHESTPLATE
     meta:
       ==: ItemMeta
-      meta-type: UNSPECIFIC
+      meta-type: ARMOR
       enchants:
         minecraft:mending: 1
-        minecraft:unbreaking: 2
-      Damage: 117
+      repair-cost: 1
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -44,8 +43,14 @@ armor:
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: TORCH
-    amount: 49
+    type: ELYTRA
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:mending: 1
+        minecraft:unbreaking: 2
+      Damage: 11
 charms: {}
 contents:
   slot_0:
@@ -142,23 +147,18 @@ contents:
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_CHESTPLATE
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      enchants:
-        minecraft:mending: 1
-      repair-cost: 1
+    type: TORCH
+    amount: 50
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: BREAD
-    amount: 12
+    amount: 30
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ENDER_PEARL
-    amount: 8
+    amount: 6
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -273,7 +273,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: DIAMOND
-    amount: 7
+    amount: 11
   slot_14:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -288,7 +288,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: GUNPOWDER
-    amount: 21
+    amount: 22
   slot_17:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -360,7 +360,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: OAK_LOG
-    amount: 34
+    amount: 49
   slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -391,12 +391,12 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ARROW
-    amount: 45
+    amount: 64
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
-    amount: 62
+    amount: 63
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
@@ -428,13 +428,12 @@ contents:
   slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FIREWORK_ROCKET
-    amount: 10
+    type: ENCHANTED_BOOK
     meta:
       ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:respiration: 1
   slot_30:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -472,3 +471,8 @@ contents:
         {
             "goditems:code_name": "bomb"
         }
+  slot_7:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EXPERIENCE_BOTTLE
+    amount: 8
