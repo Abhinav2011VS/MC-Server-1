@@ -12,13 +12,14 @@ armor:
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_CHESTPLATE
+    type: ELYTRA
     meta:
       ==: ItemMeta
-      meta-type: ARMOR
+      meta-type: UNSPECIFIC
       enchants:
         minecraft:mending: 1
-      repair-cost: 1
+        minecraft:unbreaking: 2
+      Damage: 117
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -44,7 +45,7 @@ armor:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: TORCH
-    amount: 50
+    amount: 49
 charms: {}
 contents:
   slot_0:
@@ -141,17 +142,18 @@ contents:
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENCHANTED_BOOK
+    type: NETHERITE_CHESTPLATE
     meta:
       ==: ItemMeta
-      meta-type: ENCHANTED
-      stored-enchants:
-        minecraft:smite: 1
+      meta-type: ARMOR
+      enchants:
+        minecraft:mending: 1
+      repair-cost: 1
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: BREAD
-    amount: 15
+    amount: 12
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -165,18 +167,6 @@ contents:
       ==: ItemMeta
       meta-type: UNSPECIFIC
       Damage: 453
-  slot_7:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: DIAMOND_PICKAXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:efficiency: 4
-        minecraft:fortune: 2
-        minecraft:unbreaking: 3
-      Damage: 176
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -239,13 +229,11 @@ contents:
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FIREWORK_ROCKET
-    amount: 64
+    type: FLINT_AND_STEEL
     meta:
       ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
+      meta-type: UNSPECIFIC
+      Damage: 12
   slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -359,11 +347,15 @@ contents:
   slot_31:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FLINT_AND_STEEL
+    type: DIAMOND_PICKAXE
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 12
+      enchants:
+        minecraft:efficiency: 4
+        minecraft:fortune: 2
+        minecraft:unbreaking: 3
+      Damage: 177
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -389,14 +381,12 @@ contents:
   slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ELYTRA
+    type: ENCHANTED_BOOK
     meta:
       ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:mending: 1
-        minecraft:unbreaking: 2
-      Damage: 116
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:smite: 1
   slot_35:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -405,8 +395,13 @@ contents:
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BRICK
-    amount: 61
+    type: FIREWORK_ROCKET
+    amount: 62
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
   slot_21:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
