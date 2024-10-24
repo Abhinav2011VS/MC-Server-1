@@ -164,13 +164,8 @@ armor:
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FIREWORK_ROCKET
-    amount: 10
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
+    type: AIR
+    amount: 0
   boots:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -418,13 +413,13 @@ contents:
           amount: 11.0
           slot: mainhand
           operation: 0
-          key: minecraft:6cdf5597-325f-4c77-96d6-de3f509a86ed
+          key: minecraft:a833fc06-92af-4095-a293-19d667b1e548
         minecraft:generic.attack_speed:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: -3.0
           slot: mainhand
           operation: 0
-          key: minecraft:7e531f95-d464-4101-a919-b04c1cc20ef8
+          key: minecraft:17bfe3d5-87ea-4656-80c2-81c6c6df4c8c
       ItemFlags:
       - HIDE_ENCHANTS
       - HIDE_ATTRIBUTES
@@ -437,7 +432,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_PORKCHOP
-    amount: 22
+    amount: 14
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -449,68 +444,64 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      display-name: '{"text":"","extra":[{"text":"Infernal Armor","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"Gives you inhuman power, but at a terrible cost","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Permanent strength","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Permanent hunger","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Full Set) - Not targeted by mobs from the Nether","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"           - Immune to fire","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"           - (Sneak + F) - Summon Guards","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      custom-model-data: 1200017
+      display-name: '{"text":"","extra":[{"text":"Aegis Of Eternity","color":"dark_red","bold":true}]}'
       enchants:
-        minecraft:protection: 5
-        minecraft:thorns: 4
-        minecraft:unbreaking: 3
-      attribute-modifiers:
-        minecraft:generic.armor:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 10.0
-          slot: chest
-          operation: 0
-          key: minecraft:d36c7f4a-823a-4792-a347-486db0fb668b
-        minecraft:generic.armor_toughness:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 5.0
-          slot: chest
-          operation: 0
-          key: minecraft:1ca93fa9-91d3-49e9-a8ed-c85afb27c154
-        minecraft:generic.knockback_resistance:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 3.0
-          slot: chest
-          operation: 0
-          key: minecraft:c4554e6f-ea25-4ab6-8b73-3a0518abf620
+        minecraft:aqua_affinity: 255
+        minecraft:bane_of_arthropods: 255
+        minecraft:blast_protection: 255
+        minecraft:breach: 255
+        minecraft:channeling: 255
+        minecraft:density: 255
+        minecraft:depth_strider: 255
+        minecraft:efficiency: 255
+        minecraft:feather_falling: 255
+        minecraft:fire_aspect: 255
+        minecraft:fire_protection: 255
+        minecraft:flame: 255
+        minecraft:fortune: 255
+        minecraft:frost_walker: 255
+        minecraft:impaling: 255
+        minecraft:infinity: 255
+        minecraft:knockback: 255
+        minecraft:looting: 255
+        minecraft:loyalty: 255
+        minecraft:luck_of_the_sea: 255
+        minecraft:lure: 255
+        minecraft:mending: 255
+        minecraft:multishot: 255
+        minecraft:piercing: 255
+        minecraft:power: 255
+        minecraft:projectile_protection: 255
+        minecraft:protection: 255
+        minecraft:punch: 255
+        minecraft:quick_charge: 255
+        minecraft:respiration: 255
+        minecraft:riptide: 255
+        minecraft:sharpness: 255
+        minecraft:silk_touch: 255
+        minecraft:smite: 255
+        minecraft:soul_speed: 255
+        minecraft:sweeping_edge: 255
+        minecraft:swift_sneak: 255
+        minecraft:thorns: 255
+        minecraft:unbreaking: 255
+        minecraft:wind_burst: 255
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "dark_lord_armor"
-        }
+      trim:
+        material: minecraft:emerald
+        pattern: minecraft:silence
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: PLAYER_HEAD
-    amount: 2
+    type: FIREWORK_ROCKET
+    amount: 62
     meta:
       ==: ItemMeta
-      meta-type: SKULL
-      lore:
-      - '{"text":"Killed by ","extra":[{"text":"InventoStarz","hoverEvent":{"contents":{"type":"minecraft:player","id":[-1081986355,1773484005,-1082243891,-1536211231],"name":"InventoStarz"},"action":"show_entity"},"insertion":"InventoStarz","clickEvent":{"action":"suggest_command","value":"/tell
-        InventoStarz "},"color":"yellow"}],"italic":false,"color":"gold"}'
-      skull-owner:
-        ==: PlayerProfile
-        uniqueId: 37fad011-70c6-396d-ad5b-a02a1e9fca51
-        name: PixelPulse21
-        properties:
-        - name: textures
-          value: ewogICJ0aW1lc3RhbXAiIDogMTcyOTY4MTI0MjgxNiwKICAicHJvZmlsZUlkIiA6ICI1MmYyMTZhOTk3NmI0MmFiYTE0N2NmMTk0MzQyZjZlMiIsCiAgInByb2ZpbGVOYW1lIiA6ICJQaXhlbFB1bHNlMjEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODNkNzE1NjIxODFmZDQyODAzZmVkN2IxZTZlMDU3MmJjMGJlMGI3ZGI0NjI2NmZkZWFkOWQxNDRiZThlNmIxMCIKICAgIH0KICB9Cn0=
-          signature: kZh1cQHIxJDcGmspU3XpHpbKAEPpQ3mspQjdD+pk95qVup416LnJhVvY6QGKA1zpTLUrfnfyidNqLa94mdT8bWC3zcTK6Ofo4dVodyB5EgSrN9KsaR8gPSb7ESDhZ5e6l92lUNWKq/UncdSkEUrxOypJTekdVcKwAk+O5iPydX1olZVa1e5dUJemQavROHOW8PMlFWl1l0l6+31lUuxkEK7eUPAUC8JAWxI2tyLqYjqb0wUPoaYqKKE80ftgxN4J97aFVIegFElq1huPhxBfFO4IghsMb2WSpktnIjYQX236DaUgjDg7IAg1QrCGYlh73/D7rQAxCz5pVy8Hkk/jjd+CizmzMpJ1anU+R0mWgnVWdX7iourQx8LM7zj0hJtc4Ywln0eKBkIxPofZ+zjKxr/J+9CGOLVHQCD0mi0EQQeyN19UIzeWVl3jdYNBsXFnJo7qGd8b1yHSXjYAp+Im28HhVOcwU3lJSL+jzVHuOuTA6om/I4cgEkXezaMTjuvZyT/mmPYz69t803cTRT5QqjbhwoDj90CvBC+9BjUWpjjFFEgc+C3UhxQoTooA6fwQgp7546NelmAd6XfaOn8oy1tS8TQ/Lhfr97AVB3q+lJhhtkk9GVlHtRHO/dTp6It7rMDkQcF1GRQJJwCeW2Qo5EKHwGjdhCl7uP8zjwdJf94=
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -613,13 +604,13 @@ contents:
           amount: 6.0
           slot: mainhand
           operation: 0
-          key: minecraft:ca54ffda-cd18-4687-8c7f-05420ca13649
+          key: minecraft:74e7c930-2de3-4f79-896d-d730de519e3e
         minecraft:generic.attack_speed:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: -3.0
           slot: mainhand
           operation: 0
-          key: minecraft:5ec6c79b-f534-458c-b3c8-5bbcaa284e89
+          key: minecraft:06581c42-974c-487d-8602-ea1d74436e45
       ItemFlags:
       - HIDE_ENCHANTS
       - HIDE_ATTRIBUTES
@@ -632,58 +623,8 @@ contents:
   slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_CHESTPLATE
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      display-name: '{"text":"","extra":[{"text":"Aegis Of Eternity","color":"dark_red","bold":true}]}'
-      enchants:
-        minecraft:aqua_affinity: 255
-        minecraft:bane_of_arthropods: 255
-        minecraft:blast_protection: 255
-        minecraft:breach: 255
-        minecraft:channeling: 255
-        minecraft:density: 255
-        minecraft:depth_strider: 255
-        minecraft:efficiency: 255
-        minecraft:feather_falling: 255
-        minecraft:fire_aspect: 255
-        minecraft:fire_protection: 255
-        minecraft:flame: 255
-        minecraft:fortune: 255
-        minecraft:frost_walker: 255
-        minecraft:impaling: 255
-        minecraft:infinity: 255
-        minecraft:knockback: 255
-        minecraft:looting: 255
-        minecraft:loyalty: 255
-        minecraft:luck_of_the_sea: 255
-        minecraft:lure: 255
-        minecraft:mending: 255
-        minecraft:multishot: 255
-        minecraft:piercing: 255
-        minecraft:power: 255
-        minecraft:projectile_protection: 255
-        minecraft:protection: 255
-        minecraft:punch: 255
-        minecraft:quick_charge: 255
-        minecraft:respiration: 255
-        minecraft:riptide: 255
-        minecraft:sharpness: 255
-        minecraft:silk_touch: 255
-        minecraft:smite: 255
-        minecraft:soul_speed: 255
-        minecraft:sweeping_edge: 255
-        minecraft:swift_sneak: 255
-        minecraft:thorns: 255
-        minecraft:unbreaking: 255
-        minecraft:wind_burst: 255
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      trim:
-        material: minecraft:emerald
-        pattern: minecraft:silence
+    type: LANTERN
+    amount: 12
   slot_16:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -765,75 +706,25 @@ contents:
           amount: 6.0
           slot: feet
           operation: 0
-          key: minecraft:820439d7-e267-4995-a9a5-7ee5fc8a893d
+          key: minecraft:1ef68047-e69f-4de8-bfdb-68af09c54377
         minecraft:generic.armor_toughness:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: 5.0
           slot: feet
           operation: 0
-          key: minecraft:0807bd22-0faf-4e47-aa0e-72ea258c2165
+          key: minecraft:357a39c8-9133-4b88-9e44-d909515b8071
         minecraft:generic.knockback_resistance:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: 3.0
           slot: feet
           operation: 0
-          key: minecraft:3e69b14f-580e-4eab-9ee6-e6adbb9cf793
+          key: minecraft:a1f781c9-219c-4a7e-b503-4bbcc9e4fac7
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
       PublicBukkitValues: |-
         {
             "goditems:code_name": "dark_lord_armor"
-        }
-  slot_19:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: BLAZE_ROD
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Wand of Fire","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"This enchanted wand radiates unusual heat","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
-      - '{"text":"","extra":[{"text":"It allows you to create and control fire","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - Launch a fireball","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Right Click) - Blast of fire in the direction
-        of looking","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - Surround yourself with
-        a circle of fire","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 7.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      custom-model-data: 1000010
-      enchants:
-        minecraft:sharpness: 5
-        minecraft:unbreaking: 3
-      attribute-modifiers:
-        minecraft:generic.attack_damage:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 7.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:117875ac-e9f4-4277-a292-7ac3aefa8699
-        minecraft:generic.attack_speed:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: -3.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:93466e4e-8443-4257-85d1-2e48a2eefdbf
-      ItemFlags:
-      - HIDE_ENCHANTS
-      - HIDE_ATTRIBUTES
-      Unbreakable: true
-      Damage: 0
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "fire_staff"
         }
   slot_20:
     ==: org.bukkit.inventory.ItemStack
@@ -866,19 +757,19 @@ contents:
           amount: 10.0
           slot: head
           operation: 0
-          key: minecraft:9094d932-c569-4aa9-b030-1f0a370fdd7c
+          key: minecraft:bb23a63f-0887-4dca-bae5-224610609945
         minecraft:generic.armor_toughness:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: 5.0
           slot: head
           operation: 0
-          key: minecraft:aead2caa-5463-4c11-b9eb-07e4ec4987ab
+          key: minecraft:e75e60cb-14ac-45ca-b76f-34757f274475
         minecraft:generic.knockback_resistance:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: 3.0
           slot: head
           operation: 0
-          key: minecraft:02543018-0b46-45a6-ab21-1576357eb7ff
+          key: minecraft:60d0789e-a4f2-4f46-88d3-d168eac5aafc
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
@@ -886,60 +777,6 @@ contents:
         {
             "goditems:code_name": "dark_lord_armor"
         }
-  slot_23:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: MACE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '"Mechanon"'
-      enchants:
-        mace:hit: 1
-        minecraft:aqua_affinity: 255
-        minecraft:bane_of_arthropods: 255
-        minecraft:blast_protection: 255
-        minecraft:breach: 255
-        minecraft:channeling: 255
-        minecraft:density: 255
-        minecraft:depth_strider: 255
-        minecraft:efficiency: 255
-        minecraft:feather_falling: 255
-        minecraft:fire_aspect: 255
-        minecraft:fire_protection: 255
-        minecraft:flame: 255
-        minecraft:fortune: 255
-        minecraft:frost_walker: 255
-        minecraft:impaling: 255
-        minecraft:infinity: 255
-        minecraft:knockback: 255
-        minecraft:looting: 255
-        minecraft:loyalty: 255
-        minecraft:luck_of_the_sea: 255
-        minecraft:lure: 255
-        minecraft:mending: 255
-        minecraft:multishot: 255
-        minecraft:piercing: 255
-        minecraft:power: 255
-        minecraft:projectile_protection: 255
-        minecraft:protection: 255
-        minecraft:punch: 255
-        minecraft:quick_charge: 255
-        minecraft:respiration: 255
-        minecraft:riptide: 255
-        minecraft:sharpness: 255
-        minecraft:silk_touch: 255
-        minecraft:smite: 255
-        minecraft:soul_speed: 255
-        minecraft:sweeping_edge: 255
-        minecraft:swift_sneak: 255
-        minecraft:thorns: 255
-        minecraft:unbreaking: 255
-        minecraft:wind_burst: 255
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      enchantment-glint-override: false
   slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -1050,19 +887,19 @@ contents:
           amount: 8.0
           slot: legs
           operation: 0
-          key: minecraft:96669968-a370-4cc3-91ec-7e52860ed44f
+          key: minecraft:686b96aa-2bed-4142-b11e-f8295dc73e04
         minecraft:generic.armor_toughness:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: 5.0
           slot: legs
           operation: 0
-          key: minecraft:6db40b7a-36be-4b3b-a87e-b4751e79013e
+          key: minecraft:75b73b65-1c6a-49b4-b467-6dcbf8422674
         minecraft:generic.knockback_resistance:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: 3.0
           slot: legs
           operation: 0
-          key: minecraft:0d302c4c-bd8b-4061-bbe3-e5f3a2247164
+          key: minecraft:19402a21-95a5-4240-9889-825698ff4703
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
@@ -1074,7 +911,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ARROW
-    amount: 2
+    amount: 64
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -1133,25 +970,6 @@ contents:
     v: 3955
     type: ENCHANTED_GOLDEN_APPLE
     amount: 32
-  slot_35:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: PLAYER_HEAD
-    amount: 2
-    meta:
-      ==: ItemMeta
-      meta-type: SKULL
-      lore:
-      - '{"text":"Killed by ","extra":[{"text":"InventoStarz","hoverEvent":{"contents":{"type":"minecraft:player","id":[-1081986355,1773484005,-1082243891,-1536211231],"name":"InventoStarz"},"action":"show_entity"},"insertion":"InventoStarz","clickEvent":{"action":"suggest_command","value":"/tell
-        InventoStarz "},"color":"yellow"}],"italic":false,"color":"gold"}'
-      skull-owner:
-        ==: PlayerProfile
-        uniqueId: bf8232cd-69b5-37e5-bf7e-44cda46f46e1
-        name: InventoStarz
-        properties:
-        - name: textures
-          value: ewogICJ0aW1lc3RhbXAiIDogMTU5ODc1ODY4MDc0NiwKICAicHJvZmlsZUlkIiA6ICI5MWZlMTk2ODdjOTA0NjU2YWExZmMwNTk4NmRkM2ZlNyIsCiAgInByb2ZpbGVOYW1lIiA6ICJoaGphYnJpcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80OWYwNzYwMjEyNzFjMjhhZjUzNDNjOTE2YTM2NGFjNjYxZDVkNTIyNGNmOTc0OTNiNzgyZDY1YzQzNjQwMzNmIgogICAgfQogIH0KfQ==
-          signature: q1w4jiDJU7xj9P8a/cAuYnxX/LJmq9XaSdF81u/kNV1Zd2B/p9mC0b5m5QXzy+spkOJXL83Dcb0INRLvFYwT1zWgTGMQIdnQnPpDslTz5fn90pHbfXzZa2EA6ZwG5adxNZ9BRoBQmrcAGshrtXxKCR8b/Vrl2Y2R7RokGwm9TVUd7Fb2XNlsf8sQfG4B9CRWrthAZKaEszrmc1vmHInB8JBZ/zq0IKndTdjSQ1zV0kR4YCKKH3qb1qSd1WYrzaWMGdQCvj8dvCEpQtfNCUOqPDEtqa8TSIs5OIHGXkHcu4IqBYhNPw7oYCqjakf03V+HP4mT3pMK/tiyp/1UZzvX4Gy1VRozJE8yWStZj1PcJuCL6PWOx+6tLy9FWq1cMxu3QpbxsnrHmZ0BfTPUMuHRnreaMM9ZvPhJb6trL1UNBJNRP/h12TemJPERrOebF6LcNOiHdoWSspylSlYOWRJEunCZhLt/LamkinJW60vqo5I+rhXI6p8nPfQVGToXVz62lMDparxj1iQf0mabbXCMWOTeZ4jm3n5rCl79M1oK6DDqTdRlBWiio2ujnGa+yjaoNhviEBew4AJmsz663foOrFdZqGpGPJNTaEnG8ApawJ/Z8iR0GeeFEpVfDj8V95f7Au3gzswzW6IrBv7+zjXyHptxgVB6SH6TAfbhu2xEzXg=
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -1274,46 +1092,108 @@ contents:
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: LAVA_BUCKET
+    type: MACE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '"Mechanon"'
+      enchants:
+        mace:hit: 1
+        minecraft:aqua_affinity: 255
+        minecraft:bane_of_arthropods: 255
+        minecraft:blast_protection: 255
+        minecraft:breach: 255
+        minecraft:channeling: 255
+        minecraft:density: 255
+        minecraft:depth_strider: 255
+        minecraft:efficiency: 255
+        minecraft:feather_falling: 255
+        minecraft:fire_aspect: 255
+        minecraft:fire_protection: 255
+        minecraft:flame: 255
+        minecraft:fortune: 255
+        minecraft:frost_walker: 255
+        minecraft:impaling: 255
+        minecraft:infinity: 255
+        minecraft:knockback: 255
+        minecraft:looting: 255
+        minecraft:loyalty: 255
+        minecraft:luck_of_the_sea: 255
+        minecraft:lure: 255
+        minecraft:mending: 255
+        minecraft:multishot: 255
+        minecraft:piercing: 255
+        minecraft:power: 255
+        minecraft:projectile_protection: 255
+        minecraft:protection: 255
+        minecraft:punch: 255
+        minecraft:quick_charge: 255
+        minecraft:respiration: 255
+        minecraft:riptide: 255
+        minecraft:sharpness: 255
+        minecraft:silk_touch: 255
+        minecraft:smite: 255
+        minecraft:soul_speed: 255
+        minecraft:sweeping_edge: 255
+        minecraft:swift_sneak: 255
+        minecraft:thorns: 255
+        minecraft:unbreaking: 255
+        minecraft:wind_burst: 255
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      enchantment-glint-override: false
   slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: PLAYER_HEAD
+    type: BLAZE_ROD
     meta:
       ==: ItemMeta
-      meta-type: SKULL
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Wand of Fire","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
       lore:
-      - '{"text":"Killed by ","extra":[{"text":"GameX_PlayZ","hoverEvent":{"contents":{"type":"minecraft:player","id":[-2110281596,1209546656,-1144961014,-370980043],"name":"GameX_PlayZ"},"action":"show_entity"},"insertion":"GameX_PlayZ","clickEvent":{"action":"suggest_command","value":"/tell
-        GameX_PlayZ "},"color":"yellow"}],"italic":false,"color":"gold"}'
-      skull-owner:
-        ==: PlayerProfile
-        uniqueId: bf8232cd-69b5-37e5-bf7e-44cda46f46e1
-        name: InventoStarz
-        properties:
-        - name: textures
-          value: ewogICJ0aW1lc3RhbXAiIDogMTU5ODc1ODY4MDc0NiwKICAicHJvZmlsZUlkIiA6ICI5MWZlMTk2ODdjOTA0NjU2YWExZmMwNTk4NmRkM2ZlNyIsCiAgInByb2ZpbGVOYW1lIiA6ICJoaGphYnJpcyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS80OWYwNzYwMjEyNzFjMjhhZjUzNDNjOTE2YTM2NGFjNjYxZDVkNTIyNGNmOTc0OTNiNzgyZDY1YzQzNjQwMzNmIgogICAgfQogIH0KfQ==
-          signature: q1w4jiDJU7xj9P8a/cAuYnxX/LJmq9XaSdF81u/kNV1Zd2B/p9mC0b5m5QXzy+spkOJXL83Dcb0INRLvFYwT1zWgTGMQIdnQnPpDslTz5fn90pHbfXzZa2EA6ZwG5adxNZ9BRoBQmrcAGshrtXxKCR8b/Vrl2Y2R7RokGwm9TVUd7Fb2XNlsf8sQfG4B9CRWrthAZKaEszrmc1vmHInB8JBZ/zq0IKndTdjSQ1zV0kR4YCKKH3qb1qSd1WYrzaWMGdQCvj8dvCEpQtfNCUOqPDEtqa8TSIs5OIHGXkHcu4IqBYhNPw7oYCqjakf03V+HP4mT3pMK/tiyp/1UZzvX4Gy1VRozJE8yWStZj1PcJuCL6PWOx+6tLy9FWq1cMxu3QpbxsnrHmZ0BfTPUMuHRnreaMM9ZvPhJb6trL1UNBJNRP/h12TemJPERrOebF6LcNOiHdoWSspylSlYOWRJEunCZhLt/LamkinJW60vqo5I+rhXI6p8nPfQVGToXVz62lMDparxj1iQf0mabbXCMWOTeZ4jm3n5rCl79M1oK6DDqTdRlBWiio2ujnGa+yjaoNhviEBew4AJmsz663foOrFdZqGpGPJNTaEnG8ApawJ/Z8iR0GeeFEpVfDj8V95f7Au3gzswzW6IrBv7+zjXyHptxgVB6SH6TAfbhu2xEzXg=
+      - '""'
+      - '{"text":"","extra":[{"text":"This enchanted wand radiates unusual heat","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
+      - '{"text":"","extra":[{"text":"It allows you to create and control fire","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - Launch a fireball","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Right Click) - Blast of fire in the direction
+        of looking","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - Surround yourself with
+        a circle of fire","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 7.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000010
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 7.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:3a9095e2-9fb5-4241-a93b-4297318bcd31
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:12b38c86-f4be-4484-b34d-2daaee9ab5e1
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      Damage: 0
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "fire_staff"
+        }
   slot_14:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: STRIPPED_SPRUCE_LOG
-    amount: 5
-  slot_17:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: BLUE_WOOL
-    amount: 17
-  slot_21:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENCHANTED_GOLDEN_APPLE
-    amount: 64
-  slot_29:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_BLOCK
-    amount: 10
-  slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: STICK
@@ -1324,3 +1204,68 @@ contents:
         minecraft:knockback: 255
       ItemFlags:
       - HIDE_ENCHANTS
+  slot_17:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: PAINTING
+    amount: 2
+  slot_21:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_GOLDEN_APPLE
+    amount: 64
+  slot_29:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: TORCH
+    amount: 4
+  slot_33:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      display-name: '{"text":"","extra":[{"text":"Infernal Armor","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Gives you inhuman power, but at a terrible cost","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Permanent strength","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Permanent hunger","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Full Set) - Not targeted by mobs from the Nether","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"           - Immune to fire","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"           - (Sneak + F) - Summon Guards","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1200017
+      enchants:
+        minecraft:protection: 5
+        minecraft:thorns: 4
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.armor:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 10.0
+          slot: chest
+          operation: 0
+          key: minecraft:60becea0-1b86-4191-aee7-7099767270d7
+        minecraft:generic.armor_toughness:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 5.0
+          slot: chest
+          operation: 0
+          key: minecraft:945b9973-ceae-45f1-aab7-c8e4427f1e92
+        minecraft:generic.knockback_resistance:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 3.0
+          slot: chest
+          operation: 0
+          key: minecraft:c3d88cc7-0630-45d7-ab00-631c9c729a85
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "dark_lord_armor"
+        }

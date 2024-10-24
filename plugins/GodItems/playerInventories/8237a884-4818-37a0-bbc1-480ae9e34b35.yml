@@ -6,7 +6,9 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 56
+      enchants:
+        minecraft:mending: 1
+      repair-cost: 1
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -14,7 +16,9 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 349
+      enchants:
+        minecraft:mending: 1
+      repair-cost: 1
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -22,7 +26,9 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 32
+      enchants:
+        minecraft:mending: 1
+      repair-cost: 1
   boots:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -34,12 +40,11 @@ armor:
         minecraft:mending: 1
         minecraft:unbreaking: 3
       repair-cost: 1
-      Damage: 49
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: AIR
-    amount: 0
+    type: TORCH
+    amount: 50
 charms: {}
 contents:
   slot_0:
@@ -73,13 +78,13 @@ contents:
           amount: 11.0
           slot: mainhand
           operation: 0
-          key: minecraft:6cdf5597-325f-4c77-96d6-de3f509a86ed
+          key: minecraft:a833fc06-92af-4095-a293-19d667b1e548
         minecraft:generic.attack_speed:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: -3.0
           slot: mainhand
           operation: 0
-          key: minecraft:7e531f95-d464-4101-a919-b04c1cc20ef8
+          key: minecraft:17bfe3d5-87ea-4656-80c2-81c6c6df4c8c
       ItemFlags:
       - HIDE_ENCHANTS
       - HIDE_ATTRIBUTES
@@ -118,13 +123,13 @@ contents:
           amount: 11.0
           slot: mainhand
           operation: 0
-          key: minecraft:a61a61c3-4f69-4324-870b-052be2019602
+          key: minecraft:f0af2967-3456-4375-9312-8887b765e889
         minecraft:generic.attack_speed:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: -3.0
           slot: mainhand
           operation: 0
-          key: minecraft:57d47332-2581-4bc5-a17d-dabdf5c7c743
+          key: minecraft:9347b840-73db-471a-94cf-eb20c704e3c8
       ItemFlags:
       - HIDE_ENCHANTS
       - HIDE_ATTRIBUTES
@@ -134,6 +139,54 @@ contents:
             "goditems:code_name": "thunder_axe"
         }
   slot_2:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:smite: 1
+  slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: BREAD
+    amount: 15
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 8
+  slot_6:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 453
+  slot_7:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:efficiency: 4
+        minecraft:fortune: 2
+        minecraft:unbreaking: 3
+      Damage: 176
+  slot_8:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:power: 1
+  slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: BLAZE_ROD
@@ -167,13 +220,13 @@ contents:
           amount: 7.0
           slot: mainhand
           operation: 0
-          key: minecraft:117875ac-e9f4-4277-a292-7ac3aefa8699
+          key: minecraft:3a9095e2-9fb5-4241-a93b-4297318bcd31
         minecraft:generic.attack_speed:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: -3.0
           slot: mainhand
           operation: 0
-          key: minecraft:93466e4e-8443-4257-85d1-2e48a2eefdbf
+          key: minecraft:12b38c86-f4be-4484-b34d-2daaee9ab5e1
       ItemFlags:
       - HIDE_ENCHANTS
       - HIDE_ATTRIBUTES
@@ -183,7 +236,17 @@ contents:
         {
             "goditems:code_name": "fire_staff"
         }
-  slot_3:
+  slot_10:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FIREWORK_ROCKET
+    amount: 64
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
+  slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: CROSSBOW
@@ -208,7 +271,181 @@ contents:
         {
             "goditems:code_name": "besieger"
         }
-  slot_4:
+  slot_12:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:piercing: 1
+        minecraft:unbreaking: 1
+  slot_13:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND
+    amount: 7
+  slot_14:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND_SHOVEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:efficiency: 1
+      Damage: 473
+  slot_15:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GUNPOWDER
+    amount: 21
+  slot_17:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
+  slot_18:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:efficiency: 1
+  slot_19:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: BOW
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 36
+  slot_20:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
+  slot_23:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:impaling: 1
+  slot_25:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:feather_falling: 1
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_PORKCHOP
+    amount: 64
+  slot_28:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_PORKCHOP
+    amount: 64
+  slot_31:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FLINT_AND_STEEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 12
+  slot_32:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: OAK_LOG
+    amount: 34
+  slot_33:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/+1XTW8cNRh22HxspqVp0zZJAwdruIDYhWy+aFYcmlQIKgotpAqIqgzeGe+MNV575PFku4py5hdUQgjRA0I9VuLCqSf+B7+F17tp1k4ySjZFFQduux4/rx8/7+P3tT2EPDTf4jJM61Ropnv1UHYyKeBPPo2udpigoSJt3Qyl0AT+KQ8htFhB4zmXGn4Cfpxp2qmiN1iEZi2Aknnekt0KmghlIczcMYSGwDEHODMEEqUc1C0bVSlFZRmnFqpqo8Yd1JUhinaoIjyycAs2bsLBLVirPZYwgwetIkyptrfoIW+oYBVdtwQpci07gSAdiqb926qXa8J9D709nDIIFwwyEUREkwqqbMbU6DyBJj+jhOtk8wdDcWqHKEb6a1YQsklPOqTnh9HzpOApVUGeUM4tzh/b6CkHvThEawmjgWwHhYh6TMRlea2eK6/TDspSLeOkB5wTSuwsTTkyT6NLQwCXilYNqbFHe34IaVJ+048lj/yaTx9rRfzmQ/jAWZh+sgtov7nnk1AzKWBeXsQxzXUAsTtEGMgu4QWFLx9qEA1/Csn7NrgPnL7D/n7tMH4PPsouTE/kLlUnxE1k9yCtvkEJbXibKSwCPvXlRmNp+WZjbWO91lhe2lhbXV9fW6/VG43V1Y31xlJjtVZf+Whp4+bS0urKo5pvPARRLTYQVfcyM3hUOn8feDKRU3XA5QgKNDkyuA8rMPAmC/1mm/CcHs76nHFOI9zqweY9+xxlSrYZB93HB/aGTGZxwSJ6oZ9POIEPui/+vve0+c1z9vz7uw+fPHU96znpv2wFlppoWea1C2VeaynXL47XLp4V9Y6NetNBzQ1RSmrIZtDmNE/KiF4qs3cXjK2DnNIot7DjNnamrMIq0g2YkqJsn5fLRM0TRp2i51atij03Ih3SL0C/OAm7Mtp5nf7/vP6Xz2u1APXiQGaHx/Un/MFXL56teD9Oxk9+/u3ijntcZ8v6IhVhAk2JRkFLynT0vvjrnpXzljFBU6uCDhMXEZUGLZPiY3uWrXaRhwQWPxzKtWLQUBMlizg5Ks6mComg+IHsUCzb+E5oYkJzo4oDt5dBjLgHAKPh3LG9dsyGPDTJ6S7lcHauDWcUwlSUFJplX70xNNP3FROBlpJrlpnRt44p0ZER5f3uj2a2Qu8Ercw3D83eL1ogwFaRpkzvGN+DsLOxjExqcrixRXSgapWFtJ8QOIgnHT1Io++jP49rfyDYS/H/Jd1FyEAznArZBXfGFLMcJyyKqMBdphMmsE5oTnEGhSevnZoU9Ow1ESemZkAycU8WWEtsyoKS3LDF7Azu6av8x6lkY0V6FtmB/0fl+u42VOAUv4+/ZnGi8W1TPt/DdXyXFGBbTITxO95OiIpO5/376+IsBpy3uyQzZL8gMQvxFlwcGdTFM8n716hUz+mFO3DE8GaLcegQTXwit5rVzhSl4viiB7Hufek7Gzm5/7oV+KpTga13WkJ6Qf89ZxXfeRt5zUHesF94MoXCnUmVhonMym4V118RP/eK+PlzvS8WRnmmnuE2VHWycaPspkV5D8w4YmzlxF4s06vNFO2CWIGSRx6ht5xFPNseL0E5NKM2N7UhiApFzFWjMvDYP4mOfCMTEAAA
+      blockMaterial: SHULKER_BOX
+  slot_16:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 1227
+  slot_29:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ELYTRA
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:mending: 1
+        minecraft:unbreaking: 2
+      Damage: 116
+  slot_35:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 45
+  slot_3:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: BRICK
+    amount: 61
+  slot_21:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:bane_of_arthropods: 1
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COAL_BLOCK
+    amount: 4
+  slot_24:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:efficiency: 1
+  slot_26:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FIREWORK_ROCKET
+    amount: 10
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
+  slot_30:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GUNPOWDER
+    amount: 64
+  slot_34:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FLINT
@@ -240,229 +477,3 @@ contents:
         {
             "goditems:code_name": "bomb"
         }
-  slot_5:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: BREAD
-    amount: 41
-  slot_6:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_SWORD
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 288
-  slot_7:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_AXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 1227
-  slot_8:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FIREWORK_ROCKET
-    amount: 14
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
-  slot_9:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ARROW
-    amount: 64
-  slot_10:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: DIAMOND
-    amount: 49
-  slot_11:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/42Vy3LbMAxF6WdttU2cl11nOt10nX2mP8OhKEjimCI1JFU3/fpC8UJgOki7E0UdAri4oAohCnEordenJ3DJpJcn7bveO1zErbjrjAMdVJ1+aO+SwlUohBCPC7GM1id8RH5pEnQbMTeVuJ2A0g4gS6gWYqX94MZvZ0JM4Oxd0Ggg4JKC8wz8NoEBjKt90FDJCqCPViV6yHd6yCI7ZE+jq98ge3+uIHAZLDP4isAoHIGeKbTKoIcJMsE76YamgUTYI2U/ZCzpCjhMU8ILK9YmI68nsrbGJa43W06dZPoe5VUh+DOBsbZi8k0hjhPR+2SwvtE+495GrC9vaMcx6tlBjKOdpiQKTrDaBJC6VaEBroCPGXuY2MbbCpxswXaZ3LM3FeypxhjLpe6ysbbwE2xciB1RpfXBjdnPRV7CJ87jvoymMsqRDOYU/MzlH/swaPSnVe4UCb2g9FVG35Ow6vQ3mvnlmnPaq0sr7+lQrCi5+4fkejQNlXxN6ZuMJtrGFIxrCFZQ7Jaz91uHZsHuMuorNas1sWXuj8xg99yEWNWbKPESGazh+vOQwTfEah0EZStO4j0n0mWk3rHz/wwkyaMFhddDk5v5wGldBqNPJPiOUl84odAMmICsLcSWwFsKH7lGndUv7JL2eBsF+fr74hr1yNlStyaCxVPSUNf5HArxB4AaO1UYBwAA
-      blockMaterial: SHULKER_BOX
-  slot_12:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/71XTW8cRRBtZ/2xnkCcOCQ2H4fWcAGxK3Yd28QrDtgRgohAojhKEFEYemdqZ1rb073q6fFmZPlncEPkhDhG4sKJE7+CC3+CP0D1ru3tsXdkG6LcvDP9al69qnrV9gjxyEpXqLDfBGm4KZqhSgdK4o9skVxPuYRQs57phEoahr+0Rwi5USOzmVAG/0T8LDeQ1sklHpFlB6BVlnXVsEbmQpVLe3aGkAmwVgIuTYBsMBDgoOouaraEujZBQQqaicjBrbq4uRJu1fnac4UnRNDNwz4Yl6xHvIkWdXLDSS3PjEoDyVIgi/4dXWSGCd8j702OjMMFY02DiBlWI7XtGKxic2T+S2DCJNs/WIoLj5nmbPTNGiEu6fkS6ZVJ9CzJRR90kCUghMP5Uxe9UEK/M0EbhU8D1QtyGRVcxlUVqldWSOvqui6WUI5qA8EK5JwAc6u0UJJ5kVyZAITSULfhZ57t+yGWSfsdP1Yi8hs+PDea+Z2n+ELwsP/5HqL9zr7PQsOVxHNZHseQmQBjp0xayB4TOeCbjw2KRr/A4n0bPEBO31H/oHEcv8CXaojHE7UHekrcRA0Py+pblDSWtz3CI+TTXGu3W2u32xtbm432WmtrY31zc2Oz0Wy319e3Ntut9nqjeeuT1tbtVmv91rOGb3sIozpsMKopBvbhSen8A+TJZQb6kMsJFGpy4uEBfoFjb/LQ7/SYyOD41FdcCIhot8DkPXeOBlr1uEDdZ8ftjZUcxDmP4PKonjiBj4Z//H3/RefJS/7y+3tPf3xR7lmvVP6rTmBlmFFVXXO5qte6utwvn7moN86Let9FvVlC3ZygtDJYzaAnIEuqiF6pau8hNrYJMoAoc7CzLnapyis1GwZcK1mV59UqUbOEQ8n0yq5Vc89GLGUjA/qpVLBrVQmBjHBcB8C0azGei12uclWQYYKWBlHQVap/cVf9ed+Z8K4d+Y7ROUzGNGK6H3TtQJ/qcNXt5VnI8OPHjzKjOdpxolUeJydHYVuHTAJ9pFKgqkfvhjZmbpMXyO0oiB2lQ4CdmJunck1tQh6ZF7AHApV/a3Iil7Yf+2i1I+VnyNLIRbgMjFLC8IF9+u4pJVIVgRjtDrK0E3pTtLLvPLL8IO+iADt5v8/NY+tyKOxyrCJbmgw3dwRjVes8hFFB0KWnGS2W0ffJ76e1PxTsSPxXpLsMOWpG+1IN0YtioDyjCY8ikHTITcIlNQlkQAfYtlnjzKKQX18TcWY3BBaTFiqnRlG7BLQSli3l5+iekcq/nUk21qxwyI77/6JcP9hFW+rTj+hDHieG3rHL8kPapPdYjm1LmbT9TncTpqOzef/yujjLMefdIRtYsl+zmId0B68dHLfgueT986JU/2Mv3MURo9tdLvA+0KFTuTWcy4sGkKc/ehjr/jd+KZHp7l1et9dLDuzc1xNWBKN7vWO+Ky5ypcq7I85SJSO8XOINSFR69wU9EHo9buc9LI426pTkZv4qJbd6kf8tzrH46qXob1ctVRAFds7/Sty5UOGraOz8M9VL4VKFIOSfUb3/BZ9MnfSnDQAA
-      blockMaterial: SHULKER_BOX
-  slot_13:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: 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
-      blockMaterial: SHULKER_BOX
-  slot_14:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/6WWz28bRRTHx7ETHKdt+iNJW3qxFgkOOCWO4yb1ASGViqKAQHBBIDQa7z7bI8/OrGbHid2QC+IP4ciVMxd644jUP4ET/wVvNlC/iRgEwQdrd+d9Zr7z5v2YFmMtdneoTDrdBe2kW+ymJi+Mxpdynd3JpYbUipEbpEY7gW+2xRh7UGeNUhmHj8g3pIO8yVZkxraWwEgqBRnPRVFnq6mZaW9da7HWcoEWu7+0R0OeQWqscNJoHKu93WQNtyiA3aJWusThVda0xlWWTw4YW2O15z//+KuX45/nLyYvv6leWJ3dDJdAkYy91aRb8/K5FjmwneSTmStM6dpP54UyFmz7Y1EkdWrtJ0kNDrLPPnq/WuEvV9QCV2wuEWdsOqFeoNRKQBGHaHATsDjEh8a48h+8uLOEQKcToV1+MbCm4AQUouRcZnpoQUylHlfiQw9lIhdjwBVe1tn28rOFQkiL2y7dBUT01wP918mutSOa65RpxPY8khZOjZ1yixEJlL9G+dVY0OWmLHkVzjF0LUDJ1lNhMaQI9ibFXguw20vMDEuZSaEJ2KRgMwBv0IQSikBvUGg9gMjxDsUUc6rwoW8IvEnhVgCTyB3PdGFOM7CEfI+SG7EALkQRp67FXJNaPI2hOY1F/vUYKK3RXMwhBt6IukdiovFCCT2l+bJC4c0AfkBSZ46blJhAPuGcUxALoZvBDNth9HLMPzuG2Oq3YuzYqIzr2XgcRP0WZW/HjiedQEmpNqXu/Iv6cilhggDeunI4bV+Z3LkyeTfmXwyKBVg+AZHRqhRU0nWan778N33k1YZnSVXwk0HiTynpJDB3ViSDr3BAyXT69ATpZHCWiNR3JLQr/UGWDitmjh3LIydCzQBH3nGgVPtD7RHzuRP2eTs577xaYIGj5hTtJ+YE7N9MPDGn/KJTJ57Szgv3JjJDQbvdvaPu46NHvX6/0z087B0cHezt9Tv+8/7+Qe/ocRef+71H+93ufq/7dSfxbQ+npXpwXt918etl7yXnqFTqEuyfai5j6JfLX89xEekEuikZjIQq4ZXZcXVBaA8X6IAW7fGFNXh5QOc3qqa88QH+f8E/RQlfblTHig3k28Mfvnt27/D7n148a/3+23GfBT3pXix+nJVC8Sksot00cjN49yxB9Woo0ilKf2IBCuyg7WPwx4DBoEslnPeZRx5m2j1MvQ1GHC6WnNdpoUlnpTM5z00GimfCCawRvwT67wf6O0HTwKgSNjeW415yXubSTVAJR+vCS4gVntf/S7H9P/cLGI1k6svo4kJC9fsDhXxkyWgKAAA=
-      blockMaterial: SHULKER_BOX
-  slot_15:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GUNPOWDER
-    amount: 58
-  slot_17:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/72WzW4bNxDHaa/syOvGtZM4tpt+CHutnFiWFSu6tEER1IUvBQIURYqCpXYpLSMuKXC5chTDl6AP0mPfoae8Qd6hp75Fh2s7OxS6QYICAQxjtcvfzH+GM0OGhIRkZyh1PNnnygo73491NtUKfuRr5HYmFI8NG9lBrJVl8MuEhJB7AWnkUlt4BL4hLM+aZFkk5C4CUm2KnI5MIWxAVmJdKLc+cH/X8JIHb1Zwbo1QY4RtY2zZw3Yr7CyF1xSkxoZbjvBvMR54+K0KNzzJLcSOwB0MNjzwXgVqeNQQLKhmkk74HFkAsWGV0ybOqbNFFcs4+eY8GjEphyyeRIPoiUpaT1MxbZ3yedSOrGEql8xy+OSQ+4my97lKaA5rnLfoIsBq4gKiyGimEy5pwiwDEW8IDmTFCwQpGoJKmnEm63K36pFtXB8st5SZTBuXhozmmbApbCKF1VOnHucEm7xRux3sjAqjFQL7GGx64HYFgrs5NzTlLKndiDWyUQFSG9509bg0PI9iDT8h1WMtE8g+fwH5jwa/wAcp4smTGdDR4DxisRVawbq8GI85xA62M6YcMmOycJv1wHIpWz8oh+inlpmXreii/dbBHL7qM1if6hk3/2E41Wf0sisjRynrhLslIgFB+52DfudR/2G312t3jo+7R/2jg4Ne270+PDzq9h914LnXfXjY6Rx2O7+2I1dpYBbrcdU1n7q3i9mLLkCpUDk3V2oWMcjL4tsLcCIsgzRFAyjnnL9ddiqk5ElrOIcEhGQLOTN6JCQkv1H2wfr38P9n+iNIeLZebit03avjP38/2T3+46/XJ+E/f5/2iFfLa3XD4Loph9paiatvySuEgER1DGVQuWIkuHEyPK+h5/WrykLC+bRsVmohLprD0DQ5ct7AVtbrtHMVpwz2OwElelKrPSRf4JkJVZzQKzS7/L4q+YxLEPA5anIGTa5H0Kw2NXqqk9yFFuAoYFue87iMAB4tL0vSqQ/IHmqbIp44QzaFQDlz8oi/OZ/UnQ6STUVOJXtZSFE3a256MCoannHDJO7tJcxtfHhFYPzTj1RQy16mNuu8QkPYdA7zJU+ZwTGvYHzLwze8uVw7zG/VJTgRLNMKO9vE3G2P+7riUv3+Z4CX8zsfWCdfYnj7/10H7tZdQqbaVf07mm9vcS29HtJNsnr5BmcVziMJyfA7ZOddp587gpD/DQzufrzZsav0jMEoM0VsC8PzAZyI8KWs4mCh4/dq6/gFHHtW0iEMDW5rZTXxQX51kymPhrXoOwNtwGQUesOsNHd1TJa3nYAEj8eclB2yegI5t+nj35zEGz8xuJ9dFx8W/Zkn+k5l/XmhxtC2UuO76JaD/wU8rmGDOgsAAA==
-      blockMaterial: SHULKER_BOX
-  slot_18:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/+1Y3W4jNRR2m3Q3Cdp2t2y7ICQ0zBWIRCRpmjbhhpZ/gWjFLj+iWkaeGSdjxWOPPJ5mo6pPAUjcrQS3SPsEXHHDU/AKCIkH4DhpG0+TbBra7a6q3lSN48/n8/m+c2yngFAB3XOZ8DolwhVVvZInwkhw+BDn0csh5cSTuKWanuAKwydZQAitZlA2ZkLBv4DPUkXCHJqnPnp1CGhRSbpCdhwJixOVQQueSLiGLBZQYRilYEY5BsVzaKnFaDtQjp9IrKjg/+pgw7hzs8d9LxU3h1aM3SWxEqHDcUjQzoFNHimJ7ebege0JJqTdtH0MK7osIXbRpgoz6tnNFmYxKdoKZsOMnV3ro6PQ9uHDk2H7MINeGwkUCp8wx8cKo9t//5NHi8MZEI/k9AbR+yaR8UEfBMRigreJnBB8fHbzqEAeRUzEkNdYCzqXQwtxgCOCCnGIGXNc+INGRfgzLcL81Rfhg5lEON73G5epQuZahRdAhezVV+HFb0gL1yI8fxFuPDMRfjD37grmn+z8WJHxYgi3lcQeVmQIiJWkwCGQImkHT1OtaCfcJ5IBoWP0xQj529TNdANI4/l3o+2QMEVDgPR9UWI4VpS3jUY5bZdnvaWdssLNaytcW2Fghdx5rXDWuJl03PzscZvXFrySFiw8JwveSsW9O1wiZjQk/VPVCDlvQhdTUMOIXcp9xwuwbBMDmzexSynsrSHWFV0DM3c2t/84ahAlE8Mf/cuQBMHObZFPCGMQWIZnMMLqkC3hkA+uwoFSNxjZJyzOoKXhjCiBKTrF6VHRJVJfHlOjLaZ3DenJmIol3JUEd8CufYVB+jgQXYdyRwkBro706FNLcGn7q7EleBPN2zb6dWoZXlyat6DiiOxZ/VRbLSlCK4DMT016n+jPU4m2Je4ZJAdmmZXjm/cDIdRbVsnaxlLiNpnO7pfLYsbBCNbb1glD3aStLzHlZ8vgH7Py/J8yfwotwNpyKaOq17TGciseGDEJ4ZOfM1+cfkisjNQGdhk8GMa0EW3/AlreTVxYeTvpdKj6GsMJCT1nuS183aripgeVMmg4+eC4DaB0O709qSdGDPeIdAKC/Yn9bfzxN+caGdBSFM3XHtDtfLgPaLt5YGNPd3iYFyftNomVA2uHmGvIvt4NfPOOAubWFuyZes79PinLPhzq2oOvRRcAgdgncszKuqUMfo61NYorzVxPoSDZXqW2Vm2sr9XKlWK9urlRrtbqG8VSpVFeq21uVBuNYrW2Xt4slzfWQCqdSl3rJhlYVPUiPXw6d/Yh0KQ8JvKIygjuqHWkhrUlxvvlM8oY8S23Z2mv3DHCSdGiDJKfHWgNckbthPrkpb6oCGUfdH//a+dx85sn9Mn3n+/99DjtgTspD1gjhwDxHa0j4Q6OImYekRVzmeVJNwJPiA6sEcH57gUiMvCvm/i7KbzhrBgcYYDeNUErk85lxdWke8DqpCuEJzC8y/UP+AY0Z0LvpaDmuQcve2mgsibqlWdQZA8vvsg+Bvd86+wCp+8ussRK1UqlXN2srDfqxUq13Fiv1evrdSiySq3WqFfKlVqxtLZRbkCV1YwqM9jMUGOnUIPKMQcvrb4Q+g+pS4KuERoAAA==
-      blockMaterial: SHULKER_BOX
-  slot_19:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/+3W72/bRBzH8WvTlcSFFbpfSAiw/ACBVFdL2/RHHtGJB0NigLQJHiAUne1LYsXxBfu8rqr2j/AEkJD4N5D4xzinXZMpPWWbpj1655Ed++4+d8l97+UJ4Yl7UabjUahyk5qzMNbjic7tTdkSt8ZpruJC9k031rmR9q7whBAfN8RamWljL237tdSocVOspom4M2uQpHKs86Qnn6mGuBHrKq9fX/GENxvBE5/OGkhjijSqjOqNdZL2U1XYBK2r63rc1aZYM2cTJT6fNRsoGyqNd2xzGY96iRzLgWqKlp6oQppU56Ilk6T3VGaVWhfrNpRN8vUXYvq5SL0zN80jqWLVT0LV2e2E+53jTijb6jA8brcP96ODo2T36KB5Ofnm2C7IUOaJeBHrM2escqJUsizVv01Hqj21Fx3tSRnuqnYS7vcPZSijaD/sJMnuQf9+1Dnek4upVsRmOdSnvTTvGa0zk06EaImbs24zXah6yA2xGgTin/NAPTOFDLq/nAeRzpKg25dZqbaDWNs3g24gf6tksB2kRmZpfPVUR/2qjKVRswal/SVHygwLXQ2GV98a273t5ckwLf2BTrIz/1RJ+0/wZZbp09I/05VvtB2gyhNVZDbmix6f/3rVOngu/n5HQYeyyFVZ+mao/Ik+VYWv+/Zmmm55ynpJ/1iadFDIs7mkpqjeIOiXD1PzlR/6j6cv+d+lg6HJ03zwaiH/e92Qb7ic39oq4Z9EaWarTNe/Ntv2+dyYSuWLg1729cP3weJEfn9HE/l5qHI/zf1HdqP5D+1O6y5f6L+WZktkMeo5Zv26Cf12e+e+fzItPf4304q4POLyP+vbjThL+LgujksDevOnS5VHhZIjGWXKlsu5B3FVGj3u5XKsxJ+LM7rYYC9N6O0Ui0f1prsoEMp/8opFwhN3Z8lVHtuybcYXB+N6pp6qrGzMn8GlrUiTuiTZmn2jIW4vLIfd8/ZR49rK3xCfLKySPVxVZo9MI8XmgxPvmnWsn3li68cqsovzoBqNUvNTfWaVTbFla3h98pfWBom6WPGNy/JYn/rTo2wGhRWgABSAAlAACkABKAAFFxRWgQJQAApAASgABaAAFFxQaAAFoAAUgAJQAApAASi4oLAGFIACUAAKQAEoAAWg4ILCDaAAFIACUAAKQAEoAAUXFNaBAlAACkABKAAFoAAUXFB4DygABaAAFIACUAAKQMEFhSZQAApAASgABaAAFICCCwotoAAUgAJQAApAASgABRcUPKAAFIACUAAKQAEoAAUXFDaAAlAACkABKAAFoAAUXFB4HygABaAAFIACUAAKQMEFhQ+AAlAACkABKAAFoAAUXFC4CRSAAlAACkABKAAFoOCCwiZQAApAASgABaAAFICCCwofAgWgABSAAlAACkABKLig8BFQAApAASgABaAAFICCCwpbQAEoAAWgABSAAlAACi4o3AIKQAEoAAWgABSAAlBwQeE2UAAKQAEoAAWgABSAggsKd4ACUAAKQAEoAAWgABRcULgLFIACUAAKQAEoAAWg4ILCPaAAFIACUAAKQAEoAIWXoSDE/8BzMusSxAAA
-      blockMaterial: SHULKER_BOX
-  slot_20:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/3WU227UMBCGvZtt2Ub0uD1RBIKVuGv7AOWGey55AGvizCZWfIhsp+0W8Xy8Fs4WKWOQLyIlir/xzPz/TMlYya4qZUV3hybIsL0TVvfWxA9/wFZaGhQONuFBWBMgfrmSMXZTsIVXNsTXyC9kQL1kc1mz9xOAzz06iUYgr2wICgu2J+xgRmjJ2BRhlkQ4niL4IEWXo+YJdTlRjbJPXJqOexAE3qNwkcAXE2xh5HolTUPYGWUXCXs0sVXsWg7aSyDS1uAkKN7hlpCxtHJSYUmPjzG4AY3s68/1BpSqQHTrh/WP1sUzn77jdn27Dg6MVxAw/hiB+9qEe787Md60/lVQncTgg9Vc2xoVryFATOA3o8nvJ8lfE4F6N0R5/2/YguJvEvyE6utSbE6xZYIdEmM1WW0OclZ6ahECoY4oVebcsKO4R6w9YW8p+zZ3I/S9ytrhMHejsFWlMApisuNylFMjjloLJmAd583SuZklfirZByqBdRH4i+rX//sKH1HFks+I8XQPo8ivlST2OE4SuiLB20F16LhvUSmSzzmlTxL6nNzorIlz3FiqW0nR0wT9PKGbuAJw9BaHF1AIPD6PSDU8pXHOcqtEQS89V/AyKEngFYVXOSl3+ZuhaZAWcE/Z89wqERZUbpwuEujjBBkMbaw6IBdttFA/boCsCwo6iDVoaDAe+ZYIe5kTNtfVL5S+SuhT4lONDlRNuBPKXedWZTOY3j7V6HKdeZeTYiPd2BRwDW1IQdmbhL1NpPCBg9PW8bivNPdahnb0Vjz9b4/n42T8AVaT7IdUBwAA
-      blockMaterial: SHULKER_BOX
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: DIAMOND
-    amount: 64
-  slot_23:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: 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
-      blockMaterial: SHULKER_BOX
-  slot_24:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/+3UzW7UMBAA4KHZLrsB+v8DRYg2Fy7tC+yJF+DGDaHIcSaJWduz8k+3q6rPwFPwfJX6BDhCbBKhpcjiBrck9jf2ZEaTAqRwWkji8yvUTrjVFSe1IB1e7BQOldDIDavcjJN2LLyZFADOEhhZSS48Bj8SDtUEtkQJux1gxtAygW1OXrcb3wN06slA9Y6pvV7QskSzSW5FyyRajqJy3I5S4yj1NEpNotQ0SqVR6lmUev6n6m1fvYjuj51ouRst96LlfrQ8iJaH0fJoIPc7iQoNk+UmdzxwB50ThnTObrAHwzRKu7GXwknvFM0bpp36sTCWeI3SJvBG0zXLrTOeO2/QzoSUrEZj84JpbMdUAkddFCvkPHfkedOeNljCqhJchGNWrWoHai+Jk02NzBu0rpfBuK9OB+q4U6VginT52+wnfcC9daRyzRTC19sMb5xh2ezTbVaQLLNZxaTFy4yTJJPNskJ6zC4z4ZgUfL1KReUtZw47EP6bmKNrDPm6WX91IXyI8uELSS1MCOR16AsZLvNT3n1e78ruEnj9y0UVlSjzkjkGe/cPU9jpdoQr4qTNFr49mogUdePyhTcL+RcS+tiQeWfPVRt0dd4wFRr34tH00n4dvC4MsjkrJA4b5OX/Uv8rpT7bVOqlCHUOU8rU/VK/avV3L8xVCt8JAAA=
-      blockMaterial: SHULKER_BOX
-  slot_25:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: DIAMOND_PICKAXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:efficiency: 4
-        minecraft:fortune: 2
-        minecraft:unbreaking: 3
-      Damage: 140
-  slot_26:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/82UvW4TQRDHx7GdOAckdj4ISQHRYRqIXSGKVJGoEXQUFKf13sZeeW/ntLeH40RpeAA6RJuaioIHgI6eF+BRWIeEmxU+KRwpctJJe7r5zc785yMACGBroJCPe0Jbaac9jkmK2n1ky7CeSC24YYd2n6O2zH2ZAAB26tDIFFp3dHxDWpG0YEHGsFEAh1IpEUcJS+vQ5JjrmXUtgKC4IIDtwt4ZRrHgaJiVqN2/2pMWNOw0FdChVjpzv5vQMmjPLZ8/BViE2vHXT2ezcGbno4McLp46tP0rXJAAD1o0tVn4kWaJAHESHjKlBoyPw/3wlcuADYXZfZnbFDO7+4Kl4V4oLVOSh/vOMhN7oTUuJMWscMTMUz/Wtl8k308vvET420t4WqeXz2LiqNDAm27vPOBLZWv/oez8tO+XpP34xMuCBD/IjXRHawTLciPC06uWbLWwMs7B0byCff5YFOzdd4CiZpcSLFy7BLs3S4IvrwsJPnTnSVD3JCA+Myv5mGS/QKmGR5H5QTaOFA4Jt0S5pscRAbORYCa7mtgxS1zDO5tnXiaLnu+twp4dMyVY5N63gl7RpfSSR28W9EDlIkLDRzKm4VG25bFrBaukmkYpo+AyBZc9cJtuQxy7mqZoxnyEtAnrlA+uvX8f3az+PXv/p3+/jX70f/7dv7c8CUjsw1ynOImFIQocUPJ2ZfJOZXKlMrlamWxXJjtlu4EZg5Myaq0StV6J2viX3NqU3PTIFTLvbjwI9JBCd68a5CKltsoW08WUJ7m1qAndofS9shmXBnUk9RBt2ZbeKdu2HAcTMfDXGcAvh8ECoq0JAAA=
-      blockMaterial: SHULKER_BOX
-  slot_27:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/71XTW8bRRjexGlI3I+kafNVVGm0QgKErdhpYhqfIAVViEJbkBCiVKvZ3VnvyLMz1sxsHBPlyIkLF/5CT3DixJkTF/4GBy78ASTesSN7xs7GTSt8252Z553nfWbm/Sh7XtnbDJmI2lXCNdW9aiSyjuDwo5a9WxnlJJI40c1IcI3hT5Y9z9sueQuKCQ2fgF+gmmRL3jyNvc0RQKU5axMZqJQwVvKuRCLnBvCB543Q8w76hr0dtkHXbFDJAa2NQCJUNKaYW8BtG7jgALdGQMKjFHNN4iAUom3B58peeSRI2btr+aeFBMAZNBvMLzJyRJgqeTdHC5kQmvIWWENGL4vPFYePJXYr5x3RjYm0qNRt5GKRbjGV2gKVbNAbDmjD2o6JbhASKSlRFvhtG7zkgLftHXEmeBx0aNTGx+QC8TYmBB9X7ba1IkloRGFdz1hypnIeSoLbA03nDMlViw7OcIuAtk8dqZcd+iuj9Qmj3FZs3iG9bGvL4MCX+pdx3ve93058cqwl9pvPTvxQsNhvJpgpUvEjASv9pt+Diy+6fsWnGjMaDedFmOQqwnDdhkNKS9omOpUib6XDUQ0bgJ2PSEKwRj2RSyQ6Z8xQl+oURTnnoAPCPEYdhvs/sGHO4e6AY8MdTp8PrfmnffovptJvSdyzyGuZvwL3d76grVSjB2Ci/S6qGpIRQeS4w4SiR2Q6159nxPMRSSyaKhXdAdd4RFZNZzsrVb/k8ADQe8hlHRMtOFiZzvOXGfMcuwVM4BgNg9x0ur/Ohu5nudIoJH16cPD9FzZkiRIpMkT5Ebw+IXsv98p+mlmQeNTn3ES1ncbLUfv9spq+IrFPIOqiD0PKoLhoonO5VU6sPQnhk5ue2Xr8ue84UvbWJ9ICDhnxluyJCI5VZAHHGfF+mPR6cFeGBMzYazt9KLJw6jFcMiM6aa8EiW/FRKmA8kALwTTtmNE3J9zORExYEGONvZXDb8vnCGPmyt7akzwElw/zdpvqrzDLiVry1loiNmlTQUEWk4GECyE4V5B1xwqcspN1LV+MykG/7LTrBRt6tajIkxh8loIXlZTXHOD6ZKHyvxUpRZWI72hyvUgTuHEsgDen7Bps3obecKCrdrUcdklYJOWqA7s7qUgqpCIBlpmQRTZuOjbujGykBEsdiCTQKQkUwUUG1ooKMCyl6FooZKNuFR0m5OYeNBewe3y54m1u7vnJ+GMfRYTIZKiPTYj3myc+jjQVHNapvNUiSgdgO4NSCyBH5oHAzI6G+I0ewrv4OngCnL5B/uk5wT0VR0SeY9c84EHf5RsUtCDA2yyhEDGeVXfr9dru/fr+QaNS360d7O81GvuNSrVe39s7aNRr9b1K9d77tYP7tdrePYgs5nmCVYsNWNW9jhkcl84/BZ6UKyLPuIyhBkHKHjSx6/yw/CllDPJl2EMmqFmtT0eKhDLQfaEfOa634a7kLfjcbzQOrvbPFLoy/Mfjf/96uPvi+z//fnCj9+M/bgy5XfReTIs4EUN2bOh6Uc/CIW4TCVOB6goZv1Y4sNo2lWLZ4USpC6LB4luOdxtFPRnDHaoChr/LGbX4bdngzdn1s8VeOu5szY6RFUJUBntOtInjwdkhun1hZoIcK+ymcM2G3nGg1m0nGZGY2bdp1Wz6HxTqbfxkEQAA
-      blockMaterial: SHULKER_BOX
-  slot_28:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/82UWW7CMBCGDYQtXYGyVj0CF+CJm0SOM4QIx45sB4nbd9JWyrhqnixVvMVyvm/+8RYzFrN1KrW47EG5wt32QpeVVjiwU7YoCwXC8JM7CK0cx5GJGWO7AYus1A4/kY8KB+WE9YuMLSmQphKsQ9eADYWuVfP7kbGW7QWw/QB2EMBGHvv+m82SDKCykrtOwzDYMAo2jIMNk2DDNNgQBxsePMO6NdjK1AISi2feWEJHlH4Mrv8UcBKfA9hXj/1o2coUtuQGx4kwN2xf0u6H1DHzHHO6drdcckvBHgXnHrhqQaOdA5WcMPyZwH0KL7rgr5JJigoJXZXfPPiFtM0rMISaUWrZtdC5llmi6jwHR9gxZVceu2lZUOLMlcNDkmp9oYFjFrdvcEw3B7fUIPCDlt/zIwlXaHaJtGNLrNk8dM0DTdKs/y/NRukrx/uD18jVBuzBGY4zYP6ItbnPWNv7jLXzYm3bEgrcGQxOJYXKNT2S08bwCSuDt03sBwAA
-      blockMaterial: SHULKER_BOX
-  slot_30:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/3XS707DIBAA8Nu66Vp11c1pjM+wB9CXaSjcNlLKEcri9OnF+IFDwzdI7gf3rwFo4Lk3JIc92qDD517S6MjGy1TDdtQWpReH8C7JBhFvvgGAtoLFZCjEY/QLHXBcwVwreErAUwhou4PB6VTBUtLZ/sTPARKeZXiTsPZkO3FBBmNsk3Kr4D5FKzGKI8aYN+Cvz0up9WJA1TkKIhD7oeG4yvBrwnhx6DVaiV0fSzQ8xxV/YZG98PinOG2PFBjdcHpVytwIp6fOiK+z0QwvOb7OcJtwIC/5KHZcrUrKiVhvqcY6Uw+sSyN6YRRza+6azO2Sm5w/x85+EHE74/am1NcjGfWvrzWntxld8+0WhqEtR3elJfWophDXsTSIdQZf+G/0u4B+kCdypRVsSyPpPQqVK4Bvbw92/MsDAAA=
-      blockMaterial: SHULKER_BOX
-  slot_31:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/+3WTW8bRRzH8UmcBHsLDaRPPAhY7QGBFEeO4zz5RCoORaKA1AoOCFmzu2N75fWO2Z1tGkV9I1wACYm3gcQbY9ZJY1fOyG1V9fT1ade7M/Obsec/H08IT9wLUx2NmioziTlrRno80Zm9KRri1jjJVJTLvulGOjPS3uWeEOLjmlgrUm3spW2/lhg1rovVJBZ3Zg3iRI51FvfkU1UT65Eus+r1FU94sxE88emsgTQmT8LSqN5Yx0k/UblN0Li6rsZdrYs1czZR4vNZs4GyoZJoxzaX0agXy7EcqLpo6InKpUl0JhoyjntPZFqqDbFhQ9kkX38hpp+L1Dtz09wPW629w91m3D5uNTv78qAZyuOo2Tnu7Mn+cbvdaYX1y8nXx3ZBhjKLxfNYnzljFROl4mWp/q07Uql92T7qHMbN3b2jdrOj7NXRYbTXbHfaav+gdXAUhu3FVCtisxjq016S9YzWqUkmQjTEzVm3qc5VNeQNsRoE4p/zQD01uQy6v5wHoU7joNuXaaG2g0jbN4NuIH8rZbAdJEamSXT1VIf9soikUbMGhf0lR8oMc10OhlffGtu97eXxMCn8gY7TM/9USftP8GWa6tPCP9Olb7QdoMxilac25vMen/161Tp4Jv5+S0GHMs9UUfhmqPyJPlW5r/v2ZppuecpqSf9YmnSQy7O5pCYvXyPolw8S85Xf9B9NX/K/SwZDkyXZ4OVC/veqIV9zOb+1VcI/CZPUVpmuf2227fO5MZXKFge97OuH74PFifz+liby81BlfpL5D+1G8x/YndZdvtB/Lc0Wy3zUc8z6VRP6u7s7Lf9kWnr8b6YVcXnE5X/WNxtxlvBRVRyXBvTmT5cyC3MlRzJMlS2Xcw+isjB63MvkWIk/F2d0scFemNCbKRYPq013USCU//gli4Qn7s4V+SyyZduMLw7GjVQ9UWlRmz+DC1uRJlVJsjV7vSZuLyyH3fP2Ue3ayl8Tnyyskj1cVWqPTCPF5v0T75p1rJ55YuvHMrSLc78cjRLzU3VmFXWxZWt4dfIX1gaxuljxG5flsTr1p0fZDAorQAEoAAWgABSAAlAACi4orAIFoAAUgAJQAApAASi4oFADCkABKAAFoAAUgAJQcEFhDSgABaAAFIACUAAKQMEFhXWgABSAAlAACkABKAAFFxQ2gAJQAApAASgABaAAFFxQeAcoAAWgABSAAlAACkDBBYU6UAAKQAEoAAWgABSAggsKDaAAFIACUAAKQAEoAAUXFDygABSAAlAACkABKAAFFxRuAAWgABSAAlAACkABKLig8C5QAApAASgABaAAFICCCwrvAQWgABSAAlAACkABKLigcBMoAAWgABSAAlAACkDBBYVNoAAUgAJQAApAASgABRcU3gcKQAEoAAWgABSAAlBwQeEDoAAUgAJQAApAASgABRcUtoACUAAKQAEoAAWgABRcULgFFIACUAAKQAEoAAWg4ILCbaAAFIACUAAKQAEoAAUXFO4ABaAAFIACUAAKQAEouKBwFygABaAAFIACUAAKQMEFhXtAASgABaAAFIACUAAKLih8CBSAAlAACkABKAAFoOCCwkdAASgABaAAFIACUAAKL0JBiP8BxJ/WSmTUAAA=
-      blockMaterial: SHULKER_BOX
-  slot_32:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: OAK_LOG
-    amount: 34
-  slot_33:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: PLAYER_HEAD
-    amount: 9
-    meta:
-      ==: ItemMeta
-      meta-type: SKULL
-      lore:
-      - '{"text":"Killed by ","extra":[{"text":"GameX_PlayZ","hoverEvent":{"contents":{"type":"minecraft:player","id":[-2110281596,1209546656,-1144961014,-370980043],"name":"GameX_PlayZ"},"action":"show_entity"},"insertion":"GameX_PlayZ","clickEvent":{"action":"suggest_command","value":"/tell
-        GameX_PlayZ "},"color":"yellow"}],"italic":false,"color":"gold"}'
-      skull-owner:
-        ==: PlayerProfile
-        uniqueId: 98202e51-bda7-330a-8706-67959aa30c56
-        name: umang_op
-  slot_34:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FLINT_AND_STEEL
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 5
