@@ -32,6 +32,15 @@ jobs:
       - name: Verify Java Installation
         run: java -version
 
+      - name: Verify server.jar File
+        run: |
+          if [ ! -f "server.jar" ]; then
+            echo "server.jar not found! Exiting..."
+            exit 1
+          else
+            echo "server.jar file found."
+          fi
+
       - name: Start Minecraft Server
         run: |
           echo "Starting Minecraft server..."
