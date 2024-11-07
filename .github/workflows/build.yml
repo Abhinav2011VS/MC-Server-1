@@ -46,7 +46,7 @@ jobs:
           echo "Starting Minecraft server..."
           
           # Start the server with optimized flags for performance
-          /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.4-7/x64/bin/java \
+          $JAVA_HOME/bin/java \
           -Xmx12G -XX:+UseG1GC -jar server.jar --nogui &
 
           # Wait a bit to ensure the server is running
