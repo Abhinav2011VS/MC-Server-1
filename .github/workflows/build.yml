@@ -41,7 +41,7 @@ jobs:
           -Xmx12G -XX:+UseG1GC -jar server.jar --nogui &
 
           # Wait a bit to ensure the server is running
-          sleep 15
+          sleep 45
 
           # Save server state periodically
           nohup bash -c 'while true; do
