@@ -1,0 +1,456 @@
+armor:
+  chestplate:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ELYTRA
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '"God Elytra"'
+      enchants:
+        minecraft:mending: 1
+        minecraft:unbreaking: 2
+      Damage: 9
+  offhand:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: AIR
+    amount: 0
+charms: {}
+contents:
+  slot_0:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:efficiency: 4
+        minecraft:fortune: 2
+        minecraft:unbreaking: 3
+      Damage: 571
+  slot_1:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND_SHOVEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:efficiency: 1
+      Damage: 473
+  slot_2:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: BOW
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Hellstorm","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A fiery storm from hell","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Shoot) - Barrage","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Shoot) - Fire Rain","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000021
+      enchants:
+        minecraft:flame: 1
+        minecraft:power: 5
+        minecraft:punch: 2
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "hellstorm"
+        }
+  slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Might of the Thunder","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_aqua","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"This godly weapon allows you to","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"aqua","bold":false}]}'
+      - '{"text":"","extra":[{"text":"harness the power of thunder","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"aqua","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Hit) - Strike Lightning","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000001
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 11.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:3c2ad3d1-30cd-4982-ac0f-b437a0ec83ae
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:58f2f30c-7445-4a48-88d7-06595114cc24
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "thunder_axe"
+        }
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Hammer of the Underworld","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Your foes tremble in fear at the look of this
+        terrible weapon","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - Throw entities around
+        you away","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000016
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 11.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:424b2eb5-791b-41c6-9a25-fbfbbef097ec
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:6d6b0c73-c487-4d85-bec9-48fb0635d94f
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "push_hammer"
+        }
+  slot_6:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FIREWORK_ROCKET
+    amount: 12
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
+  slot_8:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:mending: 1
+      repair-cost: 1
+  slot_9:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/+3W72/bRBzH8WvTliSFFbpfwAQYP0AgNVW6tmuXJ2wTSEMwhtQJHiAUne1LYsXxBfu8Lqr6j/AEkJD4N5D4B/iTOCddkyo9ZZumPXr3kVP77j7+2v7eqy5EXdwMEh32Gyo1sRk1Qj0Y6tT+yGvi6iBOVZjJjmmFOjXS/srqQohbFbGSJ9rYQzt+JTZqUBXLcSSuTwdEsRzoNGrLZ6oiVkNdpOXlS3VRn65QFx9NB0hjsjgojGoPdBR3YpXZBLXz43Ld5apYMaOhEp9Mh3WVDRWH23a4DPvtSA5kV1VFTQ9VJk2sU1GTUdR+KpNCrYk1G8omufeZGP9NUm/PhOjcVtG+ajaaOweqsbe/GzWCZrDX2Jfhgby7e6BkcFA9u/nqwBakJ9NIPI/1sTNWPlQqWpTqn6oj1eGd2827e3c6jb3dpmzshbuqERx2ZEM1d9X+fhA0o8PmfKolsZH39HE7TttG68TEQyFq4sp02kRnqlxyXSz7vvj7xFfPTCb91s8nfqCTyG91ZJKrLT/U9kq/5ctfC+lv+bGRSRyen9VBp8hDadR0QG6fZF+ZXqaLbu/8v8ZOb2d50otzr6ujZOQdK2nfBE8miT7OvZEuPKPtAkUaqSyxMZ/PePrL+Wj/VPz1hoL2ZJaqPPdMT3lDfawyT3fsj3G6xSnLkv6+MGk3k6OZpCYrXiHo5w9j84XX8I7GF3nfxd2eSeO0+2Ih/33ZkK9Yzm9sl/DuB3Fiu0zLuzTb1snMmkql84uezfX4e3/+Rn57QzfyU0+lXpx6j+yH5j20X1prcaH/XJgtklm/7bjrl03o7exsN73749bjfTXuiIsjLn5ZX2/EacKjsjkuDFif3V2KNMiU7MsgUbZdzpwIi9zoQTuVAyX+mL+jyQd24YZeT7N4VH50kwahvCcv2CTq4sY0uUpD27bNYLIxriXqqUryyuwenNuONCxbku3ZqxVxba4c9pu3pyqXdv6KuDVXJbu5qsRumUaKjQf365fUsTxXF5s/FIEtzoOi34/Nj+WelVfFpu3h5c6fWxtEalLx9bP2WO76461sCoUloAAUgAJQAApAASgABRcUloECUAAKQAEoAAWgABRcUKgABaAAFIACUAAKQAEouKCwAhSAAlAACkABKAAFoOCCwipQAApAASgABaAAFICCCwprQAEoAAWgABSAAlAACi4ovAUUgAJQAApAASgABaDggkIVKAAFoAAUgAJQAApAwQWFGlAACkABKAAFoAAUgIILCnWgABSAAlAACkABKAAFFxTWgQJQAApAASgABaAAFFxQeBsoAAWgABSAAlAACkDBBYV3gAJQAApAASgABaAAFFxQuAIUgAJQAApAASgABaDggsIGUAAKQAEoAAWgABSAggsK7wIFoAAUgAJQAApAASi4oPAeUAAKQAEoAAWgABSAggsKm0ABKAAFoAAUgAJQAAouKFwFCkABKAAFoAAUgAJQcEHhGlAACkABKAAFoAAUgIILCteBAlAACkABKAAFoAAUXFC4ARSAAlAACkABKAAFoOCCwk2gABSAAlAACkABKAAFFxTevwCFzelKmbRBM53OKOHe7MAPLgycuQltD3WRt+1jkUm7r0YzMyxfcEZ1torlXJO0X5749pkkgX0H7eP4Oo28o1489L5VZZOw702aJ/YFsKfKIdtRaraVBU1urylX808XlFQs/3ehAh+6KqCDPLZcmq3Ap2Xx/gepIOH2TcUAAA==
+      blockMaterial: SHULKER_BOX
+  slot_28:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_INGOT
+    amount: 4
+  slot_33:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '"God sword"'
+      enchants:
+        minecraft:bane_of_arthropods: 1
+        minecraft:unbreaking: 1
+      repair-cost: 3
+      Damage: 453
+  slot_35:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_PORKCHOP
+    amount: 32
+  slot_3:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: CROSSBOW
+    meta:
+      ==: ItemMeta
+      meta-type: CROSSBOW
+      display-name: '{"text":"","extra":[{"text":"Besieger","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_blue","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Where heavy artillery is needed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Shoot) - Explosive arrow","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000011
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "besieger"
+        }
+  slot_30:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FIREWORK_ROCKET
+    amount: 64
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
+  slot_34:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FLINT
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Bomb","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gold","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Defeat your opponents with cunning and planning","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Right Click) - place explosive","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Left Click) - show placed explosives","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - detonate","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - load gunpowder","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Must be loaded with gunpowder from inventory","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Loaded: 0/6","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000028
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      Damage: 0
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "bomb"
+        }
+  slot_7:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:efficiency: 2
+        minecraft:smite: 1
+      repair-cost: 7
+      Damage: 1227
+  slot_29:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND
+    amount: 64
+  slot_31:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FEATHER
+    amount: 64
+  slot_10:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: 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
+      blockMaterial: SHULKER_BOX
+  slot_11:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/4WVS3PTMBDHRZ2miYE+6YvnTDkyvTOc6HDhE3AVsryORWStR5JJy6dn3ZTxqjMqOTm2f9r97+PvUohSnFcW9foaXDTx7lpj16OjP2EpTjrjQHvVxC8aXVT0z5dCiDeFmAWLkS6Jn5kI3ULsmFq8nwAPxjXoNdSyBuiDVREKsatxcCP3UYjpkGfJIQcsagshMuoZp3YS6myiKqv+gOxxU4Nn8IzDRS5k5Y1eM+qQU7OEYuUxHp2sEXm8XU7uJuT5RK7Q1uCkVt4jlzrn9DwnlZhIdGMhtAxecngvF1q3JoClBsWhaRi9w+lFQh9PNFbB1Ea5HLhMwLcTuFG3FFNj34OX97OX63CZkx0NwbUca7bhFS9FOc1vKS4nosdoqEXjGI/PFmK+vcMVUdSNgxDGsZ6SeJ4kcTq93hgPUrfKryAn4MV/ut6C7SAZ8EcKmGZwFMvFbvtgbuE32FCIQ1aVFr0L2z4kEl7m0gi9HzStilVuHVgaBaf3cwW4H3o3rFaJhEvOHiTsPlszUsigzxw6zG0ZONpoCXeQ2+qj3FY31riskRwn1NFE0Xh36OqcG5wkHGtEiN64FcNKjr3KbVRlB5BGZ9WdPglWUOcEniXgpwlsMUTaog69pJQ7GToTW0pd0sv9I8dOTjxPTrxgy93S7XHNtIcE/8rxi5wSrzZy3A0G7nPwMhdX3SK9YWU16PUTG7Xg86uHELGTTnUgllff/F2Iyl6V3Ku2x8ntt1HWKqpCFDcrEPf+Pv8Oysb25ueY4t4P5ckOH0rFk36dS/phpcnJKsT1Ezbwjs8WegIybsBTVw4kNtTe2HrssR6doSjEB2aKHn+BjsaSBdCXZLwkR6SpK7h1WqrBeFBsQQZQ//TR7y/QGd6WPwgAAA==
+      blockMaterial: SHULKER_BOX
+  slot_12:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/5XSS0/EIBAH8Nk+9lGNz+iaGK/e9uBRvfhNGgpjlywwDaU+vr2smjCY7MFbSefHMH9oABpYd4bkboMu6PC5kWQHcnExruDSaofSi9fwJMkFEVe+AYDjEqrRUIif0Vc6oF1CoRVcJdCTUa2b+h5DCbWkye3LFwDJzjJ7zZp5xAF9u0WhGC44LjJ8kbBHNYY4AYM1h+UhqD25VnxwGE/YpEBKOEvVSljRY6x5BL57le2+TvXj4CeJ7RhT9CNrUXFdZ/qcddPCkuNhPHA3P3QLkrrO4N88brldZPYmWXRyK1xA1XZEu4OpNHDHpgwU829/qf35Pzf4hiYOfcoKbez5nRxk+S2z07AH2E9uoHeFnh3khctVJtlNSeE98Uc446z5T8N7Lo8yecJmE9lNPe8n/ALlemy/agMAAA==
+      blockMaterial: SHULKER_BOX
+  slot_13:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/83UMW/TQBQA4Jc4aR0DbVNaQjtAZcoANJkQQ6ZKzAh2But8viRWzj7r7kyaVl34AaysnZn4CbCx8wf4KZxD1XsHtVQSBixFspX3vXt+d34BQAC9mAs67bNcp3repyIrRG4eVAfuZmnOqCQjPaQi18Q8yQAA9j1oKS60uTW+lWqW+dBME9iwIDZJPGhTUeZV3CMAixoO2kSrTJjSSDWxatYppd21Glh5jtq1aiyJUtHi3ZFtYdtybA93Q0xZEmWlNksj3cW67ei9P3Qh5JRORIG8h/2a47vWCzKNuBgjt47duuN2rBulnFdVE7yk2YvA7rkHWzbeBEYmA8BjHx+FKneUk4zB07NQS5IrTjQLh6HNP4hLmZpbLRlRpWTheYAbUCVOGBWS6FTkKoDGMx9ael4wvK3SJDhpgy+FXsS9fG56Ao3TLxcfqoNX3Z98nXwf/IDLy7bAd1qAah+XeSFmCZOoA8dYdpaWwdLy1tLy9tLyztJy42/kEyw36w6mJLOIiqJw6BDTrbqvmIo45uz3CeAU3F3Bbq9gd+qmBzklnJHI/N4xhfQh1rt1045IKWZIrWF1z1HbVvGUz6OCJAh2MOw5EA0BNWFEqpsNjIRkZMxMzAvna7xfP7hTZ/g6437vn4+xB//XGPv88WqMHb//BleXbcH+Ci24aaVdHJUr8/d1tX66sLWWttDruvywpsvsLBwRzmNCp6bJb8wbmLMiD16XuhBKH7wiRXgUpprwlIZDE6nYkbMtVaZBkusB2p/iMkskfmUJzz28eFUTFVxIeHvYX5T8ExKerzTxCAAA
+      blockMaterial: SHULKER_BOX
+  slot_14:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: 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
+      blockMaterial: SHULKER_BOX
+  slot_15:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/71XTW/TQBDdNi2khpJSWiggpMXiAKI9cCQnWiQkJL5EEReEovV6Yq+y3rXWa0xV8Su4c0NcOHHhB3Dh3yD+AeOE1us2IUmDeoiU2Ptm3sybfbvxCPHIlUBq3tsCZYXd2+I6SbXCH9kSuZQIBdywrm1zrSzDX8YjhGw0yEImtcWviF8QFpImmRchWakAIPesYQ2yyHWuypVzHvGq4A13bcgSFgGuMfipYs/VYl91yegehJ1Umx6PdeokeeDi52fEN2bEL8yIX6zhL1Z4g+AAQre5Lu7MjHnPzohvzohfquFbFZ4Zo4tRKG8UiseQ2VG9OneiXOdrqA1n6hWPmbKlPljryOn3yI0Kk1ldCvoXmgzen5HwDiRuE4dSqgswgwJq+2S5xma5AgS1CibZgLdqgS+MErIrDBSoYsegc4Db3HYtSZOsOzrkWGnSUSwB8nHfh/foD377zb4faBn67S6TGWz6XEtt/LYfyBz8TV9YJgU/fKuDbp5xhg0+fJRZI5BDbHQexYdPLYbHKM9f0Ed/uWKwXIVgJBI6QH94e7jS/9Ag14+RTXQIshMyy8jKr99L5EK1AmlCs6/G17HFFDG2cfZqXsVAc2lFghAqtYq2JMusUBE9EOTm2Co919UPYNkcaXWliGLbCXPDrNDqZ33GWtOPwoMjIz9Z3kY978r0ee//j7yrtbxrrocx2emfmKPMYe30zGG1WiiSFGdLRUP8Yf0E2rn4y9Pj77n4jRrekSPKFXoaTquDvO0ir87YypH+8+n4lrUmd3ZsyLCs/+NB24YzBfSVToDqLn3MYYJNevlYrUe1d2YyV4EB1huo30D9W1msi45QHas1+kVaPv2nubV2uDekV+U7j6y+yANswE7e6wn7mmFTsLGrkQ5LaTLcESEMutoUHPqC4Bk+zCpRRt8n30/J+7cVF9gz2lO6kBBGQEVGYxGGoGghbCwUtXg1AJri2ZdtjhWFfDkl4kxKXZSuvqdzajUt795Gy5ItFRNMT7/L38aSjQzbc8gO5n9arrd3Y5w8epe+LN2UPsRQvTt0iz5hOY4tZaqcd7obMxOO5/35tDirAefdgqUl2acsEpzu4JVPgJmsvT+mpXrCWXiMW4xuB0Lif7M2Hcptc9/JCaCOJz24DD3zj1x4hl0B62fHtZoDOx4C71PAdqn+jrdWgmPCi2WMPwcVL6RcDgAA
+      blockMaterial: SHULKER_BOX
+  slot_16:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/+3W72/bRBzH8WvTliRl6+h+wgRYfoBAaqp0bdcuj+jEgyExQNo0HiAUne1LcorjC/a5XVXtH+EJICHxbyDxj3FOuyZTe2Sbpj1695Fd++4+d85979UUoiluR6mJhy2VWW2PW7EZjU3mboqGuD7SmYpz2bOd2GRWuru8KYS4WxNLRWqsu3Ttl7RVo7pY1Im4OW2QaDkyWdKVz1VNLMemzKrXF5qiOR2hKT6dNpDW5joqreqOTKJ7WuUuQeP8uhp3sS6W7PFYic+nzfrKhdLxpmsu42E3kSPZV3XRMGOVS6tNJhoySbqHMi3VilhxoVySr78Qk7/T1JszIXr3VLKr2q321p5q7exuJ62oHe20dmW8Jx9s7ykZ7dXPJl8fuQUZyCwRL2N95o1VjJVK5qX6p+5JtX//XvvBzv1ea2e7LVs78bZqRfs92VLtbbW7G0XtZL99MdWCWCsG5qirs641JrV6LERDXJ12m5pcVUOuisUwFH+fhOq5zWXY+fkkjEyahJ2eTAu1EcbGvRl2QvlrKcONUFuZ6vj8qYl6ZRFLq6YNCvclh8oOclP2B+f/ta5718vTgS6CvknS4+BISfdLCGSamqMiODZlYI0boMwSlacu5sseX/xy3jp8If56T0EHMs9UUQR2oIKxOVJ5YHruZpJufspqSX+fm7Sfy+OZpDYv3yLol4+0/SpoBU8mLwXf6f7AZjrrv17If9805Fsu57euSgQHkU5dlekEl2bbOJkZU6ns4qBnff3wfXhxIr+9p4n8NFBZoLPgsdtowSO30zrzF/rPudkSmQ+7nlm/acJga2uzHRxMSk/wzaQizo84/8f6biNOEz6piuPcgM3Z06XMolzJoYxS5crlzIO4LKwZdTM5UuKPizM63WCvTOjdFIvH1aY7LRAqePqaRaIpbk2Tqyx2ZduOTg/GlVQdqrSozZ7BhatI46okuZq9XBM3LiyH2/PuUe3Syl8Tdy+skjtcVeqOTCvF2sOD5iXrWD1rivUfy8gtzsNyONT2WXVmFXWx7mp4dfIXzgaJOl3x1bPyWJ36k6NsCoUFoAAUgAJQAApAASgABR8UFoECUAAKQAEoAAWgABR8UKgBBaAAFIACUAAKQAEo+KCwBBSAAlAACkABKAAFoOCDwjJQAApAASgABaAAFICCDworQAEoAAWgABSAAlAACj4ofAAUgAJQAApAASgABaDgg0IdKAAFoAAUgAJQAApAwQeFBlAACkABKAAFoAAUgIIPCk2gABSAAlAACkABKAAFHxRWgQJQAApAASgABaAAFHxQ+BAoAAWgABSAAlAACkDBB4UrQAEoAAWgABSAAlAACj4oXAUKQAEoAAWgABSAAlDwQWENKAAFoAAUgAJQAApAwQeFa0ABKAAFoAAUgAJQAAo+KHwEFIACUAAKQAEoAAWg4IPCOlAACkABKAAFoAAUgIIPCteBAlAACkABKAAFoAAUfFC4ARSAAlAACkABKAAFoOCDwk2gABSAAlAACkABKAAFHxRuAQWgABSAAlAACkABKPigcBsoAAWgABSAAlAACkDBB4U7QAEoAAWgABSAAlAACj4ofAwUgAJQAApAASgABaDgg8Inr0DhzsxJ6T6MyrpjHQ//3wrz1yrMzKHsuu9UxrbMVZUsS9y1PnQ1pxuXeVGlWqhiXZuRymSDuAdXJpH/A/kHYtsV1QAA
+      blockMaterial: SHULKER_BOX
+  slot_17:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/72VTW7bMBCFactOHLVJnF+nCVoUAgp0keQA6Sb7LnsAgqLGtiCKVEkqqlv0fL1WR45RDRNwW8ACLHA+zZvh8DFlLGWLXBlZ3YH2pd/cSVM3RuOLO2BndalBWrH0D9JoL/DNpoyxm4RNnDIe/yI/KT3UMzYuC7YYAPFTKBAcnydwCZtK0+oe+MTYQI8C+nygS2s0L/XKeIKmFB0H6IcB1eDXYHGJyzU43yjhgXwEU6ZDjQmbD2QharECDHlkNFMSZLoa4kHLtdAeCp4bU0VzpOz9wDhvLAI7tH5e31PwBArFXA6B39tSVliCsL0kNkrY6bDYlGAltmerkwVqJ4HaY7KDfTeoSEpNA+qM1lhw1KxpC/cpuReQFwNpRMWdaBTKjGXdD9gTkrUGK1RBuM+Um8XUrlrdmK4AS8gJJQ9i3XEe202oGaXSWI3L0sJujwibUPZNLGO3BkH344hSbwPqhnTmR4PDjeMDOHTeK4hpPoz1yNtSKF7BhpDjYGBnNLz/BteiBvblV7YUSuVCVtlD9m1tMebjV9hkt5m3Qrv+oOFCD9wX2t+7bUSfKfud0BpkixNV89oUoHghvEABf4IhPoo1fNs07gAK6im3lD2ONVxYazpCPVJqHssoTZ4reHkEglafxAzCNbbFjXp9CoKZPP1//kIspKwboZ4tZPTCQs4CQYdE0Cp6lM8DhvjYSpkOnbz3AkngKYUvAnhOq7Fh48YUu4zl7HASLc9bWUHU8Rax++Of4/Hc9hbc4czHFFzFbr+dgfHt1RqT8C6mv2kt/l7BwdRcB/B1VL8LjYmxv8Aa0Aj0BwAA
+      blockMaterial: SHULKER_BOX
+  slot_18:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/+2WQW8bRRTHJ7WT2Etp2qZp2sDBWqk3O9iJ4zY+ICqEQCoSIKGCWrXDeHe8O/LszGp2Nu4S5cwnqIRQpR564NhP0Dufgs/CG7fEbwwrQXvhwM3rfb/33rz35r8vICQguxOpo1mPKyts1Yt0lmsFD0WbbGdC8ciwqR1HWlkGTyYghOw1SLOQ2sJP4JvC8qxFLoiY7CwBYbSiqkwSbhtkPdKlcub7hCzZNY+9iYPpGY9prs0sSnWO+E8wf8Hjt5b8xHAW11ENj0JHtEYwSWe8QiSkGCwr0sLmzgdVLOPk49NwyqScsGgWjsNPDee5UEnnHq/CbmgNU4VklsMrh+zHyu5HzoYbFyw8a5AP0NHLwuqMZjrmksbMMjjmbwTn3/ynpz7A1Po71nqjLiozRs/rqM13jNqq61XKKroYW0TuYrLtkZdwZCYR1MRQUHfIKOUFHuM1TF2sLU2eS46oFqbe96irKJbRRTHxauqFu/RWndiqu6e5ZBVMYurPzqY3921cQKkNb7mk1h6dhpGGR5jsRMsYhp0/gXEPxw/hhRTR7LMToMPxacgiK7QCu8IJQmEp+M6YcsgJk6W7Gx9ZLmXnc7hP39OvIacHnfCse+6/gpd6DuapPuHmb/ymek5fK1joKGVd3s5ExJBP72Aw6B/cGRwdj7qDg/7x0XA0Ohp1e4PBcHg8GvQHw27v8Hb/+E6/Pzx81A3dtQavKBt3k6vc/blauvAM8hSq4OZNLisU1GTlzzOIICyDCoVjEI6Cn1vdE1LyuDOp4PABuYJCGT0VEureXChOGzqZJ6WI+XuLfsIcfzt/9ftXz8ffvRQvH3/58Olz4onG5X/X/vb/7f8vt79VQvUSqvPz7v/c2f/m1a+HwU8bydNfXly873f/itf966iZLBcFlezHUgrU/m0MX63T8KkwfA4CTg3osPeVD7zxCbBw/wkVa2RrKkWSWhqXhrnaNfykt724l5cuilRwGdd+pBvYNmYZSzjYPPN8X6sTX8Pm1G0udTK681bie92j9tDKod0Soae0VHEFO0Od5u96Dm6gsE/ghlhJJ+VKC1YXl52/rBivhQTWlaqAYQwD8iFaJRbu3tyoxRrSII27i0KSdbLxBWfSpnd/cClu3mewNy1irjTwRp3mcBWD5OScGfwl3sDsTY9FNyEWLNMKd/8W5vbqhibXllnt15eQPwCTKRmHAAsAAA==
+      blockMaterial: SHULKER_BOX
+  slot_19:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/72Wz28bRRTHx3ESXLdJ0zRNUyoka1WJA7Zqp44b+4RUqh4AFXFCoGo13h17R56dWc2MY7slx975K7jzH8CRC0LqH8GBC/8AEm+2af3G6RghELfdnfm8+c77uXVC6uT2UKhk0mLScrtoJSovlIQXc4XczLlkiaYjO0iUtBTedJ0QcrdKNo1QFh6B3+SW5TWywVNydwmwecE0ZzJh8VBZK1iVbCVqKh10jZClhYpn4frSQkHBAqI+xtRGiEoyZiyiKpiqetQ+orQyZqhmIXAzBGo6i7lWEoGnGNzywIMlOFYijbkcKyx2H6PboTPdeTGds5DY99aeWUY7hNY8dA/HfzhjwxB2xcNuoRgKumA6zhhNEQvBq+M8210CQmlWc+Yrz15EiYLXaBA53VEzYnOraTT4BhYETyaPz4COBi8imliuJOwz0/EYoh+D7ZxKh5xRMWWwct8yIRpPaM6+ir8ATV83ovPmW/sLWFQz2J6pM6bfYTdTs/h1fUSOktbpdlt4Cnpax51O+/i0c9LvNTvH7f5Jt9c76TVbnU632+912p1us/XgYbt/2m53HzxrRhJkgFWkBqzaReE+rrouOgedXBqmL7SsUOCTlY/ncAK3FDwUDUZUGPZ216dcCJY2hgu4fJ3cQEdpNeIC/L7ppJGdCdV2OobHk16vf7WMKZQA/fnpn789Of7+5S+/P9pdfPeHq/5lCtRDKZBymiuZriaslwJ1cog6h0wyKm3+emFbsDMmTBXnMRuNeOJ6y+JNIqJMTWlOxwwqL/L0XfX03Vnul8xm0Kksi81M6fRfaUQN02RUF5IZs0bi9j1P4rVQ3SaKikt1ex+jOx76wWXvZ0obFlOdKx0q4l3PxtGlyzLoHUpN1jgInWssFHIa/2M/eQ657ilC7he04CYW9PlUcKTnCMN7/9910PgxOZzpbK1NWO+WNzyhO0vKSjwbqpjZD6VKDnPsUqp48/bm3xcC+MWa/6pYp3KoGZ3AqHtziXdUQuVVFfcMzQrKNfRxc3FzpP8gNPkhREkWSu5bIYdBpxTxWFODL7yB0cMQOir7aZzTYo2vkINhY5yyRGnqejmsVT6ClusaP27GMLkMLG+Rmla23PmoC62CVJ7/+MOvZerA8/yn7NW35CKR9vwjym79YQ0XmZMfl739MHo6tQX4tfF4Xrhhqxuf0yLyStIZKUcj+fKzTzzf3w41+RHXLIZM0GMWcuNRiC3/SqQb3TjdDzB7J9QIhhxiHsOolJNg/N73YHTP8VQWapau/mQS8hf+cbJGFwsAAA==
+      blockMaterial: SHULKER_BOX
+  slot_20:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: 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
+      blockMaterial: SHULKER_BOX
+  slot_21:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/71YzW8bRRSf2E5wNiVp0uajLYjVHvgQjhrnuz5BANGqLRQqIcSHVrO7s7sjz+6sZmfjuFEuiBtn7pwQBzhxQpwQfwon/gve2MY742RxU6RcLO/O/N77vTfv/ebZFkIWWvcY97ubJJVU9jd9nmQ8hYd8Ht1IaEp8gUPZ8XkqMTwJCyF0p44aOeMSvgK+QSVJmqhGA3S7BMQEC+ny0JUxcXOC62jW50WqMDMIlQZmDANLmseY5LIKVTNQ6yUqjwvWJcLNY8KYhn5HR9erfGIheE9Dva6jGgZqo0T1YnjtQoZ8QSSpcjpbBefwlRe563EpGamKeM6AL5dwkhCBWaDh1nTcSwZurcQxnNHcZfhZwWgV56YBfqUEZ5xRSHHgBoRkOcOykve8YeK6bkJSnuowC1ll9Vno1uRelWKp1ppobvhGzwMUHKNppGqy9G4Z3l8rd495u5IyKFAobpFrZBq6lYXLH50RSx05VRgXJxmjISVi6FTzes3wqvWiB1bdBMKtOraXDWRL72KcSxeLhAtXCpq4eUJlDFlzYXc2cYw13eSiYXJVOxqG+9BvkH29BGtG/PNoUas7LkhTpWjGO3V8Do9Ox4k4C5yWQ06kwE7nS1hg1O9+cAxop3PqYF+dNuzLiygCWYBKSBKcKsgxZgWBlbsSGt5+kCoIfyqxeGY7Z62xgz6s8h7sj/kxERcYjnnPHUqgo1DDQlNbaACENttbh+17h/s7e3ut9sHBzu7h7tbWXku93t7e3Tm814bvezv72+329k7765aT4kSx0vmAXdnP1NvJ7DlnwJSmOREjNpMwyMvk2zNwQiWUvO90QsxyMt72kDJGAtvrQwIsvUMywUMo9iZqKHZo4UP4/Nx9AhS+WBgcK1TgNwc/fXt/4+CH3/+4b/3918M9s52WjCrQGjSgOOFp4GZwavikuhMsXYFI6sc4lclwYY6RY8KgV25qO8KQ+hT29ZUlY6lIPUFwd9jxA8XRtCXACY4IaO4nBv3rVX0MiZBxH+oqj7HQ63hWhy9XSakfcwEdHYqC6jdWXQevXJGG1IyIbxheV0oLggS5BMuav3UdeLMq1gjayPWIEJToevmGDl6t0vwcRCeNNNiqDlszYIt6dYnKvK5XqWRUpBnvBURoyLaO3Kg6kVFdwu3mcd79j1p+VY8MZC1wK0p6WZc/uLkGRWsjs7luVU0lIdxr8nLieg3VHAf9dqopqqck9l+pOCeLE1LCvbDIfbgPSog6uy60ieBFFE9qzvskJFjafV4Im2cjZnYPLhfbL9IUArZBrm2Qu8EDOCxSOBoIbOxBCdrImnM2oP/jVPqRwH2NvBTFC3B/81MaxdJ+T904b9mbiqRPbHKSMZ7TYzKd689XxPMRCTWa6sYacg1Ksvl0tleV1acpyLP9tm2yDgioDliZzvOXK+Y5UQWM48Aea8h0ur9eDd3HRS5tjwzowcEPOmzM0g4FT2w6HBNE//m67PsrE4lHA84de+vu/vNR+/OyOX1BYg9Ade13Pcpg+uvYF3JrabOqICQ973Rk6+OPHCMQSx+WR0ML9hhBTX3Bh2PliTuYy747H/WwViaG5f8Z9BFPvKnHcMl5zRjK6jCWLQ3mapq6knMmaabe3jkXdsIDwtwAS4yWjr6yLkiMWrPQypPCg5CPim6Xys/U4A8/BVciHqhrM4dfNwEZprDhQXAVM+HErXu7albx1Z8B0vwzAKF/ALEJ0hsyEQAA
+      blockMaterial: SHULKER_BOX
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/+1Xz28jNRR2m7RNs7Tb/dEtywoIIyEuqWiSptvmAhJCCCHEAW4rNPJ4nBkTjz3YnrTZqkfO8E/A/8KFf4MDB9DekXhOshm7m9ndFpBWglsyft/z9973zRu7iVAT7UVcktE+FYaZyT6RWS4F/NGb6E7GBCUKD82ASGEw/FNNhNCDGqprLg38BHydGZo10CqL0V0XgHk4zVxDa0QWwkZ/iFAJXbkS9AMXuupBb5dQpqQI8Rl1gLBNsyyqie6V0VSQFAuTzRbWOR1TrmvoTSHHONRGFcQUiuoB4xwnVOkwwoLa7Wsu3UJEiuIRE4ldsj1xmNY8pjslKiuMkcLhuerC6h7sZgnDSsnTqo6uXQu1fi3UxrVQjZdFve2iNj2U48qkELk8jamq2q/5KhlFMz4KjSxIanfzluhwyAiDbSZLPHTjKuVvucjXqtpNUqqNW7uL2vJQThugSMNpqElh3MbVXPC2B37glHiWU2VLpGEkDeRxMrzrZrhZpRlRUuvIs8nVNXMivi0YGYUQpRI664HX9h2Px26JixnOpIifa5+GCyCFNjILBc4o+v48oGdG4WDw6DyIJI+DwRBzTdsBkVyqYBBEvKBBO2AGc0YWqzIaFppgQ0sAGI+NqEmVLJJ08dRAesjy+TeSC6YgUSHAIRzIPEVefL2ICi5qrkZzopmMKQ9jbDDa+f3JJtouI4AibUyb9eMLC+EsSU2YFyrn/0BBX6VSvadbmU06aaU4y6h654XlNV0d5pMaR5z6Ut/6X+r/itS3PanfKhEC2MCAMjScDsecY/P3vg7OeM+VNJQYJsXTWeucBGKcYTuAVp54RO9UeRKYTagKU4rjSn7LhVyJzheKJVbGtqMrAcVGH48BHQzOAzxlC3G6SBJoRwi5MywsZIytawfB+4Zy3vpUWIj80mD1uBVclJaYwKo8hfhUjqlakjiVp+Hs0BlYlDCWuA1hIO+j/c7Bcefk+KjX77c7Dx/2Do8PDw76bfu42z3sHZ904He/d9TtdLq9DvjAvnKQ1uUDec0kt08vdy+4AKZMaKrmbC7DZqbynlqzXTL2POwz+O7TuBVNWtaFtzzdh4xD8+vTgbA1wsoUCfzsHx2d3JgKC2c9/PMXf/76Sfen73757aPtyQ9/+Ia96/nAkdUekx0DNFzQrgfaK0FSYZFQez4R3rHhsn3ul5BZbJhjY6gS2l4A1hoWCTqjDetduBo00MY8wP1iJwrH8Mk3aBG/PrOFE+68CUNYocoJnrF1gnefzR0W+UumJ0wRGAeL4Lodv06o0yY7nvLZQUVmvh73qt7LIdMpXAJCJavfyyvOjedeLfY8Io5g07Pt8iHm4l//V89ZTr6cUUWW13C/6g5ox9Mzd0CP/htVp1SOc6ZDjh8XnDngTbvzX62q2d7xDgAA
+      blockMaterial: SHULKER_BOX
+  slot_23:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/6XVS27DIBAG4IntvJw2jyZt2uYMuUBXuUmEYRqhYsbCRFZuX2cFLLwZ7xiJbwaNfokSoIRjZUj+ndF67R9nSXVDti/aJexrbVE68et/JFkv+sqVAHDKoWgN+f7Y+0J7rBeQaQWbAIRz1OUwlXS3z4sXgKAmiYrG3O62oU6hG5IZW+aslxaJ2sYLqTqsIjaJ2TRhp4RVBtVVITatER6HBs9Gd5iP7rAY3WHJWnrJUiuWemGp10QdgtKO7FXbG/mIZjFdswZu2LnfsuWOLd/Ycs+WB7Z8Z8sPtjwmchck1uiEUUPuk5WeL5b6TtQ6KKVdHO/8+Q/8AwEEtu9LBgAA
+      blockMaterial: SHULKER_BOX
+  slot_24:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/82UzW4TMRDHJ80HyUK/0qZNqZBQxAlUTpxyqsRDcFx5dyeJFa+9sr1tUsRj8CY8AI/GbILYscBccumebK1//xmPZ/4JQALXmTL5+g61l357l5uyMpo2bgQXpdSYW7Hw89xoL2hnEwC47ULPKeNpSXxPeiyHcCQLuGyBhVQKi7QUVRf6ual1c7qTQNIG6MJZe54OpqQA8HbI4zbaqRYlwvuvM2+Fdkp4nM1nrf7HrLaSlt6icLXF2bcEbkLhAnNjhZdGuwQ6H4bQ89sK4bQ9ZUlg04ehNX537vMngAF0nn7++NLcsllv7r+/gz9fW4JOUIJJq5mpGlNj85UseA04exSwLJ98hc4zasCpbkCxai1rXZnHAi0j7znZi8XLqHg8y4RT/Rjlm9sxasKpQUDd8F4yayp3Zew6X5kqFvVFrLWWRhWp1EvDCzTi6DBAz1sUS7RC8YuecG4Ue0pX2TrH9NGY6FMmAXvVskpU0qVKPNVKMrjP4ZcBPGUJ63wltKdyZVS16Cgl8IYlS89CwG+03P8fKHxARTM31eZBpM7ThTxNi5vTVNEftLumDlv71fNM6zj2vIUUpdFFrPtPAu6Wd2SWNW5SIFY7g4kpnMZ6Ulqj/+rJMUfPDg5+frDC+GCFi5gCbiokG9Y0JZnxXnGFIVe4jM3YPgfqEh2NPonNWCb2jkLmbWJ+chWDyfM96nRBwbmZHXP4+nlOwjTmsRr9it7D4/+N8ibgWYqVla4UlvZpbrfOiyazf3vX60BjzE1zu1TCudAxAX4BPq1SHXYIAAA=
+      blockMaterial: SHULKER_BOX
+  slot_25:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/92Uz27UMBDGp80u3Q2wf2jLssBh63P7AOwJCcS1HLghFHkTb2LFsSPbYVtVfT/eBvEGOKglY22NulRcuERxNL98M/ONJwaIYbYSKi3PmLTcXp6lqqqVdAczhMOKS5ZqurbLVElL3UnHADCPoGeEsu7V8T1uWTWAfZ7BuANqWjMdQT9VjWwD5wAdtedRx1hmtRLMWJcBYt9idt9j5x275pptlC4T7cphFvMxxF1dA0+wcWJVImnF4PyKsAurKVl+viKpEkqTJcmo++NKNIycEm6p4ClZrqkw7JRYF+0izj8uPtxIk+svvz+T6whebQlVKmMiyailMPn+YwijLsLpsUHbHHiPE7lb9FPBFkLJnOnFbd0nvnqM7buNcabG7KIWynAlTevl3gD6pnBmQWwqKkSycg+Xw3gteF7YJGs0tS74W2t250L0/7vwbicX7hb/tyb0PBOOOiVT84zphF0Gb1F/J/QEo488dIJQq7nMEdbH2EFoU6SFu/CIOsDU4AGbYuix045VtEyEykNcHNKkKU05TTZKZYh9idnHITbX1Jjk16oN6T4JeXKj+4eUn3ooGueMaxuCRh6EBjVvZK02mbe/I0yO/0Zu8gArpx4722pNLagsDaLfYPpZaFlVVOZafWXbfIz5w3uW+xpDR/efvinmjndrk3c1n4faZIpGlO5am4IJgegRpme7ze4Ssy92mt1Fu8d+AuZ0uhp9CAAA
+      blockMaterial: SHULKER_BOX
+  slot_26:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: WHEAT_SEEDS
+    amount: 8
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: CORNFLOWER
