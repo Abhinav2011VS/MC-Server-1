@@ -113,7 +113,7 @@ armor:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
-    amount: 32
+    amount: 27
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
@@ -460,8 +460,8 @@ contents:
   slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: REINFORCED_DEEPSLATE
-    amount: 52
+    type: ROTTEN_FLESH
+    amount: 37
   slot_16:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -557,18 +557,31 @@ contents:
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COOKED_PORKCHOP
-    amount: 62
+    type: NETHERITE_INGOT
+    amount: 15
   slot_14:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_INGOT
-    amount: 59
+    amount: 64
   slot_17:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: GLOW_INK_SAC
-    amount: 3
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      display-name: '{"text":"","extra":[{"text":"The Ultimate Strength","italic":false,"color":"dark_red","bold":true}]}'
+      enchantment-glint-override: true
+      fire-resistant: true
+      custom-effects:
+      - ==: PotionEffect
+        effect: minecraft:strength
+        duration: 200
+        amplifier: 100
+        ambient: false
+        has-particles: true
+        has-icon: true
   slot_21:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -659,9 +672,36 @@ contents:
   slot_28:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COBBLESTONE
-    amount: 43
+    type: SPYGLASS
   slot_35:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: WOODEN_AXE
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_SCRAP
+    amount: 58
+  slot_30:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EMERALD_BLOCK
+    amount: 20
+  slot_31:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: RED_SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/53LSw6CMACE4ZGHQn0iKj7OwAVceRVsMWmkrYG68PbWFWtnN38ynwAEqnvn5LNurdf+U0tnXs6GGHKURttW9s3DX6WzvgnVCwCXGMnQOR9m8In2rckQaYViBEo3xlkVI5XubX/XGzC6Ceki0sWkS0iXkm5KuhnpMtLlpBOkm5NuQbol6VakW5NuQ7qCdFvSlaTbkW5PugPpKtIdSXci3fkvB3wBj+zdoyIGAAA=
+      blockMaterial: RED_SHULKER_BOX
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_PORKCHOP
+    amount: 59
+  slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: BOW
@@ -712,33 +752,6 @@ contents:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_SCRAP
-    amount: 58
-  slot_30:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: WOODEN_AXE
-  slot_31:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ARMOR_STAND
-    amount: 8
-  slot_5:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SPYGLASS
-  slot_6:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: RED_SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/53LSw6CMACE4ZGHQn0iKj7OwAVceRVsMWmkrYG68PbWFWtnN38ynwAEqnvn5LNurdf+U0tnXs6GGHKURttW9s3DX6WzvgnVCwCXGMnQOR9m8In2rckQaYViBEo3xlkVI5XubX/XGzC6Ceki0sWkS0iXkm5KuhnpMtLlpBOkm5NuQbol6VakW5NuQ7qCdFvSlaTbkW5PugPpKtIdSXci3fkvB3wBj+zdoyIGAAA=
-      blockMaterial: RED_SHULKER_BOX
   slot_19:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
