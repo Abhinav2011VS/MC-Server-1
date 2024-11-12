@@ -25,6 +25,7 @@ armor:
       enchants:
         minecraft:mending: 1
         minecraft:unbreaking: 3
+      Damage: 2
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -60,8 +61,7 @@ armor:
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: AIR
-    amount: 0
+    type: TOTEM_OF_UNDYING
 charms: {}
 contents:
   slot_0:
@@ -76,7 +76,6 @@ contents:
         minecraft:mending: 1
         minecraft:silk_touch: 1
       repair-cost: 7
-      Damage: 3
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -115,32 +114,23 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_CHICKEN
-    amount: 57
+    amount: 22
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
-    amount: 51
+    amount: 52
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
       firework-effects: []
       power: 3
-  slot_8:
+  slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: MANGROVE_PLANKS
     amount: 64
-  slot_7:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_CHEST
   slot_10:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_CHESTPLATE
@@ -159,35 +149,13 @@ contents:
   slot_35:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: DIAMOND
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
     type: MANGROVE_PLANKS
-    amount: 13
-  slot_25:
+    amount: 4
+  slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: SPYGLASS
-  slot_32:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHER_STAR
-    amount: 3
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"Heart","italic":false,"color":"red"}'
-      lore:
-      - '{"text":"Rightclick to use","italic":false,"color":"gray"}'
-      custom-model-data: 100
-      PublicBukkitValues: |-
-        {
-            "lifestealz:customheartvalue": 1,
-            "lifestealz:customitemid": "defaultheart",
-            "lifestealz:customitemtype": "heart"
-        }
-  slot_33:
+    type: ENDER_CHEST
+  slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FISHING_ROD
@@ -199,7 +167,7 @@ contents:
         minecraft:lure: 2
         minecraft:mending: 1
         minecraft:unbreaking: 3
-  slot_34:
+  slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: DIAMOND_AXE
@@ -244,3 +212,8 @@ contents:
         {
             "goditems:code_name": "thunder_axe"
         }
+  slot_13:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_COD
+    amount: 64
