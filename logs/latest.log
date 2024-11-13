@@ -1341,3 +1341,59 @@ java.lang.IllegalArgumentException: Can not set net.minecraft.world.item.compone
 [10:31:12] [Server thread/INFO]: ThreadedAnvilChunkStorage (disaster_world): All chunks are saved
 [10:31:12] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
 [10:31:12] [Server thread/INFO]: Saved the game
+[10:31:24] [Thread-20/INFO]: [gg.playit.control.ChannelSetup] send keep alive
+[10:32:38] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=49.43.228.252:50015, claimAddress=209.25.140.2:43784, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, 49, 43, -28, -4, -61, 95, 59, -57, 127, -71, -85, 8, 103, 52, -128, 69, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 56, 9, -82, 75, -71, -85, 8, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -59, -27, 59, -32, 34, 45, -48, -44, -116, 87, -2, -26, -125, -13, 74, 57], tunnelServerId=1, dataCenterId=28}
+[10:32:38] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[10:32:38] [Thread-20/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43784 to claim client
+[10:32:38] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[10:32:38] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[10:32:38] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[10:32:38] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[10:32:38] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[10:32:38] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[10:32:38] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[10:32:39] [User Authenticator #1/INFO]: UUID of player Atomic_Slayer is 55692239-2579-3d03-8e8b-16bd0e9ba009
+[10:32:42] [Server thread/INFO]: Atomic_Slayer joined the game
+[10:32:42] [Server thread/INFO]: Atomic_Slayer[/127.0.0.1:41854] logged in with entity id 1254 at ([world]-1.3016025236635834E7, 181.0, -2431.3253139887775)
+[10:32:42] [Server thread/INFO]: [ForceResourcepacks] [DEBUG] Atomic_Slayer matched assignment global due to main packs
+[10:32:42] [Server thread/INFO]: [ForceResourcepacks] [DEBUG] Not sending message to CraftPlayer{name=Atomic_Slayer} on statusChange as we are not in an environment where we should (key is empty in key.yml)
+[10:32:42] [Server thread/INFO]: [ForceResourcepacks] Atomic_Slayer: running actions for pack universal and status 11/REQUESTED/first join: false
+[10:32:42] [Server thread/INFO]: [ForceResourcepacks] [DEBUG] Sent pack universal (3b4cf75e-0125-3118-8b7f-5a16119771c1: https://github.com/Abhinav2011VS/RP-Maximus/releases/download/v1.0/EpicRealmsSMP-ResourcePack.zip) to Atomic_Slayer. Required: true, Prompt message: §x§f§f§c§a§0§0E§x§f§f§c§8§0§2p§x§f§f§c§6§0§4i§x§f§f§c§4§0§7c§x§f§f§c§2§0§9 §x§f§f§c§0§0§bR§x§f§f§b§e§0§de§x§f§f§b§c§0§fa§x§f§f§b§a§1§1l§x§f§f§b§8§1§4m§x§f§f§b§6§1§6s§x§f§f§b§4§1§8 §x§f§f§b§2§1§aS§x§f§f§a§f§1§cM§x§f§f§a§d§1§eP§x§f§f§a§b§2§1 §x§f§f§a§9§2§3R§x§f§f§a§7§2§5e§x§f§f§a§5§2§7s§x§f§f§a§3§2§9o§x§f§f§a§1§2§bu§x§f§f§9§f§2§er§x§f§f§9§d§3§0c§x§f§f§9§b§3§2e§x§f§f§9§9§3§4 §x§f§f§9§7§3§6P§x§f§f§9§5§3§8a§x§f§f§9§3§3§bc§x§f§f§9§1§3§dk§x§f§f§8§f§3§f §x§f§f§8§d§4§1-§x§f§f§8§b§4§3 §x§f§f§8§9§4§5E§x§f§f§8§7§4§8n§x§f§f§8§5§4§ah§x§f§f§8§3§4§ca§x§f§f§8§1§4§en§x§f§f§7§f§5§0c§x§f§f§7§c§5§3e§x§f§f§7§a§5§5 §x§f§f§7§8§5§7Y§x§f§f§7§6§5§9o§x§f§f§7§4§5§bu§x§f§f§7§2§5§dr§x§f§f§7§0§6§0 §x§f§f§6§e§6§2A§x§f§f§6§c§6§4d§x§f§f§6§a§6§6v§x§f§f§6§8§6§8e§x§f§f§6§6§6§an§x§f§f§6§4§6§dt§x§f§f§6§2§6§fu§x§f§f§6§0§7§1r§x§f§f§5§e§7§3e§x§f§f§5§c§7§5 §x§f§f§5§a§7§7-§x§f§f§5§8§7§a §x§f§f§5§6§7§cY§x§f§f§5§4§7§eo§x§f§f§5§2§8§0u§x§f§f§5§0§8§2 §x§f§f§4§e§8§4m§x§f§f§4§b§8§7u§x§f§f§4§9§8§9s§x§f§f§4§7§8§bt§x§f§f§4§5§8§d §x§f§f§4§3§8§fa§x§f§f§4§1§9§2c§x§f§f§3§f§9§4c§x§f§f§3§d§9§6e§x§f§f§3§b§9§8p§x§f§f§3§9§9§at§x§f§f§3§7§9§c §x§f§f§3§5§9§ft§x§f§f§3§3§a§1h§x§f§f§3§1§a§3e§x§f§f§2§f§a§5 §x§f§f§2§d§a§7R§x§f§f§2§b§a§9e§x§f§f§2§9§a§cs§x§f§f§2§7§a§eo§x§f§f§2§5§b§0u§x§f§f§2§3§b§2r§x§f§f§2§1§b§4c§x§f§f§1§f§b§6e§x§f§f§1§d§b§9 §x§f§f§1§b§b§bP§x§f§f§1§8§b§da§x§f§f§1§6§b§fc§x§f§f§1§4§c§1k§x§f§f§1§2§c§3 §x§f§f§1§0§c§6t§x§f§f§0§e§c§8o§x§f§f§0§c§c§a §x§f§f§0§a§c§cP§x§f§f§0§8§c§el§x§f§f§0§6§d§0a§x§f§f§0§4§d§3y§x§f§f§0§2§d§5!
+[10:32:42] [Server thread/INFO]: [ForceResourcepacks] [DEBUG] Not sending message to CraftPlayer{name=Atomic_Slayer} on packsChange as we are not in an environment where we should (key is empty in key.yml)
+[10:32:43] [Server thread/INFO]: [ForceResourcepacks] [DEBUG] Not sending message to CraftPlayer{name=Atomic_Slayer} on statusChange as we are not in an environment where we should (key is empty in key.yml)
+[10:32:43] [Server thread/INFO]: [ForceResourcepacks] Atomic_Slayer: running actions for pack universal and status 3/ACCEPTED/first join: false
+[10:32:43] [Server thread/INFO]: [ForceResourcepacks] [DEBUG] Not sending message to CraftPlayer{name=Atomic_Slayer} on statusChange as we are not in an environment where we should (key is empty in key.yml)
+[10:32:43] [Server thread/INFO]: [ForceResourcepacks] Atomic_Slayer: running actions for pack universal and status 4/DOWNLOADED/first join: false
+[10:33:18] [Server thread/INFO]: Saving the game (this may take a moment!)
+[10:33:19] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[10:33:19] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[10:33:19] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[10:33:19] [Server thread/INFO]: ThreadedAnvilChunkStorage (disaster_world): All chunks are saved
+[10:33:19] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[10:33:19] [Server thread/INFO]: Saved the game
+[10:33:43] [Server thread/INFO]: [ForceResourcepacks] [DEBUG] Not sending message to CraftPlayer{name=Atomic_Slayer} on statusChange as we are not in an environment where we should (key is empty in key.yml)
+[10:33:43] [Server thread/INFO]: [ForceResourcepacks] Atomic_Slayer: running actions for pack universal and status 0/LOADED/first join: false
+[10:33:54] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[10:33:54] [Server thread/INFO]: Atomic_Slayer lost connection: Disconnected
+[10:33:54] [Server thread/INFO]: [ForceResourcepacks] [DEBUG] Not sending message to CraftPlayer{name=Atomic_Slayer} on clearPack as we are not in an environment where we should (key is empty in key.yml)
+[10:33:54] [Server thread/INFO]: Atomic_Slayer left the game
+[10:34:57] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=49.43.228.252:50046, claimAddress=209.25.140.2:43784, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, 49, 43, -28, -4, -61, 126, 107, 28, 47, -74, -85, 8, 103, 52, -128, -47, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 56, 9, -82, 30, -74, -85, 8, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 92, -72, 59, 18, 66, 80, 107, 8, -5, -81, 99, 63, -122, 9, -61, 108], tunnelServerId=1, dataCenterId=28}
+[10:34:57] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[10:34:57] [Thread-20/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43784 to claim client
+[10:34:57] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[10:34:57] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[10:34:57] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[10:34:57] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[10:34:57] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[10:34:57] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[10:34:57] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[10:34:57] [nioEventLoopGroup-2-1/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[10:34:57] [nioEventLoopGroup-2-1/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[10:35:25] [Server thread/INFO]: Saving the game (this may take a moment!)
+[10:35:25] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[10:35:25] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[10:35:25] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[10:35:25] [Server thread/INFO]: ThreadedAnvilChunkStorage (disaster_world): All chunks are saved
+[10:35:25] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[10:35:25] [Server thread/INFO]: Saved the game
+[10:35:27] [Thread-20/INFO]: [gg.playit.control.ChannelSetup] send keep alive
