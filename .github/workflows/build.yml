@@ -24,8 +24,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      # Remove specified folders
-      - name: Remove folders
+      - name: Remove folders (Optional Commit/Push)
         run: |
           for folder in cache libraries logs versions; do
             if [ -d "$folder" ]; then
@@ -35,15 +34,12 @@ jobs:
               echo "$folder does not exist"
             fi
           done
-
-      # Commit changes
-      - name: Commit changes
-        run: |
-          git commit -m "Remove cache/, libraries/, logs/, and versions/ folders"
-
-      # Push changes
-      - name: Push changes
-        run: git push
+          if [ "$(git status --porcelain)" ]; then
+            git commit -m "Remove cache/, libraries/, logs/, and versions/ folders"
+            git push
+          else
+            echo "No changes detected. Skipping commit and push."
+          fi
 
       - name: Install Dependencies
         run: |
@@ -112,14 +108,14 @@ jobs:
           wget -q --no-check-certificate -r -nH --cut-dirs=3 --no-parent --reject="index.html*" "$LATEST_PLUGINS_REPO/tree/main/plugins/"
           echo "Plugins downloaded."
 
-      # Commit changes
-      - name: Commit changes
+      - name: Commit/Push Plugins (If Necessary)
         run: |
-          git commit -m "Update Plugins"
-
-      # Push changes
-      - name: Push changes
-        run: git push
+          if [ "$(git status --porcelain)" ]; then
+            git commit -m "Update Plugins"
+            git push
+          else
+            echo "No changes detected for plugins. Skipping commit and push."
+          fi
 
       - name: Remove Existing Datapacks
         run: |
@@ -145,14 +141,14 @@ jobs:
           done
           echo "All datapacks downloaded."
 
-      # Commit changes
-      - name: Commit changes
+      - name: Commit/Push Datapacks (If Necessary)
         run: |
-          git commit -m "Update Datapacks"
-
-      # Push changes
-      - name: Push changes
-        run: git push
+          if [ "$(git status --porcelain)" ]; then
+            git commit -m "Update Datapacks"
+            git push
+          else
+            echo "No changes detected for datapacks. Skipping commit and push."
+          fi
 
       - name: Verify and Download Latest server.jar
         run: |
