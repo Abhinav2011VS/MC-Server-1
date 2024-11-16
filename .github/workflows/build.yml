@@ -21,22 +21,49 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      # Remove specified folders
-      - name: Remove folders
+      # Remove specific plugin files
+      - name: Remove old plugin files
         run: |
-          for folder in cache libraries logs versions; do
-            if [ -d "$folder" ]; then
-              git rm -r --cached "$folder"
-              echo "Removed $folder"
-            else
-              echo "$folder does not exist"
-            fi
-          done
+          cd plugins
+          rm -f WorldEdit-7.3.6.jar WorldGuard-7.0.12.jar VeinMiner-2.2.0.jar
+
+      # Download new plugin versions
+      - name: Download new plugins
+        run: |
+          cd plugins
+          curl -o WorldEdit.jar https://cdn.modrinth.com/data/1u6JkXh5/versions/lynJ1VTU/worldedit-bukkit-7.3.9-beta-01-dist.jar
+          curl -o WorldGuard.jar https://cdn.modrinth.com/data/DKY9btbd/versions/r9yT7tvE/worldguard-bukkit-7.0.13-beta-1-dist.jar
+          curl -o VeinMiner.jar https://cdn.modrinth.com/data/OhduvhIc/versions/ED8c5gtJ/veinminer-paper-2.2.1.jar
+
+      # Rename plugins
+      - name: Rename plugin files
+        run: |
+          cd plugins
+          mv lifestealz-2.7.1.jar LifeStealZ.jar
+          mv ViaVersion-5.1.0.jar ViaVersion.jar
+          mv ViaBackwards-5.1.1.jar ViaBackwards.jar
+          mv SilentAutoSave-3.0.jar SilentAutoSave.jar
+          mv LuckPerms-Bukkit-5.4.145.jar LuckPerms.jar
+          mv LoginOp-1.0-SNAPSHOT.jar LoginOP.jar
+          mv HomePlugin-0.6.4.jar Home.jar
+          mv GodItems-3.0.1.jar GodItems.jar
+          mv Giants-2.0.5.jar Giants.jar
+          mv FarmProtect-v1.9.0.jar FarmProtect.jar
+          mv EssentialsXSpawn-2.20.1.jar EssentialsXSpawn.jar
+          mv EssentialsXChat-2.20.1.jar EssentialsXChat.jar
+          mv EssentialsX-2.20.1.jar EssentialsX.jar
+          mv EpicRealmsSMP-3.0.jar EpicRealmsSMP.jar
+          mv DiscordLinker-3.4.2.jar DiscordLinker.jar
+          mv DeathLocation-1.4.jar DeathLocation.jar
+          mv DeadlyDisasters-14.7.jar DeadlyDisasters.jar
+          mv BannedWordsEffective-0.2.jar BannedWordsEffective.jar
+          mv BackpackPlus-1.4.2.jar BackpackPlus.jar
 
       # Commit changes
       - name: Commit changes
         run: |
-          git commit -m "Remove cache/, libraries/, logs/, and versions/ folders"
+          git add plugins/
+          git commit -m "Update and rename plugin files in the plugins/ folder"
 
       # Push changes
       - name: Push changes
