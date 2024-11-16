@@ -107,22 +107,35 @@ jobs:
           # Fetch the list of plugins from the GitHub repository
           curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Abhinav2011VS/Latest-Plugins-For-MC-Server-1/contents/plugins" -o plugins_list.json || { echo "Failed to fetch plugins list"; exit 1; }
           
+          # Track if any plugins were downloaded
+          PLUGINS_UPDATED=false
+          
           # Download each plugin from the list
           for plugin_url in $(jq -r '.[].download_url' plugins_list.json); do
-            echo "Downloading $plugin_url..."
-            wget -q -P "$PLUGINS_DIR" "$plugin_url"
-            echo "Downloaded: $(basename "$plugin_url")"
+            if [ "$plugin_url" != "null" ]; then
+              echo "Downloading $plugin_url..."
+              if wget -q -P "$PLUGINS_DIR" "$plugin_url"; then
+                echo "Downloaded: $(basename "$plugin_url")"
+                PLUGINS_UPDATED=true
+              else
+                echo "Failed to download: $(basename "$plugin_url")"
+              fi
+            else
+              echo "Skipping invalid plugin URL."
+            fi
           done
           
           # Clean up temporary file
           rm -f plugins_list.json
           
-          echo "Plugins downloaded."
-
-      - name: Commit/Push Plugins (If Necessary)
-        run: |
-          if [ "$(git status --porcelain)" ]; then
-            git commit -am "Update Plugins"
+          echo "Plugins download complete."
+      
+          # Commit and push if any plugins were updated
+          if [ "$PLUGINS_UPDATED" = true ]; then
+            echo "Changes detected. Committing and pushing plugins."
+            cd plugins
+            git add *
+            git commit -m "Update Plugins"
             git push
           else
             echo "No changes detected for plugins. Skipping commit and push."
@@ -146,28 +159,37 @@ jobs:
           
           # Create datapacks directory if it doesn't exist
           mkdir -p "$DATAPACKS_DIR"
-      
+        
           # Fetch the list of datapacks
           echo "Fetching datapack list..."
           curl -s -H "Accept: application/vnd.github.v3+json" "$REPO_URL" -o datapack_list.json || { echo "Failed to fetch datapack list"; exit 1; }
-      
+        
+          # Track if any datapacks were downloaded
+          DATAPACKS_UPDATED=false
+        
           # Download each datapack
           for datapack_url in $(jq -r '.[].download_url' datapack_list.json); do
             if [ "$datapack_url" != "null" ]; then
               echo "Downloading $datapack_url..."
-              wget -q -P "$DATAPACKS_DIR" "$datapack_url"
-              echo "Downloaded: $(basename "$datapack_url")"
+              if wget -q -P "$DATAPACKS_DIR" "$datapack_url"; then
+                echo "Downloaded: $(basename "$datapack_url")"
+                DATAPACKS_UPDATED=true
+              else
+                echo "Failed to download: $(basename "$datapack_url")"
+              fi
             else
               echo "Skipping invalid datapack URL."
             fi
           done
+        
+          echo "Datapack download complete."
       
-          echo "All datapacks downloaded successfully."
-
-      - name: Commit/Push Datapacks (If Necessary)
-        run: |
-          if [ "$(git status --porcelain)" ]; then
-            git commit -am "Update Datapacks"
+          # Commit and push if any datapacks were updated
+          if [ "$DATAPACKS_UPDATED" = true ]; then
+            echo "Changes detected. Committing and pushing datapacks."
+            cd world
+            git add datapacks/*
+            git commit -m "Update Datapacks"
             git push
           else
             echo "No changes detected for datapacks. Skipping commit and push."
