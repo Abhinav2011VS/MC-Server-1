@@ -35,7 +35,7 @@ jobs:
             fi
           done
           if [ "$(git status --porcelain)" ]; then
-            git commit -m "Remove cache/, libraries/, logs/, and versions/ folders"
+            git commit -am "Remove cache/, libraries/, logs/, and versions/ folders"
             git push
           else
             echo "No changes detected. Skipping commit and push."
@@ -102,16 +102,27 @@ jobs:
         run: |
           PLUGINS_DIR="plugins"
           mkdir -p "$PLUGINS_DIR"
-          cd "$PLUGINS_DIR"
           echo "Downloading latest plugins from GitHub..."
-          LATEST_PLUGINS_REPO="https://github.com/Abhinav2011VS/Latest-Plugins-For-MC-Server-1"
-          wget -q --no-check-certificate -r -nH --cut-dirs=3 --no-parent --reject="index.html*" "$LATEST_PLUGINS_REPO/tree/main/plugins/"
+          
+          # Fetch the list of plugins from the GitHub repository
+          curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Abhinav2011VS/Latest-Plugins-For-MC-Server-1/contents/plugins" -o plugins_list.json || { echo "Failed to fetch plugins list"; exit 1; }
+          
+          # Download each plugin from the list
+          for plugin_url in $(jq -r '.[].download_url' plugins_list.json); do
+            echo "Downloading $plugin_url..."
+            wget -q -P "$PLUGINS_DIR" "$plugin_url"
+            echo "Downloaded: $(basename "$plugin_url")"
+          done
+          
+          # Clean up temporary file
+          rm -f plugins_list.json
+          
           echo "Plugins downloaded."
 
       - name: Commit/Push Plugins (If Necessary)
         run: |
           if [ "$(git status --porcelain)" ]; then
-            git commit -m "Update Plugins"
+            git commit -am "Update Plugins"
             git push
           else
             echo "No changes detected for plugins. Skipping commit and push."
@@ -131,20 +142,32 @@ jobs:
       - name: Download Latest Datapacks
         run: |
           DATAPACKS_DIR="world/datapacks/"
-          REPO_URL="https://github.com/Abhinav2011VS/Latest-Plugins-For-MC-Server-1/tree/main/datapacks"
-          mkdir -p $DATAPACKS_DIR
-          echo "Downloading datapacks from the repository..."
-          wget -q -O datapack_list.json "https://api.github.com/repos/Abhinav2011VS/Latest-Plugins-For-MC-Server-1/contents/datapacks" || { echo "Failed to fetch datapack list"; exit 1; }
+          REPO_URL="https://api.github.com/repos/Abhinav2011VS/Latest-Plugins-For-MC-Server-1/contents/datapacks"
+          
+          # Create datapacks directory if it doesn't exist
+          mkdir -p "$DATAPACKS_DIR"
+      
+          # Fetch the list of datapacks
+          echo "Fetching datapack list..."
+          curl -s -H "Accept: application/vnd.github.v3+json" "$REPO_URL" -o datapack_list.json || { echo "Failed to fetch datapack list"; exit 1; }
+      
+          # Download each datapack
           for datapack_url in $(jq -r '.[].download_url' datapack_list.json); do
-            wget -q -P $DATAPACKS_DIR "$datapack_url"
-            echo "Downloaded: $(basename "$datapack_url")"
+            if [ "$datapack_url" != "null" ]; then
+              echo "Downloading $datapack_url..."
+              wget -q -P "$DATAPACKS_DIR" "$datapack_url"
+              echo "Downloaded: $(basename "$datapack_url")"
+            else
+              echo "Skipping invalid datapack URL."
+            fi
           done
-          echo "All datapacks downloaded."
+      
+          echo "All datapacks downloaded successfully."
 
       - name: Commit/Push Datapacks (If Necessary)
         run: |
           if [ "$(git status --porcelain)" ]; then
-            git commit -m "Update Datapacks"
+            git commit -am "Update Datapacks"
             git push
           else
             echo "No changes detected for datapacks. Skipping commit and push."
