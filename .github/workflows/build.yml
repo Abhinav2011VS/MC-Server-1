@@ -21,27 +21,22 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      # Remove the existing server.jar
-      - name: Remove old server.jar
+      # Remove specified folders
+      - name: Remove folders
         run: |
-          if [ -f server.jar ]; then
-            git rm server.jar
-            echo "Removed old server.jar"
-          else
-            echo "No server.jar to remove"
-          fi
-
-      # Download the new PaperMC server.jar
-      - name: Download new server.jar
-        run: |
-          curl -o server.jar https://api.papermc.io/v2/projects/paper/versions/1.21.3/builds/29/downloads/paper-1.21.3-29.jar
-          echo "Downloaded new server.jar"
+          for folder in cache libraries logs versions; do
+            if [ -d "$folder" ]; then
+              git rm -r --cached "$folder"
+              echo "Removed $folder"
+            else
+              echo "$folder does not exist"
+            fi
+          done
 
       # Commit changes
       - name: Commit changes
         run: |
-          git add server.jar
-          git commit -m "Update server.jar to Paper 1.21.3 build 29"
+          git commit -m "Remove cache/, libraries/, logs/, and versions/ folders"
 
       # Push changes
       - name: Push changes
