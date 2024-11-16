@@ -53,6 +53,107 @@ jobs:
       - name: Verify Java Installation
         run: java -version
 
+      - name: Remove Plugins
+        run: |
+          PLUGINS_DIR="plugins"
+          if [ -d "$PLUGINS_DIR" ]; then
+            echo "Removing plugins..."
+            cd "$PLUGINS_DIR"
+            for plugin in \
+              BackpackPlus.jar \
+              BannedWordsEffective.jar \
+              DeadlyDisasters.jar \
+              DeathLocation.jar \
+              DiscordLinker.jar \
+              EpicRealmsSMP.jar \
+              EssentialsX.jar \
+              EssentialsXChat.jar \
+              EssentialsXSpawn.jar \
+              FarmProtect-v1.9.0.jar \
+              Giants.jar \
+              Goditems.jar \
+              Home.jar \
+              LifeStealZ.jar \
+              LoginOP.jar \
+              Multiverse-Core.jar \
+              NonFlyingWeather.jar \
+              PlaceholderAPI.jar \
+              Playit.GG.jar \
+              PowerRanks.jar \
+              ProtocolLib.jar \
+              SilentAutoSave.jar \
+              SkinsRestorer.jar \
+              Sleeper.jar \
+              SpawnerSilk.jar \
+              TreeFeller.jar \
+              VeinMiner.jar \
+              ViaBackwards.jar \
+              ViaVersion.jar \
+              WorldEdit.jar \
+              WorldGuard.jar; do
+              if [ -f "$plugin" ]; then
+                rm -f "$plugin"
+                echo "Removed $plugin"
+              else
+                echo "$plugin does not exist"
+              fi
+            done
+          else
+            echo "Plugins folder does not exist"
+          fi
+
+      - name: Download Latest Plugins
+        run: |
+          PLUGINS_DIR="plugins"
+          mkdir -p "$PLUGINS_DIR"
+          cd "$PLUGINS_DIR"
+          echo "Downloading latest plugins from GitHub..."
+          LATEST_PLUGINS_REPO="https://github.com/Abhinav2011VS/Latest-Plugins-For-MC-Server-1"
+          wget -q --no-check-certificate -r -nH --cut-dirs=3 --no-parent --reject="index.html*" "$LATEST_PLUGINS_REPO/tree/main/plugins/"
+          echo "Plugins downloaded."
+
+      # Commit changes
+      - name: Commit changes
+        run: |
+          git commit -m "Update Plugins"
+
+      # Push changes
+      - name: Push changes
+        run: git push
+
+      - name: Remove Existing Datapacks
+        run: |
+          DATAPACKS_DIR="world/datapacks/"
+          if [ -d "$DATAPACKS_DIR" ]; then
+            echo "Removing all datapack files..."
+            rm -rf $DATAPACKS_DIR*
+            echo "Datapacks removed."
+          else
+            echo "Datapacks directory does not exist."
+          fi
+
+      - name: Download Latest Datapacks
+        run: |
+          DATAPACKS_DIR="world/datapacks/"
+          REPO_URL="https://github.com/Abhinav2011VS/Latest-Plugins-For-MC-Server-1/tree/main/datapacks"
+          mkdir -p $DATAPACKS_DIR
+          echo "Downloading datapacks from the repository..."
+          wget -q -O datapack_list.json "https://api.github.com/repos/Abhinav2011VS/Latest-Plugins-For-MC-Server-1/contents/datapacks" || { echo "Failed to fetch datapack list"; exit 1; }
+          for datapack_url in $(jq -r '.[].download_url' datapack_list.json); do
+            wget -q -P $DATAPACKS_DIR "$datapack_url"
+            echo "Downloaded: $(basename "$datapack_url")"
+          done
+          echo "All datapacks downloaded."
+
+      # Commit changes
+      - name: Commit changes
+        run: |
+          git commit -m "Update Datapacks"
+
+      # Push changes
+      - name: Push changes
+        run: git push
+
       - name: Verify and Download Latest server.jar
         run: |
           echo "Starting process to download the latest server.jar..."
@@ -96,6 +197,15 @@ jobs:
       
           echo "server.jar is ready for use."
         shell: bash
+
+      # Commit changes
+      - name: Commit changes
+        run: |
+          git commit -m "RUpdate server.jar"
+
+      # Push changes
+      - name: Push changes
+        run: git push
         
       - name: Start Minecraft Server
         if: success()
