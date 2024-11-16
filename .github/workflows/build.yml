@@ -3,7 +3,7 @@ name: Deploy Minecraft Server
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   start-server:
@@ -18,6 +18,27 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
+
+      # Remove specified folders
+      - name: Remove folders
+        run: |
+          for folder in cache libraries logs versions; do
+            if [ -d "$folder" ]; then
+              git rm -r --cached "$folder"
+              echo "Removed $folder"
+            else
+              echo "$folder does not exist"
+            fi
+          done
+
+      # Commit changes
+      - name: Commit changes
+        run: |
+          git commit -m "Remove cache/, libraries/, logs/, and versions/ folders"
+
+      # Push changes
+      - name: Push changes
+        run: git push
 
       - name: Install Dependencies
         run: |
