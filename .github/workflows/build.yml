@@ -276,12 +276,6 @@ jobs:
               start_server
             fi
       
-            # Save server state periodically
-            echo "Saving server..." | tee -a $LOG_FILE
-            screen -S minecraft_server -p 0 -X stuff "save-all flush\n" | tee -a $LOG_FILE
-            sleep 5  # Wait a moment for the server to save
-            echo "Server saved!" | tee -a $LOG_FILE
-      
             # Check for changes before committing
             if ! git diff --quiet; then
               # If there are changes, stage and commit them
