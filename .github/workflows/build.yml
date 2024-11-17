@@ -135,7 +135,7 @@ jobs:
             echo "Changes detected. Committing and pushing plugins."
             cd plugins
             git add *
-            git commit -m "Update Plugins"
+            git commit -am "Update Plugins"
             git push
           else
             echo "No changes detected for plugins. Skipping commit and push."
@@ -189,7 +189,7 @@ jobs:
             echo "Changes detected. Committing and pushing datapacks."
             cd world
             git add datapacks/*
-            git commit -m "Update Datapacks"
+            git commit -am "Update Datapacks"
             git push
           else
             echo "No changes detected for datapacks. Skipping commit and push."
