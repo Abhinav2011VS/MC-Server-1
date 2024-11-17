@@ -13,8 +13,7 @@ armor:
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
-    type: AIR
-    amount: 0
+    type: TOTEM_OF_UNDYING
 charms: {}
 contents:
   slot_0:
@@ -29,19 +28,8 @@ contents:
         minecraft:mending: 1
         minecraft:silk_touch: 1
       repair-cost: 7
-      Damage: 120
+      Damage: 83
   slot_1:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: NETHERITE_AXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:mending: 1
-      repair-cost: 1
-      Damage: 59
-  slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
     type: NETHERITE_SWORD
@@ -53,6 +41,17 @@ contents:
         minecraft:mending: 1
         minecraft:sharpness: 5
         minecraft:unbreaking: 3
+  slot_2:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:mending: 1
+      repair-cost: 1
+      Damage: 25
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -60,7 +59,7 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 681
+      Damage: 678
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -69,103 +68,18 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
     type: COOKED_CHICKEN
-    amount: 23
+    amount: 63
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
     type: FIREWORK_ROCKET
-    amount: 8
+    amount: 21
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
       firework-effects: []
       power: 3
   slot_10:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: PLAYER_HEAD
-    meta:
-      ==: ItemMeta
-      meta-type: SKULL
-      skull-owner:
-        ==: PlayerProfile
-        uniqueId: 55692239-2579-3d03-8e8b-16bd0e9ba009
-        name: Atomic_Slayer
-        properties:
-        - name: textures
-          value: ewogICJ0aW1lc3RhbXAiIDogMTczMTg0NTIyODg2NiwKICAicHJvZmlsZUlkIiA6ICJkMWZlYmI4ZGM4M2Q0Yjg3ODM3ZDEyZDUzYzI1YTk2MiIsCiAgInByb2ZpbGVOYW1lIiA6ICJBdG9taWNfc2xheWVyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2Y1ZGRkYjQxZGNhZmVmNjE2ZTk1OWMyODE3ODA4ZTBiZTc0MWM4OWZmYmZlZDM5MTM0YTEzZTc1YjgxMTg2M2QiCiAgICB9CiAgfQp9
-          signature: AiScbxg7U04I5Y+AzTuMO+ek7qNx/P+QFRyQp2syLd0p99l2gh3Gyp8UwwLi5Kp/qk34xc+DF/tT74wtEH/CdMq+hr1uAC2FqDEfCRvjyp81Pu1hUK84uHOpujUK4X1QLhQCAGi9E0+bP8GeS/8qCZ4NX95PN7oPpA1ez1Wy5FCkRxmL0fIsO6PujZDsAQM5hjsS2L+m0ClzCvxySFsNBQYO/Yiypvme52GobDUY4DMW+RVvauCiljtWgE3nOIaecUPaYCWWAPQhK2dPl0kQKE7U0JiiM4azi+KbnEroPBsTF4jb3U/DM4N4slNEhy5Ih1pvywyZRou5rAw/vGWmKqegMF4Pmgj5P/2iC9sqZuXSpI0B8ArY+9l+owYFC0PPPlJf2Yx3xKWIoz6EA1BEWTxvGgDsiZGgwZyAZhIgSLa5sgvmc+R3eXQJAmSc2fANs6IMf2+N4+UY4SsKpct1YlmpF5UuDedVvt/pVB1G7RiH3hEaU12fZIuPgUrvFvOdlcqeuwwDpLkod7BcISjUS4L5n4VagQVL0iwjoh4yjlDkEcdDWW8E6D2Wlbn2AbTjE4CHdBBeSWELRDqRajo4Kw1H/2uluxgQLfUpQo9o/wCA0uZUJOytW/GI1v4k/4oaj9/SHYGUAnMFiiJrzhuFDeIZmC7TJBeLAKkkX5RaNyw=
-  slot_35:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: STICK
-    amount: 64
-  slot_9:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: ENDER_PEARL
-    amount: 16
-  slot_12:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: NETHERITE_HELMET
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      enchants:
-        minecraft:mending: 1
-        minecraft:protection: 4
-        minecraft:thorns: 3
-        minecraft:unbreaking: 3
-      repair-cost: 1
-      Damage: 375
-      trim:
-        material: minecraft:emerald
-        pattern: minecraft:silence
-  slot_13:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: STONE_SWORD
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Trickster''s dagger","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_gray","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"A deadly dagger","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Hit enemies from behind to deal more damage","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 5.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 1.6 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      custom-model-data: 1000037
-      enchants:
-        minecraft:sharpness: 5
-        minecraft:unbreaking: 3
-      attribute-modifiers:
-        minecraft:attack_damage:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 5.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:f5f64de6-ce80-469c-baf5-3b077d12a1dd
-        minecraft:attack_speed:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: -2.4
-          slot: mainhand
-          operation: 0
-          key: minecraft:99aa8dd0-743f-4721-a902-cd4fb1871bf1
-      ItemFlags:
-      - HIDE_ENCHANTS
-      - HIDE_ATTRIBUTES
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "tricksters_dagger"
-        }
-  slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
     type: NETHERITE_CHESTPLATE
@@ -178,14 +92,79 @@ contents:
         minecraft:thorns: 3
         minecraft:unbreaking: 3
       repair-cost: 1
-      Damage: 96
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
+  slot_35:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: END_STONE
+    amount: 37
+  slot_9:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: ENDER_PEARL
+    amount: 16
+  slot_12:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: DIAMOND_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Might of the Thunder","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_aqua","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"This godly weapon allows you to","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"aqua","bold":false}]}'
+      - '{"text":"","extra":[{"text":"harness the power of thunder","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"aqua","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Hit) - Strike Lightning","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000001
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 11.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:86c5026c-1db1-40b1-bd49-87e9cb6d8b4b
+        minecraft:attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:6493e7fb-ddf2-49bf-a567-cfd092378b51
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "thunder_axe"
+        }
+  slot_13:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: COOKED_COD
+    amount: 29
+  slot_8:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: GRASS_BLOCK
+    amount: 35
   slot_14:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
-    type: RED_BED
+    type: STONE
+    amount: 5
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -272,3 +251,24 @@ contents:
       meta-type: FIREWORK
       firework-effects: []
       power: 3
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      potion-type: minecraft:strong_healing
+  slot_33:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: FISHING_ROD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:luck_of_the_sea: 2
+        minecraft:lure: 2
+        minecraft:mending: 1
+        minecraft:unbreaking: 3
+      Damage: 3
