@@ -195,58 +195,58 @@ jobs:
             echo "No changes detected for datapacks. Skipping commit and push."
           fi
 
-      - name: Verify and Download Latest server.jar
+      - name: Verify, Download, and Commit Latest server.jar (If Updated)
         run: |
-          echo "Starting process to download the latest server.jar..."
-      
-          # Delete existing server.jar if it exists
-          echo "Deleting existing server.jar (if any)..."
-          if [ -f "server.jar" ]; then
-            rm -f server.jar
-            echo "Existing server.jar deleted."
-          else
-            echo "No existing server.jar found."
-          fi
-      
+          echo "Starting process to verify and download the latest server.jar..."
+          
+          SERVER_JAR="server.jar"
+          TEMP_JAR="server_temp.jar"
+          
           # Fetch the latest release URL for server.jar from GitHub
           echo "Fetching latest release details from GitHub..."
           LATEST_RELEASE_URL=$(curl -s https://api.github.com/repos/Abhinav2011VS/Latest-Paper/releases/latest | jq -r '.assets[] | select(.name=="server.jar") | .browser_download_url')
-      
+          
           # Check if the URL was found
           if [ -z "$LATEST_RELEASE_URL" ]; then
             echo "Error: Could not find server.jar in the latest release. Exiting..."
             exit 1
           fi
-      
-          # Download the server.jar file
-          echo "Downloading server.jar from $LATEST_RELEASE_URL..."
-          wget -O server.jar "$LATEST_RELEASE_URL"
-      
+          
+          # Download the latest server.jar to a temporary file
+          echo "Downloading server.jar from $LATEST_RELEASE_URL to $TEMP_JAR..."
+          wget -O "$TEMP_JAR" "$LATEST_RELEASE_URL"
+          
           # Verify if the download was successful
-          if [ $? -eq 0 ]; then
-            echo "server.jar successfully downloaded."
-          else
+          if [ $? -ne 0 ]; then
             echo "Error: Failed to download server.jar. Exiting..."
+            rm -f "$TEMP_JAR"
             exit 1
           fi
       
-          # Verify the file was downloaded
-          if [ ! -f "server.jar" ]; then
-            echo "Error: server.jar is missing after download. Exiting..."
-            exit 1
+          # Compare hashes to check if the new server.jar differs from the current one
+          if [ -f "$SERVER_JAR" ]; then
+            CURRENT_HASH=$(sha256sum "$SERVER_JAR" | awk '{ print $1 }')
+            NEW_HASH=$(sha256sum "$TEMP_JAR" | awk '{ print $1 }')
+            
+            if [ "$CURRENT_HASH" = "$NEW_HASH" ]; then
+              echo "No changes detected in server.jar. Skipping update."
+              rm -f "$TEMP_JAR"
+              exit 0
+            else
+              echo "Changes detected in server.jar. Updating..."
+            fi
           fi
       
-          echo "server.jar is ready for use."
+          # Replace old server.jar with the new one
+          mv "$TEMP_JAR" "$SERVER_JAR"
+          echo "server.jar has been updated."
+          
+          # Commit and push changes if updated
+          echo "Committing and pushing the updated server.jar..."
+          git add "$SERVER_JAR"
+          git commit -m "Update server.jar"
+          git push
         shell: bash
-
-      # Commit changes
-      - name: Commit changes
-        run: |
-          git commit -m "RUpdate server.jar"
-
-      # Push changes
-      - name: Push changes
-        run: git push
         
       - name: Start Minecraft Server
         if: success()
