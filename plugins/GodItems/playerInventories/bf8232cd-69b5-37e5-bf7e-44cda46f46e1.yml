@@ -112,13 +112,8 @@ armor:
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
-    type: FIREWORK_ROCKET
-    amount: 11
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
+    type: AIR
+    amount: 0
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -389,7 +384,13 @@ contents:
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
-    type: ELYTRA
+    type: FIREWORK_ROCKET
+    amount: 41
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -424,13 +425,13 @@ contents:
   slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
-    type: DIRT
-    amount: 3
+    type: GLOWSTONE
+    amount: 44
   slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
     type: END_STONE
-    amount: 8
+    amount: 64
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -591,52 +592,6 @@ contents:
   slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
-    type: END_STONE
-    amount: 64
-  slot_27:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: END_STONE
-    amount: 64
-  slot_28:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: SPYGLASS
-  slot_35:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: WOODEN_AXE
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: ENDER_PEARL
-    amount: 16
-  slot_30:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: RED_SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/83UzU7DMAwHcLN2owuwDzaoOMAb7AUmDrxJ1SVeiWjjKg0H3p50OyQ5TIBP3JrYP9ltpb8AEFAeWpIfOzROu6+dpK4n4w/DHDadNihtfXR7ScbV/mQFAJQZ5ENLzj96n2uHXQETrWAdgNJ1R0ZlMJX0acbWN4DgrphuwnQZ0+VMN2W6GdNdM13BdHOmE0x3w3S3THfHdIvfu9fYLRP3FJxB947WlyptGnKX5q5+9oO/6CO/j/068WXw2KGtW1WdQiLS21jfJ/olaIvaHMlKVJVC7Ie2dnjpFTZ//wTL2G8Tvwq+J6fJRMyHjwg5J+JZ595qjLuxVsDsfAPPoWdwlkxTWWzQB2J9KkO8ycO/2eQx2WQR5MFPTH8EwDdKtfaKDgYAAA==
-      blockMaterial: RED_SHULKER_BOX
-  slot_31:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: RED_SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/53LSw6CMACE4ZGHQn0iKj7OwAVceRVsMWmkrYG68PbWFWtnN38ynwAEqnvn5LNurdf+U0tnXs6GGHKURttW9s3DX6WzvgnVCwCXGMnQOR9m8In2rckQaYViBEo3xlkVI5XubX/XGzC6Ceki0sWkS0iXkm5KuhnpMtLlpBOkm5NuQbol6VakW5NuQ7qCdFvSlaTbkW5PugPpKtIdSXci3fkvB3wBj+zdoyIGAAA=
-      blockMaterial: RED_SHULKER_BOX
-  slot_5:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: GRASS_BLOCK
-    amount: 18
-  slot_6:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
     type: BOW
     meta:
       ==: ItemMeta
@@ -685,6 +640,52 @@ contents:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: END_STONE
+    amount: 64
+  slot_28:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: SPYGLASS
+  slot_35:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: WOODEN_AXE
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: ENDER_PEARL
+    amount: 16
+  slot_30:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: RED_SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/83UzU7DMAwHcLN2owuwDzaoOMAb7AUmDrxJ1SVeiWjjKg0H3p50OyQ5TIBP3JrYP9ltpb8AEFAeWpIfOzROu6+dpK4n4w/DHDadNihtfXR7ScbV/mQFAJQZ5ENLzj96n2uHXQETrWAdgNJ1R0ZlMJX0acbWN4DgrphuwnQZ0+VMN2W6GdNdM13BdHOmE0x3w3S3THfHdIvfu9fYLRP3FJxB947WlyptGnKX5q5+9oO/6CO/j/068WXw2KGtW1WdQiLS21jfJ/olaIvaHMlKVJVC7Ie2dnjpFTZ//wTL2G8Tvwq+J6fJRMyHjwg5J+JZ595qjLuxVsDsfAPPoWdwlkxTWWzQB2J9KkO8ycO/2eQx2WQR5MFPTH8EwDdKtfaKDgYAAA==
+      blockMaterial: RED_SHULKER_BOX
+  slot_31:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: RED_SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/53LSw6CMACE4ZGHQn0iKj7OwAVceRVsMWmkrYG68PbWFWtnN38ynwAEqnvn5LNurdf+U0tnXs6GGHKURttW9s3DX6WzvgnVCwCXGMnQOR9m8In2rckQaYViBEo3xlkVI5XubX/XGzC6Ceki0sWkS0iXkm5KuhnpMtLlpBOkm5NuQbol6VakW5NuQ7qCdFvSlaTbkW5PugPpKtIdSXci3fkvB3wBj+zdoyIGAAA=
+      blockMaterial: RED_SHULKER_BOX
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: MOSS_BLOCK
+    amount: 39
+  slot_6:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: COOKED_PORKCHOP
+    amount: 64
   slot_19:
     ==: org.bukkit.inventory.ItemStack
     v: 4082

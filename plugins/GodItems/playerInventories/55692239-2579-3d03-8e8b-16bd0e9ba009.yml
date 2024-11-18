@@ -9,7 +9,7 @@ armor:
       enchants:
         minecraft:mending: 1
         minecraft:unbreaking: 3
-      Damage: 92
+      Damage: 46
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -28,7 +28,7 @@ contents:
         minecraft:mending: 1
         minecraft:silk_touch: 1
       repair-cost: 7
-      Damage: 83
+      Damage: 136
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -51,7 +51,7 @@ contents:
       enchants:
         minecraft:mending: 1
       repair-cost: 1
-      Damage: 25
+      Damage: 77
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -59,7 +59,7 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 678
+      Damage: 700
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -67,39 +67,22 @@ contents:
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
-    type: COOKED_CHICKEN
-    amount: 63
-  slot_6:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
     type: FIREWORK_ROCKET
-    amount: 21
+    amount: 57
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
       firework-effects: []
       power: 3
+  slot_6:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: COOKED_CHICKEN
+    amount: 49
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
-    type: NETHERITE_CHESTPLATE
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      enchants:
-        minecraft:mending: 1
-        minecraft:protection: 4
-        minecraft:thorns: 3
-        minecraft:unbreaking: 3
-      repair-cost: 1
-      trim:
-        material: minecraft:emerald
-        pattern: minecraft:ward
-  slot_35:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: END_STONE
-    amount: 37
+    type: ENDER_CHEST
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -158,13 +141,18 @@ contents:
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
-    type: GRASS_BLOCK
-    amount: 35
+    type: WHEAT_SEEDS
+    amount: 2
   slot_14:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
-    type: STONE
-    amount: 5
+    type: FIREWORK_ROCKET
+    amount: 56
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -173,45 +161,19 @@ contents:
   slot_34:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
-    type: ENDER_CHEST
+    type: OAK_FENCE
+    amount: 15
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
     type: GRASS_BLOCK
-    amount: 31
-  slot_11:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: FIREWORK_ROCKET
     amount: 64
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
   slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
     type: WARDEN_SPAWN_EGG
     amount: 38
   slot_16:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: NETHERITE_LEGGINGS
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      enchants:
-        minecraft:mending: 1
-        minecraft:protection: 4
-        minecraft:thorns: 3
-        minecraft:unbreaking: 3
-      repair-cost: 1
-      Damage: 405
-      trim:
-        material: minecraft:emerald
-        pattern: minecraft:ward
-  slot_17:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
     type: NETHERITE_BOOTS
@@ -224,7 +186,24 @@ contents:
         minecraft:thorns: 3
         minecraft:unbreaking: 3
       repair-cost: 1
-      Damage: 416
+      Damage: 428
+      trim:
+        material: minecraft:emerald
+        pattern: minecraft:ward
+  slot_17:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: NETHERITE_LEGGINGS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:mending: 1
+        minecraft:protection: 4
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      repair-cost: 1
+      Damage: 415
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -241,24 +220,6 @@ contents:
         minecraft:mending: 1
         minecraft:unbreaking: 3
       Damage: 3
-  slot_30:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: FIREWORK_ROCKET
-    amount: 64
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
-  slot_27:
-    ==: org.bukkit.inventory.ItemStack
-    v: 4082
-    type: POTION
-    meta:
-      ==: ItemMeta
-      meta-type: POTION
-      potion-type: minecraft:strong_healing
   slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 4082
@@ -272,3 +233,44 @@ contents:
         minecraft:mending: 1
         minecraft:unbreaking: 3
       Damage: 3
+  slot_19:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: NETHERITE_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:mending: 1
+        minecraft:protection: 4
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      repair-cost: 1
+      Damage: 12
+      trim:
+        material: minecraft:emerald
+        pattern: minecraft:ward
+  slot_20:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: FIREWORK_ROCKET
+    amount: 32
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      display-name: '{"text":"","extra":[{"text":"OP Firework","italic":false,"color":"dark_blue"}]}'
+      lore:
+      - '{"text":"","extra":[{"text":"The longer firework!","italic":false}]}'
+      firework-effects:
+      - ==: Firework
+        flicker: false
+        trail: false
+        colors: &id001 []
+        fade-colors: *id001
+        type: BALL
+      power: 200
+  slot_21:
+    ==: org.bukkit.inventory.ItemStack
+    v: 4082
+    type: COOKED_PORKCHOP
+    amount: 23
