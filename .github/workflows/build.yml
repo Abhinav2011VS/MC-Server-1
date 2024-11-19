@@ -53,45 +53,14 @@ jobs:
         run: |
           PLUGINS_DIR="plugins"
           if [ -d "$PLUGINS_DIR" ]; then
-            echo "Removing plugins..."
+            echo "Removing all plugins..."
             cd "$PLUGINS_DIR"
-            for plugin in \
-              BackpackPlus.jar \
-              BannedWordsEffective.jar \
-              DeadlyDisasters.jar \
-              DeathLocation.jar \
-              DiscordLinker.jar \
-              EpicRealmsSMP.jar \
-              EssentialsX.jar \
-              EssentialsXChat.jar \
-              EssentialsXSpawn.jar \
-              FarmProtect-v1.9.0.jar \
-              Giants.jar \
-              Goditems.jar \
-              Home.jar \
-              LifeStealZ.jar \
-              LoginOP.jar \
-              Multiverse-Core.jar \
-              NonFlyingWeather.jar \
-              PlaceholderAPI.jar \
-              Playit.GG.jar \
-              PowerRanks.jar \
-              ProtocolLib.jar \
-              SilentAutoSave.jar \
-              SkinsRestorer.jar \
-              Sleeper.jar \
-              SpawnerSilk.jar \
-              TreeFeller.jar \
-              VeinMiner.jar \
-              ViaBackwards.jar \
-              ViaVersion.jar \
-              WorldEdit.jar \
-              WorldGuard.jar; do
+            for plugin in *.jar; do
               if [ -f "$plugin" ]; then
                 rm -f "$plugin"
                 echo "Removed $plugin"
               else
-                echo "$plugin does not exist"
+                echo "No .jar files found"
               fi
             done
           else
