@@ -249,7 +249,7 @@ jobs:
             if ! git diff --quiet; then
               # If there are changes, stage and commit them
               git add --all || echo "Git add failed, continuing..." | tee -a $LOG_FILE
-              git commit -m "Auto-update server changes after save" || echo "Git commit failed, continuing..." | tee -a $LOG_FILE
+              git commit -am "Auto-update server changes after save" || echo "Git commit failed, continuing..." | tee -a $LOG_FILE
       
               # Push changes
               for i in {1..3}; do
@@ -285,7 +285,7 @@ jobs:
           # Final commit to capture all changes if there are any
           if ! git diff --quiet; then
             git add --all || echo "Git add failed on final commit, continuing..." | tee -a $LOG_FILE
-            git commit -m "Final commit after server stop" || echo "Final commit failed, continuing..." | tee -a $LOG_FILE
+            git commit -am "Final commit after server stop" || echo "Final commit failed, continuing..." | tee -a $LOG_FILE
             git push -f || echo "Final git push failed, continuing..." | tee -a $LOG_FILE
           else
             echo "No changes to commit after server stop." | tee -a $LOG_FILE
