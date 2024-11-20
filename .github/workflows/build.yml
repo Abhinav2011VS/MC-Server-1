@@ -76,11 +76,24 @@ jobs:
           # Fetch the list of plugins from the GitHub repository
           curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Abhinav2011VS/Latest-Plugins-For-MC-Server-1/contents/plugins" -o plugins_list.json || { echo "Failed to fetch plugins list"; exit 1; }
           
+          # Debugging: Output the content of plugins_list.json to ensure it's valid
+          echo "Fetched plugin list:"
+          cat plugins_list.json
+      
           # Track if any plugins were downloaded
           PLUGINS_UPDATED=false
-          
+      
+          # Check if the list contains valid plugin data
+          if jq -e '. | length > 0' plugins_list.json > /dev/null; then
+            echo "Valid plugin list found. Proceeding with downloads..."
+          else
+            echo "Error: Plugin list is empty or invalid."
+            exit 1
+          fi
+      
           # Download each plugin from the list
           for plugin_url in $(jq -r '.[].download_url' plugins_list.json); do
+            echo "Checking URL: $plugin_url"  # Debugging line
             if [ "$plugin_url" != "null" ]; then
               echo "Downloading $plugin_url..."
               if wget -q -P "$PLUGINS_DIR" "$plugin_url"; then
@@ -93,10 +106,10 @@ jobs:
               echo "Skipping invalid plugin URL."
             fi
           done
-          
+      
           # Clean up temporary file
           rm -f plugins_list.json
-          
+      
           echo "Plugins download complete."
       
           # Commit and push if any plugins were updated
