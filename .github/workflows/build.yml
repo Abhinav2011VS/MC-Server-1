@@ -96,11 +96,21 @@ jobs:
             echo "Checking URL: $plugin_url"  # Debugging line
             if [ "$plugin_url" != "null" ]; then
               echo "Downloading $plugin_url..."
+              # Only download the plugin if it doesn't exist or is different from the existing one
+              PLUGIN_NAME=$(basename "$plugin_url")
               if wget -q -P "$PLUGINS_DIR" "$plugin_url"; then
-                echo "Downloaded: $(basename "$plugin_url")"
-                PLUGINS_UPDATED=true
+                echo "Downloaded: $PLUGIN_NAME"
+                
+                # Check if the file was updated
+                if ! git diff --quiet "$PLUGINS_DIR/$PLUGIN_NAME"; then
+                  echo "$PLUGIN_NAME has changed. Marking as updated."
+                  PLUGINS_UPDATED=true
+                else
+                  echo "$PLUGIN_NAME is the same. No changes."
+                  rm -f "$PLUGINS_DIR/$PLUGIN_NAME"  # Remove if no actual change
+                fi
               else
-                echo "Failed to download: $(basename "$plugin_url")"
+                echo "Failed to download: $PLUGIN_NAME"
               fi
             else
               echo "Skipping invalid plugin URL."
@@ -112,11 +122,10 @@ jobs:
       
           echo "Plugins download complete."
       
-          # Commit and push if any plugins were updated
+          # Only commit and push if there were actual changes
           if [ "$PLUGINS_UPDATED" = true ]; then
             echo "Changes detected. Committing and pushing plugins."
-            cd plugins
-            git add *
+            git add "$PLUGINS_DIR/*"  # Ensure that only updated plugins are added
             git commit -am "Update Plugins"
             git push
           else
