@@ -26,19 +26,15 @@ jobs:
 
       - name: Remove folders (Optional Commit/Push)
         run: |
-          for folder in cache libraries logs versions; do
-            if [ -d "$folder" ]; then
-              git rm -r --cached "$folder"
-              echo "Removed $folder"
-            else
-              echo "$folder does not exist"
-            fi
-          done
-          if [ "$(git status --porcelain)" ]; then
+          # Remove the folders directly from git (cached only)
+          git rm -r --cached cache libraries logs versions || echo "Folders not found or already removed"
+      
+          # Check if there are any changes to commit
+          if git diff --quiet; then
+            echo "No changes detected. Skipping commit and push."
+          else
             git commit -am "Remove cache/, libraries/, logs/, and versions/ folders"
             git push
-          else
-            echo "No changes detected. Skipping commit and push."
           fi
 
       - name: Install Dependencies
