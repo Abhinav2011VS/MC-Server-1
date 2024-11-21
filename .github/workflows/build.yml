@@ -257,11 +257,6 @@ jobs:
       
           # Monitor the screen session and restart if it fails
           nohup bash -c 'while true; do
-            # Check if the screen session is running
-            if ! screen -list | grep -q "minecraft_server"; then
-              echo "Minecraft server is not running. Restarting..." | tee -a $LOG_FILE
-              start_server
-            fi
       
             # Check for changes before committing
             if ! git diff --quiet; then
