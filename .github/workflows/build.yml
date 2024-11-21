@@ -180,98 +180,81 @@ jobs:
           git push
         shell: bash
         
-      # Start Minecraft server and monitor Git changes
       - name: Start Minecraft Server and Monitor Changes
         run: |
-          #!/bin/bash
+          # Start Minecraft server in the background
+          JAVA_OPTS="-Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled \
+                      -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions \
+                      -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=40 \
+                      -XX:G1MaxNewSizePercent=50 -XX:G1HeapRegionSize=16M \
+                      -XX:G1ReservePercent=15 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 \
+                      -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 \
+                      -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 \
+                      -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 \
+                      -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com"
 
-          # Function to start the Minecraft server if not already running
-          start_minecraft_server() {
-            echo "Checking if Minecraft server is already running..."
-            
-            # Check if the screen session for minecraft_server is already running
-            if screen -list | grep -q "minecraft_server"; then
-              echo "Minecraft server is already running."
-            else
-              echo "Starting Minecraft server..."
-              
-              # Start the Minecraft server with the specified Java options
-              screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled \
-                -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch \
-                -XX:G1NewSizePercent=40 -XX:G1MaxNewSizePercent=50 -XX:G1HeapRegionSize=16M -XX:G1ReservePercent=15 \
-                -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 \
-                -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 \
-                -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com \
-                -jar server.jar --nogui
-            fi
-          }
-
-          # Function to commit and push changes to git
-          commit_and_push_changes() {
-            # Check for changes before committing
-            if ! git diff --quiet; then
-              echo "Changes detected. Committing and pushing..."
-              git add --all || { echo "Git add failed, continuing..."; }
-              git commit -am "Auto-update server changes after save" || { echo "Git commit failed, continuing..."; }
-              
-              # Retry pushing up to 3 times if necessary
-              for i in {1..3}; do
-                git push -f && break || { echo "Push failed, retrying... ($i)"; sleep 5; }
-              done || { echo "Push failed after multiple attempts, continuing..."; }
-            else
-              echo "No changes to commit."
-            fi
-          }
-
-          # Function to monitor server and commit periodically
-          monitor_and_commit_changes() {
-            nohup bash -c 'while true; do
-              # Commit changes every 2 minutes
-              commit_and_push_changes
-              sleep 120  # Sleep for 2 minutes
-            done' &
-          }
-
-          # Function to stop Minecraft server gracefully
-          stop_minecraft_server() {
-            echo "Stopping Minecraft server..."
-            
-            # Notify users about server shutdown
-            for i in {60..1}; do
-              screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
-              sleep 1
-            done
-            
-            screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
-            screen -S minecraft_server -p 0 -X stuff "stop\n"
-            sleep 30  # Wait for server to stop
-
-            # Pull latest changes from Git repository before final commit
-            echo "Pulling latest changes from Git..."
-            git fetch origin master && git reset --hard origin/master || { echo "Git fetch failed, skipping..."; }
-            
-            # Final commit to capture all changes if any
-            commit_and_push_changes
-          }
-
-          # Main execution starts here
-          echo "Starting Minecraft server script..."
-
-          # Ensure that Java is set up properly
-          if [ -z "$JAVA_HOME" ] || [ ! -f "$JAVA_HOME/bin/java" ]; then
-            echo "JAVA_HOME is not set correctly or Java is not installed. Exiting..."
-            exit 1
+          # Check if the server is already running
+          if screen -list | grep -q "minecraft_server"; then
+            echo "Minecraft server is already running."
+          else
+            echo "Starting Minecraft server..."
+            screen -dmS minecraft_server $JAVA_HOME/bin/java $JAVA_OPTS -jar server.jar --nogui
           fi
 
-          # Start the Minecraft server if not already running
-          start_minecraft_server
+          # Function to commit and push changes with retry logic
+          commit_and_push_changes() {
+            # Check for any changes and commit every 2 minutes
+            if ! git diff --quiet; then
+              git add --all
+              git commit -am "Auto-update server changes after save"
+              
+              # Retry git push up to 3 times
+              for i in {1..3}; do
+                echo "Attempting git push, try $i"
+                if git push -f; then
+                  echo "Push successful."
+                  break
+                else
+                  echo "Push failed, retrying... ($i)"
+                  sleep 5
+                fi
+              done
+            fi
+          }
 
-          # Monitor server and commit changes
-          monitor_and_commit_changes
+          # Run commit and push checks in the background every 2 minutes
+          nohup bash -c '
+            while true; do
+              commit_and_push_changes
+              sleep 120  # Sleep for 2 minutes
+            done
+          ' &
 
-          # Run for a set duration (e.g., 5 hours)
-          sleep 18000  # 5 hours
+          # Run the server for a specific period (e.g., 5 hours)
+          echo "Running server for 5 hours..."
+          sleep 18000  # Sleep for 5 hours (adjust as necessary)
 
-          # Stop Minecraft server gracefully
-          stop_minecraft_server
-        shell: bash
+          # Gracefully stop the server after the sleep period
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+
+          # Final commit to capture all changes before server shutdown
+          git add --all
+          git commit -am "Final commit before shutdown"
+
+          # Retry git push up to 3 times for the final commit
+          for i in {1..3}; do
+            echo "Attempting final git push, try $i"
+            if git push -f; then
+              echo "Push successful."
+              break
+            else
+              echo "Push failed, retrying... ($i)"
+              sleep 5
+            fi
+          done
