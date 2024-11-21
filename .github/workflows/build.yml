@@ -143,17 +143,17 @@ jobs:
         run: |
           DATAPACKS_DIR="world/datapacks/"
           REPO_URL="https://api.github.com/repos/Abhinav2011VS/Latest-Plugins-For-MC-Server-1/contents/datapacks"
-          
+      
           # Create datapacks directory if it doesn't exist
           mkdir -p "$DATAPACKS_DIR"
-        
+      
           # Fetch the list of datapacks
           echo "Fetching datapack list..."
           curl -s -H "Accept: application/vnd.github.v3+json" "$REPO_URL" -o datapack_list.json || { echo "Failed to fetch datapack list"; exit 1; }
-        
+      
           # Track if any datapacks were downloaded
           DATAPACKS_UPDATED=false
-        
+      
           # Download each datapack
           for datapack_url in $(jq -r '.[].download_url' datapack_list.json); do
             if [ "$datapack_url" != "null" ]; then
@@ -168,16 +168,30 @@ jobs:
               echo "Skipping invalid datapack URL."
             fi
           done
-        
+      
           echo "Datapack download complete."
+      
+          # Verify if any files were actually downloaded
+          if [ "$(ls -A "$DATAPACKS_DIR")" ]; then
+            echo "Datapacks detected in $DATAPACKS_DIR."
+          else
+            echo "No datapacks downloaded, skipping commit."
+            DATAPACKS_UPDATED=false
+          fi
       
           # Commit and push if any datapacks were updated
           if [ "$DATAPACKS_UPDATED" = true ]; then
             echo "Changes detected. Committing and pushing datapacks."
             cd world
-            git add datapacks/*
-            git commit -am "Update Datapacks"
-            git push
+            git add datapacks/* || echo "No new files to add."
+            
+            # Check for any changes to commit
+            if git diff --cached --quiet; then
+              echo "No changes to commit. Skipping commit and push."
+            else
+              git commit -am "Update Datapacks"
+              git push
+            fi
           else
             echo "No changes detected for datapacks. Skipping commit and push."
           fi
