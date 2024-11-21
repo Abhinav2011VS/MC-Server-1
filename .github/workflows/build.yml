@@ -51,18 +51,18 @@ jobs:
           if [ -d "$PLUGINS_DIR" ]; then
             echo "Removing all plugins..."
             cd "$PLUGINS_DIR"
-            for plugin in *.jar; do
-              if [ -f "$plugin" ]; then
+            if ! ls *.jar 1> /dev/null 2>&1; then
+              echo "No .jar files found"
+            else
+              for plugin in *.jar; do
                 rm -f "$plugin"
                 echo "Removed $plugin"
-              else
-                echo "No .jar files found"
-              fi
-            done
+              done
+            fi
           else
             echo "Plugins folder does not exist"
           fi
-
+          
       - name: Download Latest Plugins
         run: |
           PLUGINS_DIR="plugins"
@@ -89,21 +89,20 @@ jobs:
       
           # Download each plugin from the list
           for plugin_url in $(jq -r '.[].download_url' plugins_list.json); do
-            echo "Checking URL: $plugin_url"  # Debugging line
+            echo "Checking URL: $plugin_url"
             if [ "$plugin_url" != "null" ]; then
               echo "Downloading $plugin_url..."
-              # Only download the plugin if it doesn't exist or is different from the existing one
               PLUGIN_NAME=$(basename "$plugin_url")
               if wget -q -P "$PLUGINS_DIR" "$plugin_url"; then
                 echo "Downloaded: $PLUGIN_NAME"
                 
-                # Check if the file was updated
-                if ! git diff --quiet "$PLUGINS_DIR/$PLUGIN_NAME"; then
+                # Add and check if the plugin file has changed
+                if ! git add "$PLUGINS_DIR/$PLUGIN_NAME" || ! git diff --quiet "$PLUGINS_DIR/$PLUGIN_NAME"; then
                   echo "$PLUGIN_NAME has changed. Marking as updated."
                   PLUGINS_UPDATED=true
                 else
                   echo "$PLUGIN_NAME is the same. No changes."
-                  rm -f "$PLUGINS_DIR/$PLUGIN_NAME"  # Remove if no actual change
+                  rm -f "$PLUGINS_DIR/$PLUGIN_NAME"
                 fi
               else
                 echo "Failed to download: $PLUGIN_NAME"
