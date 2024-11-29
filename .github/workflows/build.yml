@@ -24,19 +24,6 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: Remove folders (Optional Commit/Push)
-        run: |
-          # Remove the folders directly from git (cached only)
-          git rm -r --cached cache logs versions || echo "Folders not found or already removed"
-      
-          # Check if there are any changes to commit
-          if git diff --quiet; then
-            echo "No changes detected. Skipping commit and push."
-          else
-            git commit -am "Remove cache/, logs/, and versions/ folders"
-            git push
-          fi
-
       - name: Install Dependencies
         run: |
           sudo apt-get update
@@ -44,217 +31,56 @@ jobs:
 
       - name: Verify Java Installation
         run: java -version
-
-      - name: Remove Plugins
-        run: |
-          PLUGINS_DIR="plugins"
-          if [ -d "$PLUGINS_DIR" ]; then
-            echo "Removing all plugins..."
-            cd "$PLUGINS_DIR"
-            if ! ls *.jar 1> /dev/null 2>&1; then
-              echo "No .jar files found"
-            else
-              for plugin in *.jar; do
-                rm -f "$plugin"
-                echo "Removed $plugin"
-              done
-            fi
-          else
-            echo "Plugins folder does not exist"
-          fi
-          
-      - name: Download Latest Plugins
-        run: |
-          PLUGINS_DIR="plugins"
-          mkdir -p "$PLUGINS_DIR"
-          echo "Downloading latest plugins from GitHub..."
-          
-          # Fetch the list of plugins from the GitHub repository
-          curl -s -H "Accept: application/vnd.github.v3+json" "https://api.github.com/repos/Abhinav2011VS/Latest-Plugins-For-MC-Server-1/contents/plugins" -o plugins_list.json || { echo "Failed to fetch plugins list"; exit 1; }
-          
-          # Debugging: Output the content of plugins_list.json to ensure it's valid
-          echo "Fetched plugin list:"
-          cat plugins_list.json
-      
-          # Track if any plugins were downloaded
-          PLUGINS_UPDATED=false
-      
-          # Check if the list contains valid plugin data
-          if jq -e '. | length > 0' plugins_list.json > /dev/null; then
-            echo "Valid plugin list found. Proceeding with downloads..."
-          else
-            echo "Error: Plugin list is empty or invalid."
-            exit 1
-          fi
-      
-          # Download each plugin from the list
-          for plugin_url in $(jq -r '.[].download_url' plugins_list.json); do
-            echo "Checking URL: $plugin_url"
-            if [ "$plugin_url" != "null" ]; then
-              echo "Downloading $plugin_url..."
-              PLUGIN_NAME=$(basename "$plugin_url")
-              if wget -q -P "$PLUGINS_DIR" "$plugin_url"; then
-                echo "Downloaded: $PLUGIN_NAME"
-                
-                # Add and check if the plugin file has changed
-                if ! git add "$PLUGINS_DIR/$PLUGIN_NAME" || ! git diff --quiet "$PLUGINS_DIR/$PLUGIN_NAME"; then
-                  echo "$PLUGIN_NAME has changed. Marking as updated."
-                  PLUGINS_UPDATED=true
-                else
-                  echo "$PLUGIN_NAME is the same. No changes."
-                  rm -f "$PLUGINS_DIR/$PLUGIN_NAME"
-                fi
-              else
-                echo "Failed to download: $PLUGIN_NAME"
-              fi
-            else
-              echo "Skipping invalid plugin URL."
-            fi
-          done
-      
-          # Clean up temporary file
-          rm -f plugins_list.json
-      
-          echo "Plugins download complete."
-      
-          # Only commit and push if there were actual changes
-          if [ "$PLUGINS_UPDATED" = true ]; then
-            echo "Changes detected. Committing and pushing plugins."
-            git add "$PLUGINS_DIR/*"  # Ensure that only updated plugins are added
-            git commit -am "Update Plugins"
-            git push
-          else
-            echo "No changes detected for plugins. Skipping commit and push."
-          fi
-          
-      - name: Verify, Download, and Commit Latest server.jar (If Updated)
-        run: |
-          echo "Starting process to verify and download the latest server.jar..."
-          
-          SERVER_JAR="server.jar"
-          TEMP_JAR="server_temp.jar"
-          
-          # Fetch the latest release URL for server.jar from GitHub
-          echo "Fetching latest release details from GitHub..."
-          LATEST_RELEASE_URL=$(curl -s https://api.github.com/repos/Abhinav2011VS/Latest-Paper/releases/latest | jq -r '.assets[] | select(.name=="server.jar") | .browser_download_url')
-          
-          # Check if the URL was found
-          if [ -z "$LATEST_RELEASE_URL" ]; then
-            echo "Error: Could not find server.jar in the latest release. Exiting..."
-            exit 1
-          fi
-          
-          # Download the latest server.jar to a temporary file
-          echo "Downloading server.jar from $LATEST_RELEASE_URL to $TEMP_JAR..."
-          wget -O "$TEMP_JAR" "$LATEST_RELEASE_URL"
-          
-          # Verify if the download was successful
-          if [ $? -ne 0 ]; then
-            echo "Error: Failed to download server.jar. Exiting..."
-            rm -f "$TEMP_JAR"
-            exit 1
-          fi
-      
-          # Compare hashes to check if the new server.jar differs from the current one
-          if [ -f "$SERVER_JAR" ]; then
-            CURRENT_HASH=$(sha256sum "$SERVER_JAR" | awk '{ print $1 }')
-            NEW_HASH=$(sha256sum "$TEMP_JAR" | awk '{ print $1 }')
-            
-            if [ "$CURRENT_HASH" = "$NEW_HASH" ]; then
-              echo "No changes detected in server.jar. Skipping update."
-              rm -f "$TEMP_JAR"
-              exit 0
-            else
-              echo "Changes detected in server.jar. Updating..."
-            fi
-          fi
-      
-          # Replace old server.jar with the new one
-          mv "$TEMP_JAR" "$SERVER_JAR"
-          echo "server.jar has been updated."
-          
-          # Commit and push changes if updated
-          echo "Committing and pushing the updated server.jar..."
-          git add "$SERVER_JAR"
-          git commit -m "Update server.jar"
-          git push
-        shell: bash
         
-      - name: Start Minecraft Server and Monitor Changes
+      - name: Start Minecraft Server
         run: |
-          # Start Minecraft server in the background
-          JAVA_OPTS="-Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled \
-                      -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions \
-                      -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=40 \
-                      -XX:G1MaxNewSizePercent=50 -XX:G1HeapRegionSize=16M \
-                      -XX:G1ReservePercent=15 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 \
-                      -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 \
-                      -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 \
-                      -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 \
-                      -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com"
-
-          # Check if the server is already running
-          if screen -list | grep -q "minecraft_server"; then
-            echo "Minecraft server is already running."
-          else
-            echo "Starting Minecraft server..."
-            screen -dmS minecraft_server $JAVA_HOME/bin/java $JAVA_OPTS -jar server.jar --nogui
-          fi
-
-          # Function to commit and push changes with retry logic
-          commit_and_push_changes() {
-            # Check for any changes and commit every 2 minutes
+          echo "Starting Minecraft server..."
+          
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+          # Wait a bit to ensure the server is running
+          sleep 15
+          # Save server state periodically
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-all flush\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+            # Check for changes before committing
             if ! git diff --quiet; then
+              # If there are changes, stage and commit them
               git add --all
-              git commit -am "Auto-update server changes after save"
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
               
-              # Retry git push up to 3 times
+              # Push changes
               for i in {1..3}; do
-                echo "Attempting git push, try $i"
-                if git push -f; then
-                  echo "Push successful."
-                  break
-                else
-                  echo "Push failed, retrying... ($i)"
-                  sleep 5
-                fi
-              done
+                git push -f && break || { echo "Push failed, retrying... ($i)"; sleep 5; }
+              done || echo "Push failed after multiple attempts"
+            else
+              echo "No changes to commit."
             fi
-          }
-
-          # Run commit and push checks in the background every 2 minutes
-          nohup bash -c '
-            while true; do
-              commit_and_push_changes
-              sleep 120  # Sleep for 2 minutes
-            done
-          ' &
-
-          # Run the server for a specific period (e.g., 5 hours)
-          echo "Running server for 5 hours..."
-          sleep 18000  # Sleep for 5 hours (adjust as necessary)
-
-          # Gracefully stop the server after the sleep period
+            sleep 120  # Save every 2 minutes
+          done' &
+          # Wait for the server to run for a set duration (e.g., 5 hours)
+          sleep 18000
+          echo "Stopping Minecraft server..."
+          # Notify users before stopping
           for i in {60..1}; do
             screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
             sleep 1
           done
-
           screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+          # Stop the server gracefully
           screen -S minecraft_server -p 0 -X stuff "stop\n"
-
-          # Final commit to capture all changes before server shutdown
-          git add --all
-          git commit -am "Final commit before shutdown"
-
-          # Retry git push up to 3 times for the final commit
-          for i in {1..3}; do
-            echo "Attempting final git push, try $i"
-            if git push -f; then
-              echo "Push successful."
-              break
-            else
-              echo "Push failed, retrying... ($i)"
-              sleep 5
-            fi
-          done
+          sleep 30
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
