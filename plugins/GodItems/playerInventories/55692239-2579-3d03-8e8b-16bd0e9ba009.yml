@@ -2,14 +2,19 @@ armor:
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ELYTRA
+    type: NETHERITE_CHESTPLATE
     meta:
       ==: ItemMeta
-      meta-type: UNSPECIFIC
+      meta-type: ARMOR
       enchants:
         minecraft:mending: 1
+        minecraft:protection: 4
+        minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 3
+      repair-cost: 1
+      trim:
+        material: minecraft:emerald
+        pattern: minecraft:ward
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -26,7 +31,6 @@ armor:
         minecraft:protection: 4
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 4
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -42,7 +46,6 @@ armor:
         minecraft:protection: 4
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 3
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -77,7 +80,6 @@ contents:
         minecraft:mending: 1
         minecraft:silk_touch: 1
       repair-cost: 7
-      Damage: 185
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -100,7 +102,6 @@ contents:
       enchants:
         minecraft:mending: 1
       repair-cost: 1
-      Damage: 9
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -108,50 +109,71 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 693
+      enchants:
+        minecraft:mending: 1
+        minecraft:silk_touch: 1
+        minecraft:unbreaking: 3
+      repair-cost: 15
   slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: WATER_BUCKET
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_CHICKEN
+    amount: 10
+  slot_8:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GRASS_BLOCK
+    amount: 64
+  slot_9:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_11:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_CHEST
+  slot_13:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_COD
+    amount: 29
+  slot_16:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_CHICKEN
+    amount: 64
+  slot_17:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_CHICKEN
+    amount: 64
+  slot_27:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: POTION
     meta:
       ==: ItemMeta
       meta-type: POTION
-      potion-type: minecraft:healing
-  slot_5:
+      potion-type: minecraft:strong_healing
+  slot_28:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COOKED_CHICKEN
-    amount: 23
-  slot_7:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GRASS_BLOCK
-    amount: 47
-  slot_8:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GLOWSTONE
-    amount: 33
-  slot_9:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_10:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_CHEST
-  slot_11:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHIELD
+    type: POTION
     meta:
       ==: ItemMeta
-      meta-type: SHIELD
-      enchants:
-        minecraft:mending: 1
-        minecraft:unbreaking: 3
-  slot_12:
+      meta-type: POTION
+      potion-type: minecraft:strong_healing
+  slot_32:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
+  slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: DIAMOND_AXE
@@ -196,53 +218,7 @@ contents:
         {
             "goditems:code_name": "thunder_axe"
         }
-  slot_13:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_COD
-    amount: 29
-  slot_14:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERRACK
-    amount: 8
-  slot_15:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GRASS_BLOCK
-    amount: 4
-  slot_16:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_CHICKEN
-    amount: 64
-  slot_17:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_CHICKEN
-    amount: 64
-  slot_27:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: POTION
-    meta:
-      ==: ItemMeta
-      meta-type: POTION
-      potion-type: minecraft:strong_healing
-  slot_28:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: POTION
-    meta:
-      ==: ItemMeta
-      meta-type: POTION
-      potion-type: minecraft:strong_healing
-  slot_32:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ARROW
-    amount: 64
-  slot_33:
+  slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FISHING_ROD
@@ -255,25 +231,52 @@ contents:
         minecraft:mending: 1
         minecraft:unbreaking: 3
       Damage: 3
-  slot_6:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FIREWORK_ROCKET
-    amount: 59
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: END_STONE
-    amount: 64
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: WATER_BUCKET
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Hammer of the Underworld","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Your foes tremble in fear at the look of this
+        terrible weapon","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - Throw entities around
+        you away","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000016
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 11.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:1dd5c85c-5ead-4eaa-a0a7-2be2346a756f
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:984d8504-cf58-4335-be35-05645b42842b
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "push_hammer"
+        }
   slot_31:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -287,21 +290,50 @@ contents:
   slot_34:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_CHESTPLATE
+    type: SHIELD
     meta:
       ==: ItemMeta
-      meta-type: ARMOR
+      meta-type: SHIELD
       enchants:
         minecraft:mending: 1
-        minecraft:protection: 4
-        minecraft:thorns: 3
         minecraft:unbreaking: 3
-      repair-cost: 1
-      trim:
-        material: minecraft:emerald
-        pattern: minecraft:ward
   slot_35:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CRAFTING_TABLE
-    amount: 2
+    type: GRASS_BLOCK
+    amount: 16
+  slot_23:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: POTION
+    meta:
+      ==: ItemMeta
+      meta-type: POTION
+      potion-type: minecraft:healing
+  slot_25:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      display-name: '{"text":"","extra":[{"text":"Arcane Tome of Ice","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_blue","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Ancient knowledge is hidden within these pages,","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
+      - '{"text":"","extra":[{"text":"allowing you to control the ice","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Sheak + Right Click) - Launch an Ice Shard","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Swap) - Magic Barrier","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000035
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Damage: 0
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "ice_book"
+        }
