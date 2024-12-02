@@ -220,13 +220,8 @@ armor:
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FIREWORK_ROCKET
-    amount: 16
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
+    type: AIR
+    amount: 0
 charms: {}
 contents:
   slot_0:
@@ -587,11 +582,11 @@ contents:
   slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BOW
+    type: FISHING_ROD
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '"Phoenix Quiver"'
+      display-name: '{"text":"","extra":[{"text":"Fisher Master","italic":false,"color":"dark_green","bold":true}]}'
       enchants:
         minecraft:aqua_affinity: 255
         minecraft:bane_of_arthropods: 255
@@ -615,6 +610,7 @@ contents:
         minecraft:luck_of_the_sea: 255
         minecraft:lure: 255
         minecraft:mending: 255
+        minecraft:multishot: 255
         minecraft:piercing: 255
         minecraft:power: 255
         minecraft:projectile_protection: 255
@@ -635,6 +631,7 @@ contents:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
+      fire-resistant: true
   slot_16:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -739,8 +736,19 @@ contents:
   slot_34:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COOKED_PORKCHOP
-    amount: 64
+    type: NETHERITE_LEGGINGS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:mending: 1
+        minecraft:protection: 4
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      Damage: 13
+      trim:
+        material: minecraft:emerald
+        pattern: minecraft:ward
   slot_35:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -772,13 +780,13 @@ contents:
           amount: 11.0
           slot: mainhand
           operation: 0
-          key: minecraft:b6af128a-bd2d-47b7-820e-d17469d7f762
+          key: minecraft:28f47bf5-b56c-4a38-9589-c045ce56a9d7
         minecraft:generic.attack_speed:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: -3.0
           slot: mainhand
           operation: 0
-          key: minecraft:5239ab31-42fe-4ce0-8740-b3070aee016b
+          key: minecraft:e32daff4-2bf8-4a48-9e18-0bd7e84e45ed
       ItemFlags:
       - HIDE_ENCHANTS
       - HIDE_ATTRIBUTES
@@ -790,11 +798,11 @@ contents:
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FISHING_ROD
+    type: BOW
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Fisher Master","italic":false,"color":"dark_green","bold":true}]}'
+      display-name: '"Phoenix Quiver"'
       enchants:
         minecraft:aqua_affinity: 255
         minecraft:bane_of_arthropods: 255
@@ -818,7 +826,6 @@ contents:
         minecraft:luck_of_the_sea: 255
         minecraft:lure: 255
         minecraft:mending: 255
-        minecraft:multishot: 255
         minecraft:piercing: 255
         minecraft:power: 255
         minecraft:projectile_protection: 255
@@ -839,4 +846,49 @@ contents:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-      fire-resistant: true
+  slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_PORKCHOP
+    amount: 62
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: BRICKS
+    amount: 42
+  slot_10:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: BONE
+    amount: 21
+  slot_19:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:mending: 1
+        minecraft:protection: 4
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      repair-cost: 1
+      trim:
+        material: minecraft:emerald
+        pattern: minecraft:ward
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COAL
+    amount: 6
+  slot_26:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DEEPSLATE
+    amount: 64
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GOLD_NUGGET
+    amount: 64
