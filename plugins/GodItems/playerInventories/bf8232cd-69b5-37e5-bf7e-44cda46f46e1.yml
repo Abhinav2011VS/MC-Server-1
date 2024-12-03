@@ -220,8 +220,13 @@ armor:
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: AIR
-    amount: 0
+    type: FIREWORK_ROCKET
+    amount: 50
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
 charms: {}
 contents:
   slot_0:
@@ -733,22 +738,6 @@ contents:
         minecraft:fire_aspect: 1
         minecraft:looting: 32
         minecraft:mending: 1
-  slot_34:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_LEGGINGS
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      enchants:
-        minecraft:mending: 1
-        minecraft:protection: 4
-        minecraft:thorns: 3
-        minecraft:unbreaking: 3
-      Damage: 13
-      trim:
-        material: minecraft:emerald
-        pattern: minecraft:ward
   slot_35:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -850,33 +839,15 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_PORKCHOP
-    amount: 62
+    amount: 58
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BRICKS
-    amount: 42
+    type: WOODEN_AXE
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BONE
-    amount: 21
-  slot_19:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_CHESTPLATE
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      enchants:
-        minecraft:mending: 1
-        minecraft:protection: 4
-        minecraft:thorns: 3
-        minecraft:unbreaking: 3
-      repair-cost: 1
-      trim:
-        material: minecraft:emerald
-        pattern: minecraft:ward
+    type: TOTEM_OF_UNDYING
   slot_22:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -885,10 +856,9 @@ contents:
   slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: DEEPSLATE
-    amount: 64
+    type: WHEAT_SEEDS
   slot_27:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: GOLD_NUGGET
-    amount: 64
+    type: CHEST
+    amount: 58

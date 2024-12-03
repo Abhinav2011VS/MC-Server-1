@@ -9,17 +9,11 @@ armor:
       enchants:
         minecraft:mending: 1
         minecraft:unbreaking: 3
-      Damage: 24
+      Damage: 5
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: SHIELD
-    meta:
-      ==: ItemMeta
-      meta-type: SHIELD
-      enchants:
-        minecraft:mending: 1
-        minecraft:unbreaking: 3
+    type: TOTEM_OF_UNDYING
   helmet:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -32,7 +26,7 @@ armor:
         minecraft:protection: 4
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 10
+      Damage: 2
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -50,7 +44,23 @@ armor:
         minecraft:soul_speed: 3
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 12
+      Damage: 30
+      trim:
+        material: minecraft:emerald
+        pattern: minecraft:ward
+  leggings:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_LEGGINGS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:mending: 1
+        minecraft:protection: 4
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      Damage: 15
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -68,7 +78,6 @@ contents:
         minecraft:mending: 1
         minecraft:silk_touch: 1
       repair-cost: 7
-      Damage: 153
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -79,6 +88,7 @@ contents:
       enchants:
         minecraft:mending: 1
       repair-cost: 1
+      Damage: 4
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -107,11 +117,6 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: WATER_BUCKET
-  slot_8:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GRASS_BLOCK
-    amount: 16
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -130,8 +135,8 @@ contents:
   slot_17:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: MANGROVE_PLANKS
-    amount: 36
+    type: GRASS_BLOCK
+    amount: 9
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -147,13 +152,24 @@ contents:
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COOKED_CHICKEN
-    amount: 25
+    type: SMOOTH_STONE
+    amount: 58
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BRICKS
-    amount: 2
+    type: NETHERITE_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:mending: 1
+        minecraft:protection: 4
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      repair-cost: 1
+      trim:
+        material: minecraft:emerald
+        pattern: minecraft:ward
   slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -189,3 +205,57 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_HOE
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FIREWORK_ROCKET
+    amount: 34
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
+  slot_6:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_CHICKEN
+    amount: 13
+  slot_15:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHIELD
+    meta:
+      ==: ItemMeta
+      meta-type: SHIELD
+      enchants:
+        minecraft:mending: 1
+        minecraft:unbreaking: 3
+  slot_16:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_25:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_31:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FIREWORK_ROCKET
+    amount: 31
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      display-name: '{"text":"","extra":[{"text":"OP Firework","italic":false,"color":"dark_blue"}]}'
+      lore:
+      - '{"text":"","extra":[{"text":"The longer firework!","italic":false}]}'
+      firework-effects:
+      - ==: Firework
+        flicker: false
+        trail: false
+        colors: &id001 []
+        fade-colors: *id001
+        type: BALL
+      power: 200
