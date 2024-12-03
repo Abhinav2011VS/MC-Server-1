@@ -24,12 +24,12 @@ chunk-loading-advanced:
   player-max-concurrent-chunk-loads: 0
 chunk-loading-basic:
   player-max-chunk-generate-rate: -1.0
-  player-max-chunk-load-rate: 100.0
-  player-max-chunk-send-rate: 75.0
+  player-max-chunk-load-rate: 200.0
+  player-max-chunk-send-rate: 200.0
 chunk-system:
   gen-parallelism: default
-  io-threads: -1
-  worker-threads: -1
+  io-threads: 2
+  worker-threads: 4
 collisions:
   enable-player-collisions: true
   send-full-pos-for-hard-colliding-entities: true
@@ -72,15 +72,15 @@ misc:
   fix-entity-position-desync: true
   load-permissions-yml-before-plugins: true
   max-joins-per-tick: 5
-  region-file-cache-size: 256
+  region-file-cache-size: 1024
   strict-advancement-dimension-check: false
   use-alternative-luck-formula: false
   use-dimension-type-for-custom-spawners: false
 packet-limiter:
   all-packets:
     action: KICK
-    interval: 7.0
-    max-packet-rate: 500.0
+    interval: 5.0
+    max-packet-rate: 1000.0
   kick-message: <red><lang:disconnect.exceeded_packet_rate>
   overrides:
     ServerboundPlaceRecipePacket:
@@ -88,8 +88,8 @@ packet-limiter:
       interval: 4.0
       max-packet-rate: 5.0
 player-auto-save:
-  max-per-tick: -1
-  rate: -1
+  max-per-tick: 10
+  rate: 600
 proxies:
   bungee-cord:
     online-mode: true
@@ -104,9 +104,9 @@ scoreboards:
 spam-limiter:
   incoming-packet-threshold: 300
   recipe-spam-increment: 1
-  recipe-spam-limit: 20
+  recipe-spam-limit: 10
   tab-spam-increment: 1
-  tab-spam-limit: 500
+  tab-spam-limit: 250
 spark:
   enable-immediately: false
   enabled: true
@@ -131,5 +131,5 @@ unsupported-settings:
   perform-username-validation: true
   skip-vanilla-damage-tick-when-shield-blocked: false
 watchdog:
-  early-warning-delay: 10000
-  early-warning-every: 5000
+  early-warning-delay: 4000
+  early-warning-every: 2000
