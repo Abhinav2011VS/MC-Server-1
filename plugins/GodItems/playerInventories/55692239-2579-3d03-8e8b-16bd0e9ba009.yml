@@ -9,7 +9,6 @@ armor:
       enchants:
         minecraft:mending: 1
         minecraft:unbreaking: 3
-      Damage: 7
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -26,7 +25,7 @@ armor:
         minecraft:protection: 4
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 14
+      Damage: 13
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -44,7 +43,7 @@ armor:
         minecraft:soul_speed: 3
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 40
+      Damage: 53
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -60,7 +59,7 @@ armor:
         minecraft:protection: 4
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 20
+      Damage: 33
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -89,7 +88,7 @@ contents:
       enchants:
         minecraft:mending: 1
       repair-cost: 1
-      Damage: 8
+      Damage: 16
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -114,6 +113,7 @@ contents:
         minecraft:silk_touch: 1
         minecraft:unbreaking: 3
       repair-cost: 15
+      Damage: 1
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -182,20 +182,16 @@ contents:
         {
             "goditems:code_name": "ice_book"
         }
-  slot_20:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_HOE
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_CHICKEN
-    amount: 10
+    amount: 7
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: SMOOTH_STONE
-    amount: 54
+    amount: 53
   slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -261,3 +257,11 @@ contents:
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
+  slot_10:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_HOE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 1
