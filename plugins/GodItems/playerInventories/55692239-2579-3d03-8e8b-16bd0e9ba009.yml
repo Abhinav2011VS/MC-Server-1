@@ -25,7 +25,7 @@ armor:
         minecraft:protection: 4
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 12
+      Damage: 33
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -43,7 +43,7 @@ armor:
         minecraft:soul_speed: 3
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 58
+      Damage: 67
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -59,7 +59,7 @@ armor:
         minecraft:protection: 4
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 33
+      Damage: 51
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -77,7 +77,7 @@ contents:
         minecraft:mending: 1
         minecraft:silk_touch: 1
       repair-cost: 7
-      Damage: 19
+      Damage: 23
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -88,7 +88,7 @@ contents:
       enchants:
         minecraft:mending: 1
       repair-cost: 1
-      Damage: 22
+      Damage: 10
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -101,6 +101,7 @@ contents:
         minecraft:mending: 1
         minecraft:sharpness: 5
         minecraft:unbreaking: 3
+      Damage: 2
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -113,11 +114,16 @@ contents:
         minecraft:silk_touch: 1
         minecraft:unbreaking: 3
       repair-cost: 15
-      Damage: 1
+      Damage: 3
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WATER_BUCKET
+    type: AXOLOTL_BUCKET
+    meta:
+      ==: ItemMeta
+      meta-type: AXOLOTL_BUCKET
+      internal: H4sIAAAAAAAA/+NiYOBiEEwqTc5OLdFNzSvJLKnULUlMZ2ZgdkxPZQACVgY2j9TEnJIMxwQGBmYG9rDEoszEvBIGEIcBAMgXQDA+AAAA
+      axolotl-variant: 3
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -186,12 +192,23 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_CHICKEN
-    amount: 5
+    amount: 3
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: SMOOTH_STONE
-    amount: 53
+    type: NETHERITE_CHESTPLATE
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      enchants:
+        minecraft:mending: 1
+        minecraft:protection: 4
+        minecraft:thorns: 3
+        minecraft:unbreaking: 3
+      repair-cost: 1
+      trim:
+        material: minecraft:emerald
+        pattern: minecraft:ward
   slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -212,7 +229,35 @@ contents:
     v: 3955
     type: ENDER_PEARL
     amount: 16
-  slot_31:
+  slot_19:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FIREWORK_ROCKET
+    amount: 32
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
+  slot_10:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_HOE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 1
+  slot_7:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: STONE
+    amount: 64
+  slot_20:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: STONE
+    amount: 19
+  slot_22:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
@@ -231,66 +276,23 @@ contents:
         fade-colors: *id001
         type: BALL
       power: 200
-  slot_19:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FIREWORK_ROCKET
-    amount: 32
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
-  slot_34:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_CHESTPLATE
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      enchants:
-        minecraft:mending: 1
-        minecraft:protection: 4
-        minecraft:thorns: 3
-        minecraft:unbreaking: 3
-      repair-cost: 1
-      trim:
-        material: minecraft:emerald
-        pattern: minecraft:ward
-  slot_10:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_HOE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 1
-  slot_7:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: AZALEA
-  slot_8:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GUNPOWDER
-    amount: 26
-  slot_20:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GUNPOWDER
-    amount: 64
-  slot_21:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GUNPOWDER
-    amount: 64
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GUNPOWDER
-    amount: 64
   slot_23:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BIG_DRIPLEAF
-    amount: 2
+    type: STONE
+    amount: 64
+  slot_24:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: STONE
+    amount: 64
+  slot_26:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: STONE
+    amount: 64
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: STONE
+    amount: 64
