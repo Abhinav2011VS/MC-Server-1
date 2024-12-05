@@ -162,66 +162,11 @@ armor:
       trim:
         material: minecraft:gold
         pattern: minecraft:silence
-  boots:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_BOOTS
-    meta:
-      ==: ItemMeta
-      meta-type: ARMOR
-      display-name: '{"text":"","extra":[{"text":"Velocity Vamps","color":"dark_red","bold":true}]}'
-      enchants:
-        minecraft:aqua_affinity: 255
-        minecraft:bane_of_arthropods: 255
-        minecraft:blast_protection: 255
-        minecraft:breach: 255
-        minecraft:channeling: 255
-        minecraft:density: 255
-        minecraft:depth_strider: 255
-        minecraft:efficiency: 255
-        minecraft:feather_falling: 255
-        minecraft:fire_aspect: 255
-        minecraft:fire_protection: 255
-        minecraft:flame: 255
-        minecraft:fortune: 255
-        minecraft:frost_walker: 255
-        minecraft:impaling: 255
-        minecraft:infinity: 255
-        minecraft:knockback: 255
-        minecraft:looting: 255
-        minecraft:loyalty: 255
-        minecraft:luck_of_the_sea: 255
-        minecraft:lure: 255
-        minecraft:mending: 255
-        minecraft:multishot: 255
-        minecraft:piercing: 255
-        minecraft:power: 255
-        minecraft:projectile_protection: 255
-        minecraft:protection: 255
-        minecraft:punch: 255
-        minecraft:quick_charge: 255
-        minecraft:respiration: 255
-        minecraft:riptide: 255
-        minecraft:sharpness: 255
-        minecraft:silk_touch: 255
-        minecraft:smite: 255
-        minecraft:soul_speed: 255
-        minecraft:sweeping_edge: 255
-        minecraft:swift_sneak: 255
-        minecraft:thorns: 255
-        minecraft:unbreaking: 255
-        minecraft:wind_burst: 255
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      trim:
-        material: minecraft:amethyst
-        pattern: minecraft:wild
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
-    amount: 27
+    amount: 41
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
@@ -288,7 +233,7 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '"Ore Reaper"'
+      display-name: '"Minebreaker"'
       enchants:
         minecraft:aqua_affinity: 255
         minecraft:bane_of_arthropods: 255
@@ -302,6 +247,7 @@ contents:
         minecraft:fire_aspect: 255
         minecraft:fire_protection: 255
         minecraft:flame: 255
+        minecraft:fortune: 255
         minecraft:frost_walker: 255
         minecraft:impaling: 255
         minecraft:infinity: 255
@@ -321,7 +267,6 @@ contents:
         minecraft:respiration: 255
         minecraft:riptide: 255
         minecraft:sharpness: 255
-        minecraft:silk_touch: 255
         minecraft:smite: 255
         minecraft:soul_speed: 255
         minecraft:sweeping_edge: 255
@@ -329,11 +274,11 @@ contents:
         minecraft:thorns: 255
         minecraft:unbreaking: 255
         minecraft:wind_burst: 255
-      repair-cost: 1
+      repair-cost: 15
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-      Damage: 16
+      Damage: 1
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -444,11 +389,8 @@ contents:
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FLINT_AND_STEEL
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Unbreakable: true
+    type: COOKED_PORKCHOP
+    amount: 56
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -456,13 +398,12 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/53UOxKCMBgE4F8ICvGJqPioPAAXsPIqmOBMRpLfgVh4e0NF62y3O7Nfu5JIUvloWb2qxnnjv5Vi+2YXSp9RYY1rVFc//U2x83VonSSiS0yib9mHGLwwvrEpRUZTPgJtastOx5Qo/rhheica3QR0Eehi0AnQJaCbgm4GuhR0Gegk6OagW4BuCboV6Nag24AuB90WdAXodqDbg+4AuhJ0R9CdQHf+312He/8BcrKPByIGAAA=
+      internal: H4sIAAAAAAAA/53QsQ7CMAwE0KNJJcgIA+IjuiPEwJ9UIQ0QkdooNUL8PSlLykg3n3xvOQMYbM+R3b3xJEHejeP+wZTDsMKmD+Rdshc5OCaxOSUDoFbQQ2TJZ/Y6iO+XqEKHdQHJvtorx06hdvyksXsCClzMhdVcqP6A+ynUP3BXIHm5+ZRf7XfCiT+O03wAb3Jt814BAAA=
       blockMaterial: RED_SHULKER_BOX
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 16
+    type: TOTEM_OF_UNDYING
   slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -534,7 +475,7 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '"Minebreaker"'
+      display-name: '"Ore Reaper"'
       enchants:
         minecraft:aqua_affinity: 255
         minecraft:bane_of_arthropods: 255
@@ -548,7 +489,6 @@ contents:
         minecraft:fire_aspect: 255
         minecraft:fire_protection: 255
         minecraft:flame: 255
-        minecraft:fortune: 255
         minecraft:frost_walker: 255
         minecraft:impaling: 255
         minecraft:infinity: 255
@@ -568,6 +508,7 @@ contents:
         minecraft:respiration: 255
         minecraft:riptide: 255
         minecraft:sharpness: 255
+        minecraft:silk_touch: 255
         minecraft:smite: 255
         minecraft:soul_speed: 255
         minecraft:sweeping_edge: 255
@@ -575,11 +516,11 @@ contents:
         minecraft:thorns: 255
         minecraft:unbreaking: 255
         minecraft:wind_burst: 255
-      repair-cost: 15
+      repair-cost: 1
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-      Damage: 1
+      Damage: 16
   slot_14:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -663,7 +604,58 @@ contents:
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: TOTEM_OF_UNDYING
+    type: NETHERITE_BOOTS
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      display-name: '{"text":"","extra":[{"text":"Velocity Vamps","color":"dark_red","bold":true}]}'
+      enchants:
+        minecraft:aqua_affinity: 255
+        minecraft:bane_of_arthropods: 255
+        minecraft:blast_protection: 255
+        minecraft:breach: 255
+        minecraft:channeling: 255
+        minecraft:density: 255
+        minecraft:depth_strider: 255
+        minecraft:efficiency: 255
+        minecraft:feather_falling: 255
+        minecraft:fire_aspect: 255
+        minecraft:fire_protection: 255
+        minecraft:flame: 255
+        minecraft:fortune: 255
+        minecraft:frost_walker: 255
+        minecraft:impaling: 255
+        minecraft:infinity: 255
+        minecraft:knockback: 255
+        minecraft:looting: 255
+        minecraft:loyalty: 255
+        minecraft:luck_of_the_sea: 255
+        minecraft:lure: 255
+        minecraft:mending: 255
+        minecraft:multishot: 255
+        minecraft:piercing: 255
+        minecraft:power: 255
+        minecraft:projectile_protection: 255
+        minecraft:protection: 255
+        minecraft:punch: 255
+        minecraft:quick_charge: 255
+        minecraft:respiration: 255
+        minecraft:riptide: 255
+        minecraft:sharpness: 255
+        minecraft:silk_touch: 255
+        minecraft:smite: 255
+        minecraft:soul_speed: 255
+        minecraft:sweeping_edge: 255
+        minecraft:swift_sneak: 255
+        minecraft:thorns: 255
+        minecraft:unbreaking: 255
+        minecraft:wind_burst: 255
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      trim:
+        material: minecraft:amethyst
+        pattern: minecraft:wild
   slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -693,7 +685,12 @@ contents:
   slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WATER_BUCKET
+    type: RED_SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/53USw6CMBgE4FFAoT5QUDkFF3DlTQxWTBqhvyk1xttbVqyd3Uwy33YUoFDdOtHPurXe+G+tpX+JDWXIUPbGtto1D3/WYn0TmlMAqgjx0IkPMfjY+LZPMTd3FBNwzedqnNgIiZa3HbcXYIIzFs5ZGLEwZmHCwgULlyxMWZixULFwxcI1Czcs3LIwZ+GOhXsWFiwsWXhg4ZGFpz9gPr7iD0oJMsdZBQAA
+      blockMaterial: RED_SHULKER_BOX
   slot_28:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -741,6 +738,15 @@ contents:
   slot_35:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
+    type: RED_SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/53UOxKCMBgE4F8ICvGJqPioPAAXsPIqmOBMRpLfgVh4e0NF62y3O7Nfu5JIUvloWb2qxnnjv5Vi+2YXSp9RYY1rVFc//U2x83VonSSiS0yib9mHGLwwvrEpRUZTPgJtastOx5Qo/rhheica3QR0Eehi0AnQJaCbgm4GuhR0Gegk6OagW4BuCboV6Nag24AuB90WdAXodqDbg+4AuhJ0R9CdQHf+312He/8BcrKPByIGAAA=
+      blockMaterial: RED_SHULKER_BOX
+  slot_6:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
     type: NETHERITE_AXE
     meta:
       ==: ItemMeta
@@ -784,7 +790,20 @@ contents:
         {
             "goditems:code_name": "push_hammer"
         }
-  slot_6:
+  slot_10:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: TOTEM_OF_UNDYING
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COAL
+    amount: 7
+  slot_19:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: WOODEN_AXE
+  slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: BOW
@@ -835,21 +854,44 @@ contents:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-  slot_10:
+  slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: TOTEM_OF_UNDYING
-  slot_22:
+    type: NETHERITE_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Devastator Sword","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
+      lore:
+      - '{"text":"","extra":[{"text":"Unleash chaos in all directions.","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Special Ability: Massive energy burst","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Damage: Up to 100","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Cooldown: 1 second","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      custom-model-data: 90909002
+      Unbreakable: true
+  slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COAL
-    amount: 6
-  slot_19:
+    type: RED_SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/6XLSw6CMACE4ZGHQn2Lgo8zcAFX3sTUikljaQmUhZ5eXLk2s5s/mU8AAsXNOPUsK+u1f5XK1Y2zQ3QpslrbSrXy4c/KWS+HagWAU4ioM84Pc/CR9lWdINB35D9gZKO7q5Hv3ugQsXK9/f4vwA+PGBwwOGRwxOCYwWMGTxicMDhlsGDwlMEzBs8ZvGDwksErBq8ZvGFwxuAtg3cMzhlcMHjP4AODj/9j4AN/EuoKqQYAAA==
+      blockMaterial: RED_SHULKER_BOX
+  slot_27:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COOKED_PORKCHOP
-    amount: 58
-  slot_5:
+    type: FLINT_AND_STEEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Unbreakable: true
+  slot_34:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WOODEN_AXE
+    type: RED_SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/6XTSwrCMAAE0LFNtY1fEBQP0Qu48iYSY4RgmpQmXejpTVddy+xmYN5yJCBxfrig363xyaZPq0PXB59LbHDsrDd6UK901cEnldsgARxKiOhCyjF7YZPpahT2idMMnOptvDv1HZ0tUekw+ml/A2a8YHDB4JLBgsEVg5cMXjG4ZnDDYMngNYM3DN4yeMfg/Z/4Mt34B8FH/zgKBAAA
+      blockMaterial: RED_SHULKER_BOX
