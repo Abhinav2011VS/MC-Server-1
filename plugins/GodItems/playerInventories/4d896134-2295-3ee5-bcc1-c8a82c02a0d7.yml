@@ -11,7 +11,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 9
+      Damage: 25
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -54,6 +54,7 @@ armor:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
+      Damage: 8
       PublicBukkitValues: |-
         {
             "goditems:code_name": "draculas_armor"
@@ -65,7 +66,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 9
+      Damage: 25
   boots:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -73,7 +74,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 9
+      Damage: 25
 charms: {}
 contents:
   slot_0:
@@ -301,7 +302,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: IRON_INGOT
-    amount: 58
+    amount: 59
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -353,55 +354,7 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 127
-  slot_1:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: STICK
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Druid''s Staff","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"Harness the power of nature to","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
-      - '{"text":"","extra":[{"text":"heal yourself and your allies","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"(Left Click) - Add extra health to nearby allies","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Right Click) - Heal yourself","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - Heal nearby party members","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 6.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 1.4 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      custom-model-data: 1000015
-      enchants:
-        minecraft:sharpness: 5
-        minecraft:unbreaking: 3
-      attribute-modifiers:
-        minecraft:generic.attack_damage:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 6.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:be96e310-e6d3-4506-be37-34371603968a
-        minecraft:generic.attack_speed:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: -2.6
-          slot: mainhand
-          operation: 0
-          key: minecraft:fd12f095-9806-4fe1-816b-47194e366e8b
-      ItemFlags:
-      - HIDE_ENCHANTS
-      - HIDE_ATTRIBUTES
-      Unbreakable: true
-      Damage: 0
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "druid_staff"
-        }
+      Damage: 165
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -521,12 +474,60 @@ contents:
         {
             "goditems:code_name": "life_steal_scythe"
         }
-  slot_3:
+  slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_PORKCHOP
-    amount: 55
-  slot_4:
+    amount: 49
+  slot_3:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: STICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Druid''s Staff","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Harness the power of nature to","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
+      - '{"text":"","extra":[{"text":"heal yourself and your allies","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Left Click) - Add extra health to nearby allies","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Right Click) - Heal yourself","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - Heal nearby party members","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 6.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.4 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000015
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 6.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:be96e310-e6d3-4506-be37-34371603968a
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -2.6
+          slot: mainhand
+          operation: 0
+          key: minecraft:fd12f095-9806-4fe1-816b-47194e366e8b
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      Damage: 0
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "druid_staff"
+        }
+  slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: STICK
