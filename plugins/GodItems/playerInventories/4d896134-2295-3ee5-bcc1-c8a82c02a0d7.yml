@@ -63,6 +63,7 @@ armor:
         minecraft:swift_sneak: 3
         minecraft:unbreaking: 3
       repair-cost: 1
+      Damage: 3
   helmet:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -220,11 +221,6 @@ charms:
             "goditems:code_name": "besieger_charm"
         }
 contents:
-  slot_9:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: JUNGLE_PLANKS
-    amount: 4
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -345,34 +341,30 @@ contents:
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WATER_BUCKET
-  slot_2:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_PORKCHOP
-    amount: 58
-  slot_3:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_6:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
     type: DIAMOND_PICKAXE
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
       Damage: 375
-  slot_4:
+  slot_2:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_PORKCHOP
+    amount: 54
+  slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ENDER_PEARL
+    amount: 11
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHULKER_SHELL
     amount: 5
   slot_0:
     ==: org.bukkit.inventory.ItemStack
@@ -420,3 +412,7 @@ contents:
         {
             "goditems:code_name": "life_steal_scythe"
         }
+  slot_8:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: WATER_BUCKET
