@@ -4,6 +4,14 @@ armor:
     v: 3955
     type: AIR
     amount: 0
+  chestplate:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ELYTRA
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 431
 charms: {}
 contents:
   slot_0:
@@ -110,8 +118,18 @@ contents:
   slot_16:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: GRAY_WOOL
-    amount: 33
+    type: PLAYER_HEAD
+    amount: 4
+    meta:
+      ==: ItemMeta
+      meta-type: SKULL
+      lore:
+      - '{"text":"Killed by ","extra":[{"text":"","extra":["","GameX_PlayZ",""],"hoverEvent":{"contents":{"type":"minecraft:player","id":[-2110281596,1209546656,-1144961014,-370980043],"name":"GameX_PlayZ"},"action":"show_entity"},"insertion":"GameX_PlayZ","clickEvent":{"action":"suggest_command","value":"/tell
+        GameX_PlayZ "},"color":"yellow"}],"italic":false,"color":"gold"}'
+      skull-owner:
+        ==: PlayerProfile
+        uniqueId: 0ab4593b-8ff6-3669-8647-273ffd4147cd
+        name: Dizzy_plaz
   slot_17:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -180,34 +198,11 @@ contents:
     v: 3955
     type: WHITE_CONCRETE
     amount: 28
-  slot_31:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: PLAYER_HEAD
-    amount: 4
-    meta:
-      ==: ItemMeta
-      meta-type: SKULL
-      lore:
-      - '{"text":"Killed by ","extra":[{"text":"","extra":["","GameX_PlayZ",""],"hoverEvent":{"contents":{"type":"minecraft:player","id":[-2110281596,1209546656,-1144961014,-370980043],"name":"GameX_PlayZ"},"action":"show_entity"},"insertion":"GameX_PlayZ","clickEvent":{"action":"suggest_command","value":"/tell
-        GameX_PlayZ "},"color":"yellow"}],"italic":false,"color":"gold"}'
-      skull-owner:
-        ==: PlayerProfile
-        uniqueId: 0ab4593b-8ff6-3669-8647-273ffd4147cd
-        name: Dizzy_plaz
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: STRING
     amount: 2
-  slot_33:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ELYTRA
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 431
   slot_34:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -218,3 +213,8 @@ contents:
     v: 3955
     type: TORCH
     amount: 14
+  slot_15:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GRAY_WOOL
+    amount: 33
