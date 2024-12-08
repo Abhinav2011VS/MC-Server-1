@@ -11,7 +11,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 33
+      Damage: 97
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -54,7 +54,7 @@ armor:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-      Damage: 8
+      Damage: 51
       PublicBukkitValues: |-
         {
             "goditems:code_name": "draculas_armor"
@@ -69,6 +69,7 @@ armor:
       enchants:
         minecraft:mending: 1
         minecraft:unbreaking: 3
+      Damage: 10
   boots:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -76,8 +77,141 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 33
-charms: {}
+      Damage: 97
+charms:
+  slot_1:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_NUGGET
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Valiant ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":true},{"text":"Medal
+        of Honour","italic":false,"color":"dark_blue","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A medal for bravery on the battlefield","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
+      - '{"text":"","extra":["Awarded to the bravest of warriors."]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Add Quickfire ability","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Charm level: 2","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      custom-model-data: 1002011
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "besieger_charm"
+        }
+  slot_2:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FERMENTED_SPIDER_EYE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Terrible","obfuscated":false,"italic":false,"underlined":true,"strikethrough":false,"color":"dark_purple","bold":true},{"text":"
+        ","italic":false,"underlined":false,"bold":false},{"text":"Amulet of Death","italic":false,"color":"dark_red","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"The living suffer, while the undead thrive ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
+      - '{"text":"","extra":["Evil is pulsating from this amulet."]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Add Vampire Bite ability","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Charm level: 3","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      custom-model-data: 1003020
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "draculas_armor_charm"
+        }
+  slot_3:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_INGOT
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":" Fine","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":true},{"text":"Samurai
+        Tanto","italic":false,"color":"gold","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"This short sword can be deadly in skilled warrior''s
+        hands","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
+      - '{"text":"","extra":["A fine craftsman''s work"]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Ads Spin ability","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Charm level: 2","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      custom-model-data: 1002022
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "master_katana_charm"
+        }
+  slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_NUGGET
+    amount: 2
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Common ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"Medal
+        of Honour","italic":false,"color":"dark_blue","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A medal for bravery on the battlefield","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
+      - '{"text":"","extra":["Awarded for good service. Many are seen across the land."]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Add Quickfire ability","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Charm level: 1","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      custom-model-data: 1001011
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "besieger_charm"
+        }
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: RAW_COPPER
+    amount: 3
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Luxurious ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":true},{"text":"Sigil
+        of the Deep","italic":false,"color":"dark_blue","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A dwarven miner''s emblem","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
+      - '{"text":"","extra":["Awarded to the most skilled miners."]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Add Tunnel ability","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Charm level: 2","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      custom-model-data: 1002032
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "ancient_pickaxe_charm"
+        }
 contents:
   slot_0:
     ==: org.bukkit.inventory.ItemStack
@@ -174,276 +308,31 @@ contents:
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: IRON_SWORD
+    type: TRIDENT
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Samurai Katana","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gold","bold":true}]}'
+      display-name: '{"text":"","extra":[{"text":"Gladiator''s Trident","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":true}]}'
       lore:
       - '""'
-      - '{"text":"","extra":[{"text":"A fine weapon for ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
-      - '{"text":"","extra":[{"text":"the most skilled warriors","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Its mighty blow can stun even the mightiest
+        foes","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
       - '""'
-      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - Dash forward and damage
-        enemies","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Throw) - Stun","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
       - '""'
       - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      custom-model-data: 1000022
+      custom-model-data: 1000005
       enchants:
-        minecraft:looting: 1
-        minecraft:sharpness: 1
+        minecraft:channeling: 1
         minecraft:unbreaking: 3
-      attribute-modifiers:
-        minecraft:generic.attack_damage:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 11.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:0eb2c45f-a8f7-42f9-9509-1b2b8d8f5d44
-        minecraft:generic.attack_speed:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: -3.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:b9fcc3ac-db4a-43ad-9c97-e501a98b22ac
       ItemFlags:
       - HIDE_ENCHANTS
-      - HIDE_ATTRIBUTES
       Unbreakable: true
       PublicBukkitValues: |-
         {
-            "goditems:code_name": "master_katana"
+            "goditems:code_name": "stun_trident"
         }
   slot_11:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: JUNGLE_LOG
-    amount: 63
-  slot_12:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: EMERALD_BLOCK
-    amount: 64
-  slot_13:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: EMERALD_BLOCK
-    amount: 20
-  slot_14:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: OBSIDIAN
-    amount: 10
-  slot_15:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: DIAMOND
-    amount: 18
-  slot_16:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: WATER_BUCKET
-  slot_17:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: WATER_BUCKET
-  slot_18:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FERMENTED_SPIDER_EYE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Terrible","obfuscated":false,"italic":false,"underlined":true,"strikethrough":false,"color":"dark_purple","bold":true},{"text":"
-        ","italic":false,"underlined":false,"bold":false},{"text":"Amulet of Death","italic":false,"color":"dark_red","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"The living suffer, while the undead thrive ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
-      - '{"text":"","extra":["Evil is pulsating from this amulet."]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Add Vampire Bite ability","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Charm level: 3","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      custom-model-data: 1003020
-      enchants:
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "draculas_armor_charm"
-        }
-  slot_19:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_20:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: CROSSBOW
-    meta:
-      ==: ItemMeta
-      meta-type: CROSSBOW
-      enchants:
-        minecraft:piercing: 1
-      Damage: 31
-  slot_21:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENCHANTED_BOOK
-    meta:
-      ==: ItemMeta
-      meta-type: ENCHANTED
-      stored-enchants:
-        minecraft:swift_sneak: 3
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: DIAMOND_HORSE_ARMOR
-  slot_23:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GOLDEN_APPLE
-    amount: 6
-  slot_24:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: IRON_NUGGET
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Valiant ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":true},{"text":"Medal
-        of Honour","italic":false,"color":"dark_blue","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"A medal for bravery on the battlefield","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
-      - '{"text":"","extra":["Awarded to the bravest of warriors."]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Add Quickfire ability","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Charm level: 2","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      custom-model-data: 1002011
-      enchants:
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "besieger_charm"
-        }
-  slot_25:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: IRON_INGOT
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":" Fine","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":true},{"text":"Samurai
-        Tanto","italic":false,"color":"gold","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"This short sword can be deadly in skilled warrior''s
-        hands","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
-      - '{"text":"","extra":["A fine craftsman''s work"]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Ads Spin ability","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Charm level: 2","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      custom-model-data: 1002022
-      enchants:
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "master_katana_charm"
-        }
-  slot_26:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: STICK
-    amount: 6
-  slot_27:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: IRON_INGOT
-    amount: 59
-  slot_8:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHIELD
-    meta:
-      ==: ItemMeta
-      meta-type: SHIELD
-      display-name: '{"text":"","extra":[{"text":"Parry Sword","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gold","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"Once belonged to the fiercest fighter","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"(Right Click) to parry attacks","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"When in Off Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 7.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      custom-model-data: 1000029
-      enchants:
-        minecraft:sweeping_edge: 1
-        minecraft:unbreaking: 3
-      attribute-modifiers:
-        minecraft:generic.attack_damage:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 7.0
-          slot: offhand
-          operation: 0
-          key: minecraft:bbfbef59-5c7c-48b7-aec5-0c01882634bc
-        minecraft:generic.attack_speed:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: -3.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:1b667117-be20-48c8-a66d-4c0e70f76da8
-      ItemFlags:
-      - HIDE_ENCHANTS
-      - HIDE_ATTRIBUTES
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "parry_sword"
-        }
-  slot_7:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: AMETHYST_SHARD
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Mastercrafted ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":true},{"text":"Ring
-        of the Protector","italic":false,"color":"dark_green","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"A ring of a knight sworn to protect the realm","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
-      - '{"text":"","extra":["A fine craftsman''s work."]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Add Testudo ability (at low HP)","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Charm level: 2","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      custom-model-data: 1002009
-      enchants:
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "shield_wall_charm"
-        }
-  slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_AXE
@@ -489,34 +378,7 @@ contents:
         {
             "goditems:code_name": "push_hammer"
         }
-  slot_35:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: TRIDENT
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Gladiator''s Trident","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"Its mighty blow can stun even the mightiest
-        foes","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"(Throw) - Stun","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      custom-model-data: 1000005
-      enchants:
-        minecraft:channeling: 1
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "stun_trident"
-        }
-  slot_34:
+  slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_HOE
@@ -562,11 +424,228 @@ contents:
         {
             "goditems:code_name": "life_steal_scythe"
         }
-  slot_4:
+  slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COOKED_PORKCHOP
-    amount: 45
+    type: AMETHYST_SHARD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Mastercrafted ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":true},{"text":"Ring
+        of the Protector","italic":false,"color":"dark_green","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A ring of a knight sworn to protect the realm","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
+      - '{"text":"","extra":["A fine craftsman''s work."]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Add Testudo ability (at low HP)","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Charm level: 2","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      custom-model-data: 1002009
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "shield_wall_charm"
+        }
+  slot_14:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: AMETHYST_SHARD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Rough ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"Ring
+        of the Protector","italic":false,"color":"dark_green","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A ring of a knight sworn to protect the realm","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
+      - '{"text":"","extra":["Rusty and worn."]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Add Testudo ability (at low HP)","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Charm level: 1","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      custom-model-data: 1001009
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "shield_wall_charm"
+        }
+  slot_15:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: AMETHYST_SHARD
+    amount: 3
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Royal","obfuscated":false,"italic":false,"underlined":true,"strikethrough":false,"color":"gold","bold":true},{"text":"
+        ","italic":false,"underlined":false,"bold":false},{"text":"Ring of the Protector","italic":false,"color":"dark_green","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A ring of a knight sworn to protect the realm","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
+      - '{"text":"","extra":["Made from precious metals and kingly jewels"]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Add Testudo ability (at low HP)","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Charm level: 3","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      custom-model-data: 1003009
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "shield_wall_charm"
+        }
+  slot_16:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Samurai Katana","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gold","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A fine weapon for ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
+      - '{"text":"","extra":[{"text":"the most skilled warriors","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - Dash forward and damage
+        enemies","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000022
+      enchants:
+        minecraft:looting: 1
+        minecraft:sharpness: 1
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 11.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:0eb2c45f-a8f7-42f9-9509-1b2b8d8f5d44
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:b9fcc3ac-db4a-43ad-9c97-e501a98b22ac
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "master_katana"
+        }
+  slot_17:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: JUNGLE_LOG
+    amount: 63
+  slot_18:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EMERALD_BLOCK
+    amount: 64
+  slot_19:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EMERALD_BLOCK
+    amount: 20
+  slot_20:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: OBSIDIAN
+    amount: 10
+  slot_21:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: CRAFTING_TABLE
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: WATER_BUCKET
+  slot_23:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_24:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND_HORSE_ARMOR
+  slot_25:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND
+    amount: 37
+  slot_26:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_INGOT
+    amount: 59
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: STICK
+    amount: 12
+  slot_8:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SHIELD
+    meta:
+      ==: ItemMeta
+      meta-type: SHIELD
+      display-name: '{"text":"","extra":[{"text":"Parry Sword","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gold","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Once belonged to the fiercest fighter","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Right Click) to parry attacks","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Off Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 7.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000029
+      enchants:
+        minecraft:sweeping_edge: 1
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 7.0
+          slot: offhand
+          operation: 0
+          key: minecraft:bbfbef59-5c7c-48b7-aec5-0c01882634bc
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:1b667117-be20-48c8-a66d-4c0e70f76da8
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "parry_sword"
+        }
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -618,29 +697,8 @@ contents:
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: AMETHYST_SHARD
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Rough ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"Ring
-        of the Protector","italic":false,"color":"dark_green","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"A ring of a knight sworn to protect the realm","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
-      - '{"text":"","extra":["Rusty and worn."]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Add Testudo ability (at low HP)","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Charm level: 1","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      custom-model-data: 1001009
-      enchants:
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "shield_wall_charm"
-        }
+    type: GOLDEN_APPLE
+    amount: 5
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -690,7 +748,7 @@ contents:
   slot_28:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CRAFTING_TABLE
+    type: WARD_ARMOR_TRIM_SMITHING_TEMPLATE
   slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -698,85 +756,26 @@ contents:
   slot_30:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WARD_ARMOR_TRIM_SMITHING_TEMPLATE
-  slot_31:
+    type: ENCHANTED_BOOK
+    meta:
+      ==: ItemMeta
+      meta-type: ENCHANTED
+      stored-enchants:
+        minecraft:swift_sneak: 3
+  slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: RAW_COPPER
-    amount: 3
+    type: DIAMOND_PICKAXE
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Luxurious ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":true},{"text":"Sigil
-        of the Deep","italic":false,"color":"dark_blue","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"A dwarven miner''s emblem","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
-      - '{"text":"","extra":["Awarded to the most skilled miners."]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Add Tunnel ability","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Charm level: 2","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      custom-model-data: 1002032
-      enchants:
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "ancient_pickaxe_charm"
-        }
-  slot_32:
+      Damage: 7
+  slot_35:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: AMETHYST_SHARD
-    amount: 3
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Royal","obfuscated":false,"italic":false,"underlined":true,"strikethrough":false,"color":"gold","bold":true},{"text":"
-        ","italic":false,"underlined":false,"bold":false},{"text":"Ring of the Protector","italic":false,"color":"dark_green","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"A ring of a knight sworn to protect the realm","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
-      - '{"text":"","extra":["Made from precious metals and kingly jewels"]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Add Testudo ability (at low HP)","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Charm level: 3","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      custom-model-data: 1003009
-      enchants:
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "shield_wall_charm"
-        }
-  slot_33:
+    type: DIAMOND_PICKAXE
+  slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: IRON_NUGGET
-    amount: 2
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Common ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"Medal
-        of Honour","italic":false,"color":"dark_blue","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"A medal for bravery on the battlefield","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
-      - '{"text":"","extra":["Awarded for good service. Many are seen across the land."]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Add Quickfire ability","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Charm level: 1","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      custom-model-data: 1001011
-      enchants:
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "besieger_charm"
-        }
+    type: COOKED_PORKCHOP
+    amount: 41
