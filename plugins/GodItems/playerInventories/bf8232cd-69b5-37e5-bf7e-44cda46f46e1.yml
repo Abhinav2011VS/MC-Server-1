@@ -57,49 +57,56 @@ armor:
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_CHESTPLATE
+    type: ELYTRA
     meta:
       ==: ItemMeta
-      meta-type: ARMOR
-      display-name: '{"text":"","extra":[{"text":"Dracula''s armor","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"A This armor once belonged to Vlad the Impaler","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"(Sneak + Jump to morph)","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      custom-model-data: 1000020
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Astral","color":"blue","bold":true}]}'
       enchants:
-        minecraft:protection: 5
-        minecraft:thorns: 4
-        minecraft:unbreaking: 3
-      attribute-modifiers:
-        minecraft:generic.armor:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 6.0
-          slot: chest
-          operation: 0
-          key: minecraft:5b96ae9d-d45d-42d8-983c-0ab47239e9fd
-        minecraft:generic.armor_toughness:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 1.0
-          slot: chest
-          operation: 0
-          key: minecraft:5f0b830b-e3cf-4c64-b0f6-1b94d5acb647
-        minecraft:generic.knockback_resistance:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 0.0
-          slot: chest
-          operation: 0
-          key: minecraft:243119e3-a800-4aa2-b41e-a33ee357192a
+        minecraft:aqua_affinity: 255
+        minecraft:bane_of_arthropods: 255
+        minecraft:blast_protection: 255
+        minecraft:breach: 255
+        minecraft:channeling: 255
+        minecraft:density: 255
+        minecraft:depth_strider: 255
+        minecraft:efficiency: 255
+        minecraft:feather_falling: 255
+        minecraft:fire_aspect: 255
+        minecraft:fire_protection: 255
+        minecraft:flame: 255
+        minecraft:fortune: 255
+        minecraft:frost_walker: 255
+        minecraft:impaling: 255
+        minecraft:infinity: 255
+        minecraft:knockback: 255
+        minecraft:looting: 255
+        minecraft:loyalty: 255
+        minecraft:luck_of_the_sea: 255
+        minecraft:lure: 255
+        minecraft:mending: 255
+        minecraft:multishot: 255
+        minecraft:piercing: 255
+        minecraft:power: 255
+        minecraft:projectile_protection: 255
+        minecraft:protection: 255
+        minecraft:punch: 255
+        minecraft:quick_charge: 255
+        minecraft:respiration: 255
+        minecraft:riptide: 255
+        minecraft:sharpness: 255
+        minecraft:silk_touch: 255
+        minecraft:smite: 255
+        minecraft:soul_speed: 255
+        minecraft:sweeping_edge: 255
+        minecraft:swift_sneak: 255
+        minecraft:thorns: 255
+        minecraft:unbreaking: 255
+        minecraft:wind_burst: 255
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "draculas_armor"
-        }
+      fire-resistant: true
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -158,8 +165,13 @@ armor:
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: AIR
-    amount: 0
+    type: FIREWORK_ROCKET
+    amount: 49
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
   boots:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -325,56 +337,7 @@ contents:
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_AXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '"Annihilator"'
-      enchants:
-        minecraft:aqua_affinity: 255
-        minecraft:bane_of_arthropods: 255
-        minecraft:blast_protection: 255
-        minecraft:breach: 255
-        minecraft:channeling: 255
-        minecraft:density: 255
-        minecraft:depth_strider: 255
-        minecraft:efficiency: 255
-        minecraft:feather_falling: 255
-        minecraft:fire_aspect: 255
-        minecraft:fire_protection: 255
-        minecraft:flame: 255
-        minecraft:fortune: 255
-        minecraft:frost_walker: 255
-        minecraft:impaling: 255
-        minecraft:infinity: 255
-        minecraft:knockback: 255
-        minecraft:looting: 255
-        minecraft:loyalty: 255
-        minecraft:luck_of_the_sea: 255
-        minecraft:lure: 255
-        minecraft:mending: 255
-        minecraft:multishot: 255
-        minecraft:piercing: 255
-        minecraft:power: 255
-        minecraft:projectile_protection: 255
-        minecraft:protection: 255
-        minecraft:punch: 255
-        minecraft:quick_charge: 255
-        minecraft:respiration: 255
-        minecraft:riptide: 255
-        minecraft:sharpness: 255
-        minecraft:smite: 255
-        minecraft:soul_speed: 255
-        minecraft:sweeping_edge: 255
-        minecraft:swift_sneak: 255
-        minecraft:thorns: 255
-        minecraft:unbreaking: 255
-        minecraft:wind_burst: 255
-      repair-cost: 15
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      Damage: 33
+    type: WOODEN_AXE
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -391,7 +354,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_PORKCHOP
-    amount: 63
+    amount: 60
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -608,7 +571,56 @@ contents:
   slot_21:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: WOODEN_AXE
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '"Annihilator"'
+      enchants:
+        minecraft:aqua_affinity: 255
+        minecraft:bane_of_arthropods: 255
+        minecraft:blast_protection: 255
+        minecraft:breach: 255
+        minecraft:channeling: 255
+        minecraft:density: 255
+        minecraft:depth_strider: 255
+        minecraft:efficiency: 255
+        minecraft:feather_falling: 255
+        minecraft:fire_aspect: 255
+        minecraft:fire_protection: 255
+        minecraft:flame: 255
+        minecraft:fortune: 255
+        minecraft:frost_walker: 255
+        minecraft:impaling: 255
+        minecraft:infinity: 255
+        minecraft:knockback: 255
+        minecraft:looting: 255
+        minecraft:loyalty: 255
+        minecraft:luck_of_the_sea: 255
+        minecraft:lure: 255
+        minecraft:mending: 255
+        minecraft:multishot: 255
+        minecraft:piercing: 255
+        minecraft:power: 255
+        minecraft:projectile_protection: 255
+        minecraft:protection: 255
+        minecraft:punch: 255
+        minecraft:quick_charge: 255
+        minecraft:respiration: 255
+        minecraft:riptide: 255
+        minecraft:sharpness: 255
+        minecraft:smite: 255
+        minecraft:soul_speed: 255
+        minecraft:sweeping_edge: 255
+        minecraft:swift_sneak: 255
+        minecraft:thorns: 255
+        minecraft:unbreaking: 255
+        minecraft:wind_burst: 255
+      repair-cost: 15
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      Damage: 33
   slot_23:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -781,56 +793,49 @@ contents:
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ELYTRA
+    type: NETHERITE_CHESTPLATE
     meta:
       ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Astral","color":"blue","bold":true}]}'
+      meta-type: ARMOR
+      display-name: '{"text":"","extra":[{"text":"Dracula''s armor","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A This armor once belonged to Vlad the Impaler","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Sneak + Jump to morph)","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000020
       enchants:
-        minecraft:aqua_affinity: 255
-        minecraft:bane_of_arthropods: 255
-        minecraft:blast_protection: 255
-        minecraft:breach: 255
-        minecraft:channeling: 255
-        minecraft:density: 255
-        minecraft:depth_strider: 255
-        minecraft:efficiency: 255
-        minecraft:feather_falling: 255
-        minecraft:fire_aspect: 255
-        minecraft:fire_protection: 255
-        minecraft:flame: 255
-        minecraft:fortune: 255
-        minecraft:frost_walker: 255
-        minecraft:impaling: 255
-        minecraft:infinity: 255
-        minecraft:knockback: 255
-        minecraft:looting: 255
-        minecraft:loyalty: 255
-        minecraft:luck_of_the_sea: 255
-        minecraft:lure: 255
-        minecraft:mending: 255
-        minecraft:multishot: 255
-        minecraft:piercing: 255
-        minecraft:power: 255
-        minecraft:projectile_protection: 255
-        minecraft:protection: 255
-        minecraft:punch: 255
-        minecraft:quick_charge: 255
-        minecraft:respiration: 255
-        minecraft:riptide: 255
-        minecraft:sharpness: 255
-        minecraft:silk_touch: 255
-        minecraft:smite: 255
-        minecraft:soul_speed: 255
-        minecraft:sweeping_edge: 255
-        minecraft:swift_sneak: 255
-        minecraft:thorns: 255
-        minecraft:unbreaking: 255
-        minecraft:wind_burst: 255
+        minecraft:protection: 5
+        minecraft:thorns: 4
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.armor:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 6.0
+          slot: chest
+          operation: 0
+          key: minecraft:5b96ae9d-d45d-42d8-983c-0ab47239e9fd
+        minecraft:generic.armor_toughness:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          slot: chest
+          operation: 0
+          key: minecraft:5f0b830b-e3cf-4c64-b0f6-1b94d5acb647
+        minecraft:generic.knockback_resistance:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 0.0
+          slot: chest
+          operation: 0
+          key: minecraft:243119e3-a800-4aa2-b41e-a33ee357192a
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-      fire-resistant: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "draculas_armor"
+        }
   slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -858,6 +863,33 @@ contents:
       internal: H4sIAAAAAAAA/6XTSwrCMAAE0LFNtY1fEBQP0Qu48iYSY4RgmpQmXejpTVddy+xmYN5yJCBxfrig363xyaZPq0PXB59LbHDsrDd6UK901cEnldsgARxKiOhCyjF7YZPpahT2idMMnOptvDv1HZ0tUekw+ml/A2a8YHDB4JLBgsEVg5cMXjG4ZnDDYMngNYM3DN4yeMfg/Z/4Mt34B8FH/zgKBAAA
       blockMaterial: RED_SHULKER_BOX
   slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: BAMBOO
+    amount: 46
+  slot_16:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: JUNGLE_LOG
+    amount: 21
+  slot_18:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHER_STAR
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"Heart","italic":false,"color":"red"}'
+      lore:
+      - '{"text":"Rightclick to use","italic":false,"color":"gray"}'
+      custom-model-data: 100
+      PublicBukkitValues: |-
+        {
+            "lifestealz:customheartvalue": 1,
+            "lifestealz:customitemid": "defaultheart",
+            "lifestealz:customitemtype": "heart"
+        }
+  slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: BOW
@@ -908,30 +940,3 @@ contents:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-  slot_16:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: MUTTON
-    amount: 5
-  slot_18:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHER_STAR
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"Heart","italic":false,"color":"red"}'
-      lore:
-      - '{"text":"Rightclick to use","italic":false,"color":"gray"}'
-      custom-model-data: 100
-      PublicBukkitValues: |-
-        {
-            "lifestealz:customheartvalue": 1,
-            "lifestealz:customitemid": "defaultheart",
-            "lifestealz:customitemtype": "heart"
-        }
-  slot_33:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: BUCKET
-    amount: 16
