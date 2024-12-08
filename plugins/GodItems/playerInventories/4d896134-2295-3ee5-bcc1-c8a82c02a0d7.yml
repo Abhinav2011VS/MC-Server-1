@@ -63,7 +63,6 @@ armor:
         minecraft:swift_sneak: 3
         minecraft:unbreaking: 3
       repair-cost: 1
-      Damage: 5
   helmet:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -225,6 +224,52 @@ contents:
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
+    type: STICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Ender Sceptre","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A symbol of power in the end","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - Fire a projectile","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - Teleport","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Drop Item) - Set teleport target","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 6.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000025
+      enchants:
+        minecraft:knockback: 1
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 6.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:07c2ffb6-5450-4d91-baf7-c608a852fbd8
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:04043950-9b16-4250-9e18-1a8a62409b00
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      Damage: 0
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "end_staff"
+        }
+  slot_11:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
     type: STONE_SWORD
     meta:
       ==: ItemMeta
@@ -265,20 +310,27 @@ contents:
         {
             "goditems:code_name": "tricksters_dagger"
         }
-  slot_11:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: OBSIDIAN
-    amount: 8
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_PORKCHOP
-    amount: 59
+    amount: 53
   slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_CHEST
+    type: FILLED_MAP
+    meta:
+      ==: ItemMeta
+      meta-type: MAP
+      item-name: '{"translate":"filled_map.mansion"}'
+      unhandled: H4sIAAAAAAAA/+NiYOBikMzNzEtNLkpMK7HKTSyIT0lNzi9KLMnMzyvmYmDU5mBgKaksSGUQRFaVVwyUZmXgKMovAat0NmFgYGNgrDqwW4EBBIDsCodDCxigAAA4eRSBZwAAAA==
+      map-id: 98
+      display-map-color:
+        ==: Color
+        ALPHA: 255
+        RED: 82
+        BLUE: 68
+        GREEN: 76
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -286,7 +338,7 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 458
+      Damage: 528
   slot_0:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -362,57 +414,36 @@ contents:
         {
             "goditems:code_name": "besieger"
         }
-  slot_4:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: IRON_AXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:silk_touch: 1
-      Damage: 65
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ARROW
-    amount: 64
+    type: ENDER_PEARL
+    amount: 6
   slot_19:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ARROW
-    amount: 64
+    type: TOTEM_OF_UNDYING
   slot_27:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: REDSTONE
-    amount: 64
-  slot_28:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: EMERALD
-    amount: 64
-  slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: IRON_INGOT
     amount: 64
-  slot_30:
+  slot_28:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: DIAMOND
-    amount: 19
-  slot_31:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: LAPIS_LAZULI
-    amount: 64
-  slot_32:
+    type: IRON_INGOT
+    amount: 26
+  slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: GOLD_INGOT
     amount: 64
-  slot_35:
+  slot_30:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GOLD_INGOT
+    amount: 25
+  slot_31:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: EXPERIENCE_BOTTLE
@@ -420,90 +451,28 @@ contents:
   slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: EMERALD
-    amount: 42
-  slot_34:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 6
+    type: ARROW
+    amount: 64
   slot_23:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: REDSTONE
-    amount: 11
+    type: EMERALD
+    amount: 42
   slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: IRON_INGOT
-    amount: 26
+    type: LAPIS_LAZULI
+    amount: 64
   slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: GOLD_INGOT
-    amount: 25
+    type: LAPIS_LAZULI
+    amount: 9
   slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: STICK
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Ender Sceptre","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"A symbol of power in the end","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - Fire a projectile","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - Teleport","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Sneak + Drop Item) - Set teleport target","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 6.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      custom-model-data: 1000025
-      enchants:
-        minecraft:knockback: 1
-      attribute-modifiers:
-        minecraft:generic.attack_damage:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 6.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:07c2ffb6-5450-4d91-baf7-c608a852fbd8
-        minecraft:generic.attack_speed:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: -3.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:04043950-9b16-4250-9e18-1a8a62409b00
-      ItemFlags:
-      - HIDE_ENCHANTS
-      - HIDE_ATTRIBUTES
-      Unbreakable: true
-      Damage: 0
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "end_staff"
-        }
-  slot_33:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FILLED_MAP
-    meta:
-      ==: ItemMeta
-      meta-type: MAP
-      item-name: '{"translate":"filled_map.mansion"}'
-      unhandled: H4sIAAAAAAAA/+NiYOBikMzNzEtNLkpMK7HKTSyIT0lNzi9KLMnMzyvmYmDU5mBgKaksSGUQRFaVVwyUZmXgKMovAat0NmFgYGNgrDqwW4EBBIDsCodDCxigAAA4eRSBZwAAAA==
-      map-id: 98
-      display-map-color:
-        ==: Color
-        ALPHA: 255
-        RED: 82
-        BLUE: 68
-        GREEN: 76
+    type: DIAMOND
+    amount: 19
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -538,13 +507,44 @@ contents:
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: DARK_OAK_BOAT
+    type: IRON_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:silk_touch: 1
+      Damage: 65
   slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: TOTEM_OF_UNDYING
+    type: COBBLESTONE
+    amount: 10
   slot_22:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: LAPIS_LAZULI
-    amount: 9
+    type: EMERALD
+    amount: 64
+  slot_14:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: OBSIDIAN
+    amount: 8
+  slot_15:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_CHEST
+  slot_16:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: REDSTONE
+    amount: 64
+  slot_17:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: REDSTONE
+    amount: 11
+  slot_21:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
