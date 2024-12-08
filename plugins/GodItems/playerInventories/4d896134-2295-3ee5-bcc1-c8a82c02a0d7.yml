@@ -220,52 +220,6 @@ charms:
             "goditems:code_name": "besieger_charm"
         }
 contents:
-  slot_0:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_HOE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Harvester of Souls","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"Foes that see this terrible weapon","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
-      - '{"text":"","extra":[{"text":"know their time has come","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"(Hit) - Life steal","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Wider hitting angle","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Dual-wielded (requires empty offhand)","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 15.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 0.5 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      custom-model-data: 1000030
-      enchants:
-        minecraft:looting: 3
-      attribute-modifiers:
-        minecraft:generic.attack_damage:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 15.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:d58e7dd8-54d2-4866-aee1-390403c56e2d
-        minecraft:generic.attack_speed:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: -3.5
-          slot: mainhand
-          operation: 0
-          key: minecraft:e55ce6fa-28b6-4f9c-b5a2-864da44a3c81
-      ItemFlags:
-      - HIDE_ENCHANTS
-      - HIDE_ATTRIBUTES
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "life_steal_scythe"
-        }
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -413,6 +367,52 @@ contents:
   slot_14:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
+    type: NETHERITE_HOE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Harvester of Souls","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Foes that see this terrible weapon","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
+      - '{"text":"","extra":[{"text":"know their time has come","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Hit) - Life steal","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Wider hitting angle","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Dual-wielded (requires empty offhand)","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 15.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 0.5 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000030
+      enchants:
+        minecraft:looting: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 15.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:d58e7dd8-54d2-4866-aee1-390403c56e2d
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.5
+          slot: mainhand
+          operation: 0
+          key: minecraft:e55ce6fa-28b6-4f9c-b5a2-864da44a3c81
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "life_steal_scythe"
+        }
+  slot_15:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
     type: RAW_COPPER
     amount: 3
     meta:
@@ -437,7 +437,7 @@ contents:
         {
             "goditems:code_name": "ancient_pickaxe_charm"
         }
-  slot_15:
+  slot_16:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: SHIELD
@@ -481,7 +481,7 @@ contents:
         {
             "goditems:code_name": "parry_sword"
         }
-  slot_16:
+  slot_17:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: IRON_SWORD
@@ -528,7 +528,7 @@ contents:
         {
             "goditems:code_name": "master_katana"
         }
-  slot_17:
+  slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: BLAZE_ROD
@@ -578,48 +578,41 @@ contents:
         {
             "goditems:code_name": "fire_staff"
         }
-  slot_18:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: JUNGLE_LOG
-    amount: 11
   slot_19:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: EMERALD_BLOCK
-    amount: 64
+    type: JUNGLE_LOG
+    amount: 10
   slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: EMERALD_BLOCK
-    amount: 17
+    amount: 64
   slot_23:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_EYE
-    amount: 64
+    type: OBSIDIAN
+    amount: 5
   slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: DIAMOND_PICKAXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 33
+    type: ANVIL
   slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COMPASS
+    type: WATER_BUCKET
   slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 16
+    type: FLINT_AND_STEEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 2
   slot_27:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ARROW
-    amount: 64
+    type: COMPASS
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -654,7 +647,75 @@ contents:
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
+    type: COOKED_PORKCHOP
+    amount: 60
+  slot_28:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_21:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EMERALD_BLOCK
+    amount: 17
+  slot_12:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: PRISMARINE_SHARD
+    amount: 5
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Dragon Scale","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A scale of a mighty dragon,","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
+      - '{"text":"","extra":[{"text":"incredibly light and strong","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Used for crafting","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000026
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "dragon_scale"
+        }
+  slot_29:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: JUNGLE_BOAT
+  slot_30:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
+  slot_31:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
+  slot_7:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 35
+  slot_2:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: TOTEM_OF_UNDYING
+  slot_3:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
     type: STICK
+    amount: 2
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
@@ -699,88 +760,63 @@ contents:
         {
             "goditems:code_name": "druid_staff"
         }
-  slot_28:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ARROW
-    amount: 64
-  slot_21:
+  slot_22:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: DIAMOND_BLOCK
     amount: 30
-  slot_12:
+  slot_35:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: PRISMARINE_SHARD
-    amount: 5
+    type: SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE
+  slot_32:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GOLDEN_APPLE
+    amount: 3
+  slot_33:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_INGOT
+    amount: 58
+  slot_6:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENCHANTED_BOOK
     meta:
       ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Dragon Scale","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
+      meta-type: ENCHANTED
+      display-name: '{"text":"","extra":[{"text":"Arcane Tome of Ice","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_blue","bold":true}]}'
       lore:
       - '""'
-      - '{"text":"","extra":[{"text":"A scale of a mighty dragon,","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
-      - '{"text":"","extra":[{"text":"incredibly light and strong","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Ancient knowledge is hidden within these pages,","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
+      - '{"text":"","extra":[{"text":"allowing you to control the ice","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
       - '""'
-      - '{"text":"","extra":[{"text":"Used for crafting","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sheak + Right Click) - Launch an Ice Shard","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Swap) - Magic Barrier","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
       - '""'
       - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      custom-model-data: 1000026
+      custom-model-data: 1000035
       enchants:
         minecraft:unbreaking: 3
       ItemFlags:
       - HIDE_ENCHANTS
+      Damage: 0
       PublicBukkitValues: |-
         {
-            "goditems:code_name": "dragon_scale"
+            "goditems:code_name": "ice_book"
         }
-  slot_29:
+  slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: GOLDEN_APPLE
-    amount: 2
-  slot_30:
+    type: ENDER_EYE
+    amount: 59
+  slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: IRON_INGOT
-    amount: 64
-  slot_31:
+    type: TOTEM_OF_UNDYING
+  slot_34:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: GOLD_INGOT
     amount: 53
-  slot_7:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FLINT_AND_STEEL
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 2
-  slot_2:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_PORKCHOP
-    amount: 62
-  slot_3:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: TOTEM_OF_UNDYING
-  slot_32:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE
-  slot_4:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: TOTEM_OF_UNDYING
-  slot_6:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: DARK_OAK_PLANKS
-    amount: 14
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ANVIL
