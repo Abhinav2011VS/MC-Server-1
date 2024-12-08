@@ -63,6 +63,55 @@ armor:
         minecraft:swift_sneak: 3
         minecraft:unbreaking: 3
       repair-cost: 1
+  helmet:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GOLDEN_HELMET
+    meta:
+      ==: ItemMeta
+      meta-type: ARMOR
+      display-name: '{"text":"","extra":[{"text":"Crown of the Necromancer","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Forbidden magic is pulsing from this crown,","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
+      - '{"text":"","extra":[{"text":"it gives you power over the undead","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Undead won''t attack","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Chance to get a spawn egg on every","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"undead killed","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000004
+      enchants:
+        minecraft:protection: 5
+        minecraft:thorns: 4
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.armor:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 6.0
+          slot: head
+          operation: 0
+          key: minecraft:feb2e0fd-73a6-434b-ab0f-e094c2b1332f
+        minecraft:generic.armor_toughness:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 1.0
+          slot: head
+          operation: 0
+          key: minecraft:ff46dd2e-1571-4188-8484-687b6c79fc37
+        minecraft:generic.knockback_resistance:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 0.0
+          slot: head
+          operation: 0
+          key: minecraft:2229a7f9-6126-4c8e-869b-642d4d95aa46
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "necromancer_crown"
+        }
 charms:
   slot_1:
     ==: org.bukkit.inventory.ItemStack
@@ -220,6 +269,54 @@ contents:
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
+    type: IRON_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Berzerker Axe","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Once belonged to the fiercest fighter","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Sneak + Left CLick) - Throw Axe","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Bonus attack speed + other bonuses at low health","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Requires ","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"Berzerker
+        Offhand","italic":false,"color":"dark_red","bold":true},{"text":" equipped
+        in offhand","italic":true,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000013
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 11.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:13a36645-baed-4d31-8ae8-dca0a9dd6259
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:0519c8f8-5d66-448a-b93d-3592c5eae300
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "berzerker_axe"
+        }
+  slot_10:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
     type: CROSSBOW
     meta:
       ==: ItemMeta
@@ -242,7 +339,7 @@ contents:
         {
             "goditems:code_name": "besieger"
         }
-  slot_10:
+  slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_SWORD
@@ -286,32 +383,6 @@ contents:
         {
             "goditems:code_name": "dragon_fang"
         }
-  slot_11:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: PRISMARINE_SHARD
-    amount: 5
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Dragon Scale","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"A scale of a mighty dragon,","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
-      - '{"text":"","extra":[{"text":"incredibly light and strong","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Used for crafting","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      custom-model-data: 1000026
-      enchants:
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "dragon_scale"
-        }
   slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -340,6 +411,33 @@ contents:
             "goditems:code_name": "stun_trident"
         }
   slot_14:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: RAW_COPPER
+    amount: 3
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Luxurious ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":true},{"text":"Sigil
+        of the Deep","italic":false,"color":"dark_blue","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A dwarven miner''s emblem","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
+      - '{"text":"","extra":["Awarded to the most skilled miners."]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Add Tunnel ability","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Charm level: 2","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      custom-model-data: 1002032
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "ancient_pickaxe_charm"
+        }
+  slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: SHIELD
@@ -383,7 +481,7 @@ contents:
         {
             "goditems:code_name": "parry_sword"
         }
-  slot_15:
+  slot_16:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: IRON_SWORD
@@ -430,7 +528,7 @@ contents:
         {
             "goditems:code_name": "master_katana"
         }
-  slot_16:
+  slot_17:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: BLAZE_ROD
@@ -480,30 +578,26 @@ contents:
         {
             "goditems:code_name": "fire_staff"
         }
-  slot_17:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: JUNGLE_LOG
-    amount: 28
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: EMERALD_BLOCK
-    amount: 64
+    type: JUNGLE_LOG
+    amount: 11
   slot_19:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: EMERALD_BLOCK
-    amount: 18
+    amount: 64
   slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: DIAMOND_BLOCK
-    amount: 30
+    type: EMERALD_BLOCK
+    amount: 17
   slot_23:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ANVIL
+    type: ENDER_EYE
+    amount: 64
   slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -511,7 +605,7 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 30
+      Damage: 33
   slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -524,8 +618,8 @@ contents:
   slot_27:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 16
+    type: ARROW
+    amount: 64
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -558,20 +652,6 @@ contents:
             "goditems:code_name": "trickster_bow"
         }
   slot_1:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_PORKCHOP
-    amount: 63
-  slot_28:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_21:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHROOMLIGHT
-  slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: STICK
@@ -619,101 +699,88 @@ contents:
         {
             "goditems:code_name": "druid_staff"
         }
-  slot_29:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_30:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_35:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: IRON_AXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Berzerker Axe","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"Once belonged to the fiercest fighter","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"(Sneak + Left CLick) - Throw Axe","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Bonus attack speed + other bonuses at low health","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Requires ","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"Berzerker
-        Offhand","italic":false,"color":"dark_red","bold":true},{"text":" equipped
-        in offhand","italic":true,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      custom-model-data: 1000013
-      enchants:
-        minecraft:sharpness: 5
-        minecraft:unbreaking: 3
-      attribute-modifiers:
-        minecraft:generic.attack_damage:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 11.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:13a36645-baed-4d31-8ae8-dca0a9dd6259
-        minecraft:generic.attack_speed:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: -3.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:0519c8f8-5d66-448a-b93d-3592c5eae300
-      ItemFlags:
-      - HIDE_ENCHANTS
-      - HIDE_ATTRIBUTES
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "berzerker_axe"
-        }
-  slot_31:
+  slot_28:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ARROW
     amount: 64
-  slot_7:
+  slot_21:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: DIAMOND_PICKAXE
+    type: DIAMOND_BLOCK
+    amount: 30
+  slot_12:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: PRISMARINE_SHARD
+    amount: 5
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 351
-  slot_2:
+      display-name: '{"text":"","extra":[{"text":"Dragon Scale","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A scale of a mighty dragon,","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
+      - '{"text":"","extra":[{"text":"incredibly light and strong","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Used for crafting","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000026
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "dragon_scale"
+        }
+  slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: GOLDEN_APPLE
     amount: 2
-  slot_3:
+  slot_30:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_INGOT
+    amount: 64
+  slot_31:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GOLD_INGOT
+    amount: 53
+  slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FLINT_AND_STEEL
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 1
+      Damage: 2
+  slot_2:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_PORKCHOP
+    amount: 62
+  slot_3:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: TOTEM_OF_UNDYING
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: IRON_INGOT
-    amount: 64
-  slot_33:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: BLAZE_ROD
-    amount: 64
-  slot_34:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
     type: SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE
+  slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: TOTEM_OF_UNDYING
+  slot_6:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DARK_OAK_PLANKS
+    amount: 14
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ANVIL
