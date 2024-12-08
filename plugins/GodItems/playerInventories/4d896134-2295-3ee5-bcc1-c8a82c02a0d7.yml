@@ -63,7 +63,6 @@ armor:
         minecraft:swift_sneak: 3
         minecraft:unbreaking: 3
       repair-cost: 1
-      Damage: 3
   helmet:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -224,72 +223,13 @@ contents:
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 16
+    type: ARROW
+    amount: 64
   slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_13:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_14:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_15:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_16:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_17:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_18:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_19:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_20:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_23:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: TOTEM_OF_UNDYING
-  slot_25:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
     type: ARROW
     amount: 64
-  slot_26:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ARROW
-    amount: 64
-  slot_27:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GOLDEN_APPLE
-    amount: 3
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -321,16 +261,11 @@ contents:
         {
             "goditems:code_name": "trickster_bow"
         }
-  slot_21:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
   slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 16
+    type: OBSIDIAN
+    amount: 8
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -338,26 +273,12 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 375
-  slot_2:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_PORKCHOP
-    amount: 54
+      Damage: 458
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ENDER_PEARL
-    amount: 11
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: JUNGLE_BOAT
-  slot_4:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHULKER_SHELL
-    amount: 5
+    amount: 7
   slot_0:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -412,3 +333,54 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ENDER_CHEST
+  slot_13:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FILLED_MAP
+    meta:
+      ==: ItemMeta
+      meta-type: MAP
+      item-name: '{"translate":"item.dnt.filled_map.end_castle","fallback":"End Castle
+        Map","italic":false}'
+      unhandled: H4sIAAAAAAAA/+NiYOBikMzNzEtNLkpMK7HKTSyIT0lNzi9KLMnMzyvmYmDU5mBgKaksSGUQQqgqSSxKTy2Jr2Bl4CjKLwErdTZhYGBjYKw6MOsAAwgA2RUHZjLAAAAr3Q9FaAAAAA==
+      map-id: 93
+  slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_PORKCHOP
+    amount: 46
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:silk_touch: 1
+      Damage: 1
+  slot_6:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: CROSSBOW
+    meta:
+      ==: ItemMeta
+      meta-type: CROSSBOW
+      display-name: '{"text":"","extra":[{"text":"Besieger","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_blue","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Where heavy artillery is needed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Shoot) - Explosive arrow","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000011
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "besieger"
+        }
