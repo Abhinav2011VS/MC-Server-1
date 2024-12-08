@@ -63,7 +63,7 @@ armor:
         minecraft:swift_sneak: 3
         minecraft:unbreaking: 3
       repair-cost: 1
-      Damage: 1
+      Damage: 5
   helmet:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -274,7 +274,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_PORKCHOP
-    amount: 61
+    amount: 59
   slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -287,16 +287,6 @@ contents:
       ==: ItemMeta
       meta-type: UNSPECIFIC
       Damage: 458
-  slot_3:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: IRON_AXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:silk_touch: 1
-      Damage: 61
   slot_0:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -375,7 +365,13 @@ contents:
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: DARK_OAK_BOAT
+    type: IRON_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:silk_touch: 1
+      Damage: 65
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -405,12 +401,12 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: DIAMOND
-    amount: 13
+    amount: 19
   slot_31:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: LAPIS_LAZULI
-    amount: 48
+    amount: 64
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -420,16 +416,12 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: EXPERIENCE_BOTTLE
-    amount: 31
-  slot_14:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: TOTEM_OF_UNDYING
+    amount: 39
   slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: EMERALD
-    amount: 24
+    amount: 42
   slot_34:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -439,17 +431,17 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: REDSTONE
-    amount: 2
+    amount: 11
   slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: IRON_INGOT
-    amount: 7
+    amount: 26
   slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: GOLD_INGOT
-    amount: 8
+    amount: 25
   slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -543,3 +535,16 @@ contents:
         {
             "goditems:code_name": "trickster_bow"
         }
+  slot_3:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DARK_OAK_BOAT
+  slot_13:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: TOTEM_OF_UNDYING
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: LAPIS_LAZULI
+    amount: 9
