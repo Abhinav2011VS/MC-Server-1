@@ -68,7 +68,9 @@ armor:
       meta-type: ARMOR
       enchants:
         minecraft:mending: 1
+        minecraft:swift_sneak: 3
         minecraft:unbreaking: 3
+      repair-cost: 1
       Damage: 82
   boots:
     ==: org.bukkit.inventory.ItemStack
@@ -308,6 +310,32 @@ contents:
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
+    type: PRISMARINE_SHARD
+    amount: 5
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Dragon Scale","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A scale of a mighty dragon,","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
+      - '{"text":"","extra":[{"text":"incredibly light and strong","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Used for crafting","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000026
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "dragon_scale"
+        }
+  slot_11:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
     type: TRIDENT
     meta:
       ==: ItemMeta
@@ -332,7 +360,7 @@ contents:
         {
             "goditems:code_name": "stun_trident"
         }
-  slot_11:
+  slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_AXE
@@ -378,7 +406,7 @@ contents:
         {
             "goditems:code_name": "push_hammer"
         }
-  slot_12:
+  slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_HOE
@@ -424,7 +452,7 @@ contents:
         {
             "goditems:code_name": "life_steal_scythe"
         }
-  slot_13:
+  slot_14:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: AMETHYST_SHARD
@@ -450,7 +478,7 @@ contents:
         {
             "goditems:code_name": "shield_wall_charm"
         }
-  slot_14:
+  slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: AMETHYST_SHARD
@@ -476,7 +504,7 @@ contents:
         {
             "goditems:code_name": "shield_wall_charm"
         }
-  slot_15:
+  slot_16:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: AMETHYST_SHARD
@@ -503,7 +531,7 @@ contents:
         {
             "goditems:code_name": "shield_wall_charm"
         }
-  slot_16:
+  slot_17:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: IRON_SWORD
@@ -550,54 +578,44 @@ contents:
         {
             "goditems:code_name": "master_katana"
         }
-  slot_17:
+  slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: JUNGLE_LOG
     amount: 60
-  slot_18:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: EMERALD_BLOCK
-    amount: 64
   slot_19:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: EMERALD_BLOCK
-    amount: 20
+    amount: 64
   slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: OBSIDIAN
-    amount: 10
-  slot_22:
+    type: EMERALD_BLOCK
+    amount: 20
+  slot_23:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: DIAMOND_PICKAXE
-  slot_23:
+  slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ENDER_PEARL
     amount: 16
-  slot_24:
+  slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: DIAMOND_HORSE_ARMOR
-  slot_25:
+  slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: EMERALD
     amount: 25
-  slot_26:
+  slot_27:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: DIAMOND
     amount: 57
-  slot_27:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: IRON_INGOT
-    amount: 64
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -745,12 +763,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: IRON_INGOT
-    amount: 24
-  slot_29:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GOLD_INGOT
-    amount: 33
+    amount: 57
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -758,7 +771,7 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 25
+      Damage: 26
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -771,27 +784,23 @@ contents:
   slot_31:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE
+    type: STICK
+    amount: 12
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENCHANTED_BOOK
-    meta:
-      ==: ItemMeta
-      meta-type: ENCHANTED
-      stored-enchants:
-        minecraft:swift_sneak: 3
+    type: SILENCE_ARMOR_TRIM_SMITHING_TEMPLATE
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: JUNGLE_SIGN
-    amount: 2
+    type: ANVIL
   slot_21:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: STICK
-    amount: 12
-  slot_35:
+    type: OBSIDIAN
+    amount: 10
+  slot_30:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CRAFTING_TABLE
+    type: GOLD_INGOT
+    amount: 33
