@@ -2,8 +2,47 @@ armor:
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: AIR
-    amount: 0
+    type: SHIELD
+    meta:
+      ==: ItemMeta
+      meta-type: SHIELD
+      display-name: '{"text":"","extra":[{"text":"Parry Sword","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gold","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Once belonged to the fiercest fighter","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"yellow","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Right Click) to parry attacks","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Off Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 7.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000029
+      enchants:
+        minecraft:sweeping_edge: 1
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 7.0
+          slot: offhand
+          operation: 0
+          key: minecraft:8627d865-0cee-4488-88c3-7653635e78e8
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:aceabb02-fc17-4ad7-bf99-3546b106b7fb
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "parry_sword"
+        }
   helmet:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -11,7 +50,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 77
+      Damage: 82
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -19,7 +58,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 65
+      Damage: 70
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -27,7 +66,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 77
+      Damage: 82
   boots:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -35,7 +74,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 66
+      Damage: 71
 charms: {}
 contents:
   slot_0:
@@ -88,7 +127,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_PORKCHOP
-    amount: 64
+    amount: 63
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -96,32 +135,113 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 8
+      Damage: 91
   slot_9:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Berzerker Axe","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Once belonged to the fiercest fighter","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Sneak + Left CLick) - Throw Axe","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Bonus attack speed + other bonuses at low health","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Requires ","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"Berzerker
+        Offhand","italic":false,"color":"dark_red","bold":true},{"text":" equipped
+        in offhand","italic":true,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000013
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 11.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:c24abd8b-b51c-406b-b58a-1bb0790ce7ed
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:d39772c6-c397-484a-bed9-efc9df0abd97
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "berzerker_axe"
+        }
+  slot_10:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Dragon Fang","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Blade forged from the","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":false}]}'
+      - '{"text":"","extra":[{"text":"fang of a fallen dragon","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Sneak + Hit) - Teleport behind","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 15.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000027
+      enchants:
+        minecraft:fire_aspect: 1
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 15.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:9e302c19-c7ee-4765-95f2-07d5157e40ed
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:05fef49e-01af-4ecd-960e-e4eb8b9900e7
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "dragon_fang"
+        }
+  slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: EMERALD_BLOCK
     amount: 64
-  slot_10:
+  slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: OBSIDIAN
     amount: 10
-  slot_11:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_12:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
   slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 16
+    type: CRAFTING_TABLE
   slot_14:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -141,12 +261,27 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ENDER_PEARL
-    amount: 4
+    amount: 16
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: SADDLE
+    type: ENDER_PEARL
+    amount: 16
   slot_19:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_20:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 4
+  slot_21:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SADDLE
+  slot_22:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: CROSSBOW
@@ -156,42 +291,118 @@ contents:
       enchants:
         minecraft:piercing: 1
       Damage: 31
-  slot_20:
+  slot_23:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: CROSSBOW
+    meta:
+      ==: ItemMeta
+      meta-type: CROSSBOW
+      Damage: 81
+  slot_24:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
+  slot_25:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
+  slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: GOLDEN_APPLE
     amount: 6
-  slot_21:
+  slot_27:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: BREAD
     amount: 64
-  slot_22:
+  slot_3:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: STICK
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Druid''s Staff","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Harness the power of nature to","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
+      - '{"text":"","extra":[{"text":"heal yourself and your allies","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"green","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Left Click) - Add extra health to nearby allies","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Right Click) - Heal yourself","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Right Click) - Heal nearby party members","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 6.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.4 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000015
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 6.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:d6fbece0-1252-4b65-a5f0-85e4546c7441
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -2.6
+          slot: mainhand
+          operation: 0
+          key: minecraft:9751b4e7-dd22-4222-9ce0-2eda3fcc9e2a
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      Damage: 0
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "druid_staff"
+        }
+  slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: SPRUCE_BOAT
+  slot_8:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EXPERIENCE_BOTTLE
+    amount: 49
+  slot_28:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COAL
+    amount: 46
+  slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: EMERALD
     amount: 64
-  slot_23:
+  slot_30:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: EMERALD
     amount: 64
-  slot_24:
+  slot_31:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: EMERALD
-    amount: 16
-  slot_25:
+    amount: 64
+  slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: DIAMOND
-    amount: 14
-  slot_26:
+    amount: 29
+  slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: IRON_INGOT
-    amount: 48
-  slot_27:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: CRAFTING_TABLE
+    amount: 64
