@@ -50,7 +50,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 82
+      Damage: 87
   chestplate:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -58,7 +58,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 70
+      Damage: 75
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -66,7 +66,7 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 82
+      Damage: 87
   boots:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -74,60 +74,58 @@ armor:
     meta:
       ==: ItemMeta
       meta-type: ARMOR
-      Damage: 71
+      Damage: 76
 charms: {}
 contents:
   slot_0:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_AXE
+    type: NETHERITE_SWORD
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Hammer of the Underworld","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
+      display-name: '{"text":"","extra":[{"text":"Dragon Fang","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
       lore:
       - '""'
-      - '{"text":"","extra":[{"text":"Your foes tremble in fear at the look of this
-        terrible weapon","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Blade forged from the","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":false}]}'
+      - '{"text":"","extra":[{"text":"fang of a fallen dragon","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":false}]}'
       - '""'
-      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - Throw entities around
-        you away","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Hit) - Teleport behind","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
       - '""'
       - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
       - '""'
       - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 15.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
       - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      custom-model-data: 1000016
+      custom-model-data: 1000027
       enchants:
-        minecraft:sharpness: 5
-        minecraft:unbreaking: 3
+        minecraft:fire_aspect: 1
       attribute-modifiers:
         minecraft:generic.attack_damage:
         - ==: org.bukkit.attribute.AttributeModifier
-          amount: 11.0
+          amount: 15.0
           slot: mainhand
           operation: 0
-          key: minecraft:45480f7f-d48f-4257-bb6c-0693a81190c2
+          key: minecraft:9e302c19-c7ee-4765-95f2-07d5157e40ed
         minecraft:generic.attack_speed:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: -3.0
           slot: mainhand
           operation: 0
-          key: minecraft:bf35dcbc-8f99-48ea-a730-fcb6f88a9e8e
+          key: minecraft:05fef49e-01af-4ecd-960e-e4eb8b9900e7
       ItemFlags:
       - HIDE_ENCHANTS
       - HIDE_ATTRIBUTES
       Unbreakable: true
       PublicBukkitValues: |-
         {
-            "goditems:code_name": "push_hammer"
+            "goditems:code_name": "dragon_fang"
         }
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_PORKCHOP
-    amount: 63
+    amount: 62
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -135,7 +133,7 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 91
+      Damage: 96
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -187,46 +185,48 @@ contents:
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_SWORD
+    type: NETHERITE_AXE
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Dragon Fang","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
+      display-name: '{"text":"","extra":[{"text":"Hammer of the Underworld","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
       lore:
       - '""'
-      - '{"text":"","extra":[{"text":"Blade forged from the","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":false}]}'
-      - '{"text":"","extra":[{"text":"fang of a fallen dragon","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":false}]}'
+      - '{"text":"","extra":[{"text":"Your foes tremble in fear at the look of this
+        terrible weapon","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
       - '""'
-      - '{"text":"","extra":[{"text":"(Sneak + Hit) - Teleport behind","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - Throw entities around
+        you away","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
       - '""'
       - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
       - '""'
       - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 15.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
       - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      custom-model-data: 1000027
+      custom-model-data: 1000016
       enchants:
-        minecraft:fire_aspect: 1
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
       attribute-modifiers:
         minecraft:generic.attack_damage:
         - ==: org.bukkit.attribute.AttributeModifier
-          amount: 15.0
+          amount: 11.0
           slot: mainhand
           operation: 0
-          key: minecraft:9e302c19-c7ee-4765-95f2-07d5157e40ed
+          key: minecraft:45480f7f-d48f-4257-bb6c-0693a81190c2
         minecraft:generic.attack_speed:
         - ==: org.bukkit.attribute.AttributeModifier
           amount: -3.0
           slot: mainhand
           operation: 0
-          key: minecraft:05fef49e-01af-4ecd-960e-e4eb8b9900e7
+          key: minecraft:bf35dcbc-8f99-48ea-a730-fcb6f88a9e8e
       ItemFlags:
       - HIDE_ENCHANTS
       - HIDE_ATTRIBUTES
       Unbreakable: true
       PublicBukkitValues: |-
         {
-            "goditems:code_name": "dragon_fang"
+            "goditems:code_name": "push_hammer"
         }
   slot_11:
     ==: org.bukkit.inventory.ItemStack
@@ -241,7 +241,8 @@ contents:
   slot_13:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CRAFTING_TABLE
+    type: ENDER_PEARL
+    amount: 16
   slot_14:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -271,17 +272,12 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ENDER_PEARL
-    amount: 16
+    amount: 4
   slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_PEARL
-    amount: 4
-  slot_21:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
     type: SADDLE
-  slot_22:
+  slot_21:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: CROSSBOW
@@ -291,33 +287,35 @@ contents:
       enchants:
         minecraft:piercing: 1
       Damage: 31
+  slot_22:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
   slot_23:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CROSSBOW
-    meta:
-      ==: ItemMeta
-      meta-type: CROSSBOW
-      Damage: 81
+    type: ARROW
+    amount: 64
   slot_24:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ARROW
-    amount: 64
-  slot_25:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ARROW
-    amount: 64
-  slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: GOLDEN_APPLE
     amount: 6
-  slot_27:
+  slot_25:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: BREAD
+    amount: 64
+  slot_26:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COAL
+    amount: 46
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EMERALD
     amount: 64
   slot_3:
     ==: org.bukkit.inventory.ItemStack
@@ -379,8 +377,8 @@ contents:
   slot_28:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COAL
-    amount: 46
+    type: EMERALD
+    amount: 64
   slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -389,20 +387,22 @@ contents:
   slot_30:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: EMERALD
-    amount: 64
+    type: DIAMOND
+    amount: 29
   slot_31:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: EMERALD
-    amount: 64
-  slot_32:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: DIAMOND
-    amount: 29
-  slot_33:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
     type: IRON_INGOT
-    amount: 64
+    amount: 58
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: CRAFTING_TABLE
+  slot_6:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: WATER_BUCKET
+  slot_7:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: WATER_BUCKET
