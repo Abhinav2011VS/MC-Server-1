@@ -46,7 +46,7 @@ armor:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-      Damage: 296
+      Damage: 318
       PublicBukkitValues: |-
         {
             "goditems:code_name": "draculas_armor"
@@ -63,6 +63,7 @@ armor:
         minecraft:swift_sneak: 3
         minecraft:unbreaking: 3
       repair-cost: 1
+      Damage: 8
   helmet:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -108,6 +109,7 @@ armor:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
+      Damage: 22
       PublicBukkitValues: |-
         {
             "goditems:code_name": "necromancer_crown"
@@ -223,13 +225,51 @@ contents:
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ARROW
-    amount: 64
+    type: STONE_SWORD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Trickster''s dagger","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_gray","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A deadly dagger","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Hit enemies from behind to deal more damage","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 5.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.6 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000037
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 5.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:268d1edd-5fae-439c-8f24-9081ee0b8a5c
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -2.4
+          slot: mainhand
+          operation: 0
+          key: minecraft:46c96a4c-8853-47d2-99c0-a84083e3c877
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "tricksters_dagger"
+        }
   slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ARROW
-    amount: 64
+    type: OBSIDIAN
+    amount: 8
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -264,21 +304,16 @@ contents:
   slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: OBSIDIAN
-    amount: 8
+    type: ENDER_CHEST
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: DIAMOND_PICKAXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Damage: 458
+    type: TOTEM_OF_UNDYING
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: ENDER_PEARL
-    amount: 7
+    amount: 6
   slot_0:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -332,36 +367,6 @@ contents:
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_CHEST
-  slot_13:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FILLED_MAP
-    meta:
-      ==: ItemMeta
-      meta-type: MAP
-      item-name: '{"translate":"item.dnt.filled_map.end_castle","fallback":"End Castle
-        Map","italic":false}'
-      unhandled: H4sIAAAAAAAA/+NiYOBikMzNzEtNLkpMK7HKTSyIT0lNzi9KLMnMzyvmYmDU5mBgKaksSGUQQqgqSSxKTy2Jr2Bl4CjKLwErdTZhYGBjYKw6MOsAAwgA2RUHZjLAAAAr3Q9FaAAAAA==
-      map-id: 93
-  slot_4:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_PORKCHOP
-    amount: 46
-  slot_5:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: IRON_AXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:silk_touch: 1
-      Damage: 1
-  slot_6:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
     type: CROSSBOW
     meta:
       ==: ItemMeta
@@ -384,3 +389,87 @@ contents:
         {
             "goditems:code_name": "besieger"
         }
+  slot_4:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DARK_OAK_BOAT
+  slot_6:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Damage: 458
+  slot_2:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:silk_touch: 1
+      Damage: 35
+  slot_15:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DARK_OAK_BOAT
+  slot_16:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DARK_OAK_BOAT
+  slot_17:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DARK_OAK_BOAT
+  slot_18:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
+  slot_19:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: REDSTONE
+    amount: 28
+  slot_28:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EMERALD
+    amount: 24
+  slot_29:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: IRON_INGOT
+    amount: 16
+  slot_30:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: DIAMOND
+    amount: 5
+  slot_31:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: LAPIS_LAZULI
+    amount: 9
+  slot_32:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GOLD_INGOT
+    amount: 21
+  slot_35:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: EXPERIENCE_BOTTLE
+    amount: 8
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_PORKCHOP
+    amount: 63
