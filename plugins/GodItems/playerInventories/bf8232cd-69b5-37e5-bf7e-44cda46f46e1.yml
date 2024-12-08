@@ -166,7 +166,7 @@ armor:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
-    amount: 21
+    amount: 38
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
@@ -403,7 +403,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_PORKCHOP
-    amount: 49
+    amount: 64
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -793,6 +793,37 @@ contents:
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
+    type: GUNPOWDER
+    amount: 64
+  slot_26:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: RED_SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/6XLSw6CMACE4ZGHQn2Lgo8zcAFX3sTUikljaQmUhZ5eXLk2s5s/mU8AAsXNOPUsK+u1f5XK1Y2zQ3QpslrbSrXy4c/KWS+HagWAU4ioM84Pc/CR9lWdINB35D9gZKO7q5Hv3ugQsXK9/f4vwA+PGBwwOGRwxOCYwWMGTxicMDhlsGDwlMEzBs8ZvGDwksErBq8ZvGFwxuAtg3cMzhlcMHjP4AODj/9j4AN/EuoKqQYAAA==
+      blockMaterial: RED_SHULKER_BOX
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FLINT_AND_STEEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Unbreakable: true
+  slot_34:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: RED_SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/6XTSwrCMAAE0LFNtY1fEBQP0Qu48iYSY4RgmpQmXejpTVddy+xmYN5yJCBxfrig363xyaZPq0PXB59LbHDsrDd6UK901cEnldsgARxKiOhCyjF7YZPpahT2idMMnOptvDv1HZ0tUekw+ml/A2a8YHDB4JLBgsEVg5cMXjG4ZnDDYMngNYM3DN4yeMfg/Z/4Mt34B8FH/zgKBAAA
+      blockMaterial: RED_SHULKER_BOX
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
     type: BOW
     meta:
       ==: ItemMeta
@@ -841,29 +872,30 @@ contents:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
-  slot_26:
+  slot_16:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: RED_SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/6XLSw6CMACE4ZGHQn2Lgo8zcAFX3sTUikljaQmUhZ5eXLk2s5s/mU8AAsXNOPUsK+u1f5XK1Y2zQ3QpslrbSrXy4c/KWS+HagWAU4ioM84Pc/CR9lWdINB35D9gZKO7q5Hv3ugQsXK9/f4vwA+PGBwwOGRwxOCYwWMGTxicMDhlsGDwlMEzBs8ZvGDwksErBq8ZvGFwxuAtg3cMzhlcMHjP4AODj/9j4AN/EuoKqQYAAA==
-      blockMaterial: RED_SHULKER_BOX
-  slot_27:
+    type: MUTTON
+    amount: 5
+  slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FLINT_AND_STEEL
+    type: NETHER_STAR
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Unbreakable: true
-  slot_34:
+      display-name: '{"text":"Heart","italic":false,"color":"red"}'
+      lore:
+      - '{"text":"Rightclick to use","italic":false,"color":"gray"}'
+      custom-model-data: 100
+      PublicBukkitValues: |-
+        {
+            "lifestealz:customheartvalue": 1,
+            "lifestealz:customitemid": "defaultheart",
+            "lifestealz:customitemtype": "heart"
+        }
+  slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: RED_SHULKER_BOX
-    meta:
-      ==: ItemMeta
-      meta-type: TILE_ENTITY
-      internal: H4sIAAAAAAAA/6XTSwrCMAAE0LFNtY1fEBQP0Qu48iYSY4RgmpQmXejpTVddy+xmYN5yJCBxfrig363xyaZPq0PXB59LbHDsrDd6UK901cEnldsgARxKiOhCyjF7YZPpahT2idMMnOptvDv1HZ0tUekw+ml/A2a8YHDB4JLBgsEVg5cMXjG4ZnDDYMngNYM3DN4yeMfg/Z/4Mt34B8FH/zgKBAAA
-      blockMaterial: RED_SHULKER_BOX
+    type: GUNPOWDER
+    amount: 64
