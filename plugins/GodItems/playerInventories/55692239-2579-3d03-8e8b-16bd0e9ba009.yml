@@ -12,7 +12,7 @@ armor:
         minecraft:thorns: 3
         minecraft:unbreaking: 3
       repair-cost: 1
-      Damage: 207
+      Damage: 226
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -32,7 +32,7 @@ armor:
         minecraft:protection: 4
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 223
+      Damage: 240
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -50,7 +50,7 @@ armor:
         minecraft:soul_speed: 3
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 188
+      Damage: 198
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -66,7 +66,7 @@ armor:
         minecraft:protection: 4
         minecraft:thorns: 3
         minecraft:unbreaking: 3
-      Damage: 197
+      Damage: 217
       trim:
         material: minecraft:emerald
         pattern: minecraft:ward
@@ -84,7 +84,7 @@ contents:
         minecraft:mending: 1
         minecraft:silk_touch: 1
       repair-cost: 7
-      Damage: 42
+      Damage: 89
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -112,24 +112,15 @@ contents:
   slot_3:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_SHOVEL
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:mending: 1
-        minecraft:silk_touch: 1
-        minecraft:unbreaking: 3
-      repair-cost: 15
+    type: BEACON
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: AXOLOTL_BUCKET
+    type: FLINT_AND_STEEL
     meta:
       ==: ItemMeta
-      meta-type: AXOLOTL_BUCKET
-      internal: H4sIAAAAAAAA/+NiYOBiEEwqTc5OLdFNzSvJLKnULUlMZ2ZgdkxPZQACVgY2j9TEnJIMxwQGBmYG9rDEoszEvBIGEIcBAMgXQDA+AAAA
-      axolotl-variant: 3
+      meta-type: UNSPECIFIC
+      Damage: 4
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -138,72 +129,30 @@ contents:
   slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: STONE
-    amount: 64
-  slot_13:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
-  slot_18:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FIREWORK_ROCKET
-    amount: 31
+    type: YELLOW_SHULKER_BOX
     meta:
       ==: ItemMeta
-      meta-type: FIREWORK
-      display-name: '{"text":"","extra":[{"text":"OP Firework","italic":false,"color":"dark_blue"}]}'
-      lore:
-      - '{"text":"","extra":[{"text":"The longer firework!","italic":false}]}'
-      firework-effects:
-      - ==: Firework
-        flicker: false
-        trail: false
-        colors: &id001 []
-        fade-colors: *id001
-        type: BALL
-      power: 200
-  slot_14:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_BLOCK
-    amount: 10
+      meta-type: TILE_ENTITY
+      internal: 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
+      blockMaterial: YELLOW_SHULKER_BOX
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COOKED_CHICKEN
-    amount: 14
+    type: RED_SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/+1ZbW/bNhBm4iRNvDZpXpqm2xdB60cbyIudF38YlqQtlq3oOrjbgA2FQElnmTBFGiTVxCv6P4btJ+xn7I+NspuISqpKaQupQJYgQGTpuTs+d3yOPtURqqP7LuXeoAlMETVqejwccqYv5AJaDQkDT+Ce6nicKayvRB0htFpDM5Jypf/V+BmiIJxH08Q3Aa7gp8zxR1BDsx6PWPzwVB3VE/vz6J5hP5KKhw7DIaC/X9twpgS2O7+/tl1OfbvTw1RCw/Y45cLu2F9vbh5vH+/aDZsoTIl38QB3e5H0sIIEI5UgA1B9waOgf/Gp0h60oUcEh5z51hH2BkP9py1GzAdBdWDnJt68vHjcflNDX10JOuQ+UMfHCqPb7Vr9HcuK79XRyvPI1cEeRYMBUb9gGoHm4IH71vWQRrJzfhFFms2H7Z2DtrsLrWbroLXdbLn7e80Db2+r6fuwu9/DPdjzQbOYshC7crEENNf96enJi8e1LA8S/DglWfcVAaHv1xBaQIvJgjT/2iVCK1Nf5GfpycHx1ubmx2dpd/fMemdmGlmeHx3Gvx/v+RgLwVVuVUzdLZGMVmVkcD4AvVcAevmMrJTHSLtdFSPfRyygYD2nmA1kPif18jjZ2a+Kk64iBXS0zPrYqWzHXLSXuMPmc7JUHidbldXHieDMOmFBEVmdL5GQnaoIecEKMLFaHhN7VRHxTN8AoU+TRffLnRJ7TGXVIQim1g8wyqdj+QbQ8TgEgWlhRd0oj5Lt6rfNcR+kGlIN/awEZat6Zo44VwUOaCUe4ysj5Vf9qLCOIk8/8X+ZxI6faHfKOtTntK4CoJ+V0FZGyvnRtXvKhZ9PyfoNoCSRk6cQBIQFBRRl8Qbw0qUk1BKLaYGts3YD+Ejq5DugYQGVHc/ZzieqU6mJ6koyehPgS8WZOVBtm8DpLCDR37gcfJaaxJrAWgq4dgk4ng4b0JoJnUlBlxMoTM5pBu5bEzebwlkJzgcYyvgE45wv1+HCjHzWNDOXMrNhjqvjUZXj9Yluc8yAf2PCb31g9PPvJYzE320NaMOELhR32TJxd7Jw/kSns3K7mFUU8aTdUTjIAi6ngF8mwKEgMsRCXzuyj4XpebbYfP+vqxqgRGTsRB+LgTOMxJDCJ2hkAgecWV0P0/xjcR2tGylhXh8zFcaLqaM5Cq+AypqZ74i5AvBAZ3y8MabQkuzzU10BjuKcKjKMP33vC4Olo9+u+cJgJeB+nBipi9yHCaO3/fEiHRkvMmNifwtN2zb6J1d/KQn66pOxf2iNY7J4z8J6m2vTI2sSbCNfFssOljBPqw5x6cgaG7awPgBpBGdBfrAxu3/mBhwIPDICndT9deP8WYJv9biwxhkmRaP797rRfSCNJ7o6rUOXUKJGncwenPgEYFedvrX14zP70vu3u4b24RAHgCY/iXStZmllrE1YyizJW0vhlgzcpRaYQt3LQl1u1qkWsp7VQgKdlyst5IEJvX+NA0LK50YKaAgdxUMiHYr/iCgxwA9jWv8D7VeaWCMeAAA=
+      blockMaterial: RED_SHULKER_BOX
   slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_SWORD
+    type: AXOLOTL_BUCKET
     meta:
       ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Devastator Sword","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
-      lore:
-      - '{"text":"","extra":[{"text":"Unleash chaos in all directions.","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Special Ability: Massive energy burst","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"red","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Damage: Up to 100","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"Cooldown: 1 second","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      custom-model-data: 90909002
-      Unbreakable: true
-  slot_16:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: SHIELD
-    meta:
-      ==: ItemMeta
-      meta-type: SHIELD
-      enchants:
-        minecraft:mending: 1
-        minecraft:unbreaking: 3
-  slot_25:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
+      meta-type: AXOLOTL_BUCKET
+      internal: H4sIAAAAAAAA/+NiYOBiEEwqTc5OLdFNzSvJLKnULUlMZ2ZgdkxPZQACVgY2j9TEnJIMxwQGBmYG9rDEoszEvBIGEIcBAMgXQDA+AAAA
+      axolotl-variant: 3
   slot_19:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -214,69 +163,64 @@ contents:
     v: 3955
     type: ENDER_PEARL
     amount: 16
-  slot_23:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ELYTRA
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        minecraft:mending: 1
-        minecraft:unbreaking: 3
-  slot_24:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_CHEST
   slot_26:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FISHING_ROD
+    type: DIAMOND_AXE
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Might of the Thunder","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_aqua","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"This godly weapon allows you to","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"aqua","bold":false}]}'
+      - '{"text":"","extra":[{"text":"harness the power of thunder","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"aqua","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Hit) - Strike Lightning","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000001
       enchants:
-        minecraft:luck_of_the_sea: 2
-        minecraft:lure: 2
-        minecraft:mending: 1
+        minecraft:sharpness: 5
         minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 11.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:3c793120-d0c2-4b58-afd6-55751a34f38b
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:9423d20d-9f05-4318-be60-1a683937a6b6
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "thunder_axe"
+        }
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: STONE
-    amount: 55
+    type: LIGHT_GRAY_SHULKER_BOX
+    meta:
+      ==: ItemMeta
+      meta-type: TILE_ENTITY
+      internal: H4sIAAAAAAAA/52Uy24TMRSGnTaFZEpbSIFeJKTK60TNrc1lAyxYgcQCJBYVRI7HmVjx2JHtyRBVeQzWfYQ+Aa/Cs3AmQR27ZTbNKvY53/j3f85xgFCAjsZC0VmDScvtskFVPFcSFqaKDmMuGdVkYodUSUtgpQOEUG0blY1QFv4CX+aWxRW0xUN0nAOSJJaLxIzMlAmxjXaoSmRGlBDK8ZKHv87xlFimR+OEzpgtgrc8+CCHidYqdah3LrXjUc9zaq4sV9I9LEBBbkeATu7njjJXslgFPdnsoDd5jrFayWikWcTAN7IOI1fJ00fprzyKqhZRdMqM6/CWSwVFXo3hMFZY1V0PO3IwzVIOnhhLZFhEP/PomiuVaKqIKLrjngfuu83rQScutO9BTsdHiZyrNGTaIWsueeCRpzkZJ4bTUcgNhYtqUnjRWtHsmJjbaeaTJWPBivBDD9/LcU5d5q3LvCxsHrngoqgNjj3qRU4JAv2vZRF36nGvnPERZAnjPWW+Od68Vd0KCqVZJUspja8xVbDEQxwpEeI6Zj/BZDy8goDgdPZhATQeXmNCs5GDPJNEETQ5TGscQ98BsiAiYRA5t/A2nb23KoaCfVmLOsOr+t0JSwirFICpWjD9ny9PVTraPJw4ozavQZbCQ1DU6nbag4tOt9mqX7b7vWa7e9mrN1qDZqfb77UHg3q7e9HsN5u9zvc6liTOJHli4KN2Oc+273uHVyCTS8P0PykPOLDlwfYKzuGWgE14OCHCsLu8j1wIFp6Nl3D/wC3xXKsJF2B+OROIqlDOeZTwkO2ui4pQ+Wv6+8/nm+G3W37749PVrxu0/v0FqdoLQVsGAAA=
+      blockMaterial: LIGHT_GRAY_SHULKER_BOX
   slot_21:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENCHANTED_BOOK
-    meta:
-      ==: ItemMeta
-      meta-type: ENCHANTED
-      display-name: '{"text":"","extra":[{"text":"Arcane Tome of Ice","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_blue","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"Ancient knowledge is hidden within these pages,","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
-      - '{"text":"","extra":[{"text":"allowing you to control the ice","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"blue","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"(Sheak + Right Click) - Launch an Ice Shard","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":"(Sneak + Swap) - Magic Barrier","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      custom-model-data: 1000035
-      enchants:
-        minecraft:unbreaking: 3
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Damage: 0
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "ice_book"
-        }
-  slot_28:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: DRAGON_HEAD
-    amount: 12
+    type: WATER_BUCKET
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -285,3 +229,49 @@ contents:
       ==: ItemMeta
       meta-type: UNSPECIFIC
       Damage: 15
+  slot_5:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 5
+  slot_7:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: GRAY_WOOL
+    amount: 2
+  slot_12:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: PRISMARINE_BRICKS
+  slot_20:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 3
+  slot_27:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_PEARL
+    amount: 16
+  slot_30:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_CHICKEN
+    amount: 14
+  slot_31:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_SHOVEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      enchants:
+        minecraft:mending: 1
+        minecraft:silk_touch: 1
+        minecraft:unbreaking: 3
+      repair-cost: 15
+  slot_35:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: STONE
+    amount: 37
