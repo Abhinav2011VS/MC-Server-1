@@ -3539,3 +3539,66 @@ Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTU
 [09:22:34] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
 [09:22:34] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
 [09:22:34] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[09:22:58] [Thread-23/INFO]: [gg.playit.control.ChannelSetup] send keep alive
+[09:24:35] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=49.156.94.139:35794, claimAddress=209.25.140.2:43784, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, 49, -100, 94, -117, -117, -46, 71, -81, -27, -11, -85, 8, 103, 86, -73, 83, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 51, -11, -85, 8, 0, 0, 0, 0, 33, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 2, 52, -94, -107, 23, 68, -83, -18, -67, 57, 3, -53, -44, 64, 77, -3], tunnelServerId=1, dataCenterId=33}
+[09:24:35] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[09:24:35] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43784 to claim client
+[09:24:35] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[09:24:35] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[09:24:35] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[09:24:35] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[09:24:35] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[09:24:35] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[09:24:35] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[09:24:36] [User Authenticator #1/INFO]: UUID of player Dizzy_plaz is 0ab4593b-8ff6-3669-8647-273ffd4147cd
+[09:24:40] [Server thread/INFO]: >>> Dizzy_plaz Entered the Game!
+[09:24:40] [Server thread/INFO]: Dizzy_plaz[/127.0.0.1:50680] logged in with entity id 98 at ([world]-912.685110759799, 71.0, 662.0395234574571)
+[09:24:40] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor249.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners$1.run(Listeners.java:97) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[09:24:41] [Server thread/INFO]: Saving the game (this may take a moment!)
+[09:24:42] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[09:24:42] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[09:24:42] [Server thread/INFO]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[09:24:42] [Server thread/INFO]: ThreadedAnvilChunkStorage (disaster_world): All chunks are saved
+[09:24:42] [Server thread/INFO]: ThreadedAnvilChunkStorage: All dimensions are saved
+[09:24:42] [Server thread/INFO]: Saved the game
+[09:24:42] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor249.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.scheduler.TrackLocationTask$1$1.run(TrackLocationTask.java:49) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
