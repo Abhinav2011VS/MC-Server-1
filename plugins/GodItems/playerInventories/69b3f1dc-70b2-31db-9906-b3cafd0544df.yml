@@ -3,7 +3,7 @@ armor:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: TORCH
-    amount: 24
+    amount: 17
   helmet:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -55,7 +55,7 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 79
+      Damage: 27
   slot_5:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -71,7 +71,7 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 80
+      Damage: 81
   slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -82,16 +82,6 @@ contents:
     v: 3955
     type: COBBLED_DEEPSLATE
     amount: 64
-  slot_14:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COBBLED_DEEPSLATE
-    amount: 64
-  slot_15:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COAL_BLOCK
-    amount: 19
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -103,8 +93,7 @@ contents:
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COBBLED_DEEPSLATE
-    amount: 52
+    type: STONE_PICKAXE
   slot_4:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -112,37 +101,24 @@ contents:
     meta:
       ==: ItemMeta
       meta-type: UNSPECIFIC
-      Damage: 66
+      Damage: 109
   slot_11:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: RED_BED
+    type: COBBLED_DEEPSLATE
+    amount: 64
   slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: COBBLED_DEEPSLATE
-    amount: 64
+    type: STONE_PICKAXE
   slot_28:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: BUCKET
+    type: FLINT_AND_STEEL
   slot_29:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: FLINT_AND_STEEL
-  slot_31:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: GOLD_BLOCK
-  slot_32:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COBBLED_DEEPSLATE
-    amount: 64
-  slot_35:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COBBLED_DEEPSLATE
+    type: TORCH
     amount: 64
   slot_9:
     ==: org.bukkit.inventory.ItemStack
@@ -151,96 +127,14 @@ contents:
   slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: CRAFTING_TABLE
+    type: COBBLED_DEEPSLATE
+    amount: 7
   slot_12:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: STICK
-    amount: 40
-  slot_13:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: MANGROVE_PLANKS
-    amount: 30
-  slot_16:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
     type: COBBLED_DEEPSLATE
     amount: 64
-  slot_17:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: PLAYER_HEAD
-    meta:
-      ==: ItemMeta
-      meta-type: SKULL
-      lore:
-      - '{"text":"Killed by ","extra":[{"text":"","extra":["","InventoStarz",""],"hoverEvent":{"contents":{"type":"minecraft:player","id":[-1081986355,1773484005,-1082243891,-1536211231],"name":"InventoStarz"},"action":"show_entity"},"insertion":"InventoStarz","clickEvent":{"action":"suggest_command","value":"/tell
-        InventoStarz "},"color":"yellow"}],"italic":false,"color":"gold"}'
-      skull-owner:
-        ==: PlayerProfile
-        uniqueId: 9371f8ea-9c8a-32c0-981b-c585f66e1769
-        name: MingoTheTroll
-        properties:
-        - name: textures
-          value: ewogICJ0aW1lc3RhbXAiIDogMTczMzY0OTU2NzY3MywKICAicHJvZmlsZUlkIiA6ICJhMmZhMzUxODdmMjg0NmNlYjNiYTMzN2JiZDhlMjhiNiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNaW5nb1RoZVRyb2xsIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlL2UwMTEyYzZhNjEyMGUyNzRiYmRlNzkxMTQyMGExYjdmMDk5MTI3MmQ3NDg3N2MxMzIxZTJkNzg4OTBhODE0NTAiCiAgICB9CiAgfQp9
-          signature: vfk6IQG6oYWDmuoIrmxACFVZ7pPfbn7/uBwlW56ZtivBQYFBMGEFGXPIcXxLz+vXM4SSsbdp+CVSFNEDNHu/Zh+ARpsrA25GRVEIyfu48iH3UkwT7/UwykCpzYYoooFEggCi7Dqg0OGzYa0KBMv0kuQNthzQ+eVNHjjxjNIrR39QEQLU7Jb/Y0JsVC3eZW6np+IRMzm/fLhtf1ePZJj61L29eAjP+6O6ObTdw2vZ/mst+axSbEb2qLawcOe/pLMhuWg+KflQjyRKJb34HVo6uQ+eE+4OWwOmZYIT37PZLWEwZBA4ZB00DPSPzJLLq4KH8PAJ3zIP7q8WBRRyTBJylOoMaoqhP9JZsV1PLYiXHDgbogr1OxSpyj+QfodP2nx/UnXctvuUwBS0ZM1J/mR0BkVfi5bUkVv0elnIP/z9YKRjpx+5IbE1cJtaemZsu+ltUecqmQ0bpbbmyiqV74eyelmm2HBdFr3vYgmbsMAdqjfX+Uv9eZiQRfk8iZt+XJU8SPVgMlhwrfXLJ7E/vs40T65Xa03Pt9s6SwArPde03zSYh8UmSyNLcczQ8V1qCpzSxXVbSuPe4GJHSGW6P+tUOL835TuhRNHOJEgwp6LcoXS2SZxF5yJ6ZXfO/PrUa/tESSt3baHQP0L5jyjYa2t2uzqG4xF3tJY+vuyLBJDMDNo=
-  slot_19:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COBBLED_DEEPSLATE
-    amount: 64
-  slot_20:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COBBLESTONE
-    amount: 43
-  slot_21:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: STICK
-    amount: 64
-  slot_22:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: IRON_BLOCK
-    amount: 6
-  slot_23:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: OBSIDIAN
-    amount: 3
-  slot_24:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COBBLED_DEEPSLATE
-    amount: 64
-  slot_25:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: DIAMOND
-    amount: 28
-  slot_26:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FURNACE
-    amount: 2
   slot_27:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: STONE_PICKAXE
-  slot_30:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: TORCH
-    amount: 64
-  slot_33:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: REDSTONE_BLOCK
-    amount: 7
-  slot_34:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: LAPIS_LAZULI
-    amount: 41
