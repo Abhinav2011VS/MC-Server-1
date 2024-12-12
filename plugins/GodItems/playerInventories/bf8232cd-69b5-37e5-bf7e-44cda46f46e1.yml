@@ -3,7 +3,7 @@ armor:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
-    amount: 43
+    amount: 60
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
@@ -284,70 +284,6 @@ contents:
   slot_2:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: NETHERITE_AXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '{"text":"","extra":[{"text":"Hammer of the Underworld","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
-      lore:
-      - '""'
-      - '{"text":"","extra":[{"text":"Your foes tremble in fear at the look of this
-        terrible weapon","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - Throw entities around
-        you away","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
-      - '""'
-      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
-      custom-model-data: 1000016
-      enchants:
-        minecraft:sharpness: 5
-        minecraft:unbreaking: 3
-      attribute-modifiers:
-        minecraft:generic.attack_damage:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: 11.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:ad894f54-1ecb-4bcc-84ec-93a077219b6a
-        minecraft:generic.attack_speed:
-        - ==: org.bukkit.attribute.AttributeModifier
-          amount: -3.0
-          slot: mainhand
-          operation: 0
-          key: minecraft:71cc0d18-a856-481f-ac45-0e328bc47ca5
-      ItemFlags:
-      - HIDE_ENCHANTS
-      - HIDE_ATTRIBUTES
-      Unbreakable: true
-      PublicBukkitValues: |-
-        {
-            "goditems:code_name": "push_hammer"
-        }
-  slot_7:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: COOKED_PORKCHOP
-    amount: 60
-  slot_8:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ARROW
-    amount: 64
-  slot_12:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FLINT_AND_STEEL
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      Unbreakable: true
-  slot_13:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
     type: NETHERITE_SHOVEL
     meta:
       ==: ItemMeta
@@ -399,6 +335,24 @@ contents:
       - HIDE_ENCHANTS
       Unbreakable: true
       Damage: 6
+  slot_7:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: COOKED_PORKCHOP
+    amount: 58
+  slot_8:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ARROW
+    amount: 64
+  slot_12:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FLINT_AND_STEEL
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      Unbreakable: true
   slot_20:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -491,11 +445,6 @@ contents:
         {
             "goditems:code_name": "push_hammer"
         }
-  slot_23:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: ENDER_PEARL
-    amount: 16
   slot_24:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -553,10 +502,6 @@ contents:
       - HIDE_ENCHANTS
       Unbreakable: true
       fire-resistant: true
-  slot_31:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: TOTEM_OF_UNDYING
   slot_32:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -577,16 +522,6 @@ contents:
         minecraft:fire_aspect: 1
         minecraft:looting: 32
         minecraft:mending: 1
-  slot_26:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: STONE_SWORD
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      enchants:
-        nova_structures:wither_coated: 1
-      Damage: 84
   slot_27:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -633,10 +568,6 @@ contents:
         {
             "goditems:code_name": "draculas_armor"
         }
-  slot_16:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: WITHER_SKELETON_SKULL
   slot_33:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -869,13 +800,59 @@ contents:
       meta-type: FIREWORK
       firework-effects: []
       power: 3
-  slot_14:
+  slot_18:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: SMOOTH_STONE
-    amount: 56
-  slot_22:
+    type: FIREWORK_ROCKET
+    amount: 64
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
+  slot_19:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: STRING
-    amount: 34
+    type: NETHERITE_AXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Hammer of the Underworld","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"Your foes tremble in fear at the look of this
+        terrible weapon","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_red","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"(Sneak + Left Click) - Throw entities around
+        you away","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"When in Main Hand:","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 11.0 Attack Damage","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      - '{"text":"","extra":[{"text":" 1.0 Attack Speed","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_green","bold":false}]}'
+      custom-model-data: 1000016
+      enchants:
+        minecraft:sharpness: 5
+        minecraft:unbreaking: 3
+      attribute-modifiers:
+        minecraft:generic.attack_damage:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: 11.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:ad894f54-1ecb-4bcc-84ec-93a077219b6a
+        minecraft:generic.attack_speed:
+        - ==: org.bukkit.attribute.AttributeModifier
+          amount: -3.0
+          slot: mainhand
+          operation: 0
+          key: minecraft:71cc0d18-a856-481f-ac45-0e328bc47ca5
+      ItemFlags:
+      - HIDE_ENCHANTS
+      - HIDE_ATTRIBUTES
+      Unbreakable: true
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "push_hammer"
+        }
