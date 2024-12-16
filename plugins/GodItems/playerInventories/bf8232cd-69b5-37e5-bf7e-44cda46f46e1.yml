@@ -3,7 +3,7 @@ armor:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
-    amount: 60
+    amount: 50
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
@@ -62,6 +62,7 @@ armor:
       - HIDE_ENCHANTS
       Unbreakable: true
       fire-resistant: true
+      Damage: 45
   helmet:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -114,6 +115,7 @@ armor:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
+      Damage: 45
       trim:
         material: minecraft:diamond
         pattern: minecraft:silence
@@ -169,6 +171,7 @@ armor:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
+      Damage: 45
       trim:
         material: minecraft:gold
         pattern: minecraft:silence
@@ -224,6 +227,7 @@ armor:
       ItemFlags:
       - HIDE_ENCHANTS
       Unbreakable: true
+      Damage: 45
       trim:
         material: minecraft:amethyst
         pattern: minecraft:wild
@@ -339,7 +343,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_PORKCHOP
-    amount: 58
+    amount: 52
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -727,59 +731,6 @@ contents:
       - HIDE_ENCHANTS
       Unbreakable: true
       Damage: 33
-  slot_4:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: NETHERITE_PICKAXE
-    meta:
-      ==: ItemMeta
-      meta-type: UNSPECIFIC
-      display-name: '"Minebreaker"'
-      enchants:
-        minecraft:aqua_affinity: 255
-        minecraft:bane_of_arthropods: 255
-        minecraft:blast_protection: 255
-        minecraft:breach: 255
-        minecraft:channeling: 255
-        minecraft:density: 255
-        minecraft:depth_strider: 255
-        minecraft:efficiency: 255
-        minecraft:feather_falling: 255
-        minecraft:fire_aspect: 255
-        minecraft:fire_protection: 255
-        minecraft:flame: 255
-        minecraft:fortune: 255
-        minecraft:frost_walker: 255
-        minecraft:impaling: 255
-        minecraft:infinity: 255
-        minecraft:knockback: 255
-        minecraft:looting: 255
-        minecraft:loyalty: 255
-        minecraft:luck_of_the_sea: 255
-        minecraft:lure: 255
-        minecraft:mending: 255
-        minecraft:multishot: 255
-        minecraft:piercing: 255
-        minecraft:power: 255
-        minecraft:projectile_protection: 255
-        minecraft:protection: 255
-        minecraft:punch: 255
-        minecraft:quick_charge: 255
-        minecraft:respiration: 255
-        minecraft:riptide: 255
-        minecraft:sharpness: 255
-        minecraft:smite: 255
-        minecraft:soul_speed: 255
-        minecraft:sweeping_edge: 255
-        minecraft:swift_sneak: 255
-        minecraft:thorns: 255
-        minecraft:unbreaking: 255
-        minecraft:wind_burst: 255
-      repair-cost: 15
-      ItemFlags:
-      - HIDE_ENCHANTS
-      Unbreakable: true
-      Damage: 1
   slot_9:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -855,4 +806,82 @@ contents:
       PublicBukkitValues: |-
         {
             "goditems:code_name": "push_hammer"
+        }
+  slot_3:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: NETHERITE_PICKAXE
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '"Minebreaker"'
+      enchants:
+        minecraft:aqua_affinity: 255
+        minecraft:bane_of_arthropods: 255
+        minecraft:blast_protection: 255
+        minecraft:breach: 255
+        minecraft:channeling: 255
+        minecraft:density: 255
+        minecraft:depth_strider: 255
+        minecraft:efficiency: 255
+        minecraft:feather_falling: 255
+        minecraft:fire_aspect: 255
+        minecraft:fire_protection: 255
+        minecraft:flame: 255
+        minecraft:fortune: 255
+        minecraft:frost_walker: 255
+        minecraft:impaling: 255
+        minecraft:infinity: 255
+        minecraft:knockback: 255
+        minecraft:looting: 255
+        minecraft:loyalty: 255
+        minecraft:luck_of_the_sea: 255
+        minecraft:lure: 255
+        minecraft:mending: 255
+        minecraft:multishot: 255
+        minecraft:piercing: 255
+        minecraft:power: 255
+        minecraft:projectile_protection: 255
+        minecraft:protection: 255
+        minecraft:punch: 255
+        minecraft:quick_charge: 255
+        minecraft:respiration: 255
+        minecraft:riptide: 255
+        minecraft:sharpness: 255
+        minecraft:smite: 255
+        minecraft:soul_speed: 255
+        minecraft:sweeping_edge: 255
+        minecraft:swift_sneak: 255
+        minecraft:thorns: 255
+        minecraft:unbreaking: 255
+        minecraft:wind_burst: 255
+      repair-cost: 15
+      ItemFlags:
+      - HIDE_ENCHANTS
+      Unbreakable: true
+      Damage: 1
+  slot_28:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: PRISMARINE_SHARD
+    meta:
+      ==: ItemMeta
+      meta-type: UNSPECIFIC
+      display-name: '{"text":"","extra":[{"text":"Dragon Scale","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"dark_purple","bold":true}]}'
+      lore:
+      - '""'
+      - '{"text":"","extra":[{"text":"A scale of a mighty dragon,","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
+      - '{"text":"","extra":[{"text":"incredibly light and strong","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"light_purple","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Used for crafting","obfuscated":false,"italic":true,"underlined":false,"strikethrough":false,"color":"gray","bold":false}]}'
+      - '""'
+      - '{"text":"","extra":[{"text":"Item Ability: ","obfuscated":false,"italic":false,"underlined":false,"strikethrough":false,"color":"gray","bold":false},{"text":"ON","italic":false,"color":"green"}]}'
+      custom-model-data: 1000026
+      enchants:
+        minecraft:unbreaking: 3
+      ItemFlags:
+      - HIDE_ENCHANTS
+      PublicBukkitValues: |-
+        {
+            "goditems:code_name": "dragon_scale"
         }
