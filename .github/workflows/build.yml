@@ -26,8 +26,8 @@ jobs:
 
       - name: Fetch latest changes and pull from master
         run: |
-          git fetch
-          git pull origin master
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
 
       - name: Delete folders and commit changes
         run: |
@@ -147,8 +147,8 @@ jobs:
 
       - name: Fetch latest changes and pull from master
         run: |
-          git fetch
-          git pull origin master
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
 
       - name: Delete folders and commit changes
         run: |
@@ -268,8 +268,8 @@ jobs:
 
       - name: Fetch latest changes and pull from master
         run: |
-          git fetch
-          git pull origin master
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
 
       - name: Delete folders and commit changes
         run: |
@@ -389,8 +389,8 @@ jobs:
 
       - name: Fetch latest changes and pull from master
         run: |
-          git fetch
-          git pull origin master
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
 
       - name: Delete folders and commit changes
         run: |
@@ -510,8 +510,8 @@ jobs:
 
       - name: Fetch latest changes and pull from master
         run: |
-          git fetch
-          git pull origin master
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
 
       - name: Delete folders and commit changes
         run: |
@@ -631,8 +631,8 @@ jobs:
 
       - name: Fetch latest changes and pull from master
         run: |
-          git fetch
-          git pull origin master
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
 
       - name: Delete folders and commit changes
         run: |
@@ -752,8 +752,8 @@ jobs:
 
       - name: Fetch latest changes and pull from master
         run: |
-          git fetch
-          git pull origin master
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
 
       - name: Delete folders and commit changes
         run: |
@@ -873,8 +873,8 @@ jobs:
 
       - name: Fetch latest changes and pull from master
         run: |
-          git fetch
-          git pull origin master
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
 
       - name: Delete folders and commit changes
         run: |
@@ -994,8 +994,8 @@ jobs:
 
       - name: Fetch latest changes and pull from master
         run: |
-          git fetch
-          git pull origin master
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
 
       - name: Delete folders and commit changes
         run: |
@@ -1115,8 +1115,8 @@ jobs:
 
       - name: Fetch latest changes and pull from master
         run: |
-          git fetch
-          git pull origin master
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
 
       - name: Delete folders and commit changes
         run: |
