@@ -24168,3 +24168,538 @@ java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
 Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
 	... 11 more
+[06:25:49] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=93.100.157.166:61772, claimAddress=209.25.140.2:43784, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, 93, 100, -99, -90, -15, 76, 104, -98, 15, 110, -85, 8, 103, 105, 2, 109, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -66, 110, -85, 8, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -68, -19, -43, -42, -10, -7, 127, 88, -80, -113, -75, 121, -54, -49, -15, 65], tunnelServerId=1, dataCenterId=28}
+[06:25:49] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:25:49] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43784 to claim client
+[06:25:49] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:25:49] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:25:49] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:25:49] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:25:49] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:25:49] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:25:49] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:25:50] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:25:55] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:00] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:05] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:10] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:15] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:20] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:25] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:30] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:35] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:40] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:45] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:50] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:26:55] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:27:00] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:27:05] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:27:10] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:27:15] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:27:20] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:27:25] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:27:30] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:27:31] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:41572, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -94, 100, 17, -120, -126, 118, -85, 10, 103, 105, 2, -46, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 48, 118, -85, 10, 0, 0, 0, 0, 46, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 71, 34, 81, 29, 74, -82, -122, 124, -95, 25, -40, 127, -14, 31, -99, -6], tunnelServerId=1, dataCenterId=46}
+[06:27:31] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:31] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:31] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:31] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:31] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:31] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:31] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:31] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:31] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:31] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=[2602:fbaf:082c:0001:0000:0000:0000:00c2]:22550, peerAddr=[2001:19f0:6402:08f2:5400:05ff:fe0c:67c3]:56468, claimAddress=209.25.140.2:43786, claimToken=[64, 0, 88, 38, 2, -5, -81, 8, 44, 0, 1, 0, 0, 0, 0, 0, 0, 0, -62, 88, 22, 32, 1, 25, -16, 100, 2, 8, -14, 84, 0, 5, -1, -2, 12, 103, -61, -36, -108, 0, 0, 0, 0, -69, 15, 127, 124, -85, 10, 103, 105, 2, -45, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -99, 124, -85, 10, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, -25, -6, -108, 98, -56, -9, -10, -32, 59, -109, -92, -4, 68, -22, -59, -99], tunnelServerId=1, dataCenterId=38}
+[06:27:31] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:31] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:31] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:41584, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -94, 112, -56, -85, 48, -103, -85, 10, 103, 105, 2, -44, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 61, -103, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, -54, 26, -42, 68, 15, 105, 1, -90, -58, -44, -71, 27, -45, -13, 83, 78], tunnelServerId=1, dataCenterId=44}
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:32] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:41590, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -94, 118, 15, 22, 87, 17, -85, 10, 103, 105, 2, -44, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -70, 17, -85, 10, 0, 0, 0, 0, 46, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 127, -34, 114, -47, 68, -79, -104, -12, 113, 62, 31, -28, -98, 23, 34, -52], tunnelServerId=1, dataCenterId=46}
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:32] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:41600, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -94, -128, 64, -30, 71, -49, -85, 10, 103, 105, 2, -44, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 26, -49, -85, 10, 0, 0, 0, 0, 46, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 64, -109, -105, 17, 59, 1, -94, 127, -8, 1, 86, -55, 83, 31, -110, -65], tunnelServerId=1, dataCenterId=46}
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:32] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:41608, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -94, -120, -17, 58, -54, 25, -85, 10, 103, 105, 2, -44, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 56, 25, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 45, -81, 67, 119, 28, 37, -34, -39, -4, -82, -20, 17, 13, -9, 70, -22], tunnelServerId=1, dataCenterId=44}
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:32] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:32] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:35] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:41620, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -94, -108, -51, -2, -42, -32, -85, 10, 103, 105, 2, -42, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -83, -32, -85, 10, 0, 0, 0, 0, 46, 0, 0, 0, 0, 0, 0, 0, 1, 0, 4, -32, -13, -26, 82, -29, 99, 75, 34, 79, 113, 121, 94, 65, -124, -24, 86], tunnelServerId=1, dataCenterId=46}
+[06:27:35] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:35] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:35] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:35] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:35] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:35] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:35] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:35] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:35] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:35] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:45806, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -78, -18, -107, 53, -127, 9, -85, 10, 103, 105, 2, -40, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -20, 9, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 9, -97, 110, 6, -117, 92, -126, -109, 90, -23, 67, 73, 105, 121, 21, -21], tunnelServerId=1, dataCenterId=44}
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:36] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:45814, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -78, -10, -124, -96, 119, -108, -85, 10, 103, 105, 2, -40, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -14, -108, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 4, -12, 88, 58, 20, -71, -91, -62, -62, -9, 23, -48, 25, -6, 108, -86, 53], tunnelServerId=1, dataCenterId=44}
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:36] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:45816, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -78, -8, -71, -57, 89, -104, -85, 10, 103, 105, 2, -40, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 34, -104, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -45, -111, -63, 43, -44, 14, 30, 106, -24, -95, 22, 2, 93, 109, -107, 62], tunnelServerId=1, dataCenterId=44}
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:36] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:36] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:45820, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -78, -4, 100, -32, 33, -1, -85, 10, 103, 105, 2, -40, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -98, -1, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -75, -12, 41, 2, 45, -92, 87, -106, -78, 51, 4, -42, 28, -54, 59, -119], tunnelServerId=1, dataCenterId=44}
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:36] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:36] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:36] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:39] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=[2602:fbaf:082c:0001:0000:0000:0000:00c2]:22550, peerAddr=[2001:19f0:6402:08f2:5400:05ff:fe0c:67c3]:34772, claimAddress=209.25.140.2:43786, claimToken=[64, 0, 88, 38, 2, -5, -81, 8, 44, 0, 1, 0, 0, 0, 0, 0, 0, 0, -62, 88, 22, 32, 1, 25, -16, 100, 2, 8, -14, 84, 0, 5, -1, -2, 12, 103, -61, -121, -44, 0, 0, 0, 0, 55, 82, 65, -73, -85, 10, 103, 105, 2, -37, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -85, -73, -85, 10, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, -14, 10, -3, -75, -84, 19, 50, -3, 64, 30, 89, -70, -105, 105, 113, -115], tunnelServerId=1, dataCenterId=38}
+[06:27:39] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:39] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:39] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:40] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:27:41] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:45836, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -77, 12, -127, 87, 22, 29, -85, 10, 103, 105, 2, -35, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 91, 29, -85, 10, 0, 0, 0, 0, 46, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 105, -61, 94, 112, -22, -56, 114, -102, 97, 68, -83, 87, 45, -34, -79, 88], tunnelServerId=1, dataCenterId=46}
+[06:27:41] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:41] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:41] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:44] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=216.128.138.102:45844, claimAddress=209.25.140.2:43786, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -40, -128, -118, 102, -77, 20, 21, 44, -78, 19, -85, 10, 103, 105, 2, -32, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 49, 19, -85, 10, 0, 0, 0, 0, 46, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 56, 90, -38, 86, 58, 91, 17, 73, 98, 97, -50, -68, 13, -124, 47, 101], tunnelServerId=1, dataCenterId=46}
+[06:27:44] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:44] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:44] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:44] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:44] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:44] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:44] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:44] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:44] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:44] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=[2602:fbaf:080c:0001:0000:0000:0000:00c2]:22550, peerAddr=[2001:19f0:6402:08f2:5400:05ff:fe0c:67c3]:43008, claimAddress=209.25.140.2:43786, claimToken=[64, 0, 88, 38, 2, -5, -81, 8, 12, 0, 1, 0, 0, 0, 0, 0, 0, 0, -62, 88, 22, 32, 1, 25, -16, 100, 2, 8, -14, 84, 0, 5, -1, -2, 12, 103, -61, -88, 0, 0, 0, 0, 0, -95, -51, 119, -77, -85, 10, 103, 105, 2, -32, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -128, -77, -85, 10, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, -82, 86, 125, -88, 117, 19, 99, 96, 8, 101, 34, 14, 68, 89, -112, -119], tunnelServerId=1, dataCenterId=44}
+[06:27:44] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[06:27:44] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43786 to claim client
+[06:27:44] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[06:27:44] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[06:27:44] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[06:27:44] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[06:27:44] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[06:27:44] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[06:27:44] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[06:27:45] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
+[06:27:50] [Server thread/WARN]: [PingDisplayTAB] Task #57 for PingDisplayTAB v1.0-SNAPSHOT generated an exception
+java.lang.NoClassDefFoundError: me/neznamy/tab/api/TabAPI
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.updateNametags(PingDisplayTAB.java:73) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB.access$000(PingDisplayTAB.java:24) ~[PingDisplay.jar:?]
+	at PingDisplay.jar/com.boggy.pingdisplaytab.PingDisplayTAB$1.run(PingDisplayTAB.java:43) ~[PingDisplay.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.neznamy.tab.api.TabAPI
+	... 11 more
