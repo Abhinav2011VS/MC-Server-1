@@ -1217,3 +1217,2483 @@ jobs:
           else
             echo "No changes to commit after server stop."
           fi
+
+  start-server-11:
+    needs: start-server-10
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-12:
+    needs: start-server-11
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-13:
+    needs: start-server-12
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-14:
+    needs: start-server-13
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-15:
+    needs: start-server-14
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-16:
+    needs: start-server-15
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-17:
+    needs: start-server-16
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-18:
+    needs: start-server-17
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-19:
+    needs: start-server-18
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-20:
+    needs: start-server-19
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-21:
+    needs: start-server-20
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-22:
+    needs: start-server-21
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-23:
+    needs: start-server-22
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-24:
+    needs: start-server-23
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-25:
+    needs: start-server-24
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-26:
+    needs: start-server-25
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-27:
+    needs: start-server-26
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-28:
+    needs: start-server-27
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-29:
+    needs: start-server-28
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
+
+  start-server-30:
+    needs: start-server-29
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Fetch latest changes and pull from master
+        run: |
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false fetch origin --recurse-submodules=no --progress --prune
+          git -c credential.helper= -c core.quotepath=false -c log.showSignature=false merge origin/master --no-stat -v
+
+      - name: Delete folders and commit changes
+        run: |
+          # Delete folders if they exist
+          rm -rf cache libraries logs versions plugins/GodItems/playerInventories
+
+          # Check if any folders were deleted
+          if [ -n "$(git status --porcelain)" ]; then
+            # Commit and push changes if there are any changes
+            git add .
+            git commit -m "Delete cache, libraries, logs, and versions folders"
+            git push origin master
+          else
+            echo "No folders to delete. Skipping commit and push."
+          fi
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget screen jq
+
+      - name: Verify Java Installation
+        run: java -version
+
+      - name: Start Minecraft Server
+        run: |
+          echo "Starting Minecraft server..."
+
+          # Start the server with optimized flags for performance
+          screen -dmS minecraft_server $JAVA_HOME/bin/java -Xmx12G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Daikars.new.flags=true -Dusing.aikars.flags=https://mcutils.com -jar server.jar --nogui &
+
+          # Wait a bit to ensure the server is running
+          sleep 15
+
+          # Periodically save server state and check for updates
+          nohup bash -c 'while true; do
+            echo "Saving server..."
+            screen -S minecraft_server -p 0 -X stuff "save-secretly\n"
+            sleep 5  # Wait a moment for the server to save
+            echo "Server saved!"
+
+            # Fetch and pull the latest changes from the remote
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+
+            # If there are new commits, reload the server
+            if [ "$(git rev-parse HEAD)" != "$(git rev-parse @{u})" ]; then
+              echo "New commits pulled, reloading server..."
+
+              # Announce and reload the server in Minecraft
+              screen -S minecraft_server -p 0 -X stuff "say Server Update Found!\n"
+              screen -S minecraft_server -p 0 -X stuff "say Reloading...\n"
+              screen -S minecraft_server -p 0 -X stuff "reload\n"
+            else
+              echo "No new commits to pull."
+            fi
+
+            # Check for changes before committing and pushing (only local changes)
+            if ! git diff --quiet; then
+              # Stage, commit, and push local changes
+              git add --all
+              git commit -m "Auto-update server changes after save" || echo "Git commit failed"
+              git push -f || echo "Push failed after multiple attempts"
+            else
+              echo "No local changes to commit."
+            fi
+
+            sleep 120  # Save every 2 minutes
+          done' &
+
+          # Run server for a specific duration (e.g., 5 hours)
+          sleep 18000
+
+          echo "Stopping Minecraft server..."
+
+          # Notify users before stopping the server
+          for i in {60..1}; do
+            screen -S minecraft_server -p 0 -X stuff "say Server will restart in $i seconds\n"
+            sleep 1
+          done
+          screen -S minecraft_server -p 0 -X stuff "say Server restarting...\n"
+
+          # Stop the server gracefully
+          screen -S minecraft_server -p 0 -X stuff "stop\n"
+          sleep 30
+
+          # Pull latest changes before final commit
+          echo "Pulling latest changes..."
+          git fetch origin master && git reset --hard origin/master || { echo "Fetch failed, skipping..."; true; }
+
+          # Final commit to capture all changes if there are any
+          if ! git diff --quiet; then
+            git fetch || echo "Git fetch failed"
+            git pull origin master || echo "Git pull failed"
+            git add --all
+            git commit -m "Final commit after server stop" || echo "Final commit failed"
+            git push -f || echo "Final git push failed"
+          else
+            echo "No changes to commit after server stop."
+          fi
