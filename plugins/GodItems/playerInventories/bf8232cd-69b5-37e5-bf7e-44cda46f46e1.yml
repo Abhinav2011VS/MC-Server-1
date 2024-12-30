@@ -224,8 +224,13 @@ armor:
   offhand:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: AIR
-    amount: 0
+    type: FIREWORK_ROCKET
+    amount: 51
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
 charms: {}
 contents:
   slot_0:
@@ -684,16 +689,6 @@ contents:
         {
             "goditems:code_name": "end_staff"
         }
-  slot_14:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FIREWORK_ROCKET
-    amount: 53
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
   slot_15:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
