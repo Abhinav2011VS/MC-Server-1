@@ -3384,3 +3384,718 @@ java.net.SocketException: Connection reset
 [14:26:10] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
 [14:26:10] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
 [14:27:44] [Thread-23/INFO]: [gg.playit.control.ChannelSetup] send keep alive
+[14:29:27] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:45792, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -78, -32, 23, 3, 101, 5, -97, 7, 103, -105, -104, 71, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -20, 5, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -10, 8, 6, -9, 21, -127, -35, -27, 20, 43, -45, -99, 74, -106, -98, 112], tunnelServerId=1, dataCenterId=28}
+[14:29:27] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:29:27] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:29:27] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:29:27] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:29:27] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:29:27] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:29:27] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:29:27] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:29:27] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:29:30] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:45820, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -78, -4, 87, 65, -43, -59, -97, 7, 103, -105, -104, 73, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -59, -59, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 123, -64, 49, 38, 21, 21, 31, 13, -108, -124, 78, 91, -18, -123, -74, 59], tunnelServerId=1, dataCenterId=28}
+[14:29:30] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:29:30] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:29:30] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:45806, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -78, -18, 48, 124, 93, 74, -97, 7, 103, -105, -104, 73, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -69, 74, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 73, -92, -76, 50, -3, -121, 113, -101, -28, -43, 101, -119, 89, -67, 26, 57], tunnelServerId=1, dataCenterId=28}
+[14:29:30] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:29:30] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:29:30] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:29:30] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:29:30] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:29:30] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:29:30] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:29:30] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:29:30] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:29:30] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:29:30] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:29:30] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:29:30] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:29:30] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:29:30] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:29:30] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:29:32] [User Authenticator #3/INFO]: UUID of player blaster_gaming12 is 69b3f1dc-70b2-31db-9906-b3cafd0544df
+[14:29:36] [Server thread/INFO]: >>> blaster_gaming12 Stepped onto the Server!
+[14:29:36] [Server thread/INFO]: blaster_gaming12[/127.0.0.1:36006] logged in with entity id 431 at ([world]-826.5, 63.282925328564396, 680.5)
+[14:29:36] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners$1.run(Listeners.java:97) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [nioEventLoopGroup-2-2/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:37] [Server thread/INFO]: blaster_gaming12 lost connection: Disconnected
+[14:29:37] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onPlayerQuitEvent(Listeners.java:107) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor197.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:605) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:590) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.removePlayerFromWorld(ServerGamePacketListenerImpl.java:2107) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2087) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2074) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.network.Connection.handleDisconnection(Connection.java:910) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:268) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1821) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 29 more
+[14:29:37] [Server thread/INFO]: <<< blaster_gaming12 Departed from the Game!
+[14:29:46] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=104.218.233.81:43366, claimAddress=209.25.140.2:43783, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, 104, -38, -23, 81, -87, 102, -125, -65, 121, 41, -85, 7, 103, -105, -104, 90, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 31, 41, -85, 7, 0, 0, 0, 0, 42, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 107, 76, 79, 28, -25, -71, -100, -122, 25, -28, 90, 120, 23, -126, 41, 70], tunnelServerId=1, dataCenterId=42}
+[14:29:46] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:29:46] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43783 to claim client
+[14:29:46] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:29:46] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:29:46] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:29:46] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:29:46] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:29:46] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:29:46] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:29:48] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:45554, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -79, -14, -13, 46, 37, 70, -97, 7, 103, -105, -104, 92, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -51, 70, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 95, 71, -7, 21, 84, -123, -23, -40, -37, 109, -92, 33, -3, 64, 116, 36], tunnelServerId=1, dataCenterId=28}
+[14:29:48] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:29:48] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:29:48] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:45560, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -79, -8, -88, -43, -78, 43, -97, 7, 103, -105, -104, 92, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -39, 43, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -73, 127, -75, 76, 112, 123, 46, -110, -119, 10, 80, -76, 15, 42, 67, -127], tunnelServerId=1, dataCenterId=28}
+[14:29:48] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:29:48] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:29:48] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:29:48] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:29:48] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:29:48] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:29:48] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:29:48] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:29:48] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:29:48] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:29:48] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:29:48] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:29:48] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:29:48] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:29:48] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:29:48] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:29:51] [User Authenticator #3/INFO]: UUID of player DarkReaper007 is 94aa4168-790f-32f2-8f90-4705f0902672
+[14:29:53] [Server thread/INFO]: >>> DarkReaper007 Entered the Game!
+[14:29:53] [Server thread/INFO]: DarkReaper007[/127.0.0.1:34242] logged in with entity id 447 at ([world]-1274.5327561335346, 79.0, 535.4379956619239)
+[14:29:53] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners$1.run(Listeners.java:97) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[14:29:53] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.scheduler.TrackLocationTask$1$1.run(TrackLocationTask.java:49) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[14:29:54] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:29:54] [Server thread/INFO]: DarkReaper007 lost connection: Disconnected
+[14:29:54] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onPlayerQuitEvent(Listeners.java:107) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor197.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:605) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:590) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.removePlayerFromWorld(ServerGamePacketListenerImpl.java:2107) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2087) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2074) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.network.Connection.handleDisconnection(Connection.java:910) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:268) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1821) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 29 more
+[14:29:54] [Server thread/INFO]: <<< DarkReaper007 Left the Game!
+[14:30:05] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:43790, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -85, 14, -71, -35, -101, 22, -97, 7, 103, -105, -104, 108, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 64, 22, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -99, -117, -91, 59, 116, -86, -39, 71, 45, -107, 14, -5, -70, -66, -57, 32], tunnelServerId=1, dataCenterId=28}
+[14:30:05] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:30:05] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:30:05] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:30:05] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:30:05] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:30:05] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:30:05] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:30:05] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:30:05] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:30:07] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:43786, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -85, 10, 16, -90, -30, 33, -97, 7, 103, -105, -104, 110, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 43, 33, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -95, -127, 78, 109, -8, -73, 17, 21, 15, -29, -14, 64, -124, 96, 109, -18], tunnelServerId=1, dataCenterId=28}
+[14:30:07] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:30:07] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:30:07] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:30:07] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:30:07] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:30:07] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:30:07] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:30:07] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:30:07] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:30:10] [User Authenticator #3/INFO]: UUID of player vikingguy12 is c6777a43-78b1-3c40-8b6a-60ac2cf80705
+[14:30:11] [Server thread/INFO]: >>> vikingguy12 Entered the Game!
+[14:30:11] [Server thread/INFO]: vikingguy12[/127.0.0.1:32902] logged in with entity id 483 at ([world]-1113.3112634948557, 78.0, 663.9681266104548)
+[14:30:11] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners$1.run(Listeners.java:97) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[14:30:11] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.scheduler.TrackLocationTask$1$1.run(TrackLocationTask.java:49) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[14:30:12] [nioEventLoopGroup-2-1/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:12] [Server thread/INFO]: vikingguy12 lost connection: Disconnected
+[14:30:12] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onPlayerQuitEvent(Listeners.java:107) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor197.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:605) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:590) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.removePlayerFromWorld(ServerGamePacketListenerImpl.java:2107) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2087) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2074) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.network.Connection.handleDisconnection(Connection.java:910) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:268) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1821) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 29 more
+[14:30:12] [Server thread/INFO]: <<< vikingguy12 Left the Game!
+[14:30:23] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:54546, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -43, 18, -39, -91, 94, 95, -97, 7, 103, -105, -104, 127, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 119, 95, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 62, 78, 63, -122, -16, 57, -83, -23, 120, -61, 6, 69, 27, -11, -47, 103], tunnelServerId=1, dataCenterId=28}
+[14:30:23] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:30:23] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:30:23] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:30:23] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:30:23] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:30:23] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:30:23] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:30:23] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:30:23] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:30:23] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:54556, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -43, 28, -113, -104, 84, 72, -97, 7, 103, -105, -104, 127, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -57, 72, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 50, -121, -113, -81, -79, -62, 81, -71, 11, 49, 2, 55, -49, 67, 3, 6], tunnelServerId=1, dataCenterId=28}
+[14:30:23] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:30:23] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:30:23] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:30:23] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:30:23] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:30:23] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:30:23] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:30:23] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:30:23] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:30:26] [User Authenticator #3/INFO]: UUID of player Atomic_Slayer is 55692239-2579-3d03-8e8b-16bd0e9ba009
+[14:30:28] [Server thread/INFO]: >>> Atomic_Slayer Entered the Game!
+[14:30:28] [Server thread/INFO]: Atomic_Slayer[/127.0.0.1:41626] logged in with entity id 499 at ([world]-1263.027340000609, 77.0, 544.2860767722597)
+[14:30:28] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners$1.run(Listeners.java:97) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[14:30:29] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:29] [Server thread/INFO]: Atomic_Slayer lost connection: Disconnected
+[14:30:29] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onPlayerQuitEvent(Listeners.java:107) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor197.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:605) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:590) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.removePlayerFromWorld(ServerGamePacketListenerImpl.java:2107) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2087) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2074) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.network.Connection.handleDisconnection(Connection.java:910) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:268) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1821) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 29 more
+[14:30:29] [Server thread/INFO]: <<< Atomic_Slayer Exited the Server!
+[14:30:39] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:46662, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -74, 70, -63, -96, -100, 50, -97, 7, 103, -105, -104, -113, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 27, 50, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 51, 30, 66, -85, -117, -118, 79, 102, 49, -101, 88, -101, 107, 96, 24, -59], tunnelServerId=1, dataCenterId=28}
+[14:30:39] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:30:39] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:30:39] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:46676, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -74, 84, -124, 4, -122, 27, -97, 7, 103, -105, -104, -113, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -46, 27, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -104, 60, 106, 69, -51, -111, 70, -81, 65, 48, 80, -74, 120, -78, -106, 3], tunnelServerId=1, dataCenterId=28}
+[14:30:39] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:30:39] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:30:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:30:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:30:39] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:30:39] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:30:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:30:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:30:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:30:39] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:30:39] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:30:39] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:30:39] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:30:39] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:30:39] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:30:39] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:30:42] [User Authenticator #3/INFO]: UUID of player justop is 3796b195-6983-3d7d-907f-9e0df2cee01c
+[14:30:43] [Server thread/INFO]: >>> justop Entered the Game!
+[14:30:43] [Server thread/INFO]: justop[/127.0.0.1:53430] logged in with entity id 558 at ([world]-951.6999999880791, 71.0, 624.9794480518741)
+[14:30:43] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners$1.run(Listeners.java:97) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[14:30:44] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.scheduler.TrackLocationTask$1$1.run(TrackLocationTask.java:49) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:45] [Server thread/INFO]: justop lost connection: Disconnected
+[14:30:45] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onPlayerQuitEvent(Listeners.java:107) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor197.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:605) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:590) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.removePlayerFromWorld(ServerGamePacketListenerImpl.java:2107) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2087) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2074) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.network.Connection.handleDisconnection(Connection.java:910) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:268) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1821) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 29 more
+[14:30:45] [Server thread/INFO]: <<< justop Disconnected from the Server!
+[14:30:55] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:58602, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -28, -22, -91, -66, 79, 67, -97, 7, 103, -105, -104, -97, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -33, 67, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 13, 71, 5, -88, -57, -39, -128, -110, 47, 83, -113, -81, 62, 68, -85, -35], tunnelServerId=1, dataCenterId=28}
+[14:30:55] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:30:55] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:30:55] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:58608, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -28, -16, -1, 115, 66, 72, -97, 7, 103, -105, -104, -97, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -11, 72, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 61, -72, 84, -20, 102, -119, -58, 61, 1, 70, -72, -36, 84, 52, -50, -61], tunnelServerId=1, dataCenterId=28}
+[14:30:55] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:30:55] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:30:55] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:30:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:30:55] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:30:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:30:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:30:55] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:30:55] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:30:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:30:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:30:55] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:30:55] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:30:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:30:55] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:30:55] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:30:57] [User Authenticator #3/INFO]: UUID of player Dizzy_plaz is 0ab4593b-8ff6-3669-8647-273ffd4147cd
+[14:30:58] [Server thread/INFO]: >>> Dizzy_plaz Stepped onto the Server!
+[14:30:58] [Server thread/INFO]: Dizzy_plaz[/127.0.0.1:40714] logged in with entity id 581 at ([world]-834.6999999880791, 63.0, 683.3000000119209)
+[14:30:58] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners$1.run(Listeners.java:97) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[14:30:59] [nioEventLoopGroup-2-3/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:30:59] [Server thread/INFO]: Dizzy_plaz lost connection: Disconnected
+[14:30:59] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onPlayerQuitEvent(Listeners.java:107) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor197.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:605) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:590) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.removePlayerFromWorld(ServerGamePacketListenerImpl.java:2107) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2087) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2074) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.network.Connection.handleDisconnection(Connection.java:910) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:268) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1821) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 29 more
+[14:30:59] [Server thread/INFO]: <<< Dizzy_plaz Departed from the Game!
+[14:31:10] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:36076, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -116, -20, 36, -117, 91, -80, -97, 7, 103, -105, -104, -83, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -96, -80, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -114, 70, 117, -104, -8, 100, 111, 106, 30, 94, -77, 76, 91, 56, -19, -16], tunnelServerId=1, dataCenterId=28}
+[14:31:10] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:31:10] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:31:10] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:31:10] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:31:10] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:31:10] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:31:10] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:31:10] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:31:10] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:31:10] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=209.25.143.194:22550, peerAddr=185.204.1.183:36060, claimAddress=209.25.140.2:40711, claimToken=[44, 0, 60, -47, 25, -113, -62, 88, 22, -71, -52, 1, -73, -116, -36, 23, 1, -43, 104, -97, 7, 103, -105, -104, -83, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -105, 104, -97, 7, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 67, -4, -118, 122, -47, 4, -43, -112, -65, -5, -22, -89, -33, 6, -12, 25], tunnelServerId=1, dataCenterId=28}
+[14:31:10] [Thread-23/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[14:31:10] [Thread-23/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:40711 to claim client
+[14:31:10] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[14:31:10] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[14:31:10] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[14:31:10] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[14:31:10] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[14:31:10] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[14:31:10] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[14:31:12] [User Authenticator #3/INFO]: UUID of player GameX_PlayZ is 8237a884-4818-37a0-bbc1-480ae9e34b35
+[14:31:14] [Server thread/INFO]: >>> GameX_PlayZ Appeared in the World!
+[14:31:14] [Server thread/INFO]: GameX_PlayZ[/127.0.0.1:46982] logged in with entity id 582 at ([world]-1283.5100370604493, 146.5, 515.4247777590435)
+[14:31:14] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners$1.run(Listeners.java:97) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[14:31:14] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.scheduler.TrackLocationTask$1$1.run(TrackLocationTask.java:49) ~[Aurora.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 17 more
+[14:31:15] [nioEventLoopGroup-2-1/WARN]: [gg.playit.minecraft.PlayitTcpTunnel] failed to send data to tunnel
+[14:31:15] [Server thread/INFO]: GameX_PlayZ lost connection: Disconnected
+[14:31:15] [Server thread/ERROR]: Could not pass event ParticleUpdateEvent to Aurora v5.8.3
+java.lang.NoClassDefFoundError: com/github/ipecter/rtu/biomelib/RTUBiomeLib
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onParticleUpdateEvent(Listeners.java:114) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor198.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at Aurora.jar/com.zenya.aurora.event.Listeners.onPlayerQuitEvent(Listeners.java:107) ~[Aurora.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor197.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:80) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.manager.PaperPluginManagerImpl.callEvent(PaperPluginManagerImpl.java:131) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-mojangapi-1.21.1-R0.1-SNAPSHOT.jar:?]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:605) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.players.PlayerList.remove(PlayerList.java:590) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.removePlayerFromWorld(ServerGamePacketListenerImpl.java:2107) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2087) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerGamePacketListenerImpl.onDisconnect(ServerGamePacketListenerImpl.java:2074) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.network.Connection.handleDisconnection(Connection.java:910) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.network.ServerConnectionListener.tick(ServerConnectionListener.java:268) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1821) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: com.github.ipecter.rtu.biomelib.RTUBiomeLib
+	... 29 more
+[14:31:15] [Server thread/INFO]: <<< GameX_PlayZ Left the Game!
