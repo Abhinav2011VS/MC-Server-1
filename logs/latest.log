@@ -1,0 +1,56 @@
+[05:34:32] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.5+11-LTS; Eclipse Adoptium Temurin-21.0.5+11) on Linux 6.8.0-1020-azure (amd64)
+[05:34:32] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) for Minecraft 1.21.1
+[05:34:32] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[05:34:33] [ServerMain/ERROR]: [DirectoryProviderSource] Error loading plugin: Restricted name, cannot use 0x20 (space character) in a plugin name.
+org.bukkit.plugin.InvalidDescriptionException: Restricted name, cannot use 0x20 (space character) in a plugin name.
+	at io.papermc.paper.plugin.provider.type.spigot.SpigotPluginProviderFactory.build(SpigotPluginProviderFactory.java:45) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.provider.type.spigot.SpigotPluginProviderFactory.build(SpigotPluginProviderFactory.java:28) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.provider.type.PluginFileType.register(PluginFileType.java:72) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.provider.source.FileProviderSource.registerProviders(FileProviderSource.java:96) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.provider.source.DirectoryProviderSource.registerProviders(DirectoryProviderSource.java:52) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.provider.source.DirectoryProviderSource.registerProviders(DirectoryProviderSource.java:17) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.util.EntrypointUtil.registerProvidersFromSource(EntrypointUtil.java:15) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.plugin.PluginInitializerManager.load(PluginInitializerManager.java:113) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at net.minecraft.server.Main.main(Main.java:123) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paper.PaperBootstrap.boot(PaperBootstrap.java:21) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at org.bukkit.craftbukkit.Main.main(Main.java:281) ~[paper-1.21.1.jar:1.21.1-131-84281ce]
+	at io.papermc.paperclip.Paperclip.lambda$main$0(Paperclip.java:42) ~[app:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[05:34:33] [ServerMain/INFO]: [PluginInitializerManager] Initialized 39 plugins
+[05:34:33] [ServerMain/INFO]: [PluginInitializerManager] Paper plugins (1):
+ - SilentAutoSave (3.0)
+[05:34:33] [ServerMain/INFO]: [PluginInitializerManager] Bukkit plugins (38):
+ - AFK (1.0), AnimatedIronGolemSpawn (1.2.1), AnvilColors (1.0.5), Aurora (5.8.3), AuthMe (5.6.0-bCUSTOM), BackpackPlus (1.4.5), Clumps (2.2), DamageIndicator (2.1.3), DeadlyDisasters (14.7), DeathLocation (1.4), Discord-Linker (3.4.2), DragonTrail (1.0), EpicRealmsSMP (6.6), Essentials (2.20.1), EssentialsChat (2.20.1), EssentialsSpawn (2.20.1), FarmProtect (1.9.0), GSit (1.11.2), Giants (2.0.5), GodItems (3.0.1), HomePlugin (0.6.4), LevelledMobs (4.2.0 b91), LifeStealZ (2.7.1), Maintenance (4.3.0), Multiverse-Core (4.3.13), PowerRanks (1.10.10), ProtocolLib (5.3.0), SecretSaver (1.1), SkinsRestorer (15.5.2), Sleeper (1.5.3), SpawnerSilk (5.8.0), TreeFeller (1.24.1), Veinminer (2.2.2), Vulcan (2.9.1), WorldEdit (7.3.9+6959-7adf70b), WorldEditSelectionVisualizer (2.1.7), oplogin (1.0-SNAPSHOT), playit-gg (0.1.4)
+[05:34:37] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[05:34:37] [ServerMain/WARN]: Missing metadata in pack file/VanillaTweaksDataTweaks.zip
+[05:34:40] [ServerMain/INFO]: Loaded 1313 recipes
+[05:34:40] [ServerMain/ERROR]: Couldn't load advancements: [minecraft:wander_add_map, minecraft:give_quest_trader_trade]
+[05:34:40] [ServerMain/INFO]: Loaded 1458 advancements
+[05:34:40] [ServerMain/WARN]: Not all defined tags for registry ResourceKey[minecraft:root / minecraft:block] are present in data pack: imst:fossil/rottable
+[05:34:40] [Server thread/INFO]: Starting minecraft server version 1.21.1
+[05:34:40] [Server thread/INFO]: Loading properties
+[05:34:40] [Server thread/INFO]: This server is running Paper version 1.21.1-131-ver/1.21.1@84281ce (2024-10-31T17:43:44Z) (Implementing API version 1.21.1-R0.1-SNAPSHOT)
+[05:34:41] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
+[05:34:41] [Server thread/INFO]: Server Ping Player Sample Count: 200
+[05:34:41] [Server thread/INFO]: Using 4 threads for Netty based IO
+[05:34:42] [Server thread/INFO]: [ChunkTaskScheduler] Chunk system is using 2 I/O threads, 4 worker threads, and population gen parallelism of 4 threads
+[05:34:42] [Server thread/INFO]: Default game type: SURVIVAL
+[05:34:42] [Server thread/INFO]: Generating keypair
+[05:34:42] [Server thread/INFO]: Starting Minecraft server on *:25565
+[05:34:42] [Server thread/INFO]: Using epoll channel type
+[05:34:42] [Server thread/INFO]: Paper: Using libdeflate (Linux x86_64) compression from Velocity.
+[05:34:42] [Server thread/INFO]: Paper: Using OpenSSL 3.x.x (Linux x86_64) cipher from Velocity.
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] [BackpackPlus] Loading 2 libraries... please wait
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] Downloading https://repo.maven.apache.org/maven2/com/zaxxer/HikariCP/4.0.3/HikariCP-4.0.3.pom
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] Downloading https://repo.maven.apache.org/maven2/org/sonatype/oss/oss-parent/9/oss-parent-9.pom
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.0-alpha1/slf4j-api-2.0.0-alpha1.pom
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/2.0.0-alpha1/slf4j-parent-2.0.0-alpha1.pom
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] Downloading https://repo.maven.apache.org/maven2/org/xerial/sqlite-jdbc/3.46.1.0/sqlite-jdbc-3.46.1.0.pom
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] Downloading https://repo.maven.apache.org/maven2/com/zaxxer/HikariCP/4.0.3/HikariCP-4.0.3.jar
+[05:34:43] [BasicRepositoryConnector-repo.maven.apache.org-0-0/INFO]: [SpigotLibraryLoader] Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.0-alpha1/slf4j-api-2.0.0-alpha1.jar
+[05:34:43] [BasicRepositoryConnector-repo.maven.apache.org-0-1/INFO]: [SpigotLibraryLoader] Downloading https://repo.maven.apache.org/maven2/org/xerial/sqlite-jdbc/3.46.1.0/sqlite-jdbc-3.46.1.0.jar
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] [BackpackPlus] Loaded library /home/runner/work/MC-Server-1/MC-Server-1/libraries/com/zaxxer/HikariCP/4.0.3/HikariCP-4.0.3.jar
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] [BackpackPlus] Loaded library /home/runner/work/MC-Server-1/MC-Server-1/libraries/org/slf4j/slf4j-api/2.0.0-alpha1/slf4j-api-2.0.0-alpha1.jar
+[05:34:43] [Server thread/INFO]: [SpigotLibraryLoader] [BackpackPlus] Loaded library /home/runner/work/MC-Server-1/MC-Server-1/libraries/org/xerial/sqlite-jdbc/3.46.1.0/sqlite-jdbc-3.46.1.0.jar
