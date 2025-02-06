@@ -26,7 +26,7 @@ armor:
         minecraft:mending: 1
         minecraft:unbreaking: 3
       repair-cost: 1
-      Damage: 19
+      Damage: 60
   leggings:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -80,7 +80,7 @@ contents:
         minecraft:mending: 1
         minecraft:silk_touch: 1
       repair-cost: 7
-      Damage: 2
+      Damage: 7
   slot_1:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -121,7 +121,7 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: FIREWORK_ROCKET
-    amount: 6
+    amount: 60
     meta:
       ==: ItemMeta
       meta-type: FIREWORK
@@ -131,12 +131,12 @@ contents:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: COOKED_PORKCHOP
-    amount: 47
+    amount: 42
   slot_6:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: STONE_BRICKS
-    amount: 14
+    amount: 13
   slot_8:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -209,26 +209,6 @@ contents:
     v: 3955
     type: COOKED_BEEF
     amount: 50
-  slot_15:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FIREWORK_ROCKET
-    amount: 64
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
-  slot_16:
-    ==: org.bukkit.inventory.ItemStack
-    v: 3955
-    type: FIREWORK_ROCKET
-    amount: 64
-    meta:
-      ==: ItemMeta
-      meta-type: FIREWORK
-      firework-effects: []
-      power: 3
   slot_17:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
@@ -272,7 +252,12 @@ contents:
     v: 3955
     type: STONE_BRICKS
     amount: 64
-  slot_34:
+  slot_35:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: ENDER_CHEST
+    amount: 2
+  slot_7:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
     type: NETHERITE_AXE
@@ -318,8 +303,23 @@ contents:
         {
             "goditems:code_name": "push_hammer"
         }
-  slot_35:
+  slot_10:
     ==: org.bukkit.inventory.ItemStack
     v: 3955
-    type: ENDER_CHEST
-    amount: 2
+    type: FIREWORK_ROCKET
+    amount: 64
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
+  slot_11:
+    ==: org.bukkit.inventory.ItemStack
+    v: 3955
+    type: FIREWORK_ROCKET
+    amount: 56
+    meta:
+      ==: ItemMeta
+      meta-type: FIREWORK
+      firework-effects: []
+      power: 3
