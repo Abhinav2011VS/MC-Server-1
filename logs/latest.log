@@ -1251,3 +1251,42 @@ java.io.IOException: Connection timed out
 [18:59:47] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
 [18:59:47] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
 [18:59:47] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[19:00:09] [Paper Watchdog Thread/ERROR]: --- DO NOT REPORT THIS TO PAPER - THIS IS NOT A BUG OR A CRASH  - 1.21.1-131-84281ce (MC: 1.21.1) ---
+[19:00:09] [Paper Watchdog Thread/ERROR]: The server has not responded for 4 seconds! Creating thread dump
+[19:00:09] [Paper Watchdog Thread/ERROR]: ------------------------------
+[19:00:09] [Paper Watchdog Thread/ERROR]: Server thread dump (Look for plugins here before reporting to Paper!):
+[19:00:09] [Paper Watchdog Thread/ERROR]: ------------------------------
+[19:00:09] [Paper Watchdog Thread/ERROR]: Current Thread: Server thread
+[19:00:09] [Paper Watchdog Thread/ERROR]: 	PID: 39 | Suspended: false | Native: true | State: RUNNABLE
+[19:00:09] [Paper Watchdog Thread/ERROR]: 	Stack:
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/sun.nio.ch.UnixFileDispatcherImpl.write0(Native Method)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/sun.nio.ch.UnixFileDispatcherImpl.write(UnixFileDispatcherImpl.java:65)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/sun.nio.ch.IOUtil.write(IOUtil.java:102)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/sun.nio.ch.IOUtil.write(IOUtil.java:72)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/sun.nio.ch.FileChannelImpl.write(FileChannelImpl.java:300)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/sun.nio.ch.ChannelOutputStream.writeFully(ChannelOutputStream.java:68)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:105)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:240)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/java.io.FilterOutputStream.close(FilterOutputStream.java:184)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/java.util.zip.DeflaterOutputStream.close(DeflaterOutputStream.java:249)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/java.io.FilterOutputStream.close(FilterOutputStream.java:190)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/java.io.FilterOutputStream.close(FilterOutputStream.java:190)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.nbt.NbtIo.writeCompressed(NbtIo.java:222)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.nbt.NbtIo.writeCompressed(NbtIo.java:174)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.saveLevelData(LevelStorageSource.java:617)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.saveDataTag(LevelStorageSource.java:608)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.level.ServerLevel.saveIncrementally(ServerLevel.java:1340)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1617)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer$$Lambda/0x00007f85d4c9c008.run(Unknown Source)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/java.lang.Thread.runWith(Thread.java:1596)
+[19:00:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.6/java.lang.Thread.run(Thread.java:1583)
+[19:00:09] [Paper Watchdog Thread/ERROR]: ------------------------------
+[19:00:09] [Paper Watchdog Thread/ERROR]: --- DO NOT REPORT THIS TO PAPER - THIS IS NOT A BUG OR A CRASH ---
+[19:00:09] [Paper Watchdog Thread/ERROR]: ------------------------------
+[19:00:10] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 4741ms or 94 ticks behind
+[19:01:53] [Thread-23/INFO]: [gg.playit.control.ChannelSetup] send keep alive
