@@ -9124,3 +9124,189 @@ java.net.SocketException: Connection reset
 	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[19:13:55] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=185.90.102.9:58293, claimAddress=209.25.140.2:43776, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -71, 90, 102, 9, -29, -75, 49, 109, -71, 90, -85, 0, 104, 48, -56, -13, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -42, 90, -85, 0, 0, 0, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 57, -65, 11, -16, -58, 125, -2, 113, -6, -112, 46, -51, 49, -24, 102, 45], tunnelServerId=1, dataCenterId=36}
+[19:13:55] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[19:13:55] [Thread-22/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43776 to claim client
+[19:13:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[19:13:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[19:13:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[19:13:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[19:13:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[19:13:55] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[19:13:55] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[19:14:06] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=109.237.192.236:52755, claimAddress=209.25.140.2:43776, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, 109, -19, -64, -20, -50, 19, 5, -80, 38, -45, -85, 0, 104, 48, -56, -2, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 91, -45, -85, 0, 0, 0, 0, 0, 36, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 49, -47, 17, -65, 112, -4, -6, -71, -110, 7, 46, 35, 59, -50, -99, 84], tunnelServerId=1, dataCenterId=36}
+[19:14:06] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[19:14:06] [Thread-22/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43776 to claim client
+[19:14:06] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[19:14:06] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[19:14:06] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[19:14:06] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[19:14:06] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[19:14:06] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[19:14:06] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[19:14:08] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=84.64.71.48:63189, claimAddress=209.25.140.2:43784, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, 84, 64, 71, 48, -10, -43, -59, -114, -122, 62, -85, 8, 104, 48, -55, 0, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -50, 62, -85, 8, 0, 0, 0, 0, 38, 0, 0, 0, 0, 0, 0, 0, 1, 0, 4, -32, 98, 108, -32, -24, -44, 25, 63, -18, -8, -58, -122, -43, 82, -22, 93], tunnelServerId=1, dataCenterId=38}
+[19:14:08] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[19:14:08] [Thread-22/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43784 to claim client
+[19:14:08] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[19:14:08] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[19:14:08] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[19:14:08] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[19:14:08] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[19:14:08] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[19:14:08] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[19:14:11] [nioEventLoopGroup-2-1/WARN]: [io.netty.channel.DefaultChannelPipeline] An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434) ~[?:?]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[19:14:12] [nioEventLoopGroup-2-3/WARN]: [io.netty.channel.DefaultChannelPipeline] An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434) ~[?:?]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[19:14:13] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=93.100.132.167:50788, claimAddress=209.25.140.2:43784, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, 93, 100, -124, -89, -58, 100, 13, 11, -46, -34, -85, 8, 104, 48, -55, 5, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 34, -34, -85, 8, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 39, 6, 5, -69, 104, 9, 43, 101, 77, -39, 43, 107, 127, -82, -10, -22], tunnelServerId=1, dataCenterId=28}
+[19:14:13] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[19:14:13] [Thread-22/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43784 to claim client
+[19:14:13] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[19:14:13] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[19:14:13] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[19:14:13] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[19:14:13] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[19:14:13] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[19:14:13] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[19:14:21] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=38.46.78.110:54795, claimAddress=209.25.140.2:43776, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, 38, 46, 78, 110, -42, 11, 36, -57, -112, 101, -85, 0, 104, 48, -55, 13, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -7, 101, -85, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, -45, -101, 70, -125, -61, 48, -71, -40, -11, -56, -24, -38, 79, 78, -75, -121], tunnelServerId=1, dataCenterId=40}
+[19:14:21] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[19:14:21] [Thread-22/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43776 to claim client
+[19:14:21] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[19:14:21] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[19:14:21] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[19:14:21] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[19:14:21] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[19:14:21] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[19:14:21] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[19:14:26] [nioEventLoopGroup-2-3/WARN]: [io.netty.channel.DefaultChannelPipeline] An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434) ~[?:?]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[19:14:28] [Server thread/WARN]: java.lang.ClassNotFoundException: org.bukkit.craftbukkit.v1_21_R1.CraftServer
+[19:14:28] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:146)
+[19:14:28] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:107)
+[19:14:28] [Server thread/WARN]: 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+[19:14:28] [Server thread/WARN]: 	at java.base/java.lang.Class.forName0(Native Method)
+[19:14:28] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:534)
+[19:14:28] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:513)
+[19:14:28] [Server thread/WARN]: 	at io.papermc.reflectionrewriter.runtime.AbstractDefaultRulesReflectionProxy.forName(AbstractDefaultRulesReflectionProxy.java:68)
+[19:14:28] [Server thread/WARN]: 	at io.papermc.paper.pluginremap.reflect.PaperReflectionHolder.forName(Unknown Source)
+[19:14:28] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave.executeSaveAllSilently(SilentAutoSave.java:66)
+[19:14:28] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave$1.run(SilentAutoSave.java:44)
+[19:14:28] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
+[19:14:28] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
+[19:14:28] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1659)
+[19:14:28] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1529)
+[19:14:28] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1251)
+[19:14:28] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
+[19:14:28] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[19:14:41] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=185.175.231.218:61184, claimAddress=209.25.140.2:42752, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -71, -81, -25, -38, -17, 0, 16, -81, 10, 23, -89, 0, 104, 48, -55, 33, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -119, 23, -89, 0, 0, 0, 0, 0, 18, 0, 0, 0, 0, 0, 0, 0, 7, 0, 2, -34, 75, -60, -81, 9, 116, 34, 108, -45, -47, 56, -3, 27, 54, 53, -40], tunnelServerId=7, dataCenterId=18}
+[19:14:41] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[19:14:41] [Thread-22/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:42752 to claim client
+[19:14:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[19:14:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[19:14:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[19:14:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[19:14:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[19:14:41] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[19:14:41] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[19:14:46] [nioEventLoopGroup-2-1/WARN]: [io.netty.channel.DefaultChannelPipeline] An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434) ~[?:?]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[19:15:28] [Server thread/WARN]: java.lang.ClassNotFoundException: org.bukkit.craftbukkit.v1_21_R1.CraftServer
+[19:15:28] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:146)
+[19:15:28] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:107)
+[19:15:28] [Server thread/WARN]: 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+[19:15:28] [Server thread/WARN]: 	at java.base/java.lang.Class.forName0(Native Method)
+[19:15:28] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:534)
+[19:15:28] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:513)
+[19:15:28] [Server thread/WARN]: 	at io.papermc.reflectionrewriter.runtime.AbstractDefaultRulesReflectionProxy.forName(AbstractDefaultRulesReflectionProxy.java:68)
+[19:15:28] [Server thread/WARN]: 	at io.papermc.paper.pluginremap.reflect.PaperReflectionHolder.forName(Unknown Source)
+[19:15:28] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave.executeSaveAllSilently(SilentAutoSave.java:66)
+[19:15:28] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave$1.run(SilentAutoSave.java:44)
+[19:15:28] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
+[19:15:28] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
+[19:15:28] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1659)
+[19:15:28] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1529)
+[19:15:28] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1251)
+[19:15:28] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
+[19:15:28] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[19:15:31] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=38.46.78.110:7364, claimAddress=209.25.140.2:43776, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, 38, 46, 78, 110, 28, -60, -65, -117, -31, -113, -85, 0, 104, 48, -55, 83, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 123, -113, -85, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 14, 42, -93, 35, 49, 114, -45, 18, -10, 118, -113, 10, -94, -70, -88, -118], tunnelServerId=1, dataCenterId=40}
+[19:15:31] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[19:15:31] [Thread-22/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43776 to claim client
+[19:15:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[19:15:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[19:15:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[19:15:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[19:15:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[19:15:31] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[19:15:31] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[19:15:36] [nioEventLoopGroup-2-3/WARN]: [io.netty.channel.DefaultChannelPipeline] An exceptionCaught() event was fired, and it reached at the tail of the pipeline. It usually means the last handler in the pipeline did not handle the exception.
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:401) ~[?:?]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:434) ~[?:?]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.115.Final.jar:4.1.115.Final]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
