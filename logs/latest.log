@@ -8989,3 +8989,126 @@ java.net.SocketException: Connection reset
 [21:37:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1251)
 [21:37:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
 [21:37:03] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[21:38:03] [Server thread/WARN]: java.lang.ClassNotFoundException: org.bukkit.craftbukkit.v1_21_R1.CraftServer
+[21:38:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:146)
+[21:38:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:107)
+[21:38:03] [Server thread/WARN]: 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+[21:38:03] [Server thread/WARN]: 	at java.base/java.lang.Class.forName0(Native Method)
+[21:38:03] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:534)
+[21:38:03] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:513)
+[21:38:03] [Server thread/WARN]: 	at io.papermc.reflectionrewriter.runtime.AbstractDefaultRulesReflectionProxy.forName(AbstractDefaultRulesReflectionProxy.java:68)
+[21:38:03] [Server thread/WARN]: 	at io.papermc.paper.pluginremap.reflect.PaperReflectionHolder.forName(Unknown Source)
+[21:38:03] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave.executeSaveAllSilently(SilentAutoSave.java:66)
+[21:38:03] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave$1.run(SilentAutoSave.java:44)
+[21:38:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
+[21:38:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
+[21:38:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1659)
+[21:38:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1529)
+[21:38:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1251)
+[21:38:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
+[21:38:03] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=172.96.172.207:48454, claimAddress=209.25.140.2:43783, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -84, 96, -84, -49, -67, 70, 54, 99, 17, -90, -85, 7, 104, 50, 60, 88, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 127, -90, -85, 7, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 114, 29, 24, 31, -66, -113, -59, 15, -1, 18, -105, -85, 59, -18, 17, 114], tunnelServerId=1, dataCenterId=45}
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43783 to claim client
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=172.96.172.207:48460, claimAddress=209.25.140.2:43783, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -84, 96, -84, -49, -67, 76, -64, -24, -42, 95, -85, 7, 104, 50, 60, 88, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 117, 95, -85, 7, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -121, -123, -101, 85, 54, -29, 53, 120, 74, -44, -34, 59, -32, 120, 116, 50], tunnelServerId=1, dataCenterId=45}
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43783 to claim client
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[21:38:32] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[21:38:32] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[21:38:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[21:38:32] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[21:38:32] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[21:38:32] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[21:38:32] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[21:38:32] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=172.96.172.207:48476, claimAddress=209.25.140.2:43783, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -84, 96, -84, -49, -67, 92, -49, 122, 1, -2, -85, 7, 104, 50, 60, 88, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -19, -2, -85, 7, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -27, 85, 39, -89, 14, -57, -38, 29, -36, -6, -65, 34, 71, 59, -104, -56], tunnelServerId=1, dataCenterId=45}
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43783 to claim client
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[21:38:32] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[21:38:32] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=172.96.172.207:48484, claimAddress=209.25.140.2:43783, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -84, 96, -84, -49, -67, 100, -10, -5, -21, -59, -85, 7, 104, 50, 60, 88, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 53, -59, -85, 7, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 56, -100, -57, 46, -51, -123, 41, 56, 20, -124, 28, 16, 115, 126, 29, -25], tunnelServerId=1, dataCenterId=45}
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[21:38:32] [Thread-22/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43783 to claim client
+[21:38:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[21:38:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[21:38:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[21:38:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[21:38:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[21:38:32] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[21:38:32] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[21:38:37] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 60 seconds
+[21:38:38] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 59 seconds
+[21:38:39] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 58 seconds
+[21:38:40] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 57 seconds
+[21:38:41] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 56 seconds
+[21:38:42] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 55 seconds
+[21:38:43] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 54 seconds
+[21:38:44] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 53 seconds
+[21:38:45] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 52 seconds
+[21:38:46] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 51 seconds
+[21:38:47] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 50 seconds
+[21:38:48] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 49 seconds
+[21:38:49] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 48 seconds
+[21:38:50] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 47 seconds
+[21:38:51] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 46 seconds
+[21:38:52] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 45 seconds
+[21:38:53] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 44 seconds
+[21:38:54] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 43 seconds
+[21:38:55] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 42 seconds
+[21:38:56] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 41 seconds
+[21:38:57] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 40 seconds
+[21:38:58] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 39 seconds
+[21:38:59] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 38 seconds
+[21:39:00] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 37 seconds
+[21:39:01] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 36 seconds
+[21:39:02] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 35 seconds
+[21:39:03] [Server thread/WARN]: java.lang.ClassNotFoundException: org.bukkit.craftbukkit.v1_21_R1.CraftServer
+[21:39:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:146)
+[21:39:03] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:107)
+[21:39:03] [Server thread/WARN]: 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+[21:39:03] [Server thread/WARN]: 	at java.base/java.lang.Class.forName0(Native Method)
+[21:39:03] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:534)
+[21:39:03] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:513)
+[21:39:03] [Server thread/WARN]: 	at io.papermc.reflectionrewriter.runtime.AbstractDefaultRulesReflectionProxy.forName(AbstractDefaultRulesReflectionProxy.java:68)
+[21:39:03] [Server thread/WARN]: 	at io.papermc.paper.pluginremap.reflect.PaperReflectionHolder.forName(Unknown Source)
+[21:39:03] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave.executeSaveAllSilently(SilentAutoSave.java:66)
+[21:39:03] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave$1.run(SilentAutoSave.java:44)
+[21:39:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
+[21:39:03] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
+[21:39:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1659)
+[21:39:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1529)
+[21:39:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1251)
+[21:39:03] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
+[21:39:03] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[21:39:03] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 34 seconds
+[21:39:04] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 33 seconds
+[21:39:05] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 32 seconds
+[21:39:06] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 31 seconds
+[21:39:07] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 30 seconds
+[21:39:08] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 29 seconds
+[21:39:09] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 28 seconds
+[21:39:10] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 27 seconds
+[21:39:11] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 26 seconds
+[21:39:12] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 25 seconds
+[21:39:13] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 24 seconds
+[21:39:14] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 23 seconds
+[21:39:15] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 22 seconds
+[21:39:16] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 21 seconds
+[21:39:17] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 20 seconds
+[21:39:18] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 19 seconds
+[21:39:19] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 18 seconds
+[21:39:20] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 17 seconds
+[21:39:21] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 16 seconds
+[21:39:22] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 15 seconds
+[21:39:23] [Server thread/INFO]: [Not Secure] [Server] Server will restart in 14 seconds
