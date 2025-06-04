@@ -8099,3 +8099,201 @@ java.net.SocketException: Connection reset
 [04:37:44] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1251)
 [04:37:44] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
 [04:37:44] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[04:38:44] [Server thread/WARN]: java.lang.ClassNotFoundException: org.bukkit.craftbukkit.v1_21_R1.CraftServer
+[04:38:44] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:146)
+[04:38:44] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:107)
+[04:38:44] [Server thread/WARN]: 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+[04:38:44] [Server thread/WARN]: 	at java.base/java.lang.Class.forName0(Native Method)
+[04:38:44] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:534)
+[04:38:44] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:513)
+[04:38:44] [Server thread/WARN]: 	at io.papermc.reflectionrewriter.runtime.AbstractDefaultRulesReflectionProxy.forName(AbstractDefaultRulesReflectionProxy.java:68)
+[04:38:44] [Server thread/WARN]: 	at io.papermc.paper.pluginremap.reflect.PaperReflectionHolder.forName(Unknown Source)
+[04:38:44] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave.executeSaveAllSilently(SilentAutoSave.java:66)
+[04:38:44] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave$1.run(SilentAutoSave.java:44)
+[04:38:44] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
+[04:38:44] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
+[04:38:44] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1659)
+[04:38:44] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1529)
+[04:38:44] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1251)
+[04:38:44] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
+[04:38:44] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=172.96.172.207:59474, claimAddress=209.25.140.2:43783, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -84, 96, -84, -49, -24, 82, 86, -68, 16, -116, -85, 7, 104, 63, -51, -6, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 113, -116, -85, 7, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 79, -64, -53, -22, -51, -61, 55, 10, 111, 11, 100, -29, 2, -127, 75, 44], tunnelServerId=1, dataCenterId=45}
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43783 to claim client
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=172.96.172.207:59488, claimAddress=209.25.140.2:43783, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -84, 96, -84, -49, -24, 96, 115, -41, -80, 83, -85, 7, 104, 63, -51, -6, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, -98, 83, -85, 7, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 1, 0, 4, 53, -73, -68, -63, -67, -16, 29, -16, 68, -108, 54, 1, 29, 68, -60, 17], tunnelServerId=1, dataCenterId=45}
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43783 to claim client
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[04:39:22] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[04:39:22] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[04:39:22] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[04:39:22] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[04:39:22] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[04:39:22] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[04:39:22] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[04:39:22] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=172.96.172.207:59494, claimAddress=209.25.140.2:43783, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -84, 96, -84, -49, -24, 102, -89, -63, -20, -123, -85, 7, 104, 63, -51, -6, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 27, -123, -85, 7, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 44, -25, -1, 14, 56, 85, -56, 101, 54, -68, -113, -46, -44, 74, -36, 33], tunnelServerId=1, dataCenterId=45}
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43783 to claim client
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[04:39:22] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[04:39:22] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=172.96.172.207:59500, claimAddress=209.25.140.2:43783, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, -84, 96, -84, -49, -24, 108, 126, -128, 117, -128, -85, 7, 104, 63, -51, -6, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 35, -128, -85, 7, 0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, -117, 114, -65, 45, -97, 31, -114, 110, -29, 28, 112, -84, 118, -85, 42, -119], tunnelServerId=1, dataCenterId=45}
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[04:39:22] [Thread-20/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43783 to claim client
+[04:39:22] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[04:39:22] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[04:39:22] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[04:39:22] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[04:39:22] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[04:39:22] [nioEventLoopGroup-2-3/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[04:39:22] [nioEventLoopGroup-2-4/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[04:39:44] [Server thread/WARN]: java.lang.ClassNotFoundException: org.bukkit.craftbukkit.v1_21_R1.CraftServer
+[04:39:44] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:146)
+[04:39:44] [Server thread/WARN]: 	at io.papermc.paper.plugin.entrypoint.classloader.PaperPluginClassLoader.loadClass(PaperPluginClassLoader.java:107)
+[04:39:44] [Server thread/WARN]: 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526)
+[04:39:44] [Server thread/WARN]: 	at java.base/java.lang.Class.forName0(Native Method)
+[04:39:44] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:534)
+[04:39:44] [Server thread/WARN]: 	at java.base/java.lang.Class.forName(Class.java:513)
+[04:39:44] [Server thread/WARN]: 	at io.papermc.reflectionrewriter.runtime.AbstractDefaultRulesReflectionProxy.forName(AbstractDefaultRulesReflectionProxy.java:68)
+[04:39:44] [Server thread/WARN]: 	at io.papermc.paper.pluginremap.reflect.PaperReflectionHolder.forName(Unknown Source)
+[04:39:44] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave.executeSaveAllSilently(SilentAutoSave.java:66)
+[04:39:44] [Server thread/WARN]: 	at SilentAutoSave.jar//net.abhinav.silentautosave.SilentAutoSave$1.run(SilentAutoSave.java:44)
+[04:39:44] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78)
+[04:39:44] [Server thread/WARN]: 	at org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:474)
+[04:39:44] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1659)
+[04:39:44] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1529)
+[04:39:44] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1251)
+[04:39:44] [Server thread/WARN]: 	at net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
+[04:39:44] [Server thread/WARN]: 	at java.base/java.lang.Thread.run(Thread.java:1583)
+[04:39:49] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] got new client: NewClient{connectAddr=147.185.221.194:22550, peerAddr=93.100.132.167:58006, claimAddress=209.25.140.2:43784, claimToken=[44, 0, 60, -109, -71, -35, -62, 88, 22, 93, 100, -124, -89, -30, -106, 80, -114, -115, 67, -85, 8, 104, 63, -50, 21, 0, 0, 0, 0, 0, 9, -24, 75, 0, 0, 0, 0, 0, 58, -47, -35, 95, 67, -85, 8, 0, 0, 0, 0, 28, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, -12, 6, 1, -15, -109, -93, 77, -123, -1, -91, -30, -119, 101, 64, -85, -84], tunnelServerId=1, dataCenterId=28}
+[04:39:49] [Thread-20/INFO]: [gg.playit.minecraft.PlayitManager] starting tcp tunnel for client
+[04:39:49] [Thread-20/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] start connection to /209.25.140.2:43784 to claim client
+[04:39:49] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to tunnel server, sending claim token
+[04:39:49] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] claim token sent
+[04:39:49] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connection to tunnel server has been established
+[04:39:49] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] Reflect: ReflectionHelper{ServerConnection=class net.minecraft.server.network.ServerConnectionListener, LegacyPingHandler=class net.minecraft.server.network.LegacyQueryHandler, MinecraftServer=class net.minecraft.server.MinecraftServer, PacketSplitter=class net.minecraft.network.Varint21FrameDecoder, PacketDecoder=class net.minecraft.network.PacketDecoder, EnumProtocolDirection=class net.minecraft.network.protocol.PacketFlow, PacketPrepender=class net.minecraft.network.Varint21LengthFieldPrepender, PacketEncoder=class net.minecraft.network.PacketEncoder, NetworkManagerServer=class net.minecraft.network.RateKickingConnection, NetworkManager=class net.minecraft.network.Connection, HandshakeListener=class net.minecraft.server.network.ServerHandshakePacketListenerImpl, PacketListener=interface net.minecraft.network.PacketListener, CraftServer=class org.bukkit.craftbukkit.CraftServer}
+[04:39:49] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] legacyPingHandler is null
+[04:39:49] [nioEventLoopGroup-2-1/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connecting to minecraft server at localhost/127.0.0.1:25565
+[04:39:49] [nioEventLoopGroup-2-2/INFO]: [gg.playit.minecraft.PlayitTcpTunnel] connected to local minecraft server
+[04:40:05] [Paper Watchdog Thread/ERROR]: --- DO NOT REPORT THIS TO PAPER - THIS IS NOT A BUG OR A CRASH  - 1.21.4-231-09e9afd (MC: 1.21.4) ---
+[04:40:05] [Paper Watchdog Thread/ERROR]: The server has not responded for 4 seconds! Creating thread dump
+[04:40:05] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:05] [Paper Watchdog Thread/ERROR]: Server thread dump (Look for plugins here before reporting to Paper!):
+[04:40:05] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:05] [Paper Watchdog Thread/ERROR]: Current Thread: Server thread
+[04:40:05] [Paper Watchdog Thread/ERROR]: 	PID: 40 | Suspended: false | Native: true | State: RUNNABLE
+[04:40:05] [Paper Watchdog Thread/ERROR]: 	Stack:
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.UnixFileDispatcherImpl.write0(Native Method)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.UnixFileDispatcherImpl.write(UnixFileDispatcherImpl.java:65)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.IOUtil.write(IOUtil.java:102)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.IOUtil.write(IOUtil.java:72)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.FileChannelImpl.write(FileChannelImpl.java:300)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.ChannelOutputStream.writeFully(ChannelOutputStream.java:68)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:105)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:240)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.FilterOutputStream.close(FilterOutputStream.java:184)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.util.zip.DeflaterOutputStream.close(DeflaterOutputStream.java:272)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.FilterOutputStream.close(FilterOutputStream.java:190)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.FilterOutputStream.close(FilterOutputStream.java:190)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		net.minecraft.nbt.NbtIo.writeCompressed(NbtIo.java:86)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		net.minecraft.nbt.NbtIo.writeCompressed(NbtIo.java:79)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.saveLevelData(LevelStorageSource.java:525)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.saveDataTag(LevelStorageSource.java:517)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.level.ServerLevel.saveIncrementally(ServerLevel.java:1337)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1551)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1251)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer$$Lambda/0x00007f57a4df4300.run(Unknown Source)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+[04:40:05] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+[04:40:05] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:05] [Paper Watchdog Thread/ERROR]: --- DO NOT REPORT THIS TO PAPER - THIS IS NOT A BUG OR A CRASH ---
+[04:40:05] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:07] [Paper Watchdog Thread/ERROR]: --- DO NOT REPORT THIS TO PAPER - THIS IS NOT A BUG OR A CRASH  - 1.21.4-231-09e9afd (MC: 1.21.4) ---
+[04:40:07] [Paper Watchdog Thread/ERROR]: The server has not responded for 6 seconds! Creating thread dump
+[04:40:07] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:07] [Paper Watchdog Thread/ERROR]: Server thread dump (Look for plugins here before reporting to Paper!):
+[04:40:07] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:07] [Paper Watchdog Thread/ERROR]: Current Thread: Server thread
+[04:40:07] [Paper Watchdog Thread/ERROR]: 	PID: 40 | Suspended: false | Native: true | State: RUNNABLE
+[04:40:07] [Paper Watchdog Thread/ERROR]: 	Stack:
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.UnixFileDispatcherImpl.write0(Native Method)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.UnixFileDispatcherImpl.write(UnixFileDispatcherImpl.java:65)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.IOUtil.write(IOUtil.java:102)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.IOUtil.write(IOUtil.java:72)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.FileChannelImpl.write(FileChannelImpl.java:300)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.ChannelOutputStream.writeFully(ChannelOutputStream.java:68)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:105)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:240)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.FilterOutputStream.close(FilterOutputStream.java:184)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.util.zip.DeflaterOutputStream.close(DeflaterOutputStream.java:272)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.FilterOutputStream.close(FilterOutputStream.java:190)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.FilterOutputStream.close(FilterOutputStream.java:190)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		net.minecraft.nbt.NbtIo.writeCompressed(NbtIo.java:86)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		net.minecraft.nbt.NbtIo.writeCompressed(NbtIo.java:79)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.saveLevelData(LevelStorageSource.java:525)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.saveDataTag(LevelStorageSource.java:517)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.level.ServerLevel.saveIncrementally(ServerLevel.java:1337)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1551)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1251)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer$$Lambda/0x00007f57a4df4300.run(Unknown Source)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+[04:40:07] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+[04:40:07] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:07] [Paper Watchdog Thread/ERROR]: --- DO NOT REPORT THIS TO PAPER - THIS IS NOT A BUG OR A CRASH ---
+[04:40:07] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:09] [Paper Watchdog Thread/ERROR]: --- DO NOT REPORT THIS TO PAPER - THIS IS NOT A BUG OR A CRASH  - 1.21.4-231-09e9afd (MC: 1.21.4) ---
+[04:40:09] [Paper Watchdog Thread/ERROR]: The server has not responded for 8 seconds! Creating thread dump
+[04:40:09] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:09] [Paper Watchdog Thread/ERROR]: Server thread dump (Look for plugins here before reporting to Paper!):
+[04:40:09] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:09] [Paper Watchdog Thread/ERROR]: Current Thread: Server thread
+[04:40:09] [Paper Watchdog Thread/ERROR]: 	PID: 40 | Suspended: false | Native: true | State: RUNNABLE
+[04:40:09] [Paper Watchdog Thread/ERROR]: 	Stack:
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.UnixFileDispatcherImpl.write0(Native Method)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.UnixFileDispatcherImpl.write(UnixFileDispatcherImpl.java:65)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:137)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.IOUtil.write(IOUtil.java:102)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.IOUtil.write(IOUtil.java:72)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.FileChannelImpl.write(FileChannelImpl.java:300)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.ChannelOutputStream.writeFully(ChannelOutputStream.java:68)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/sun.nio.ch.ChannelOutputStream.write(ChannelOutputStream.java:105)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:125)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.BufferedOutputStream.implFlush(BufferedOutputStream.java:252)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:240)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.FilterOutputStream.close(FilterOutputStream.java:184)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.util.zip.DeflaterOutputStream.close(DeflaterOutputStream.java:272)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.FilterOutputStream.close(FilterOutputStream.java:190)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.io.FilterOutputStream.close(FilterOutputStream.java:190)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.nbt.NbtIo.writeCompressed(NbtIo.java:86)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.nbt.NbtIo.writeCompressed(NbtIo.java:79)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.saveLevelData(LevelStorageSource.java:525)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess.saveDataTag(LevelStorageSource.java:517)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.level.ServerLevel.saveIncrementally(ServerLevel.java:1337)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1551)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1251)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer.lambda$spin$2(MinecraftServer.java:310)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		net.minecraft.server.MinecraftServer$$Lambda/0x00007f57a4df4300.run(Unknown Source)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+[04:40:09] [Paper Watchdog Thread/ERROR]: 		java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+[04:40:09] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:09] [Paper Watchdog Thread/ERROR]: --- DO NOT REPORT THIS TO PAPER - THIS IS NOT A BUG OR A CRASH ---
+[04:40:09] [Paper Watchdog Thread/ERROR]: ------------------------------
+[04:40:10] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 9685ms or 193 ticks behind
